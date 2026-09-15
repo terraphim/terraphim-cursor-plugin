@@ -35,6 +35,9 @@ class PluginContractTests(unittest.TestCase):
         )
         for relative in manifest["skills"]:
             self.assertTrue((ROOT / relative / "SKILL.md").is_file())
+        logo = manifest.get("logo")
+        self.assertEqual(logo, "assets/logo.svg")
+        self.assertTrue((ROOT / logo).is_file())
 
     def test_skill_frontmatter_is_open_source_and_consistent(self) -> None:
         for name in EXPECTED_SKILLS:
