@@ -1,0 +1,31 @@
+{
+  "name": "terraphim-skills",
+  "description": "Public Community skills from Terraphim AI.",
+  "plugins": [
+    {
+      "name": "terraphim-skills-intro",
+      "source": {
+        "source": "github",
+        "repo": "terraphim/terraphim-cursor-plugin",
+        "path": ".",
+        "ref": "v0.2.0"
+      },
+      "description": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
+      "description_i18n": {
+        "en": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
+        "zh-CN": "使用 Terraphim 命令行工具搜索代码、记录经验并检索记忆。"
+      },
+      "version": "0.2.0",
+      "category": "developer-tools",
+      "tags": [
+        "terraphim",
+        "code-search",
+        "learning",
+        "memory",
+        "knowledge-graph",
+        "developer-tools"
+      ],
+      "strict": true
+    }
+  ]
+}

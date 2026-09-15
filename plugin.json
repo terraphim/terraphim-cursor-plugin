@@ -17,10 +17,15 @@
     "knowledge-graph",
     "developer-tools"
   ],
-  "logo": "assets/logo.svg",
   "skills": [
-    "skills/terraphim-grep",
-    "skills/terraphim-agent-learn",
-    "skills/terraphim-agent-memory"
-  ]
+    "./skills/terraphim-grep",
+    "./skills/terraphim-agent-learn",
+    "./skills/terraphim-agent-memory"
+  ],
+  "interface": {
+    "displayName": "Terraphim Skills Introduction",
+    "shortDescription": "Local search, learning, and memory workflows",
+    "developerName": "Terraphim AI",
+    "websiteURL": "https://terraphim-skills.md/"
+  }
 }
