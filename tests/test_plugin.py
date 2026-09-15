@@ -103,6 +103,12 @@ class PluginContractTests(unittest.TestCase):
         ):
             self.assertIn(token, memory)
 
+    def test_readme_documents_cursor_320_local_copy_requirement(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("Cursor 3.20 rejects a symlink", readme)
+        self.assertIn("cp -R /path/to/terraphim-cursor-plugin", readme)
+        self.assertIn("~/.cursor/plugins/local/terraphim-skills-intro", readme)
+
 
 if __name__ == "__main__":
     unittest.main()

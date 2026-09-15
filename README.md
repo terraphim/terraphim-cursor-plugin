@@ -25,10 +25,18 @@ The wrappers inspect `--help` at runtime so they remain honest about the locally
 
 ## Local Cursor installation
 
-For local development, place or symlink this repository at:
+For local development, copy this repository into Cursor's local plugin directory:
 
 ```text
 ~/.cursor/plugins/local/terraphim-skills-intro
+```
+
+Cursor 3.20 rejects a symlink when its resolved target is outside
+`~/.cursor/plugins/local`, so use a real directory for a reliable test. For example:
+
+```sh
+cp -R /path/to/terraphim-cursor-plugin \
+  ~/.cursor/plugins/local/terraphim-skills-intro
 ```
 
 Reload Cursor, open **Customize**, and confirm that all three skills appear. Invoke them by name or ask Cursor to search code, inspect an earlier command failure, or retrieve project memory.
