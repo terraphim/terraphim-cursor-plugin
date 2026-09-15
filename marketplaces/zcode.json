@@ -8,14 +8,14 @@
         "source": "github",
         "repo": "terraphim/terraphim-cursor-plugin",
         "path": ".",
-        "ref": "v0.2.0"
+        "ref": "v0.2.1"
       },
       "description": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
       "description_i18n": {
         "en": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
         "zh-CN": "使用 Terraphim 命令行工具搜索代码、记录经验并检索记忆。"
       },
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "developer-tools",
       "tags": [
         "terraphim",

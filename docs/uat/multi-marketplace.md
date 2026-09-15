@@ -8,7 +8,7 @@ older installation cannot make a failed package appear healthy.
 
 1. Install and verify the runtime dependencies using
    [Install dependencies](../install-dependencies.md).
-2. Confirm the plugin version is `0.2.0`.
+2. Confirm the plugin version is `0.2.1`.
 3. Confirm the installed skill set is exactly:
    `terraphim-grep`, `terraphim-agent-learn`, and
    `terraphim-agent-memory`.
