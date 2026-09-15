@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 880" width="1100" height="880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ahBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="ahGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22c55e"/>
+    </marker>
+    <marker id="ahOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f97316"/>
+    </marker>
+    <marker id="ahGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="ahRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ef4444"/>
+    </marker>
+    <style>
+      .label  { paint-order: stroke fill; stroke: #ffffff; stroke-width: 4px; stroke-linejoin: round; }
+      .tlabel { paint-order: stroke fill; stroke: #ffffff; stroke-width: 5px; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="880" fill="#ffffff"/>
+
+  <text x="550" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">The V-Model: Architecture of Discipline</text>
+
+  <text x="145" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#1d4ed8" letter-spacing="1.2">LEFT SIDE</text>
+  <text x="145" y="96" text-anchor="middle" font-size="13" fill="#3b82f6">Planning</text>
+  <text x="955" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#15803d" letter-spacing="1.2">RIGHT SIDE</text>
+  <text x="955" y="96" text-anchor="middle" font-size="13" fill="#22c55e">Testing</text>
+
+  <!-- Defect loop-back: curve from QG bottom-right under everything to P1 bottom-left -->
+  <path d="M 760,675 C 880,840 80,840 60,225" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="6 5" fill="none" marker-end="url(#ahRed)" opacity="0.85"/>
+
+  <!-- Horizontal traceability arrows -->
+  <line x1="275" y1="155" x2="825" y2="155" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ahGrey)"/>
+  <text x="550" y="148" text-anchor="middle" font-size="12" fill="#6b7280" font-style="italic" class="tlabel">validates</text>
+
+  <line x1="435" y1="388" x2="665" y2="388" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ahGrey)"/>
+  <text x="550" y="381" text-anchor="middle" font-size="12" fill="#6b7280" font-style="italic" class="tlabel">verifies</text>
+
+  <!-- Left descent (blue) -->
+  <line x1="200" y1="215" x2="255" y2="315" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#ahBlue)"/>
+  <text x="170" y="275" font-size="11" font-weight="700" fill="#1d4ed8" letter-spacing="0.5" class="label">EXPLORE</text>
+
+  <line x1="370" y1="463" x2="380" y2="532" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#ahBlue)"/>
+  <text x="330" y="505" font-size="11" font-weight="700" fill="#1d4ed8" letter-spacing="0.5" class="label">ELIMINATE</text>
+
+  <line x1="490" y1="683" x2="510" y2="732" stroke="#f97316" stroke-width="2.5" marker-end="url(#ahOrange)"/>
+  <text x="430" y="715" font-size="11" font-weight="700" fill="#c2410c" letter-spacing="0.5" class="label">EXECUTE</text>
+
+  <!-- Right ascent (green, mirror of left descent) -->
+  <line x1="590" y1="732" x2="610" y2="683" stroke="#22c55e" stroke-width="2.5" marker-end="url(#ahGreen)"/>
+
+  <line x1="720" y1="532" x2="730" y2="463" stroke="#22c55e" stroke-width="2.5" marker-end="url(#ahGreen)"/>
+  <text x="735" y="505" font-size="11" font-weight="700" fill="#15803d" letter-spacing="0.5" class="label">VERIFY</text>
+
+  <line x1="845" y1="315" x2="900" y2="215" stroke="#22c55e" stroke-width="2.5" marker-end="url(#ahGreen)"/>
+  <text x="855" y="275" font-size="11" font-weight="700" fill="#15803d" letter-spacing="0.5" class="label">VALIDATE</text>
+
+  <!-- Phase 1: Research -->
+  <g>
+    <rect x="20" y="100" width="250" height="110" rx="10" ry="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="145" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Phase 1: Research</text>
+    <text x="145" y="154" text-anchor="middle" font-size="12" fill="#1f2937">Problem understanding</text>
+    <text x="145" y="174" text-anchor="middle" font-size="12" fill="#1f2937">Constraints &amp; risks</text>
+    <text x="145" y="194" text-anchor="middle" font-size="12" fill="#1f2937">Success criteria</text>
+  </g>
+
+  <!-- Phase 5: Validation (mirror of Phase 1) -->
+  <g>
+    <rect x="830" y="100" width="250" height="110" rx="10" ry="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="955" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Phase 5: Validation</text>
+    <text x="955" y="154" text-anchor="middle" font-size="12" fill="#1f2937">System testing</text>
+    <text x="955" y="174" text-anchor="middle" font-size="12" fill="#1f2937">UAT with stakeholders</text>
+    <text x="955" y="194" text-anchor="middle" font-size="12" fill="#1f2937">Formal sign-off</text>
+  </g>
+
+  <!-- Phase 2: Design -->
+  <g>
+    <rect x="180" y="320" width="250" height="135" rx="10" ry="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="305" y="348" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Phase 2: Design</text>
+    <text x="305" y="375" text-anchor="middle" font-size="12" fill="#1f2937">File changes</text>
+    <text x="305" y="395" text-anchor="middle" font-size="12" fill="#1f2937">API signatures</text>
+    <text x="305" y="415" text-anchor="middle" font-size="12" fill="#1f2937">Test strategy</text>
+    <text x="305" y="435" text-anchor="middle" font-size="12" fill="#1f2937">Document NOT-doing</text>
+  </g>
+
+  <!-- Phase 4: Verification (mirror of Phase 2) -->
+  <g>
+    <rect x="670" y="320" width="250" height="135" rx="10" ry="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="795" y="348" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Phase 4: Verification</text>
+    <text x="795" y="375" text-anchor="middle" font-size="12" fill="#1f2937">Unit testing</text>
+    <text x="795" y="395" text-anchor="middle" font-size="12" fill="#1f2937">Integration testing</text>
+    <text x="795" y="415" text-anchor="middle" font-size="12" fill="#1f2937">Traceability matrix</text>
+    <text x="795" y="435" text-anchor="middle" font-size="12" fill="#1f2937">Test execution</text>
+  </g>
+
+  <!-- Phase 2.5: Specification -->
+  <g>
+    <rect x="320" y="540" width="200" height="135" rx="10" ry="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="420" y="568" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Phase 2.5</text>
+    <text x="420" y="588" text-anchor="middle" font-size="12" fill="#1e3a8a">Specification</text>
+    <text x="420" y="612" text-anchor="middle" font-size="12" fill="#1f2937">Deep interview</text>
+    <text x="420" y="632" text-anchor="middle" font-size="12" fill="#1f2937">Edge cases</text>
+    <text x="420" y="652" text-anchor="middle" font-size="12" fill="#1f2937">Tradeoffs</text>
+  </g>
+
+  <!-- Quality Gate (mirror of Phase 2.5) -->
+  <g>
+    <rect x="580" y="540" width="200" height="135" rx="10" ry="10" fill="#fff7ed" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="680" y="568" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Quality</text>
+    <text x="680" y="588" text-anchor="middle" font-size="12" fill="#9a3412">Gate</text>
+    <text x="680" y="612" text-anchor="middle" font-size="12" fill="#1f2937">Code review</text>
+    <text x="680" y="632" text-anchor="middle" font-size="12" fill="#1f2937">UBS &amp; security</text>
+    <text x="680" y="652" text-anchor="middle" font-size="12" fill="#1f2937">Traceability</text>
+  </g>
+
+  <!-- Phase 3: Implementation -->
+  <g>
+    <rect x="400" y="740" width="300" height="100" rx="10" ry="10" fill="#fed7aa" stroke="#f97316" stroke-width="2"/>
+    <text x="550" y="772" text-anchor="middle" font-size="14" font-weight="700" fill="#9a3412">Phase 3: Implementation</text>
+    <text x="550" y="800" text-anchor="middle" font-size="12" fill="#1f2937">Test first | Small commits | Quality checks</text>
+  </g>
+
+  <!-- Defect loop-back annotation -->
+  <text x="20" y="855" font-size="12" font-weight="700" fill="#b91c1c" letter-spacing="0.5">DEFECT LOOP-BACK</text>
+  <text x="200" y="855" font-size="11" fill="#dc2626" font-style="italic">Defects trace back to the originating left-side phase</text>
+</svg>

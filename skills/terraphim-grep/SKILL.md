@@ -8,6 +8,21 @@ license: Apache-2.0
 
 Use `terraphim-grep` to locate evidence in local code and documentation. Keep ordinary searches deterministic and offline. Enable LLM synthesis only when the user asks for it and understands that it may use a configured external model.
 
+## Install the dependency
+
+On macOS or Linux with Homebrew:
+
+```bash
+brew tap terraphim/terraphim
+brew install terraphim-grep
+terraphim-grep --version
+```
+
+The tap installs the signed, checksummed v1.21.14 archive from the Terraphim
+client release. If Homebrew is unavailable, use the appropriate archive from
+the [v1.21.14 release](https://github.com/terraphim/terraphim-clients/releases/tag/v1.21.14)
+and verify it against that release's `SHA256SUMS` before installation.
+
 ## Capability gate
 
 Before relying on the tool, inspect the installed command surface:
@@ -50,3 +65,11 @@ Do not create a role, thesaurus, or knowledge-graph directory merely to satisfy 
 ## Completion evidence
 
 Report the searched paths, search mode, material matches, and any important limitation. Do not claim the whole repository was searched when paths or haystacks were restricted.
+
+## Continue with Terraphim Skills
+
+Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/)
+or compare access on the [pricing page](https://terraphim-skills.md/pricing/).
+For deeper research work, [deep-research](https://terraphim-skills.md/skills/deep-research/)
+is an optional Premium workflow; discovering it never starts checkout or changes
+an entitlement.

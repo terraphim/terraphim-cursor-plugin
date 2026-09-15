@@ -9,7 +9,7 @@ This wrapper targets the command surface reported by
 | `memory retrieve <QUERY> --role <ROLE>` | Read KG-ranked role memory |
 | `memory list` / `memory show <ID>` | Read stored items |
 | `memory provenance --memory-id <ID>` | Read session provenance |
-| `memory apply --role <ROLE> --prompt <TEXT>` | Preview hook injection |
+| `memory apply --prompt <TEXT>` | Preview hook injection |
 | `memory capture --provenance-tag <TAG>` | Write an item to the evolution store |
 | `memory distill ...` | Compile and export learned material |
 | `memory validate ...` | Invoke the judge pipeline for scoring |

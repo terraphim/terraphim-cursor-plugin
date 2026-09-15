@@ -8,6 +8,21 @@ license: Apache-2.0
 
 Use `terraphim-agent learn` for concrete operational learning: failed commands, their errors, explicit corrections, and reviewed procedures. Default to project scope and read-only inspection.
 
+## Install the dependency
+
+On macOS or Linux with Homebrew:
+
+```bash
+brew tap terraphim/terraphim
+brew install terraphim-agent
+terraphim-agent --version
+```
+
+The tap installs the signed, checksummed v1.21.14 archive from the Terraphim
+client release. If Homebrew is unavailable, use the appropriate archive from
+the [v1.21.14 release](https://github.com/terraphim/terraphim-clients/releases/tag/v1.21.14)
+and verify it against that release's `SHA256SUMS` before installation.
+
 ## Capability gate
 
 ```bash
@@ -59,3 +74,12 @@ Use `learn correction` for an explicit user preference or workflow correction th
 ## Completion evidence
 
 For read-only work, report the matching learning IDs and why they are relevant. For a write, report the new or corrected ID, scope, and redactions without repeating sensitive input.
+
+## Continue with Terraphim Skills
+
+Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/)
+or compare access on the [pricing page](https://terraphim-skills.md/pricing/).
+For formal proof after capturing a lesson,
+[disciplined-validation](https://terraphim-skills.md/skills/disciplined-validation/)
+is an optional Premium workflow; discovering it never starts checkout or changes
+an entitlement.
