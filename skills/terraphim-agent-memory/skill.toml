@@ -10,3 +10,8 @@ repository = "https://github.com/terraphim/terraphim-cursor-plugin"
 [files]
 "SKILL.md" = "634aff47696d227a65264852c02be073efc404dab37456959b0b0937c1c43b82"
 "references/command-guide.md" = "3f7ff187af11b243b741ee5611434fd9a9023db43786d0e56c1a862701282e3e"
+
+[signature]
+public_key = "261c6820525270bfe2a5daaa5bf3f581bd9bc193e1a0148010e870a3a63ad959"
+signature = "6f3a0b038ab502db07316ac8e23889f9d652f4e8fd7eb5a34b2a47c6eae10989669275670404c79bc89ecdf2665e65972b3f8c1b5659e473161f95e8f3b8350d"
+timestamp = "1789462010Z"
