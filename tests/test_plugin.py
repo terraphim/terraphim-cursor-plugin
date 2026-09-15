@@ -65,6 +65,7 @@ class PluginContractTests(unittest.TestCase):
                 ".json",
                 ".md",
                 ".py",
+                ".toml",
             }:
                 continue
             text = path.read_text(encoding="utf-8")

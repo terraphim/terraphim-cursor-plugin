@@ -1,0 +1,12 @@
+[skill]
+name = "terraphim-agent-learn"
+version = "1.0.0"
+description = "Inspect failures and capture verified operational corrections with terraphim-agent learn."
+tier = "community"
+author = "terraphim"
+license = "Apache-2.0"
+repository = "https://github.com/terraphim/terraphim-cursor-plugin"
+
+[files]
+"SKILL.md" = "02268217164234834634edc3c9af887e79d27137cbf38085fccc2635b9f63e29"
+"references/command-guide.md" = "792034bb071bd45831aae1da1a11c999eb61fb7deed123d51b567737fc50346c"

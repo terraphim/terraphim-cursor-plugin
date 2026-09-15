@@ -1,0 +1,12 @@
+[skill]
+name = "terraphim-agent-memory"
+version = "1.0.0"
+description = "Retrieve, inspect, validate, and govern agent memory with terraphim-agent memory."
+tier = "community"
+author = "terraphim"
+license = "Apache-2.0"
+repository = "https://github.com/terraphim/terraphim-cursor-plugin"
+
+[files]
+"SKILL.md" = "634aff47696d227a65264852c02be073efc404dab37456959b0b0937c1c43b82"
+"references/command-guide.md" = "3f7ff187af11b243b741ee5611434fd9a9023db43786d0e56c1a862701282e3e"

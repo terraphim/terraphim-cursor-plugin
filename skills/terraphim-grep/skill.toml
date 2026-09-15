@@ -1,0 +1,12 @@
+[skill]
+name = "terraphim-grep"
+version = "1.0.0"
+description = "Search bounded local source code and documentation with terraphim-grep, offline by default."
+tier = "community"
+author = "terraphim"
+license = "Apache-2.0"
+repository = "https://github.com/terraphim/terraphim-cursor-plugin"
+
+[files]
+"SKILL.md" = "60b46cea519bf8652ae66562955d6fe3e88533bc8d0b2cb9644960c002eef2be"
+"references/command-guide.md" = "0f8e9e51c7ddf4af363f20423ebcb3328055f4a2de847af2fd4e9063178fed23"
