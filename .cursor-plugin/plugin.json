@@ -21,6 +21,7 @@
   "skills": [
     "skills/terraphim-grep",
     "skills/terraphim-agent-learn",
-    "skills/terraphim-agent-memory"
+    "skills/terraphim-agent-memory",
+    "skills/terraphim-agent-onboarding"
   ]
 }

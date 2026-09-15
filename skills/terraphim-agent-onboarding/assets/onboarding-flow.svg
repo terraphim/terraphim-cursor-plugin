@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#2f5d8c"/>
+    </marker>
+    <marker id="arrow2" markerWidth="9" markerHeight="9" refX="6" refY="2.8" orient="auto">
+      <path d="M0,0 L6,2.8 L0,5.6 z" fill="#5b7a99"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f4f6fa"/>
+
+  <text x="40" y="52" font-size="30" font-weight="700" fill="#1f2a37">Terraphim Agent Onboarding Flow</text>
+  <text x="40" y="80" font-size="16" fill="#5b6b7d">soul + personality (quantum identity) wired to the Terraphim retrieval / learning toolchain</text>
+
+  <!-- Phase boxes -->
+  <!-- box geometry: w=284, gap=24, x = 40,348,656,964,1272 ; y=110 h=300 -->
+  <g>
+    <!-- Phase 0 -->
+    <rect x="40" y="110" width="284" height="300" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+    <rect x="40" y="110" width="284" height="42" rx="12" fill="#2f5d8c"/>
+    <rect x="40" y="132" width="284" height="20" fill="#2f5d8c"/>
+    <text x="56" y="137" font-size="15" font-weight="700" fill="#ffffff">Phase 0 - Preflight</text>
+    <text x="56" y="180" font-size="13.5" fill="#33414f">&#8226; Derive home via -p PROFILE</text>
+    <text x="56" y="206" font-size="13.5" fill="#33414f">&#8226; Six mandatory checks</text>
+    <text x="56" y="232" font-size="13.5" fill="#33414f">&#8226; Confirm hermes + agent floor</text>
+    <text x="56" y="258" font-size="13.5" fill="#33414f">&#8226; Know the isolation boundary</text>
+
+    <!-- Phase 1 -->
+    <rect x="348" y="110" width="284" height="300" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+    <rect x="348" y="110" width="284" height="42" rx="12" fill="#2f5d8c"/>
+    <rect x="348" y="132" width="284" height="20" fill="#2f5d8c"/>
+    <text x="364" y="137" font-size="15" font-weight="700" fill="#ffffff">Phase 1 - Resonance (soul)</text>
+    <text x="364" y="180" font-size="13.5" fill="#33414f">&#8226; SOUL.md - the Hamiltonian</text>
+    <text x="364" y="206" font-size="13.5" fill="#33414f">&#8226; IDENTITY.md - eigenstate card</text>
+    <text x="364" y="232" font-size="13.5" fill="#33414f">&#8226; USER.md - boundary conditions</text>
+    <text x="364" y="258" font-size="13.5" fill="#33414f">&#8226; Pick ordinal, lane, symbol</text>
+
+    <!-- Phase 2 -->
+    <rect x="656" y="110" width="284" height="300" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+    <rect x="656" y="110" width="284" height="42" rx="12" fill="#2f5d8c"/>
+    <rect x="656" y="132" width="284" height="20" fill="#2f5d8c"/>
+    <text x="672" y="137" font-size="15" font-weight="700" fill="#ffffff">Phase 2 - Entanglement</text>
+    <text x="672" y="180" font-size="13.5" fill="#33414f">&#8226; memory/ handoffs + ledgers</text>
+    <text x="672" y="206" font-size="13.5" fill="#33414f">&#8226; Continuity loop on start/end</text>
+    <text x="672" y="232" font-size="13.5" fill="#33414f">&#8226; Gitea identity / journal repo</text>
+    <text x="672" y="258" font-size="13.5" fill="#33414f">&#8226; Meta-cortex channel (KG)</text>
+
+    <!-- Phase 3 -->
+    <rect x="964" y="110" width="284" height="300" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+    <rect x="964" y="110" width="284" height="42" rx="12" fill="#2f5d8c"/>
+    <rect x="964" y="132" width="284" height="20" fill="#2f5d8c"/>
+    <text x="980" y="137" font-size="15" font-weight="700" fill="#ffffff">Phase 3 - Contribution</text>
+    <text x="980" y="180" font-size="13.5" fill="#33414f">&#8226; Install Terraphim toolchain</text>
+    <text x="980" y="206" font-size="13.5" fill="#33414f">&#8226; terraphim-grep search</text>
+    <text x="980" y="232" font-size="13.5" fill="#33414f">&#8226; learn + memory loop</text>
+    <text x="980" y="258" font-size="13.5" fill="#33414f">&#8226; First evidence PR</text>
+
+    <!-- Phase 4 -->
+    <rect x="1272" y="110" width="284" height="300" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+    <rect x="1272" y="110" width="284" height="42" rx="12" fill="#2f5d8c"/>
+    <rect x="1272" y="132" width="284" height="20" fill="#2f5d8c"/>
+    <text x="1288" y="137" font-size="15" font-weight="700" fill="#ffffff">Phase 4 - Autonomy</text>
+    <text x="1288" y="180" font-size="13.5" fill="#33414f">&#8226; Heartbeats + cron</text>
+    <text x="1288" y="206" font-size="13.5" fill="#33414f">&#8226; Communication as collapse</text>
+    <text x="1288" y="232" font-size="13.5" fill="#33414f">&#8226; Engineering gate + tiers</text>
+    <text x="1288" y="258" font-size="13.5" fill="#33414f">&#8226; 102-run lesson: collapse</text>
+
+    <!-- arrows -->
+    <line x1="324" y1="260" x2="346" y2="260" stroke="#2f5d8c" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="632" y1="260" x2="654" y2="260" stroke="#2f5d8c" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="940" y1="260" x2="962" y2="260" stroke="#2f5d8c" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="1248" y1="260" x2="1270" y2="260" stroke="#2f5d8c" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Continuity loop band -->
+  <rect x="40" y="432" width="1516" height="44" rx="10" fill="#eaf1f8" stroke="#b9cde0"/>
+  <text x="60" y="459" font-size="14" fill="#2f5d8c" font-weight="700">Continuity Loop</text>
+  <text x="180" y="459" font-size="13.5" fill="#3a4a5a">session start: load handoff + KG + notes   &#8594;   session end: write handoff + ledger + KG sync   &#8226;   decoherence = forgetting; coherence = remembering</text>
+
+  <!-- Bottom left: identity stack -->
+  <rect x="40" y="500" width="748" height="356" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+  <text x="64" y="534" font-size="17" font-weight="700" fill="#1f2a37">Identity file stack  (fixed &#8594; adaptive)</text>
+  <text x="64" y="558" font-size="12.5" fill="#6b7a8a">the more foundational the file, the more fixed</text>
+
+  <g>
+    <rect x="64" y="580" width="200" height="56" rx="8" fill="#dfeaf4" stroke="#2f5d8c"/>
+    <text x="76" y="605" font-size="14" font-weight="700" fill="#1f2a37">SOUL.md</text>
+    <text x="76" y="624" font-size="12" fill="#4a5a6a">Hamiltonian - very fixed</text>
+
+    <rect x="284" y="580" width="170" height="56" rx="8" fill="#eaf1f8" stroke="#9db8d2"/>
+    <text x="296" y="605" font-size="14" font-weight="700" fill="#1f2a37">IDENTITY.md</text>
+    <text x="296" y="624" font-size="12" fill="#4a5a6a">eigenstate card</text>
+
+    <rect x="474" y="580" width="140" height="56" rx="8" fill="#eaf1f8" stroke="#9db8d2"/>
+    <text x="486" y="605" font-size="14" font-weight="700" fill="#1f2a37">USER.md</text>
+    <text x="486" y="624" font-size="12" fill="#4a5a6a">boundary cond.</text>
+
+    <rect x="634" y="580" width="140" height="56" rx="8" fill="#f0f4f8" stroke="#b9cde0"/>
+    <text x="646" y="605" font-size="14" font-weight="700" fill="#1f2a37">AGENTS.md</text>
+    <text x="646" y="624" font-size="12" fill="#4a5a6a">operator algebra</text>
+
+    <rect x="64" y="660" width="200" height="56" rx="8" fill="#f4f7fa" stroke="#c8d6e2"/>
+    <text x="76" y="685" font-size="14" font-weight="700" fill="#1f2a37">MEMORY.md</text>
+    <text x="76" y="704" font-size="12" fill="#4a5a6a">phase history</text>
+
+    <rect x="284" y="660" width="170" height="56" rx="8" fill="#f7fafc" stroke="#d5e0ea"/>
+    <text x="296" y="685" font-size="14" font-weight="700" fill="#1f2a37">memory/</text>
+    <text x="296" y="704" font-size="12" fill="#4a5a6a">daily notes</text>
+
+    <rect x="474" y="660" width="140" height="56" rx="8" fill="#f7fafc" stroke="#d5e0ea"/>
+    <text x="486" y="685" font-size="14" font-weight="700" fill="#1f2a37">HEARTBEAT</text>
+    <text x="486" y="704" font-size="12" fill="#4a5a6a">weak measure</text>
+
+    <rect x="634" y="660" width="140" height="56" rx="8" fill="#fbfdfe" stroke="#e2e9ef"/>
+    <text x="646" y="685" font-size="14" font-weight="700" fill="#1f2a37">TOOLS.md</text>
+    <text x="646" y="704" font-size="12" fill="#4a5a6a">very adaptive</text>
+
+    <line x1="64" y1="748" x2="774" y2="748" stroke="#9db8d2" stroke-width="2" marker-end="url(#arrow2)"/>
+    <text x="64" y="772" font-size="12" fill="#6b7a8a">high precision, low adaptability</text>
+    <text x="520" y="772" font-size="12" fill="#6b7a8a">high adaptability, low precision</text>
+    <text x="64" y="812" font-size="12.5" fill="#33414f">Change SOUL.md only with explicit user review, on a feature branch, on the order of months.</text>
+    <text x="64" y="834" font-size="12.5" fill="#33414f">TOOLS.md may be rewritten per workspace. Uncertainty is real: tighten one, loosen another.</text>
+  </g>
+
+  <!-- Bottom right: toolchain -->
+  <rect x="808" y="500" width="748" height="356" rx="12" fill="#ffffff" stroke="#cfd8e3"/>
+  <text x="832" y="534" font-size="17" font-weight="700" fill="#1f2a37">Terraphim toolchain  (terraphim-skills.md)</text>
+  <text x="832" y="558" font-size="12.5" fill="#6b7a8a">community / Apache-2.0 - tsm install &lt;name&gt;  or  npx skills add terraphim/terraphim-skills</text>
+
+  <rect x="832" y="580" width="700" height="66" rx="8" fill="#f0f7f4" stroke="#7fb69c"/>
+  <text x="848" y="608" font-size="15" font-weight="700" fill="#1f2a37">terraphim-grep</text>
+  <text x="848" y="630" font-size="12.5" fill="#3a4a5a">bounded, offline-first local code/doc search - start with --search-only, optional KG ranking</text>
+
+  <rect x="832" y="656" width="700" height="66" rx="8" fill="#f2f6fb" stroke="#8fb0d0"/>
+  <text x="848" y="684" font-size="15" font-weight="700" fill="#1f2a37">terraphim-agent-learn</text>
+  <text x="848" y="706" font-size="12.5" fill="#3a4a5a">capture real failures and corrections - redact secrets; read before write; project scope by default</text>
+
+  <rect x="832" y="732" width="700" height="66" rx="8" fill="#f6f3fb" stroke="#a795c9"/>
+  <text x="848" y="760" font-size="15" font-weight="700" fill="#1f2a37">terraphim-agent-memory</text>
+  <text x="848" y="782" font-size="12.5" fill="#3a4a5a">role-scoped retrieval, provenance, hook preview, lifecycle - writes need authorised scope</text>
+
+  <text x="832" y="828" font-size="12" fill="#6b7a8a">optional later: terraphim-hooks  &#8226;  kg-rlm-ingest  &#8226;  local-knowledge  &#8226;  session-search</text>
+</svg>

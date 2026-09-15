@@ -10,6 +10,7 @@ EXPECTED_SKILLS = {
     "terraphim-grep": "terraphim-grep",
     "terraphim-agent-learn": "terraphim-agent learn",
     "terraphim-agent-memory": "terraphim-agent memory",
+    "terraphim-agent-onboarding": "terraphim-agent",
 }
 
 
@@ -26,7 +27,7 @@ def frontmatter(text: str) -> dict[str, str]:
 
 
 class PluginContractTests(unittest.TestCase):
-    def test_manifest_declares_exactly_three_skills(self) -> None:
+    def test_manifest_declares_expected_skills(self) -> None:
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
         self.assertEqual(manifest["license"], "Apache-2.0")
         self.assertEqual(
