@@ -1,6 +1,6 @@
 # Multi-marketplace distribution
 
-This repository is the canonical source for all hosts. Release `v0.2.1` contains
+This repository is the canonical source for all hosts. Release `v0.2.2` contains
 exactly three skills and deterministic AutoClaw archives.
 
 ## Availability model
@@ -17,7 +17,7 @@ exactly three skills and deterministic AutoClaw archives.
 
 Install the immutable release URL through Kimi Code's `/plugins install`, or
 open `/plugins marketplace` with
-`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.1/marketplaces/kimi.json`
+`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.2/marketplaces/kimi.json`
 and install
 `terraphim-skills-intro`. Run `/plugins reload` (or start a new session), then
 confirm that exactly the three documented skills appear. The native manifest is
@@ -27,7 +27,7 @@ Update by installing the newer tag; remove through Kimi's plugin manager.
 
 ## AutoClaw
 
-Download the three ZIP files and `SHA256SUMS` from the `v0.2.1` release. Verify
+Download the three ZIP files and `SHA256SUMS` from the `v0.2.2` release. Verify
 each digest, then use **Skills & Connectors → Skills → Create → Add skill file**.
 Import each ZIP separately. Restart AutoClaw and confirm the skills persist. Remove
 them through the same Skills screen. If Homebrew binaries are missing from the GUI
@@ -36,7 +36,7 @@ them through the same Skills screen. If Homebrew binaries are missing from the G
 ## ZCode
 
 Open ZCode's **Discover** view and add
-`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.1/marketplaces/zcode.json`
+`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.2/marketplaces/zcode.json`
 as a personal marketplace source, install `terraphim-skills-intro`, then confirm the Plugin
 Skills view shows exactly three skills. Curated discovery requires a separate
 pull request to `zai-org/zcode-plugins`; this repository does not claim that
@@ -54,7 +54,7 @@ hermes skills inspect terraphim/terraphim-cursor-plugin/skills/terraphim-agent-l
 hermes skills inspect terraphim/terraphim-cursor-plugin/skills/terraphim-agent-memory
 ```
 
-Record the immutable `v0.2.1` provenance. Remove the skills with Hermes' normal
+Record the immutable `v0.2.2` provenance. Remove the skills with Hermes' normal
 skill-management command.
 
 ## skills.sh
@@ -66,7 +66,7 @@ npx skills add terraphim/terraphim-cursor-plugin
 ```
 
 Set `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. Confirm exactly three
-skills are offered and that their files match tag `v0.2.1`. Update by repeating the
+skills are offered and that their files match tag `v0.2.2`. Update by repeating the
 command for the new tag; remove the installed skill directories through the target
 agent's documented skill manager.
 
