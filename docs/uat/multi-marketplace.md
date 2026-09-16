@@ -71,6 +71,7 @@ content as bundled.
 | Hermes Agent | Add the repository's `skills/` entries to the configured skills directory | Three discovered skills and UAT-1 through UAT-5 |
 | skills.sh | Install/discover from the public repository URL | Three discovered skills and UAT-1 through UAT-5 |
 | Claude Code | Add the local/publisher marketplace, then install `terraphim-skills-intro` | Strict plugin validation, installed listing, UAT-1 through UAT-5 |
+| Grok Build (xAI) | Install from the curated catalogue after submission approval | Full commit pin, generated component index, security checks, and UAT-1 through UAT-5 |
 
 Capture the host and version, plugin version, command transcript or screenshots,
 and the final pass/fail result. Redact local paths or memory content that is not

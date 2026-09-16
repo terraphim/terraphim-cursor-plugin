@@ -158,11 +158,19 @@ class DistributionTests(unittest.TestCase):
             "hermes",
             "skills.sh",
             "claude",
+            "grok",
         ):
             self.assertIn(host, readme)
             self.assertIn(host, uat)
         for probe in self.metadata["runtime"]["verify"]:
             self.assertIn(probe, (ROOT / "docs/install-dependencies.md").read_text())
+
+    def test_release_evidence_records_live_publication_and_submissions(self) -> None:
+        evidence = (ROOT / "docs/uat/evidence-v0.2.2.md").read_text()
+        self.assertIn("actions/runs/35069801681", evidence)
+        self.assertIn("releases/tag/v0.2.2", evidence)
+        self.assertIn("zai-org/zcode-plugins/pull/13", evidence)
+        self.assertIn("xai-org/plugin-marketplace/pull/730", evidence)
 
     def test_skills_hint_dependencies_without_installing_them(self) -> None:
         for name in GENERATOR.ALLOWED_SKILLS:

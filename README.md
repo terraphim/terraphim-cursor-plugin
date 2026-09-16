@@ -2,7 +2,7 @@
 
 Three small, open-source skills bring Terraphim's local code search, operational
 learning, and agent memory workflows to Cursor, Kimi Code, AutoClaw, ZCode,
-Hermes Agent, skills.sh, and Claude Code.
+Hermes Agent, skills.sh, Claude Code, and Grok Build.
 
 | Skill | Command family | Purpose |
 |---|---|---|
@@ -42,6 +42,7 @@ never install dependencies automatically.
 | Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the three skills. |
 | skills.sh | Run `npx skills add terraphim/terraphim-cursor-plugin`; use `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. |
 | Claude Code | Add the repository as a marketplace, then install the plugin as shown below. |
+| Grok Build | The [xAI marketplace submission](https://github.com/xai-org/plugin-marketplace/pull/730) pins the signed v0.2.2 commit and is awaiting maintainer review. |
 
 Claude Code commands:
 
