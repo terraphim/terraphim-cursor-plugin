@@ -10,6 +10,9 @@ exactly three skills and deterministic AutoClaw archives.
 - **Curated marketplace listing** is controlled by each marketplace maintainer and
   remains pending until that marketplace confirms indexing or approval.
 - Cursor is already submitted and is a regression target, not a new submission.
+- The Grok Build submission is open at
+  <https://github.com/xai-org/plugin-marketplace/pull/730> and pins the exact
+  signed `v0.2.2` commit; public listing remains under maintainer review.
 - AutoClaw local ZIP import is supported. ZhipuAI Skills Center inclusion is a
   separate external review; ClawHub is not treated as proof of that inclusion.
 
@@ -46,9 +49,9 @@ Open ZCode's **Discover** view and add
 `https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.2/marketplaces/zcode.json`
 as a personal marketplace source, install `terraphim-skills-intro`, then confirm the Plugin
 Skills view shows exactly three skills. Curated discovery requires a separate
-pull request to `zai-org/zcode-plugins`; this repository does not claim that
-acceptance before the maintainers merge it. Update or remove the installed
-plugin through ZCode's plugin manager.
+[pull request to `zai-org/zcode-plugins`](https://github.com/zai-org/zcode-plugins/pull/13);
+this repository does not claim acceptance before the maintainers merge it.
+Update or remove the installed plugin through ZCode's plugin manager.
 
 ## Hermes Agent
 
@@ -76,6 +79,14 @@ Set `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. Confirm exactly thr
 skills are offered and that their files match tag `v0.2.2`. Update by repeating the
 command for the new tag; remove the installed skill directories through the target
 agent's documented skill manager.
+
+## Grok Build (xAI)
+
+The [xAI marketplace submission](https://github.com/xai-org/plugin-marketplace/pull/730)
+uses a full commit SHA for the signed `v0.2.2` source. Its catalogue validation,
+component-index generation, Socket security checks, and Semgrep scan pass. The
+listing becomes generally available only after xAI maintainers merge the pull
+request.
 
 ## Claude Code
 
