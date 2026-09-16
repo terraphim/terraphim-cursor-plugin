@@ -71,9 +71,13 @@ control.
   desktop UAT.
 - **ZCode:** the official validator accepts 22 plugins including Terraphim and
   `build_dist.py` creates an integrity-tested v0.2.2 package containing the
-  canonical Apache-2.0 `LICENSE` and `NOTICE`. Submission
-  [PR #13](https://github.com/zai-org/zcode-plugins/pull/13) is open; its Actions
-  require maintainer approval and real GUI UAT remains transparently outstanding.
+  canonical Apache-2.0 `LICENSE` and `NOTICE`. In an isolated ZCode 0.15.2
+  profile, the app-server added the public GitHub repository as a marketplace,
+  discovered `terraphim-skills-intro` v0.2.2, installed it enabled at user scope,
+  validated the plugin with no diagnostics, and described exactly the three
+  intended skills. Submission [PR #13](https://github.com/zai-org/zcode-plugins/pull/13)
+  is open; its Actions require maintainer approval and real GUI UAT remains
+  transparently outstanding.
 - **Grok Build (xAI):** submission
   [PR #730](https://github.com/xai-org/plugin-marketplace/pull/730) pins the exact
   v0.2.2 commit. Catalogue validation and component-index checks pass when
