@@ -3,7 +3,7 @@
   "plugin": {
     "name": "terraphim-skills-intro",
     "display_name": "Terraphim Skills Introduction",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
     "description_zh_cn": "使用 Terraphim 命令行工具搜索代码、记录经验并检索记忆。",
     "author_name": "Terraphim AI",
@@ -24,7 +24,7 @@
   },
   "runtime": {
     "tap": "terraphim/terraphim",
-    "release": "https://github.com/terraphim/terraphim-clients/releases/tag/v1.21.14",
+    "release": "https://terraphim-skills.md/docs/non-technical/",
     "formulae": [
       "terraphim-grep",
       "terraphim-agent"

@@ -27,9 +27,10 @@ terraphim-agent memory --help
 ```
 
 The formulae install the signed, checksummed Terraphim Clients v1.21.14 release.
-See [dependency installation](docs/install-dependencies.md) for updates, removal,
-non-Homebrew installation, signature checks, and PATH troubleshooting. The skills
-never install dependencies automatically.
+See the [non-technical installation guide](https://terraphim-skills.md/docs/non-technical/)
+or the repository's [dependency installation](docs/install-dependencies.md) for
+updates, removal, non-Homebrew installation, signature checks, and PATH
+troubleshooting. The skills never install dependencies automatically.
 
 ## Install in your agent
 
@@ -42,7 +43,7 @@ never install dependencies automatically.
 | Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the three skills. |
 | skills.sh | Run `npx skills add terraphim/terraphim-cursor-plugin`; use `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. |
 | Claude Code | Add the repository as a marketplace, then install the plugin as shown below. |
-| Grok Build | The [xAI marketplace submission](https://github.com/xai-org/plugin-marketplace/pull/730) pins the signed v0.2.2 commit and is awaiting maintainer review. |
+| Grok Build | The marketplace submission pins the signed public release and is awaiting maintainer review; see the [distribution guide](docs/distribution.md) for status. |
 
 Claude Code commands:
 
@@ -89,6 +90,14 @@ Browse the [Community, Core, and Premium catalogue](https://terraphim-skills.md/
 The public introduction contains no proprietary instructions or entitlement token.
 Following a related-skill link never creates a checkout or transaction. Access and
 purchase decisions remain on Terraphim's authenticated site and MCP services.
+
+For guided setup, see the [non-technical installation guide](https://terraphim-skills.md/docs/non-technical/).
+For agent integration, see the [MCP guide](https://terraphim-skills.md/docs/mcp/).
+Read the [privacy policy](https://terraphim-skills.md/legal/privacy/) and
+[terms of service](https://terraphim-skills.md/legal/terms/). The engineering
+approach is explained in the canonical
+[Disciplined Engineering for AI Systems](https://terraphim.ai/posts/disciplined-engineering-ai-systems/)
+article.
 
 ## Development
 

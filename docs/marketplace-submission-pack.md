@@ -14,7 +14,10 @@ canonical source.
 - **Licence:** Apache-2.0
 - **Homepage:** <https://terraphim-skills.md/>
 - **Public catalogue:** <https://terraphim-skills.md/skills/>
-- **Repository:** <https://github.com/terraphim/terraphim-cursor-plugin>
+- **Installation guide:** <https://terraphim-skills.md/docs/non-technical/>
+- **MCP guide:** <https://terraphim-skills.md/docs/mcp/>
+- **Privacy policy:** <https://terraphim-skills.md/legal/privacy/>
+- **Terms of service:** <https://terraphim-skills.md/legal/terms/>
 
 ### Tagline
 
@@ -98,7 +101,7 @@ The repository includes Terraphim-owned V-model artwork in both formats:
 | Hermes Agent | `skills/*/SKILL.md` | Repository/local skills directory |
 | skills.sh | `skills/*/SKILL.md` | Repository URL discovery/install |
 | Claude Code | `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` | Direct install and publisher-owned marketplace |
-| Grok Build (xAI) | `.grok-plugin/marketplace.json` entry in xAI's catalogue | [Submission PR #730](https://github.com/xai-org/plugin-marketplace/pull/730), pinned to the signed v0.2.2 commit |
+| Grok Build (xAI) | `.grok-plugin/marketplace.json` entry in xAI's catalogue | Submission pending maintainer review; see [distribution status](distribution.md) |
 
 An artefact being present does not imply that a third-party catalogue has
 accepted or featured the plugin. Record curated acceptance only after the host

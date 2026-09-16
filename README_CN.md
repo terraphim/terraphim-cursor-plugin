@@ -25,8 +25,8 @@ terraphim-agent learn --help
 terraphim-agent memory --help
 ```
 
-技能不会自动安装软件。没有 Homebrew 时，请从
-[Terraphim Clients v1.21.14](https://github.com/terraphim/terraphim-clients/releases/tag/v1.21.14)
+技能不会自动安装软件。没有 Homebrew 时，请按照
+[Terraphim 安装指南](https://terraphim-skills.md/docs/non-technical/)
 下载适合平台的文件，并用 `SHA256SUMS` 验证。
 
 ## 安装与使用

@@ -41,8 +41,8 @@ locations before deleting user-created state.
 
 ## Without Homebrew
 
-Download the correct archive and `SHA256SUMS` from the
-[v1.21.14 release](https://github.com/terraphim/terraphim-clients/releases/tag/v1.21.14).
+Follow the [Terraphim installation guide](https://terraphim-skills.md/docs/non-technical/)
+to download the correct archive and `SHA256SUMS`.
 Verify the archive checksum before extracting it. macOS archives are signed and
 notarized; do not bypass Gatekeeper. Linux archives are signed through the release
 checksum and signature chain.
