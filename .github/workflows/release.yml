@@ -64,6 +64,17 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Re-verify immutable release tag
+        run: |
+          release_ref="refs/release-tags/$GITHUB_REF_NAME"
+          git fetch --no-tags --force origin \
+            "refs/tags/$GITHUB_REF_NAME:$release_ref"
+          test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"
+          git config gpg.format ssh
+          git config gpg.ssh.allowedSignersFile \
+            "$GITHUB_WORKSPACE/.github/trusted-release-signers"
+          git verify-tag "$release_ref"
+
       - name: Publish immutable release assets
         env:
           GH_TOKEN: ${{ github.token }}

@@ -138,7 +138,12 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("fetch-depth: 0", workflow)
         self.assertIn('release_ref="refs/release-tags/$GITHUB_REF_NAME"', workflow)
         self.assertIn('"refs/tags/$GITHUB_REF_NAME:$release_ref"', workflow)
+        self.assertIn(
+            'test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"',
+            workflow,
+        )
         self.assertIn('git verify-tag "$release_ref"', workflow)
+        self.assertEqual(2, workflow.count('git verify-tag "$release_ref"'))
 
     def test_docs_cover_hosts_and_dependency_probes(self) -> None:
         readme = (ROOT / "README.md").read_text().lower()

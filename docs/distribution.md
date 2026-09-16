@@ -13,6 +13,13 @@ exactly three skills and deterministic AutoClaw archives.
 - AutoClaw local ZIP import is supported. ZhipuAI Skills Center inclusion is a
   separate external review; ClawHub is not treated as proof of that inclusion.
 
+## Release integrity
+
+Release tags match `v*`, are SSH-signed by a checked-in trusted signer, and are
+verified against the exact GitHub event commit before assets are published. The
+repository's active tag ruleset must restrict updates and deletions for `v*` so
+the tag cannot move between verification and release publication.
+
 ## Kimi Code
 
 Install the immutable release URL through Kimi Code's `/plugins install`, or
