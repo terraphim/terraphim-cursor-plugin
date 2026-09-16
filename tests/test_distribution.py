@@ -138,9 +138,11 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("fetch-depth: 0", workflow)
         self.assertIn('release_ref="refs/release-tags/$GITHUB_REF_NAME"', workflow)
         self.assertIn('"refs/tags/$GITHUB_REF_NAME:$release_ref"', workflow)
-        self.assertIn(
-            'test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"',
-            workflow,
+        self.assertEqual(
+            2,
+            workflow.count(
+                'test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"'
+            ),
         )
         self.assertIn('git verify-tag "$release_ref"', workflow)
         self.assertEqual(2, workflow.count('git verify-tag "$release_ref"'))
