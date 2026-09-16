@@ -29,10 +29,17 @@ jobs:
         run: |
           expected_tag="v$(python3 scripts/generate_distribution.py --print-version)"
           test "$GITHUB_REF_NAME" = "$expected_tag"
+          # actions/checkout can leave the event tag name pointing at the
+          # peeled commit. Fetch the remote annotated tag into a private ref so
+          # signature verification always targets the tag object itself.
+          release_ref="refs/release-tags/$GITHUB_REF_NAME"
+          git fetch --no-tags --force origin \
+            "refs/tags/$GITHUB_REF_NAME:$release_ref"
+          test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"
           git config gpg.format ssh
           git config gpg.ssh.allowedSignersFile \
             "$GITHUB_WORKSPACE/.github/trusted-release-signers"
-          git verify-tag "$GITHUB_REF_NAME"
+          git verify-tag "$release_ref"
           python3 scripts/generate_distribution.py --check
           python3 -m unittest discover -s tests -p 'test_*.py'
 
@@ -56,6 +63,17 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+
+      - name: Re-verify immutable release tag
+        run: |
+          release_ref="refs/release-tags/$GITHUB_REF_NAME"
+          git fetch --no-tags --force origin \
+            "refs/tags/$GITHUB_REF_NAME:$release_ref"
+          test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"
+          git config gpg.format ssh
+          git config gpg.ssh.allowedSignersFile \
+            "$GITHUB_WORKSPACE/.github/trusted-release-signers"
+          git verify-tag "$release_ref"
 
       - name: Publish immutable release assets
         env:

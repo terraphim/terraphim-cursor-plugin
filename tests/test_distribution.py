@@ -31,11 +31,11 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(GENERATOR.ALLOWED_SKILLS, names)
 
     def test_print_version_matches_manifests(self) -> None:
-        self.assertEqual("0.2.1", self.metadata["plugin"]["version"])
+        self.assertEqual("0.2.2", self.metadata["plugin"]["version"])
         output = io.StringIO()
         with redirect_stdout(output):
             self.assertEqual(0, GENERATOR.main(["--print-version"]))
-        self.assertEqual("0.2.1\n", output.getvalue())
+        self.assertEqual("0.2.2\n", output.getvalue())
 
     def test_generated_manifests_are_current_and_deterministic(self) -> None:
         expected = GENERATOR.generated_files(ROOT, self.metadata)
@@ -93,7 +93,7 @@ class DistributionTests(unittest.TestCase):
         entry = marketplace["plugins"][0]
         self.assertEqual("terraphim-skills-intro", entry["name"])
         self.assertEqual("developer-tools", entry["category"])
-        self.assertEqual("v0.2.1", entry["source"]["ref"])
+        self.assertEqual("v0.2.2", entry["source"]["ref"])
         self.assertTrue(entry["strict"])
         self.assertEqual({"en", "zh-CN"}, set(entry["description_i18n"]))
         manifest = json.loads((ROOT / ".zcode-plugin/plugin.json").read_text())
@@ -136,7 +136,16 @@ class DistributionTests(unittest.TestCase):
     def test_release_checkout_fetches_annotated_tag_object(self) -> None:
         workflow = (ROOT / ".github/workflows/release.yml").read_text()
         self.assertIn("fetch-depth: 0", workflow)
-        self.assertIn('git verify-tag "$GITHUB_REF_NAME"', workflow)
+        self.assertIn('release_ref="refs/release-tags/$GITHUB_REF_NAME"', workflow)
+        self.assertIn('"refs/tags/$GITHUB_REF_NAME:$release_ref"', workflow)
+        self.assertEqual(
+            2,
+            workflow.count(
+                'test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"'
+            ),
+        )
+        self.assertIn('git verify-tag "$release_ref"', workflow)
+        self.assertEqual(2, workflow.count('git verify-tag "$release_ref"'))
 
     def test_docs_cover_hosts_and_dependency_probes(self) -> None:
         readme = (ROOT / "README.md").read_text().lower()
