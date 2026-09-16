@@ -31,11 +31,11 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(GENERATOR.ALLOWED_SKILLS, names)
 
     def test_print_version_matches_manifests(self) -> None:
-        self.assertEqual("0.2.2", self.metadata["plugin"]["version"])
+        self.assertEqual("0.2.3", self.metadata["plugin"]["version"])
         output = io.StringIO()
         with redirect_stdout(output):
             self.assertEqual(0, GENERATOR.main(["--print-version"]))
-        self.assertEqual("0.2.2\n", output.getvalue())
+        self.assertEqual("0.2.3\n", output.getvalue())
 
     def test_generated_manifests_are_current_and_deterministic(self) -> None:
         expected = GENERATOR.generated_files(ROOT, self.metadata)
@@ -93,7 +93,7 @@ class DistributionTests(unittest.TestCase):
         entry = marketplace["plugins"][0]
         self.assertEqual("terraphim-skills-intro", entry["name"])
         self.assertEqual("developer-tools", entry["category"])
-        self.assertEqual("v0.2.2", entry["source"]["ref"])
+        self.assertEqual("v0.2.3", entry["source"]["ref"])
         self.assertTrue(entry["strict"])
         self.assertEqual({"en", "zh-CN"}, set(entry["description_i18n"]))
         manifest = json.loads((ROOT / ".zcode-plugin/plugin.json").read_text())
@@ -200,6 +200,27 @@ class DistributionTests(unittest.TestCase):
             text = (ROOT / "skills" / name / "SKILL.md").read_text().lower()
             self.assertIn("https://terraphim-skills.md/skills/", text)
             self.assertIn("never starts checkout or changes", text)
+
+    def test_end_user_collateral_links_only_to_terraphim_sites(self) -> None:
+        link_pattern = re.compile(r"https://([^/)>]+)[^)>]*")
+        collateral = [
+            ROOT / "README.md",
+            ROOT / "README_CN.md",
+            ROOT / "docs" / "install-dependencies.md",
+            ROOT / "docs" / "marketplace-submission-pack.md",
+            *(ROOT / "skills" / name / "SKILL.md" for name in GENERATOR.ALLOWED_SKILLS),
+        ]
+        allowed = {"terraphim-skills.md", "terraphim.ai"}
+        for path in collateral:
+            hosts = set(link_pattern.findall(path.read_text(encoding="utf-8")))
+            self.assertLessEqual(hosts, allowed, (path, hosts - allowed))
+
+    def test_canonical_legal_links_are_published(self) -> None:
+        for name in ("README.md", "README_CN.md"):
+            text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertIn("https://terraphim-skills.md/legal/privacy/", text)
+            self.assertIn("https://terraphim-skills.md/legal/terms/", text)
+            self.assertNotIn("https://terraphim-skills.md/privacy/", text)
 
     def test_chinese_readme_matches_public_boundary(self) -> None:
         text = (ROOT / "README_CN.md").read_text()

@@ -1,6 +1,6 @@
 # Multi-marketplace distribution
 
-This repository is the canonical source for all hosts. Release `v0.2.2` contains
+This repository is the canonical source for all hosts. Release `v0.2.3` contains
 exactly three skills and deterministic AutoClaw archives.
 
 ## Availability model
@@ -12,7 +12,7 @@ exactly three skills and deterministic AutoClaw archives.
 - Cursor is already submitted and is a regression target, not a new submission.
 - The Grok Build submission is open at
   <https://github.com/xai-org/plugin-marketplace/pull/730> and pins the exact
-  signed `v0.2.2` commit; public listing remains under maintainer review.
+  signed release commit; public listing remains under maintainer review.
 - AutoClaw local ZIP import is supported. ZhipuAI Skills Center inclusion is a
   separate external review; ClawHub is not treated as proof of that inclusion.
 
@@ -27,7 +27,7 @@ the tag cannot move between verification and release publication.
 
 Install the immutable release URL through Kimi Code's `/plugins install`, or
 open `/plugins marketplace` with
-`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.2/marketplaces/kimi.json`
+`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.3/marketplaces/kimi.json`
 and install
 `terraphim-skills-intro`. Run `/plugins reload` (or start a new session), then
 confirm that exactly the three documented skills appear. The native manifest is
@@ -37,7 +37,7 @@ Update by installing the newer tag; remove through Kimi's plugin manager.
 
 ## AutoClaw
 
-Download the three ZIP files and `SHA256SUMS` from the `v0.2.2` release. Verify
+Download the three ZIP files and `SHA256SUMS` from the `v0.2.3` release. Verify
 each digest, then use **Skills & Connectors → Skills → Create → Add skill file**.
 Import each ZIP separately. Restart AutoClaw and confirm the skills persist. Remove
 them through the same Skills screen. If Homebrew binaries are missing from the GUI
@@ -46,7 +46,7 @@ them through the same Skills screen. If Homebrew binaries are missing from the G
 ## ZCode
 
 Open ZCode's **Discover** view and add
-`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.2/marketplaces/zcode.json`
+`https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.3/marketplaces/zcode.json`
 as a personal marketplace source, install `terraphim-skills-intro`, then confirm the Plugin
 Skills view shows exactly three skills. Curated discovery requires a separate
 [pull request to `zai-org/zcode-plugins`](https://github.com/zai-org/zcode-plugins/pull/13);
@@ -64,7 +64,7 @@ hermes skills inspect terraphim/terraphim-cursor-plugin/skills/terraphim-agent-l
 hermes skills inspect terraphim/terraphim-cursor-plugin/skills/terraphim-agent-memory
 ```
 
-Record the immutable `v0.2.2` provenance. Remove the skills with Hermes' normal
+Record the immutable `v0.2.3` provenance. Remove the skills with Hermes' normal
 skill-management command.
 
 ## skills.sh
@@ -76,14 +76,14 @@ npx skills add terraphim/terraphim-cursor-plugin
 ```
 
 Set `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. Confirm exactly three
-skills are offered and that their files match tag `v0.2.2`. Update by repeating the
+skills are offered and that their files match tag `v0.2.3`. Update by repeating the
 command for the new tag; remove the installed skill directories through the target
 agent's documented skill manager.
 
 ## Grok Build (xAI)
 
 The [xAI marketplace submission](https://github.com/xai-org/plugin-marketplace/pull/730)
-uses a full commit SHA for the signed `v0.2.2` source. Its catalogue validation,
+uses a full commit SHA for the signed release source. Its catalogue validation,
 and component-index checks pass when reproduced locally against the submitted
 head. GitHub-hosted Actions await maintainer approval; the hosted Socket security
 and Semgrep checks are green. The listing becomes generally available only after
