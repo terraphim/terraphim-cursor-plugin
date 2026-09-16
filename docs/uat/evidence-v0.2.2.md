@@ -76,8 +76,10 @@ control.
   require maintainer approval and real GUI UAT remains transparently outstanding.
 - **Grok Build (xAI):** submission
   [PR #730](https://github.com/xai-org/plugin-marketplace/pull/730) pins the exact
-  v0.2.2 commit. Catalogue validation and component-index checks pass, as do
-  Socket security and Semgrep scans. Maintainer merge remains external.
+  v0.2.2 commit. Catalogue validation and component-index checks pass when
+  reproduced locally against the submitted head. GitHub-hosted Actions await
+  maintainer approval; the hosted Socket security and Semgrep checks are green.
+  Maintainer merge remains external.
 
 The package contains Community skill instructions only. Curated marketplace
 acceptance remains a third-party decision and is never inferred from direct

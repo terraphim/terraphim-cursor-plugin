@@ -84,9 +84,10 @@ agent's documented skill manager.
 
 The [xAI marketplace submission](https://github.com/xai-org/plugin-marketplace/pull/730)
 uses a full commit SHA for the signed `v0.2.2` source. Its catalogue validation,
-component-index generation, Socket security checks, and Semgrep scan pass. The
-listing becomes generally available only after xAI maintainers merge the pull
-request.
+and component-index checks pass when reproduced locally against the submitted
+head. GitHub-hosted Actions await maintainer approval; the hosted Socket security
+and Semgrep checks are green. The listing becomes generally available only after
+xAI maintainers merge the pull request.
 
 ## Claude Code
 
