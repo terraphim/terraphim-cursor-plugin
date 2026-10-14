@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewed-source-candidate-not-published",
+  "publisherKey": "261c6820525270bfe2a5daaa5bf3f581bd9bc193e1a0148010e870a3a63ad959",
+  "importerCommit": "e042daafcab97ffa487ce8c7d6e090fc64457e4f",
+  "skills": {
+    "terraphim-grep": {
+      "sourceRepository": "https://github.com/terraphim/terraphim-cursor-plugin",
+      "sourceCommit": "391c7e4ebc103f1770b9dca589fcce7ccd211d5f",
+      "sourceRelease": "v0.2.4",
+      "releaseStatus": "released",
+      "version": "1.0.3",
+      "sourceFiles": {
+        "SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0"
+      },
+      "sourceBlake3": {
+        "SKILL.md": "4bf3d3721c831953a99cfd7301e76182a392408c6f77529e042aae326921ebc1",
+        "references/command-guide.md": "95548ee723a3dd508c0f5b45b8c47fcc4f84259921931f1690c1128343a53bd6",
+        "references/risk-concern.knowledge-graph.json": "83f089bacf0236cd3127a2d27272ef4fa39f72b56a83a4134e2c6909a666f153",
+        "references/workflows.md": "2b4a2146de020ccc210478c26c91be8a83d483aa9c182acd72cf7dd813648a39"
+      },
+      "licenseFiles": {
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
+      },
+      "import": {
+        "files": {
+          "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+          "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+          "SKILL.md": "dd2f32d2a627014b66e74f9610643b8138fd64fddfb55f3319472c2a28a12746",
+          "local.patch": "63e7b71eca61b6b512cb5cf657dab80f934f39e1f3c3650b324dfdb3505a8fb9",
+          "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
+          "references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+          "references/kilo-provenance.json": "981c217219b3afa0d79ab523551af19b4e3a45ac4c4e44184de9a9e47e20b94a",
+          "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+          "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+        },
+        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
+      }
+    },
+    "terraphim-agent-memory": {
+      "sourceRepository": "https://github.com/terraphim/terraphim-cursor-plugin",
+      "sourceCommit": "391c7e4ebc103f1770b9dca589fcce7ccd211d5f",
+      "sourceRelease": "v0.2.4",
+      "releaseStatus": "released",
+      "version": "1.0.3",
+      "sourceFiles": {
+        "SKILL.md": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e",
+        "references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+        "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skill.toml": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11"
+      },
+      "sourceBlake3": {
+        "SKILL.md": "dbd32a2646ec4a015b993e536d1f78cab6128e767a3eafe45167c29721c468f8",
+        "references/command-guide.md": "6bc5848a2bb8e8ff8d68dd080d4b00ea9b7770010cd8f0debe424e8a7e609121",
+        "references/risk-concern.knowledge-graph.json": "83f089bacf0236cd3127a2d27272ef4fa39f72b56a83a4134e2c6909a666f153",
+        "references/workflows.md": "2b4a2146de020ccc210478c26c91be8a83d483aa9c182acd72cf7dd813648a39"
+      },
+      "licenseFiles": {
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
+      },
+      "import": {
+        "files": {
+          "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+          "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+          "SKILL.md": "bd5eb837483548e4666ea9569d76473c7f0c6e8f04da2a7e1a645797f0ab7ede",
+          "local.patch": "dcec9ed1531b42296b742af28dfaae647095c837d76a310990b4fb95f09b0b67",
+          "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
+          "references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+          "references/kilo-provenance.json": "998efcf5b2c66b6ce31c44cc35e06a955a2f21bbd0a6f5d1144b6c5f70efc734",
+          "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+          "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+        },
+        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
+      }
+    },
+    "terraphim-agent-learn": {
+      "sourceRepository": "https://github.com/terraphim/terraphim-cursor-plugin",
+      "sourceCommit": "391c7e4ebc103f1770b9dca589fcce7ccd211d5f",
+      "sourceRelease": "v0.2.4",
+      "releaseStatus": "released",
+      "version": "1.0.3",
+      "sourceFiles": {
+        "SKILL.md": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec",
+        "references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+        "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skill.toml": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76"
+      },
+      "sourceBlake3": {
+        "SKILL.md": "80e6f3bbdbc022bfff4702195000ae6fdc19781659118d992f0970b893c4cd5f",
+        "references/command-guide.md": "966ce206965be67335afcdfea8e8eea5cdd945f8c7927b2072d27bd3d39b79a9",
+        "references/risk-concern.knowledge-graph.json": "83f089bacf0236cd3127a2d27272ef4fa39f72b56a83a4134e2c6909a666f153",
+        "references/workflows.md": "2b4a2146de020ccc210478c26c91be8a83d483aa9c182acd72cf7dd813648a39"
+      },
+      "licenseFiles": {
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
+      },
+      "import": {
+        "files": {
+          "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+          "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+          "SKILL.md": "cc798f22c6e3901b8ef41bb20f08eef13dea09f7352a2509c239ba4a89d5c643",
+          "local.patch": "0d548dd3a28ae3d6e3fc942b7c2adace5ac74678843c39e4480dd95ed0a8c4e7",
+          "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
+          "references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+          "references/kilo-provenance.json": "e00f7514f577e7f8627bd1a7daae6d58bd4bbe72d350a94663533475596a9ab6",
+          "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+          "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+        },
+        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
+      }
+    },
+    "terraphim-editor": {
+      "sourceRepository": "https://github.com/terraphim/terraphim-cursor-plugin",
+      "sourceCommit": "afe8fc95edb71af30321b8538dbca2d84743a6c2",
+      "sourceRelease": "v0.2.5",
+      "releaseStatus": "candidate",
+      "version": "1.0.0",
+      "sourceFiles": {
+        "SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
+        "references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+        "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skill.toml": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28"
+      },
+      "sourceBlake3": {
+        "SKILL.md": "3ff643bbdac98d8f89c69194ac8ea51e640fbb8d39d5a227f93257dfc4b0af88",
+        "references/command-guide.md": "94655506c5e2abbdcd9b2c58e2fbe3598d0842438dbad133af0c6ee3e2b055d2",
+        "references/risk-concern.knowledge-graph.json": "83f089bacf0236cd3127a2d27272ef4fa39f72b56a83a4134e2c6909a666f153",
+        "references/workflows.md": "2b4a2146de020ccc210478c26c91be8a83d483aa9c182acd72cf7dd813648a39"
+      },
+      "licenseFiles": {
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
+      },
+      "import": null
+    }
+  },
+  "importerStatus": "reviewed-local-fix-not-yet-published",
+  "importerBase": "ff51758b06b8249007116184096765d47bdb7505"
+}
