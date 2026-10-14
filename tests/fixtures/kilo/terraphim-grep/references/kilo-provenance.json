@@ -36,7 +36,17 @@
     "upstream text whitespace normalization",
     "root LICENSE via metadata.source.license_path",
     "root skill.toml removed via local.remove",
-    "NOTICE, provenance and explanation added via local.patch"
+    "NOTICE, provenance and explanation added via local.patch",
+    "exact CLI archive wording correction recorded in wordingCorrections"
   ],
-  "signatureScope": "The original signature verifies the immutable source skill, not this transformed Kilo copy."
+  "signatureScope": "The original signature verifies the immutable source skill, not this transformed Kilo copy.",
+  "wordingCorrections": [
+    {
+      "sourceVersion": "1.0.3",
+      "sourceCommit": "391c7e4ebc103f1770b9dca589fcce7ccd211d5f",
+      "oldText": "For signed,\nchecksummed release archives",
+      "newText": "For checksummed release archives",
+      "reason": "The verified skill signature does not authenticate separate CLI archives; only CLI release checksums were verified."
+    }
+  ]
 }

@@ -146,3 +146,14 @@ Kilo archive provenance. The existing remote Skills service, released Continue
 grep transport and Rust KG MCP are distinct optional integrations. Actual Kilo
 installation, OAuth/provider methods and catalog admission remain unqualified
 until their individual output checks pass. No current Kilo listing is claimed.
+
+### Skill signatures and CLI download checksums
+
+The TSM signature verifies the original signed skill files. It does not authenticate
+separately installed `terraphim-grep` or `terraphim-agent` binaries. The Clients
+v1.21.20 download evidence establishes checksums; no archive-signature claim is
+made here. The Kilo imports of grep, memory and learn 1.0.3 correct the inherited
+phrase “signed, checksummed release archives” to “checksummed release archives”.
+Their provenance records the exact old/new text and source version/commit, and
+the verifier permits only that reviewed correction. Original signed source files
+and existing release assets remain unchanged.
