@@ -16,8 +16,11 @@ terraphim-agent learn --help
 terraphim-agent memory --help
 ```
 
-The formulae use immutable, signed and checksummed v1.21.14 archives. If both
-binaries already pass the four probes, do not reinstall them.
+The formula versions can differ from the releases used in individual examples.
+The [graph search and authored-memory workflow](cli-workflows.md) was checked
+with Terraphim Clients 1.21.20 and links to its release archives and checksums.
+Check the installed versions and help before running its commands. If the existing
+binaries support the workflow you need, do not reinstall them.
 
 ## Update
 

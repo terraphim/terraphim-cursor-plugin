@@ -3,6 +3,21 @@
 This repository is the canonical source for all hosts. Release `v0.2.3` contains
 exactly three skills and deterministic AutoClaw archives.
 
+## CLI workflows to include in every listing
+
+Each marketplace description should link to [the checked grep and agent
+examples](cli-workflows.md) and name both separate dependencies:
+`terraphim-grep` searches the editor-exported Risk/Concern synonym graph;
+`terraphim-agent` captures explicit lesson text and reads back its actual memory
+ID. The guide supplies a small exported graph, baseline and graph-enabled
+commands, and a capture/show pair tested with Clients 1.21.20.
+
+Link to the [synonym-search tutorial](https://terraphim.ai/how-tos/synonym-search/)
+and [agent memory tutorial](https://terraphim.ai/posts/cold-start-tax-agentic-memory/).
+Show the graph output and saved memory result as distinct artifacts; the graph
+export does not configure the agent's memory store. Skills remain instruction
+wrappers, and curated availability does not establish native host qualification.
+
 ## Availability model
 
 - **Direct/custom install** is controlled by the user and available from the
