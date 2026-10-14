@@ -1,85 +1,97 @@
 ---
 name: terraphim-agent-learn
-description: Inspect and capture command failures or user corrections with terraphim-agent learn. Use when a user asks to preserve a concrete operational lesson, search earlier failures, or attach a correction; use terraphim-agent-memory for broader memory retrieval and lifecycle work.
+description: Inspect and capture command failures or user corrections with terraphim-agent learn. Use when a user asks to preserve a concrete operational lesson, search earlier failures, or attach a correction; use terraphim-agent-memory for authored memory capture and retrieval.
 license: Apache-2.0
 ---
 
 # Terraphim Agent Learn
 
-Use `terraphim-agent learn` for concrete operational learning: failed commands, their errors, explicit corrections, and reviewed procedures. Default to project scope and read-only inspection.
+Use real failed commands, observed errors and verified corrections. Start with
+read-only inspection and establish the actual learning store before writing.
 
-## Install the dependency
+## Install and check the dependency
 
 On macOS or Linux with Homebrew:
 
-```bash
+```sh
 brew tap terraphim/terraphim
 brew install terraphim-agent
-terraphim-agent --version
-```
-
-The tap installs the signed, checksummed v1.21.14 archive from the Terraphim
-client release. If Homebrew is unavailable, use the appropriate archive from
-the [Terraphim installation guide](https://terraphim-skills.md/docs/non-technical/)
-and verify it against that release's `SHA256SUMS` before installation.
-
-## Capability gate
-
-```bash
-command -v terraphim-agent
 terraphim-agent --version
 terraphim-agent learn --help
 ```
 
-Inspect the selected subcommand's `--help` before a write or replay. The installed binary is authoritative.
+The examples target released **Clients 1.21.20**. Homebrew may install a different
+version; inspect the installed help before using a command. For signed,
+checksummed release archives, follow the
+[installation guide](https://terraphim-skills.md/docs/non-technical/).
+The skill does not install software automatically.
 
-## Read before writing
+## Establish the actual scope
 
-Start with a bounded project-scoped inspection:
+A Git repository alone does not select project storage. In Clients 1.21.20, an
+existing project `.terraphim` directory selects project learning; without it the
+command can fall back to the global store. Inspect the returned scope/path.
+Use `--global` only for deliberately global work. If project storage is wanted,
+create its `.terraphim` directory only within the user-authorized project setup.
+Do not overwrite an existing directory or configuration.
 
-```bash
+```sh
 terraphim-agent learn list --recent 10
 terraphim-agent learn query "cargo build"
 ```
 
-Use `--exact` when identifiers must match literally. Use `--semantic` only when the project has a suitable knowledge graph. Use `--global` only when the user explicitly asks to search or modify global learning state.
+Use `--exact` for a literal identifier. Use `--semantic` only with a suitable
+configured knowledge graph. Bound results and inspect returned IDs and paths.
 
-## Capture a failed command
+## Capture and correct a real failure
 
-Capture only a real, observed failure. Redact tokens, credentials, personal data, customer data, and sensitive paths from both the command and error before storing them.
+Capture only a command that actually failed. Redact credentials, personal data,
+customer data and sensitive paths before persistent storage.
 
-```bash
-terraphim-agent learn capture --error "<redacted error>" --exit-code 1 "<redacted failed command>"
-```
-
-Record the smallest useful error. Do not store full logs when a short diagnostic and exit code preserve the lesson.
-
-## Correct an existing learning
-
-First identify the exact learning, then attach the verified correction:
-
-```bash
+```sh
+terraphim-agent learn capture --error "<observed redacted error>" \
+  --exit-code 1 "<actual redacted failed command>"
 terraphim-agent learn query "<failure pattern>" --exact
-terraphim-agent learn correct "<learning-id>" --correction "<verified correction>"
+terraphim-agent learn correct "<actual-learning-id>" \
+  --correction "<verified corrected command>"
 ```
 
-Use `learn correction` for an explicit user preference or workflow correction that is not tied to one failed command. Inspect `terraphim-agent learn correction --help` before writing.
+`learn correct` annotates that failure; it does not add a rule to the separate
+correction store consumed by compilation. To record an explicitly reviewed
+rewrite, inspect the help and use the distinct correction command:
 
-## Procedures and hooks
+```sh
+terraphim-agent learn correction add --original "<observed command>" \
+  --corrected "<verified command>" --correction-type tool-preference
+terraphim-agent learn compile --output ./compiled-corrections.json
+terraphim-agent learn export-kg --output ./reviewed-corrections
+```
 
-- `learn procedure replay` executes stored commands. Never replay automatically; inspect the procedure and obtain authorization appropriate to its effects.
-- `learn install-hook` changes an agent's configuration. Use it only when the user explicitly asks to install the hook.
-- `learn export-kg` writes files. Confirm the exact output directory and review the generated knowledge before treating it as trusted.
+Read the compiled mapping and exported Markdown. A stored rule alone does not
+activate a rewrite; separately configure the intended host adapter and verify
+what actually executes.
 
-## Completion evidence
+## Procedures, hooks and exports
 
-For read-only work, report the matching learning IDs and why they are relevant. For a write, report the new or corrected ID, scope, and redactions without repeating sensitive input.
+- `learn procedure replay` executes stored commands. Inspect their effects and
+  run only within the user's authorized scope.
+- `learn install-hook` writes a hook script and gives manual configuration
+  instructions. It does not itself activate the host hook. Verify the adapter's
+  configuration and actual execution separately.
+- `learn compile` writes the compiled correction artifact. Read that artifact
+  and verify the intended reviewed rule is present before using it.
+- `learn export-kg` writes graph files to the selected output directory. Read
+  them back and keep unreviewed or sensitive learnings out of a public graph.
 
-## Continue with Terraphim Skills
+For each write, report the actual ID, scope/path and saved file. For hook demos,
+keep attempted input, the applied rewrite, actual execution result and output
+file distinct. See the [verified hooks workflow](https://terraphim.ai/posts/native-hook-support/).
 
-Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/)
-or compare access on the [pricing page](https://terraphim-skills.md/pricing/).
-For formal proof after capturing a lesson,
-[disciplined-validation](https://terraphim-skills.md/skills/disciplined-validation/)
-is an optional Premium workflow; discovering it never starts checkout or changes
-an entitlement.
+## Related workflows
+
+The packaged [CLI examples](references/workflows.md) show both
+`terraphim-grep` synonym search and `terraphim-agent` authored-memory
+capture/readback. The graph and memory store are separate.
+
+Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/).
+Discovering a related skill never starts checkout or changes an entitlement.

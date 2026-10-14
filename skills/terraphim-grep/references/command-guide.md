@@ -1,18 +1,17 @@
 # Command guide
 
-This wrapper targets the command surface reported by `terraphim-grep --help`.
-Treat the installed help as authoritative when a later release differs.
+Checked with released Clients 1.21.20. Inspect installed `--help` when versions differ.
 
 | Need | Flag |
 |---|---|
-| Keep the run offline | `--search-only` (alias: `--no-rlm`) |
-| Limit the search roots | `--paths <PATHS>...` |
-| Select content | `--haystack code`, `docs`, or `all` |
-| Add surrounding lines | `-C <COUNT>` |
-| Limit returned matches | `-n <COUNT>` |
-| Produce machine-readable output | `--json` |
-| Use an existing thesaurus | `--thesaurus <PATH>` |
-| Use an existing role | `--role <NAME>` |
+| Offline retrieval | `--search-only` (alias `--no-rlm`) |
+| Bound roots | `--paths <PATHS>...` |
+| Local code | `--haystack code` |
+| Local Markdown | `--haystack all`; `docs` did not return these matches in the checked releases |
+| Context and result limit | `-C <COUNT>` and `-n <COUNT>` |
+| Actual structured output | `--json` |
+| Exported synonym graph | `--thesaurus <JSON_PATH>` |
+| Existing configured role | `--role <NAME>` |
 
-`--answer` and `--force-rlm` can enable configured model synthesis. They are
-outside the default offline workflow.
+`--answer` and `--force-rlm` can invoke configured model synthesis; neither belongs
+to the default offline workflow. [Run the paired CLI examples](workflows.md).

@@ -4,7 +4,7 @@
 |---|---|---|---|---|
 | Terraphim Grep | None by default; configured synthesis may call a model | `terraphim-grep` | None | Paid or external synthesis only when requested |
 | Agent Learn | None required for local commands | `terraphim-agent learn` | None | Capture, correction, hooks, replay, or export only when authorised |
-| Agent Memory | None required for local commands | `terraphim-agent memory` | None | Capture, distil, retire, or export only when authorised |
+| Agent Memory | None required for local commands | `terraphim-agent memory` | None | Explicit-content capture, retirement proposal, or export only when authorised |
 
 The package requires local `terraphim-grep` and `terraphim-agent` binaries. It
 contains no executables, secrets, hooks, MCP servers, agents, background tasks, or

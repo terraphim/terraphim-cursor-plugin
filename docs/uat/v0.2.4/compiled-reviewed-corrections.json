@@ -1,0 +1,11 @@
+{
+  "name": "compiled_corrections",
+  "data": {
+    "printf \"%d\\n\" release-fixture": {
+      "id": 1,
+      "nterm": "printf \"%s\\n\" release-fixture",
+      "display_value": "printf \"%s\\n\" release-fixture",
+      "pinned": false
+    }
+  }
+}
