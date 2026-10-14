@@ -157,3 +157,29 @@ phrase “signed, checksummed release archives” to “checksummed release arch
 Their provenance records the exact old/new text and source version/commit, and
 the verifier permits only that reviewed correction. Original signed source files
 and existing release assets remain unchanged.
+
+## CI delivery and external catalog gates
+
+An SSH-signed version tag runs original TSM signature verification, tests and
+reproducible archive checks before creating an immutable GitHub release. CI now
+reads every public release asset back and compares it with the reviewed source;
+`published-release-readback` retains the actual download hashes. The read-only
+**Verify published marketplace pack** workflow can check an existing signed tag
+without recreating a release. A failed download or byte mismatch fails the job.
+
+Kimi and ZCode publisher manifests pin this source release. Claude, Cursor,
+Hermes and skills.sh use the checked repository manifests or skill trees;
+AutoClaw uses its per-skill ZIPs. These delivery artifacts are generated and
+verified together, while native installation remains a separate host check.
+
+Curated Kilo, Grok and ZCode catalogs require their maintainers to accept the
+existing submissions. Kilo's updater fix and four-skill submission remain
+separate pull requests. CI must not report those pending admissions as published
+listings. A successful source release does not merge another repository's PR.
+
+The Terraphim API catalog is a separate publishing surface. Its deployed publish
+endpoint requires a publisher OAuth grant for the CLI audience; the current
+service has no GitHub OIDC publisher exchange. Existing catalog uploads use
+`tsm push`, and service/site deployment CI does not upload new skill content.
+Unattended catalog publication remains a gate until a supported scoped CI
+publisher identity is available; no human token is copied into this repository.

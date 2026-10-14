@@ -75,6 +75,9 @@ jobs:
 
   publish:
     needs: validate
+    concurrency:
+      group: skills-publish-${{ github.ref }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -99,12 +102,32 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" \
-            dist/autoclaw/*.zip \
-            dist/autoclaw/SHA256SUMS \
-            assets/v-model-overview.svg \
-            assets/v-model-overview.png \
-            --repo "$GITHUB_REPOSITORY" \
-            --title "Terraphim Skills Introduction $GITHUB_REF_NAME" \
-            --generate-notes \
-            --verify-tag
+          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --json tagName; then
+            # A retry never uploads or replaces existing assets. The next step
+            # verifies the complete immutable release against this tagged source.
+            echo "Release already exists; verifying its published assets."
+          else
+            gh release create "$GITHUB_REF_NAME" \
+              dist/autoclaw/*.zip \
+              dist/autoclaw/SHA256SUMS \
+              assets/v-model-overview.svg \
+              assets/v-model-overview.png \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Terraphim Skills Introduction $GITHUB_REF_NAME" \
+              --generate-notes \
+              --verify-tag
+          fi
+
+      - name: Read back every public release asset
+        run: |
+          python3 scripts/verify_published_release.py \
+            --tag "$GITHUB_REF_NAME" \
+            --receipt "$RUNNER_TEMP/published-release.json"
+
+      - name: Retain actual public readback
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: published-release-readback
+          path: ${{ runner.temp }}/published-release.json
+          if-no-files-found: error

@@ -1,7 +1,7 @@
 {
   "name": "terraphim-skills-intro",
   "description": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": {
     "name": "Terraphim AI",
     "email": "engineering@terraphim.ai"
