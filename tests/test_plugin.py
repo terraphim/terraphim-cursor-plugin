@@ -10,6 +10,7 @@ EXPECTED_SKILLS = {
     "terraphim-grep": "terraphim-grep",
     "terraphim-agent-learn": "terraphim-agent learn",
     "terraphim-agent-memory": "terraphim-agent memory",
+    "terraphim-editor": "terraphim-grep",
 }
 
 
@@ -26,7 +27,7 @@ def frontmatter(text: str) -> dict[str, str]:
 
 
 class PluginContractTests(unittest.TestCase):
-    def test_manifest_declares_exactly_three_skills(self) -> None:
+    def test_manifest_declares_exactly_four_skills(self) -> None:
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
         self.assertEqual(manifest["license"], "Apache-2.0")
         self.assertEqual(
@@ -102,6 +103,21 @@ class PluginContractTests(unittest.TestCase):
             "memory retire",
         ):
             self.assertIn(token, memory)
+
+    def test_editor_companion_graph_maps_both_terms_to_one_concept(self) -> None:
+        path = ROOT / "skills/terraphim-editor/references/risk-concern.knowledge-graph.json"
+        graph = json.loads(path.read_text())
+        self.assertEqual(graph["data"]["risk"], graph["data"]["concern"])
+        self.assertEqual("risk", graph["data"]["concern"]["nterm"])
+
+    def test_editor_companion_preserves_separate_stores_and_real_exports(self) -> None:
+        path = ROOT / "skills/terraphim-editor"
+        text = (path / "SKILL.md").read_text()
+        workflow = (path / "references/workflows.md").read_text()
+        for term in ("Export Document Knowledge Graph", "save", "reopen", "--thesaurus", "--search-only", "--answer", "terraphim-agent", "memory show", "OS-local", "synonyms::"):
+            self.assertIn(term, text + workflow)
+        self.assertIn("separate", text)
+        self.assertNotIn("requirements:", text)
 
     def test_readme_documents_cursor_320_local_copy_requirement(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

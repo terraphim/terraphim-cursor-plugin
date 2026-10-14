@@ -9,8 +9,8 @@
     {
       "name": "terraphim-skills-intro",
       "source": "./",
-      "description": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
-      "version": "0.2.4",
+      "description": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
+      "version": "0.2.5",
       "category": "development",
       "homepage": "https://terraphim-skills.md/"
     }

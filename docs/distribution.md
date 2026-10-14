@@ -1,7 +1,10 @@
 # Multi-marketplace distribution
 
 This repository is the canonical source for all hosts. Release `v0.2.4` contains
-exactly three skills and deterministic AutoClaw archives.
+exactly three skills and deterministic AutoClaw archives. The current source
+prepares pack `0.2.5` with a fourth, editor-to-search companion; it is not yet a
+published release. The version-pinned installation examples below remain on
+`0.2.4` until the new release passes its gates.
 
 ## CLI workflows to include in every listing
 
@@ -126,3 +129,18 @@ Each host links to <https://terraphim-skills.md/skills/>. Community skills are
 freely obtainable; Core and Premium content follows the catalogue's entitlement
 rules. Public packages never embed proprietary bodies, tokens, checkout URLs, or
 automatic transactions.
+
+## Kilo integration in preparation
+
+The source prepares four instruction skills: editor, grep, authored memory and
+explicit command learning. The editor companion uses the existing online/editor
+extension and hands its exported synonym JSON to the separately installed
+`terraphim-grep`. A separate example uses `terraphim-agent` to save/read authored
+memory. No Kilo plugin binary or new server is introduced.
+
+Kilo imports will use the official importer, a full source commit and copied
+Apache licence, with verified source signatures kept separate from transformed
+Kilo archive provenance. The existing remote Skills service, released Continue
+grep transport and Rust KG MCP are distinct optional integrations. Actual Kilo
+installation, OAuth/provider methods and catalog admission remain unqualified
+until their individual output checks pass. No current Kilo listing is claimed.

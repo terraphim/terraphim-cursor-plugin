@@ -4,8 +4,8 @@
     {
       "id": "terraphim-skills-intro",
       "displayName": "Terraphim Skills Introduction",
-      "description": "Search code, capture learning, and retrieve memory with Terraphim command-line tools.",
-      "source": "https://github.com/terraphim/terraphim-cursor-plugin/archive/refs/tags/v0.2.4.zip"
+      "description": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
+      "source": "https://github.com/terraphim/terraphim-cursor-plugin/archive/refs/tags/v0.2.5.zip"
     }
   ]
 }

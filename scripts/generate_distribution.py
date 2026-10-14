@@ -18,6 +18,7 @@ ALLOWED_SKILLS = (
     "terraphim-grep",
     "terraphim-agent-learn",
     "terraphim-agent-memory",
+    "terraphim-editor",
 )
 
 

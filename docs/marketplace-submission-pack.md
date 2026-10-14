@@ -3,7 +3,9 @@
 This document is the reusable, public submission collateral for the Terraphim
 introductory skills plugin. Platform-specific manifests are generated from
 `distribution/metadata.json`; this copy should remain consistent with that
-canonical source.
+canonical source. This source prepares four-skill pack **0.2.5**; the current
+released pack **0.2.4** still has three skills. Do not use candidate copy as proof
+of a new release or Kilo catalog admission.
 
 ## Listing identity
 
@@ -21,18 +23,18 @@ canonical source.
 
 ### Tagline
 
-Search code, capture learning, and retrieve memory with Terraphim command-line
-tools.
+Create wording alternatives, search a shared synonym graph, capture learning,
+and retrieve memory with Terraphim.
 
 ### Short description
 
-Three Community skills introduce local code search, structured learning
-capture, and reusable memory. The skills run Terraphim's local command-line
+Four Community skills connect editor alternatives, local search, structured
+learning capture, and reusable memory. The skills run Terraphim's local command-line
 tools and explain every write before it happens.
 
 ### Long description
 
-Terraphim Skills Introduction gives coding agents three focused, open-source
+Terraphim Skills Introduction gives coding agents four focused, open-source
 workflows:
 
 1. `terraphim-grep` searches local code and documentation with context.
@@ -40,6 +42,8 @@ workflows:
    knowledge entry.
 3. `terraphim-agent-memory` works with the current user's OS-local memory
    store; the checked example captures authored text and reads it back by ID.
+4. `terraphim-editor` guides the existing editor: create and swap alternatives,
+   save/reopen, export synonym JSON and search related decisions.
 
 The plugin contains instructions, not bundled executables. Users install the
 signed Terraphim binaries through Homebrew or the checksummed release archives
@@ -119,6 +123,7 @@ The repository includes Terraphim-owned V-model artwork in both formats:
 | Hermes Agent | `skills/*/SKILL.md` | Repository/local skills directory |
 | skills.sh | `skills/*/SKILL.md` | Repository URL discovery/install |
 | Claude Code | `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` | Direct install and publisher-owned marketplace |
+| Kilo | Four imported skills and three optional existing MCP integrations | In preparation; separate upstream admission and actual host checks required |
 | Grok Build (xAI) | `.grok-plugin/marketplace.json` entry in xAI's catalogue | Submission pending maintainer review; see [distribution status](distribution.md) |
 
 An artefact being present does not imply that a third-party catalogue has
