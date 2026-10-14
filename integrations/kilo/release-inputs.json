@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "reviewed-source-candidate-not-published",
+  "status": "source-pack-v0.2.5-released-kilo-imports-pending-admission",
   "publisherKey": "261c6820525270bfe2a5daaa5bf3f581bd9bc193e1a0148010e870a3a63ad959",
   "importerCommit": "e042daafcab97ffa487ce8c7d6e090fc64457e4f",
   "skills": {
@@ -32,14 +32,14 @@
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
           "SKILL.md": "dd2f32d2a627014b66e74f9610643b8138fd64fddfb55f3319472c2a28a12746",
-          "local.patch": "63e7b71eca61b6b512cb5cf657dab80f934f39e1f3c3650b324dfdb3505a8fb9",
+          "local.patch": "da385469b27e450e3e9b72e73da56346fa414fcb633e55a3a0ba3a1c2d53d091",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
-          "references/kilo-provenance.json": "981c217219b3afa0d79ab523551af19b4e3a45ac4c4e44184de9a9e47e20b94a",
+          "references/kilo-provenance.json": "a2d2d01dab9b414874d3cab956bc8b0f87759d05630be749c67b60df5585ba63",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },
-        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "method": "official add-remote-skill.ts at full source commit, reviewed updater fix e042daa",
         "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
       }
     },
@@ -71,14 +71,14 @@
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
           "SKILL.md": "bd5eb837483548e4666ea9569d76473c7f0c6e8f04da2a7e1a645797f0ab7ede",
-          "local.patch": "dcec9ed1531b42296b742af28dfaae647095c837d76a310990b4fb95f09b0b67",
+          "local.patch": "834514919748b7783d8e1a21381515497c5aa4a647ea848464529f71a628737c",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
-          "references/kilo-provenance.json": "998efcf5b2c66b6ce31c44cc35e06a955a2f21bbd0a6f5d1144b6c5f70efc734",
+          "references/kilo-provenance.json": "0cec09d5fa2c0b88aea47b9e462115b43d248bfe95243263c7d3421f39fc4a17",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },
-        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "method": "official add-remote-skill.ts at full source commit, reviewed updater fix e042daa",
         "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
       }
     },
@@ -110,22 +110,22 @@
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
           "SKILL.md": "cc798f22c6e3901b8ef41bb20f08eef13dea09f7352a2509c239ba4a89d5c643",
-          "local.patch": "0d548dd3a28ae3d6e3fc942b7c2adace5ac74678843c39e4480dd95ed0a8c4e7",
+          "local.patch": "d0794fd7c59143022ea5c60010f07306606a6425a7240e17cb93ac675cf53ef9",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
-          "references/kilo-provenance.json": "e00f7514f577e7f8627bd1a7daae6d58bd4bbe72d350a94663533475596a9ab6",
+          "references/kilo-provenance.json": "0952086ea703ca400e8f62ecf6096984ce0bee36facd87f2f3bcdab710644014",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },
-        "method": "official importer at ff51758 and independently reviewed updater fix e042daa at immutable source pin",
+        "method": "official add-remote-skill.ts at full source commit, reviewed updater fix e042daa",
         "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
       }
     },
     "terraphim-editor": {
       "sourceRepository": "https://github.com/terraphim/terraphim-cursor-plugin",
-      "sourceCommit": "afe8fc95edb71af30321b8538dbca2d84743a6c2",
+      "sourceCommit": "11311294ce0d1afb3f1abf491028ffadea3861cd",
       "sourceRelease": "v0.2.5",
-      "releaseStatus": "candidate",
+      "releaseStatus": "released",
       "version": "1.0.0",
       "sourceFiles": {
         "SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
@@ -144,9 +144,25 @@
         "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
         "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
       },
-      "import": null
+      "import": {
+        "files": {
+          "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+          "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+          "SKILL.md": "e4d8434733db9b0a720c0e5fc7ae929212310600d5538f57684da44bb27f6693",
+          "local.patch": "4f9cf3ed080eb330eea6b80a37f69627644d3fd46b999aa19c8ea8e3da97cabb",
+          "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
+          "references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+          "references/kilo-provenance.json": "a6c8c6cbf18a7f5430ea37b6758d0a6e2dccc31e57ea324a51f3d7531004070b",
+          "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+          "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+        },
+        "method": "official add-remote-skill.ts at full source commit, reviewed updater fix e042daa",
+        "updaterRoundTrip": "PASS: two actual runs, exact file hashes equal"
+      }
     }
   },
-  "importerStatus": "reviewed-local-fix-not-yet-published",
-  "importerBase": "ff51758b06b8249007116184096765d47bdb7505"
+  "importerStatus": "reviewed-fork-fix-upstream-PR-395-pending",
+  "importerBase": "ff51758b06b8249007116184096765d47bdb7505",
+  "importerRepository": "https://github.com/AlexMikhalev/kilo-marketplace",
+  "importerPullRequest": "https://github.com/Kilo-Org/kilo-marketplace/pull/395"
 }

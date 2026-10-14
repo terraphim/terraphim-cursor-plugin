@@ -1,10 +1,12 @@
 # Multi-marketplace distribution
 
-This repository is the canonical source for all hosts. Release `v0.2.4` contains
-exactly three skills and deterministic AutoClaw archives. The current source
-prepares pack `0.2.5` with a fourth, editor-to-search companion; it is not yet a
-published release. The version-pinned installation examples below remain on
-`0.2.4` until the new release passes its gates.
+This repository is the canonical source for all hosts. The signed [v0.2.5
+release](https://github.com/terraphim/terraphim-cursor-plugin/releases/tag/v0.2.5)
+contains four skills and deterministic AutoClaw archives, including the new
+editor-to-search companion. Its public packages and original signatures have
+been verified. The version-pinned host examples below retain their historical
+`0.2.4` qualification; that earlier pack has three skills. A new source release
+does not qualify a new host installation or Kilo catalog admission.
 
 ## CLI workflows to include in every listing
 
@@ -132,7 +134,7 @@ automatic transactions.
 
 ## Kilo integration in preparation
 
-The source prepares four instruction skills: editor, grep, authored memory and
+The released pack supplies four instruction skills: editor, grep, authored memory and
 explicit command learning. The editor companion uses the existing online/editor
 extension and hands its exported synonym JSON to the separately installed
 `terraphim-grep`. A separate example uses `terraphim-agent` to save/read authored

@@ -28,7 +28,7 @@
     }
   },
   "importer": {
-    "repository": "https://github.com/Kilo-Org/kilo-marketplace",
+    "repository": "https://github.com/AlexMikhalev/kilo-marketplace",
     "commit": "e042daafcab97ffa487ce8c7d6e090fc64457e4f"
   },
   "transforms": [
