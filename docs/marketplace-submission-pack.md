@@ -38,23 +38,41 @@ workflows:
 1. `terraphim-grep` searches local code and documentation with context.
 2. `terraphim-agent-learn` turns an explicit lesson into a reusable local
    knowledge entry.
-3. `terraphim-agent-memory` retrieves, records, and applies local project
-   memory.
+3. `terraphim-agent-memory` works with the current user's OS-local memory
+   store; the checked example captures authored text and reads it back by ID.
 
 The plugin contains instructions, not bundled executables. Users install the
-signed Terraphim binaries through Homebrew and can verify both tools before an
-agent uses them. Search is read-only by default. Learning and memory writes are
+signed Terraphim binaries through Homebrew or the checksummed release archives
+and verify both versions before an agent uses them. Search is read-only by default. Learning and memory writes are
 performed only when the user asks for them.
 
 The Community skills stand on their own. They also link neutrally to the
 Terraphim Skills catalogue, where users can discover Community, Core, and
 Premium workflows without an in-skill checkout or purchase prompt.
 
+## Include both CLI examples
+
+Use the [shared CLI workflow](cli-workflows.md) in each publication. It includes:
+
+- A Markdown concept note with `synonyms:: concern`, an actual exported JSON
+  graph, and `terraphim-grep Concern --search-only --haystack all --paths ./corpus
+  --thesaurus ./risk-concern.knowledge-graph.json --json -n 3`.
+- `terraphim-agent --format json memory capture --content 'Risk requires a
+  Decision: approve a second supplier as the mitigation.' --provenance-tag
+  'public-project-brief'`, followed by `memory show <actual-memory-id> --json`.
+
+The complete copyable commands and output checks are in the guide. They were
+run using released Clients 1.21.20 binaries. The memory capture is an explicit
+write; a search graph export does not configure or isolate the memory store.
+Link the [editor and grep story](https://terraphim.ai/how-tos/synonym-search/)
+and [agent memory story](https://terraphim.ai/posts/cold-start-tax-agentic-memory/)
+so readers can continue from either tool.
+
 ## Suggested prompts
 
 - “Use Terraphim Grep to find where OAuth callback state is validated.”
 - “Capture what we learned from this incident for the next session.”
-- “Search project memory for the deployment constraints, then cite the source.”
+- “Save the deployment lesson in local memory, then show its actual saved ID and content.”
 
 ## Runtime prerequisites
 

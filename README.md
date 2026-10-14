@@ -8,7 +8,7 @@ Hermes Agent, skills.sh, Claude Code, and Grok Build.
 |---|---|---|
 | `terraphim-grep` | `terraphim-grep` | Search bounded local code and documentation, offline by default. |
 | `terraphim-agent-learn` | `terraphim-agent learn` | Inspect failures and capture verified operational corrections. |
-| `terraphim-agent-memory` | `terraphim-agent memory` | Retrieve role-scoped memory, inspect provenance, and govern its lifecycle. |
+| `terraphim-agent-memory` | `terraphim-agent memory` | Save authored lessons, inspect saved content and source tags, and retrieve memory. |
 
 These Apache-2.0 command wrappers do not bundle executables, secrets, hooks, or
 proprietary skill content. They remain useful without a marketplace account.
@@ -26,7 +26,10 @@ terraphim-agent learn --help
 terraphim-agent memory --help
 ```
 
-The formulae install the signed, checksummed Terraphim Clients v1.21.14 release.
+Homebrew versions can differ from the release used in an example. The linked
+[graph search and authored-memory workflow](docs/cli-workflows.md) was checked
+with Terraphim Clients 1.21.20; the guide links to the release archives and
+checksums. Verify the installed versions before using it.
 See the [non-technical installation guide](https://terraphim-skills.md/docs/non-technical/)
 or the repository's [dependency installation](docs/install-dependencies.md) for
 updates, removal, non-Homebrew installation, signature checks, and PATH
@@ -74,11 +77,38 @@ cp -R /path/to/terraphim-cursor-plugin \
 
 Reload Cursor, open **Customize**, and confirm that all three skills appear.
 
+## Use both command-line tools
+
+[Search with an editor-exported synonym graph, then save and read an authored
+lesson](docs/cli-workflows.md). The example includes a real exported Risk/Concern
+graph, a clean public corpus, a baseline search and saved JSON outputs:
+
+```sh
+terraphim-grep Concern --search-only --haystack all \
+  --paths ./corpus --thesaurus ./risk-concern.knowledge-graph.json --json -n 3
+
+terraphim-agent --format json memory capture \
+  --content 'Risk requires a Decision: approve a second supplier as the mitigation.' \
+  --provenance-tag 'public-project-brief' > captured-memory.json
+memory_id="$(python3 -c 'import json; print(json.load(open("captured-memory.json"))["memory_id"])')"
+terraphim-agent memory show "$memory_id" --json
+```
+
+Create the corpus and copy the graph using the linked guide before running these
+commands. The memory capture writes to the current user's OS-local store,
+independent of the current working directory; exporting a search graph does not
+select a memory role or storage scope.
+
+Read the [synonym-search walkthrough](https://terraphim.ai/how-tos/synonym-search/),
+[agent memory walkthrough](https://terraphim.ai/posts/cold-start-tax-agentic-memory/)
+and [learning/hooks walkthrough](https://terraphim.ai/posts/native-hook-support/)
+for the complete flows.
+
 ## Example requests
 
 - “Use Terraphim Grep to find the authorization callback and show two lines of context.”
 - “Search project learnings for an earlier failed deployment command.”
-- “Retrieve role-scoped memory about OAuth redirect validation and show its provenance.”
+- “Save this authored lesson in local memory, then show its saved ID and content.”
 
 The skills default to local, read-only operations. Persistent learning or memory
 changes remain explicit and scoped. Review [permissions and side effects](docs/permissions.md)
