@@ -1,0 +1,2 @@
+# Preserve the exact Markdown exported by the released CLI, including its final blank line.
+docs/uat/v0.2.4/printf-s-n-release-fixture.md whitespace=-blank-at-eof
