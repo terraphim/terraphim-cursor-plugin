@@ -1,6 +1,6 @@
 # Multi-marketplace UAT protocol
 
-This protocol qualifies the four-skill **0.2.5 candidate** in each intended host.
+This protocol qualifies the released four-skill **0.2.5 pack** in each intended host.
 Released 0.2.4 contains only the earlier three skills; historical results remain
 bound to that version. No host passes merely because it shares the source. Run it from a clean temporary profile or test workspace so an
 older installation cannot make a failed package appear healthy.
@@ -9,8 +9,8 @@ older installation cannot make a failed package appear healthy.
 
 1. Install and verify the runtime dependencies using
    [Install dependencies](../install-dependencies.md).
-2. Confirm the candidate plugin version is `0.2.5`; record released or candidate
-   provenance separately.
+2. Confirm the plugin version is `0.2.5`; record the immutable release and
+   any platform-specific transformed package provenance separately.
 3. Confirm the installed skill set is exactly:
    `terraphim-grep`, `terraphim-agent-learn`, and
    `terraphim-agent-memory`, plus `terraphim-editor`.

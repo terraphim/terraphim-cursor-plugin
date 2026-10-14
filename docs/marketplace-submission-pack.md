@@ -3,9 +3,10 @@
 This document is the reusable, public submission collateral for the Terraphim
 introductory skills plugin. Platform-specific manifests are generated from
 `distribution/metadata.json`; this copy should remain consistent with that
-canonical source. This source prepares four-skill pack **0.2.5**; the current
-released pack **0.2.4** still has three skills. Do not use candidate copy as proof
-of a new release or Kilo catalog admission.
+canonical source. The signed four-skill pack **0.2.5** is released; its public
+archives and original signatures have been verified. The previous **0.2.4**
+pack has three skills. Native host qualification and Kilo catalog admission
+remain separate gates.
 
 ## Listing identity
 
