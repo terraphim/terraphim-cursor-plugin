@@ -31,8 +31,7 @@ terraphim-grep --help
 ```
 
 The examples target released **Clients 1.21.20**. Homebrew may install a different
-version; inspect the installed help before using a command. For signed,
-checksummed release archives, follow the
+version; inspect the installed help before using a command. For checksummed release archives, follow the
 [installation guide](https://terraphim-skills.md/docs/non-technical/).
 The skill does not install software automatically.
 

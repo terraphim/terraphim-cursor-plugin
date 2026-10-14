@@ -31,11 +31,11 @@
         "files": {
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
-          "SKILL.md": "dd2f32d2a627014b66e74f9610643b8138fd64fddfb55f3319472c2a28a12746",
-          "local.patch": "da385469b27e450e3e9b72e73da56346fa414fcb633e55a3a0ba3a1c2d53d091",
+          "SKILL.md": "fee56aa6c00d781b13defe6b195b77d870d72ee15eed24490ace98b348e6245a",
+          "local.patch": "b0be529f02cbf7d0d344a8925d68d3900600701f95ecd5697124f9f396c453e9",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
-          "references/kilo-provenance.json": "a2d2d01dab9b414874d3cab956bc8b0f87759d05630be749c67b60df5585ba63",
+          "references/kilo-provenance.json": "d7b60f52720585d83aa8cd2f99d0b830c0218d153626ee9b48aa1133d4961984",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },
@@ -70,11 +70,11 @@
         "files": {
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
-          "SKILL.md": "bd5eb837483548e4666ea9569d76473c7f0c6e8f04da2a7e1a645797f0ab7ede",
-          "local.patch": "834514919748b7783d8e1a21381515497c5aa4a647ea848464529f71a628737c",
+          "SKILL.md": "738eaf7fd3896d091c58a6a060166d67e240f919bbe40d9b2eeb8b3826252ea4",
+          "local.patch": "b2116ea9d1a2d15f1fe4ffc4d5f37f44e969a221f66236bcd84dd954802568f9",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
-          "references/kilo-provenance.json": "0cec09d5fa2c0b88aea47b9e462115b43d248bfe95243263c7d3421f39fc4a17",
+          "references/kilo-provenance.json": "75368221c945f004c13e4a5cd6c820c89a203d609eac90aeacd8e5766f721c07",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },
@@ -109,11 +109,11 @@
         "files": {
           "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
           "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
-          "SKILL.md": "cc798f22c6e3901b8ef41bb20f08eef13dea09f7352a2509c239ba4a89d5c643",
-          "local.patch": "d0794fd7c59143022ea5c60010f07306606a6425a7240e17cb93ac675cf53ef9",
+          "SKILL.md": "2672a6200c2e0210d6403faab86880b3e9f0104324875d8212d21d1c23039dca",
+          "local.patch": "f526f46f135182875cfcb8674539376bcc2fcfe8b577e37b2752634a757b13df",
           "local.remove": "b6d386395a64b4912c766a87e22759691237c477a58643cb7d62c1c248545436",
           "references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
-          "references/kilo-provenance.json": "0952086ea703ca400e8f62ecf6096984ce0bee36facd87f2f3bcdab710644014",
+          "references/kilo-provenance.json": "c7478a3be9a331dd9a5d93525fba5b0e3541dd295204d41657e861aa6c3bd82d",
           "references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
           "references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
         },

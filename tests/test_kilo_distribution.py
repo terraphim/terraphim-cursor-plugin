@@ -60,6 +60,60 @@ class KiloDistributionTests(unittest.TestCase):
         self.assertIn("NOTICE", receipt["archiveFiles"])
         self.assertIn("references/kilo-provenance.json", receipt["archiveFiles"])
 
+    def test_exact_cli_checksum_wording_correction_is_accepted(self):
+        skill = self.imported / "SKILL.md"
+        skill.write_text(
+            skill.read_text().replace(
+                "For signed,\nchecksummed release archives",
+                "For checksummed release archives",
+            )
+        )
+        inputs = json.loads(json.dumps(INPUTS))
+        inputs["skills"][ID]["import"]["files"] = V.read_tree(self.imported)
+        receipt = V.verify_import(ROOT / "skills" / ID, self.imported, inputs, ID)
+        self.assertEqual("PASS", receipt["status"])
+        self.assertIn("For checksummed release archives", skill.read_text())
+
+    def test_cli_wording_transform_is_limited_to_admitted_version_and_commit(self):
+        for name in (
+            "terraphim-grep",
+            "terraphim-agent-memory",
+            "terraphim-agent-learn",
+        ):
+            data = (ROOT / "skills" / name / "SKILL.md").read_bytes()
+            row = INPUTS["skills"][name]
+            expected = V.expected_instruction_body(data, row, name)
+            self.assertNotIn(b"For signed,\nchecksummed release archives", expected)
+            self.assertIn(b"For checksummed release archives", expected)
+            for field, changed in (("version", "1.0.4"), ("sourceCommit", "0" * 40)):
+                unsupported = dict(row, **{field: changed})
+                unchanged = V.expected_instruction_body(data, unsupported, name)
+                self.assertIn(b"For signed,\nchecksummed release archives", unchanged)
+                self.assertNotIn(b"For checksummed release archives", unchanged)
+
+    def test_original_cli_signature_claim_refused_even_if_hash_is_recomputed(self):
+        skill = self.imported / "SKILL.md"
+        skill.write_text(
+            skill.read_text().replace(
+                "For checksummed release archives",
+                "For signed,\nchecksummed release archives",
+            )
+        )
+        inputs = json.loads(json.dumps(INPUTS))
+        inputs["skills"][ID]["import"]["files"] = V.read_tree(self.imported)
+        with self.assertRaisesRegex(V.VerificationError, "body"):
+            V.verify_import(ROOT / "skills" / ID, self.imported, inputs, ID)
+
+    def test_wording_provenance_refused_even_if_hash_is_recomputed(self):
+        path = self.imported / "references/kilo-provenance.json"
+        provenance = json.loads(path.read_text())
+        provenance["wordingCorrections"] = []
+        path.write_text(json.dumps(provenance, indent=2) + "\n")
+        inputs = json.loads(json.dumps(INPUTS))
+        inputs["skills"][ID]["import"]["files"] = V.read_tree(self.imported)
+        with self.assertRaisesRegex(V.VerificationError, "wording provenance"):
+            V.verify_import(ROOT / "skills" / ID, self.imported, inputs, ID)
+
     def test_all_original_skills_have_exact_admitted_file_hashes(self):
         for name in INPUTS["skills"]:
             self.assertEqual(

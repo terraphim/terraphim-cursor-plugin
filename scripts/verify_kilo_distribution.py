@@ -225,6 +225,39 @@ def _body(data: bytes) -> bytes:
     return sections[1]
 
 
+def wording_corrections(row: dict, entry_id: str) -> list[dict]:
+    """Return the single reviewed factual correction for the original 1.0.3 skills."""
+    if (
+        entry_id
+        not in {"terraphim-grep", "terraphim-agent-memory", "terraphim-agent-learn"}
+        or row.get("version") != "1.0.3"
+        or row.get("sourceCommit") != "391c7e4ebc103f1770b9dca589fcce7ccd211d5f"
+    ):
+        return []
+    return [
+        {
+            "sourceVersion": "1.0.3",
+            "sourceCommit": "391c7e4ebc103f1770b9dca589fcce7ccd211d5f",
+            "oldText": "For signed,\nchecksummed release archives",
+            "newText": "For checksummed release archives",
+            "reason": "The verified skill signature does not authenticate separate CLI archives; only CLI release checksums were verified.",
+        }
+    ]
+
+
+def expected_instruction_body(data: bytes, row: dict, entry_id: str) -> bytes:
+    """Preserve original instructions except an exact admitted factual correction."""
+    body = _body(data).rstrip(b"\n")
+    for correction in wording_corrections(row, entry_id):
+        old = correction["oldText"].encode()
+        if body.count(old) != 1:
+            raise VerificationError(
+                "reviewed wording correction is not uniquely applicable"
+            )
+        body = body.replace(old, correction["newText"].encode())
+    return body + b"\n" + FOOTER.encode()
+
+
 def _archive_files(row: dict) -> dict:
     imported = row.get("import")
     if not imported:
@@ -255,11 +288,8 @@ def verify_import(source: Path, imported: Path, inputs: dict, entry_id: str) -> 
         )
     if (imported / "local.remove").read_bytes() != b"skill.toml\n":
         raise VerificationError("root signature removal is not exact")
-    if (
-        _body((imported / "SKILL.md").read_bytes())
-        != _body((source / "SKILL.md").read_bytes()).rstrip(b"\n")
-        + b"\n"
-        + FOOTER.encode()
+    if _body((imported / "SKILL.md").read_bytes()) != expected_instruction_body(
+        (source / "SKILL.md").read_bytes(), row, entry_id
     ):
         raise VerificationError("imported instruction body changed")
     for name in row["sourceBlake3"]:
@@ -271,6 +301,8 @@ def verify_import(source: Path, imported: Path, inputs: dict, entry_id: str) -> 
         if actual.get(name) != expected:
             raise VerificationError(f"license/notice changed: {name}")
     provenance = json.loads((imported / PROVENANCE_PATH).read_text(encoding="utf-8"))
+    if provenance.get("wordingCorrections", []) != wording_corrections(row, entry_id):
+        raise VerificationError("wording provenance differs from reviewed correction")
     original = provenance["source"]
     if (
         provenance.get("schemaVersion") != 1
