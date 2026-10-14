@@ -31,11 +31,11 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(GENERATOR.ALLOWED_SKILLS, names)
 
     def test_print_version_matches_manifests(self) -> None:
-        self.assertEqual("0.2.3", self.metadata["plugin"]["version"])
+        self.assertEqual("0.2.4", self.metadata["plugin"]["version"])
         output = io.StringIO()
         with redirect_stdout(output):
             self.assertEqual(0, GENERATOR.main(["--print-version"]))
-        self.assertEqual("0.2.3\n", output.getvalue())
+        self.assertEqual("0.2.4\n", output.getvalue())
 
     def test_generated_manifests_are_current_and_deterministic(self) -> None:
         expected = GENERATOR.generated_files(ROOT, self.metadata)
@@ -93,7 +93,7 @@ class DistributionTests(unittest.TestCase):
         entry = marketplace["plugins"][0]
         self.assertEqual("terraphim-skills-intro", entry["name"])
         self.assertEqual("developer-tools", entry["category"])
-        self.assertEqual("v0.2.3", entry["source"]["ref"])
+        self.assertEqual("v0.2.4", entry["source"]["ref"])
         self.assertTrue(entry["strict"])
         self.assertEqual({"en", "zh-CN"}, set(entry["description_i18n"]))
         manifest = json.loads((ROOT / ".zcode-plugin/plugin.json").read_text())

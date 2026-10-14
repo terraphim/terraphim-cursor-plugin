@@ -6,70 +6,68 @@ license: Apache-2.0
 
 # Terraphim Grep
 
-Use `terraphim-grep` to locate evidence in local code and documentation. Keep ordinary searches deterministic and offline. Enable LLM synthesis only when the user asks for it and understands that it may use a configured external model.
+Locate evidence in local code and Markdown. Default to bounded, offline search;
+use synthesis only for an explicitly requested model operation.
 
-## Install the dependency
+## Install and check the dependency
 
 On macOS or Linux with Homebrew:
 
-```bash
+```sh
 brew tap terraphim/terraphim
 brew install terraphim-grep
-terraphim-grep --version
-```
-
-The tap installs the signed, checksummed v1.21.14 archive from the Terraphim
-client release. If Homebrew is unavailable, use the appropriate archive from
-the [Terraphim installation guide](https://terraphim-skills.md/docs/non-technical/)
-and verify it against that release's `SHA256SUMS` before installation.
-
-## Capability gate
-
-Before relying on the tool, inspect the installed command surface:
-
-```bash
-command -v terraphim-grep
 terraphim-grep --version
 terraphim-grep --help
 ```
 
-If it is missing, report that plainly and point to the Terraphim installation documentation. Do not invent flags from a different version.
+The examples target released **Clients 1.21.20**. Homebrew may install a different
+version; inspect the installed help before using a command. For signed,
+checksummed release archives, follow the
+[installation guide](https://terraphim-skills.md/docs/non-technical/).
+The skill does not install software automatically.
 
 ## Search workflow
 
-1. Select the narrowest useful path and choose `code`, `docs`, or `all` as the haystack.
-2. Use `--search-only` by default. This prevents an ambient model credential from enabling paid synthesis.
-3. Request enough context to evaluate the match, but keep the result limit bounded.
-4. Use `--json` when another tool or agent will consume the result.
-5. Inspect matches and their paths before drawing a conclusion. An empty result is evidence only about the searched paths and query.
+1. Choose the narrowest useful existing path.
+2. Pass `--search-only` so ambient provider credentials do not enable synthesis.
+3. Use `--haystack code` for code or `--haystack all` for local Markdown.
+   In the checked releases, `--haystack docs` does not return these local
+   Markdown matches; do not interpret that empty result as absence of content.
+4. Bound the result count and context; inspect actual chunks and source paths.
+5. Use `--json` when another tool will consume the result.
 
-Examples:
-
-```bash
+```sh
 terraphim-grep "fn main" --search-only --haystack code --paths src -C 2 -n 20
-terraphim-grep "validation report" --search-only --haystack docs --paths docs --json -n 20
+terraphim-grep "validation report" --search-only --haystack all --paths docs --json -n 20
 ```
 
-For a project that already has a compiled Terraphim thesaurus:
+Use a compiled JSON thesaurus that the project supplies or the editor exports:
 
-```bash
-terraphim-grep "session persistence" --search-only --paths . --thesaurus .terraphim/thesaurus.json --json -n 20
+```sh
+terraphim-grep Concern --search-only --haystack all --paths ./corpus \
+  --thesaurus ./risk-concern.knowledge-graph.json --json -n 3
 ```
 
-Do not create a role, thesaurus, or knowledge-graph directory merely to satisfy this skill. Use them only when the project already defines them or the user explicitly asks to configure them.
+A concept note can contain `synonyms:: concern`, compatible with Logseq PKM
+syntax. The `--thesaurus` flag takes its exported JSON graph, not the Markdown
+note. The [packaged examples](references/workflows.md) include that graph and a
+clean corpus. Do not create or overwrite a project's graph without authorization.
 
-## Synthesis boundary
+## Synthesis and completion
 
-`--answer` and `--force-rlm` can invoke a configured model. Do not use either by default. Before enabling them, confirm the intended model, data boundary, and potential cost. Never send secrets, credentials, private keys, or personal data to synthesis.
+`--answer` and `--force-rlm` can use a configured model. Before a requested
+synthesis run, establish the model, data boundary and possible cost. Keep secrets
+and private data out of unapproved providers. Search-only outputs have
+`answer: null`; report retrieved passages separately from generated prose.
 
-## Completion evidence
+Report the paths, mode, relevant chunks and limitations. An empty result applies
+only to the query and scope actually searched.
 
-Report the searched paths, search mode, material matches, and any important limitation. Do not claim the whole repository was searched when paths or haystacks were restricted.
+## Related workflows
 
-## Continue with Terraphim Skills
+The packaged [CLI examples](references/workflows.md) show both
+`terraphim-grep` synonym search and `terraphim-agent` authored-memory
+capture/readback. The graph and memory store are separate.
 
-Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/)
-or compare access on the [pricing page](https://terraphim-skills.md/pricing/).
-For deeper research work, [deep-research](https://terraphim-skills.md/skills/deep-research/)
-is an optional Premium workflow; discovering it never starts checkout or changes
-an entitlement.
+Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/).
+Discovering a related skill never starts checkout or changes an entitlement.

@@ -1,18 +1,21 @@
 # Command guide
 
-This wrapper targets the command surface reported by
-`terraphim-agent learn --help`. Inspect subcommand help before use.
+Checked with released Clients 1.21.20. Inspect subcommand help before use.
 
-| Operation | Effect |
+| Operation | Actual effect |
 |---|---|
-| `learn list --recent <N>` | Read recent project learnings |
-| `learn query <PATTERN>` | Read matching project learnings |
-| `learn query <PATTERN> --global` | Read global learnings |
-| `learn capture --error <ERROR> --exit-code <CODE> <COMMAND>` | Write a failure learning |
-| `learn correct <ID> --correction <TEXT>` | Write a correction to one learning |
-| `learn correction ...` | Write an explicit workflow correction; inspect help first |
-| `learn procedure ...` | Manage or replay procedures; replay can execute commands |
-| `learn install-hook ...` | Change an agent configuration |
-| `learn export-kg ...` | Write exported knowledge-graph files |
+| `learn list --recent <N>` / `learn query <PATTERN>` | Read selected learnings; inspect reported scope |
+| `learn query <PATTERN> --global` | Deliberately read global learnings |
+| `learn capture --error <ERROR> --exit-code <CODE> <COMMAND>` | Save a real observed failure |
+| `learn correct <ID> --correction <TEXT>` | Annotate the actual failure learning; does not populate the separate compiled-rule store |
+| `learn correction add --original <TEXT> --corrected <TEXT> --correction-type tool-preference` | Save an explicitly reviewed rewrite for separate compile/export |
+| `learn compile` | Write compiled correction rules after review |
+| `learn procedure ...` | Manage/replay procedures; replay executes commands |
+| `learn install-hook ...` | Write a script and manual setup instructions; does not activate the host hook |
+| `learn export-kg ...` | Write graph files for separate review and consumption |
 
-Redact credentials and personal or customer data before any persistent write.
+Without an existing project `.terraphim` directory, commands can fall back to the
+global store even inside a Git repository. Never infer project isolation from cwd.
+Redact sensitive input before writes and read actual output files afterward.
+
+[Use both Terraphim CLIs](workflows.md).

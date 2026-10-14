@@ -1,91 +1,102 @@
 ---
 name: terraphim-agent-memory
-description: Retrieve, inspect, validate, and govern agentic memory with terraphim-agent memory. Use for role-scoped memory searches, provenance checks, hook previews, reliability evaluation, or explicitly authorized lifecycle changes; use terraphim-agent-learn for individual command failures and corrections.
+description: Save explicit authored lessons, read saved memory by ID, and retrieve configured KG-ranked memory with terraphim-agent memory. Use for local memory capture/readback, heuristic checks, or explicitly requested exports; use terraphim-agent-learn for command failures and corrections.
 license: Apache-2.0
 ---
 
 # Terraphim Agent Memory
 
-Use `terraphim-agent memory` for the broader memory lifecycle. Prefer retrieval, scope inspection, and provenance checks before capture, distillation, validation, or retirement.
+Read stored items before writing. Capture only the lesson the user actually
+provides or explicitly approves, and verify the saved output.
 
-## Install the dependency
+## Install and check the dependency
 
 On macOS or Linux with Homebrew:
 
-```bash
+```sh
 brew tap terraphim/terraphim
 brew install terraphim-agent
-terraphim-agent --version
-```
-
-The tap installs the signed, checksummed v1.21.14 archive from the Terraphim
-client release. If Homebrew is unavailable, use the appropriate archive from
-the [Terraphim installation guide](https://terraphim-skills.md/docs/non-technical/)
-and verify it against that release's `SHA256SUMS` before installation.
-
-## Capability gate
-
-```bash
-command -v terraphim-agent
 terraphim-agent --version
 terraphim-agent memory --help
 ```
 
-Inspect the exact subcommand help before any state-changing operation. Do not assume a command from a newer release exists locally.
+The examples target released **Clients 1.21.20**. Homebrew may install a different
+version; inspect the installed help before using a command. For signed,
+checksummed release archives, follow the
+[installation guide](https://terraphim-skills.md/docs/non-technical/).
+The skill does not install software automatically.
 
-## Establish scope
+## Storage and reads
 
-Check the project and role boundary before retrieval or mutation:
+In Clients 1.21.20, capture/list/show use the current user's OS-local evolution
+store, independent of the working directory. `--config`, `--role`, or an exported
+search graph does not create a project-scoped capture store. Do not assume a new
+project means an empty or isolated memory store.
 
-```bash
-terraphim-agent memory scope --project . --check
-```
-
-Use an exact `--role` only when the role exists in the active configuration. If scope is ambiguous or a public location contains permissioned material, stop and surface the boundary problem.
-
-## Retrieve and inspect
-
-```bash
-terraphim-agent memory retrieve "<query>" --role "<exact role>"
+```sh
 terraphim-agent memory list --limit 20
-terraphim-agent memory show "<memory-id>" --json
-terraphim-agent memory provenance --memory-id "<memory-id>"
+terraphim-agent memory show "<actual-memory-id>" --json
 ```
 
-Retrieval is knowledge-graph ranked and has no lexical fallback. No results means the query matched none of the role's concepts; it does not prove that no related memory exists. Try one justified conceptual variant or inspect the role's scope rather than broadening indefinitely.
+For KG-ranked retrieval, use an exact role already defined in the active
+configuration:
 
-## Preview application
-
-Use `apply` to show what a hook would inject without changing files:
-
-```bash
-terraphim-agent memory apply --prompt "<non-sensitive prompt>"
+```sh
+terraphim-agent memory retrieve "<query>" --role "<exact configured role>"
 ```
 
-Do not put secrets, credentials, private keys, personal data, or unpublished customer material in the prompt.
+Retrieval requires matching graph concepts and has no lexical fallback. An empty
+result does not establish that no related stored item exists. Inspect the
+configured role and actual saved items; do not infer a security boundary from
+`memory scope --check`. The released scope diagnostic is not an access-control
+test and can ignore an explicitly supplied configuration.
 
-## Govern lifecycle changes
+## Capture explicit content and verify it
 
-The following operations are not read-only:
+Only perform the write when authorized. A provenance tag labels the source; it
+is not lesson content or proof of an external session lookup.
 
-- `memory capture` writes a new item with provenance metadata;
-- `memory distill` compiles and exports learned material;
-- `memory retire` proposes a retirement in `learned-rules.md`;
-- `memory export --output` writes an external artefact.
+```sh
+terraphim-agent --format json memory capture \
+  --content 'Risk requires a Decision: approve a second supplier as the mitigation.' \
+  --provenance-tag 'public-project-brief' > captured-memory.json
+memory_id="$(python3 -c 'import json; print(json.load(open("captured-memory.json"))["memory_id"])')"
+terraphim-agent memory show "$memory_id" --json > saved-memory.json
+```
 
-Use them only when the user has authorized the exact scope and destination. Add a meaningful `--provenance-tag` to captures. Retirement requires a specific ID, reason, and the configured approval path.
+Read both files. Require the returned ID, exact content and source tag to match.
+Use `--file` only after reviewing that file's contents and the installed help.
+Never capture private data merely to demonstrate the command.
 
-`memory validate` invokes the judge pipeline and `memory rubric` performs a project-wide diagnostic. State the intended scope and expected cost before running a broad evaluation.
+## Evaluation, previews and explicit lifecycle writes
+
+- `memory validate` and `memory rubric` provide heuristic diagnostics. The
+  checked validator reports `heuristic-v1`; do not describe it as an LLM judge
+  or a proof of correctness.
+- `memory apply --prompt <TEXT>` previews available hook context. A preview is
+  not evidence of an installed or executed hook.
+- `memory export --output <PATH>` writes an artifact. Confirm the destination
+  and read the saved file after execution.
+- `memory retire --lesson-id <ID> --reason <TEXT>` writes a pending-approval
+  retirement proposal named `retired-<ID>.md`; it does not immediately remove
+  the stored item. Review the actual path returned by the command.
+
+In Clients 1.21.20, `memory provenance` and `memory distill` return status output
+without performing the session lookup or compile/export their names suggest.
+Do not use either as completion evidence. Use the saved content/tag for capture
+readback, or the separate reviewed `learn compile`/`learn export-kg` workflow.
 
 ## Completion evidence
 
-Report the role and project scope, result IDs, provenance confidence, and any reliability warning. Distinguish retrieved evidence from inference, and never expose sensitive memory contents unnecessarily.
+Report actual IDs, saved content only as needed, storage behavior, configured
+retrieval role, and the files created. Distinguish author-provided source tags,
+heuristics, previews and actual execution.
 
-## Continue with Terraphim Skills
+## Related workflows
 
-Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/)
-or compare access on the [pricing page](https://terraphim-skills.md/pricing/).
-For governed decision evidence,
-[requirements-traceability](https://terraphim-skills.md/skills/requirements-traceability/)
-is an optional Premium workflow; discovering it never starts checkout or changes
-an entitlement.
+The packaged [CLI examples](references/workflows.md) show both
+`terraphim-grep` synonym search and `terraphim-agent` authored-memory
+capture/readback. The graph and memory store are separate.
+
+Browse the [Community, Core, and Premium skill catalogue](https://terraphim-skills.md/skills/).
+Discovering a related skill never starts checkout or changes an entitlement.
