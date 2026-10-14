@@ -1,7 +1,9 @@
 # Install Terraphim command dependencies
 
-The three skills are workflow instructions. They call two local binaries and never
-install software automatically.
+Released pack 0.2.4 contains three CLI instruction skills. Candidate pack 0.2.5
+adds an editor companion; it uses the existing online/editor extension and the
+same two separately installed CLIs. No skill installs software automatically.
+The editor and Kilo catalog routes require their own installation checks.
 
 ## Homebrew installation
 

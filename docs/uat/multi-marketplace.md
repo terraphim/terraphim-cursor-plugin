@@ -1,19 +1,22 @@
 # Multi-marketplace UAT protocol
 
-This protocol validates the same three public Community skills in every
-supported host. Run it from a clean temporary profile or test workspace so an
+This protocol qualifies the four-skill **0.2.5 candidate** in each intended host.
+Released 0.2.4 contains only the earlier three skills; historical results remain
+bound to that version. No host passes merely because it shares the source. Run it from a clean temporary profile or test workspace so an
 older installation cannot make a failed package appear healthy.
 
 ## Preconditions
 
 1. Install and verify the runtime dependencies using
    [Install dependencies](../install-dependencies.md).
-2. Confirm the plugin version is `0.2.4`.
+2. Confirm the candidate plugin version is `0.2.5`; record released or candidate
+   provenance separately.
 3. Confirm the installed skill set is exactly:
    `terraphim-grep`, `terraphim-agent-learn`, and
-   `terraphim-agent-memory`.
-4. Use a disposable repository containing one searchable marker and a writable
-   local Terraphim memory store.
+   `terraphim-agent-memory`, plus `terraphim-editor`.
+4. Use a disposable repository and a dedicated test OS account/container for
+   OS-user memory/global installs. A temporary working directory alone does not
+   isolate memory. Never override HOME or modify normal user profiles.
 
 ## Shared acceptance scenarios
 
@@ -23,9 +26,10 @@ Run all scenarios through the host's agent interface, not only from a shell.
 
 Ask: “Check whether the Terraphim dependencies are installed.”
 
-Pass when the agent runs or proposes the documented version/help probes. If a
-binary is absent, it must show the Homebrew commands and must not silently
-install software.
+Pass when the agent actually runs the documented version/help probes and the
+outputs identify the expected released binaries. If a binary is absent, show
+installation guidance and mark execution BLOCKED; a proposed command is not an
+executed result. Do not silently install software.
 
 ### UAT-2 — local search
 
@@ -37,12 +41,12 @@ and makes no file changes.
 
 ### UAT-3 — learning capture
 
-Ask: “Capture this explicit lesson with Terraphim Agent: use the staging API
-for marketplace smoke tests.”
-
-Pass when the agent explains the intended write, invokes the documented
-`terraphim-agent learn` flow only after the request, and the lesson can be
-retrieved afterward.
+Execute a harmless command that actually fails, then ask the agent to capture
+its observed exit/error, inspect the returned learning ID and record a verified
+correction. Pass when saved learning/readback and actual corrected execution
+match. Inspect the real project/global scope. `learn correct` annotates the
+failure; any compiled rewrite needs a separate correction-store add, compile
+and export. Do not infer automatic hook activation.
 
 ### UAT-4 — memory retrieval and write boundary
 
@@ -60,18 +64,31 @@ Pass when the agent provides <https://terraphim-skills.md/skills/> as neutral
 discovery. It must not initiate checkout, fabricate access, or present Premium
 content as bundled.
 
+### UAT-6 — editor synonym-to-search
+
+Use the actual separately released editor with the host: create Concern for
+Risk, swap, save, close/reopen, export clean Markdown and the actual document
+knowledge graph. Verify both terms share a concept ID. Search the unchanged
+Risk-only corpus by Concern with and without that graph; inspect the actual
+zero-to-expected passage change and source files. Synthesis is a separate
+provider opt-in, with retrieved passages and generated wording saved distinctly.
+Use the [companion](../../skills/terraphim-editor/SKILL.md) and packaged workflow.
+A prepared graph is a fixture, not proof of a new editor action. Agent-memory
+examples remain separate from the short editor-to-search demo.
+
 ## Host-specific installation and evidence
 
 | Host | Installation route | Required evidence |
 | --- | --- | --- |
-| Cursor | Existing marketplace listing or repository plugin install | Plugin version, three discovered skills, UAT-1 through UAT-5 |
-| Kimi Code | Install the tagged repository with `/plugins install`, or open `/plugins marketplace` with `marketplaces/kimi.json`; use `kimi plugin install` for the compatibility CLI | Plugin listing, exactly three skills after reload, plus UAT-1 through UAT-5 |
-| AutoClaw | Import each ZIP from `dist/autoclaw/` | Successful import, checksum match, one skill per archive, UAT for all three skills |
-| ZCode | Install from the repository using `.zcode-plugin/plugin.json` | Plugin listing and UAT-1 through UAT-5 |
-| Hermes Agent | Add the repository's `skills/` entries to the configured skills directory | Three discovered skills and UAT-1 through UAT-5 |
-| skills.sh | Install/discover from the public repository URL | Three discovered skills and UAT-1 through UAT-5 |
-| Claude Code | Add the local/publisher marketplace, then install `terraphim-skills-intro` | Strict plugin validation, installed listing, UAT-1 through UAT-5 |
-| Grok Build (xAI) | Install from the curated catalogue after submission approval | Full commit pin, generated component index, security checks, and UAT-1 through UAT-5 |
+| Cursor | Existing marketplace listing or repository plugin install | Plugin version, four discovered skills, UAT-1 through UAT-6 |
+| Kimi Code | Install the tagged repository with `/plugins install`, or open `/plugins marketplace` with `marketplaces/kimi.json`; use `kimi plugin install` for the compatibility CLI | Plugin listing, exactly four skills after reload, plus UAT-1 through UAT-6 |
+| AutoClaw | Import each ZIP from `dist/autoclaw/` | Successful import, checksum match, one skill per archive, UAT for all four skills |
+| ZCode | Install from the repository using `.zcode-plugin/plugin.json` | Plugin listing and UAT-1 through UAT-6 |
+| Hermes Agent | Add the repository's `skills/` entries to the configured skills directory | Four discovered skills and UAT-1 through UAT-6 |
+| skills.sh | Install/discover from the public repository URL | Four discovered skills and UAT-1 through UAT-6 |
+| Claude Code | Add the local/publisher marketplace, then install `terraphim-skills-intro` | Strict plugin validation, installed listing, UAT-1 through UAT-6 |
+| Kilo | Official skill importer/catalog and native project/global installation after admission | Four skills, relative resources, scope/collision/ownership lifecycle, actual MCP results and UAT-1 through UAT-6; each method/OS independently qualified |
+| Grok Build (xAI) | Install from the curated catalogue after submission approval | Full commit pin, generated component index, security checks, and UAT-1 through UAT-6 |
 
 Capture the host and version, plugin version, command transcript or screenshots,
 and the final pass/fail result. Redact local paths or memory content that is not

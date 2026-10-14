@@ -1,13 +1,14 @@
 # Terraphim Skills Introduction
 
-本插件提供三个开源技能，让 Kimi Code、ZCode 及其他智能体能够使用
-Terraphim 的本地代码搜索、经验学习和智能体记忆工作流。
+本插件提供四个开源技能，让 Kimi Code、ZCode 及其他智能体能够使用
+Terraphim 的编辑器备选措辞、本地代码搜索、经验学习和智能体记忆工作流。
 
 ## 技能
 
 - `terraphim-grep`：在本地代码和文档中进行有界搜索，默认离线。
 - `terraphim-agent-learn`：检查失败并记录经过验证的操作修正。
 - `terraphim-agent-memory`：保存明确提供的经验，按实际 ID 读取内容和来源标签。
+- `terraphim-editor`：创建和切换备选措辞，导出同义词图并搜索相关决策。
 
 这些技能采用 Apache-2.0 许可证，不包含可执行文件、密钥、后台任务或
 Terraphim 专有技能内容。

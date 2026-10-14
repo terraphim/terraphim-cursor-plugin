@@ -1,7 +1,7 @@
 # Terraphim Skills Introduction
 
-Three small, open-source skills bring Terraphim's local code search, operational
-learning, and agent memory workflows to Cursor, Kimi Code, AutoClaw, ZCode,
+Four small, open-source skills connect Terraphim's editor alternatives, local
+search, operational learning, and agent memory workflows to Cursor, Kimi Code, AutoClaw, ZCode,
 Hermes Agent, skills.sh, Claude Code, and Grok Build.
 
 | Skill | Command family | Purpose |
@@ -9,8 +9,9 @@ Hermes Agent, skills.sh, Claude Code, and Grok Build.
 | `terraphim-grep` | `terraphim-grep` | Search bounded local code and documentation, offline by default. |
 | `terraphim-agent-learn` | `terraphim-agent learn` | Inspect failures and capture verified operational corrections. |
 | `terraphim-agent-memory` | `terraphim-agent memory` | Save authored lessons, inspect saved content and source tags, and retrieve memory. |
+| `terraphim-editor` | Editor UI → `terraphim-grep` | Create and swap alternatives, export synonyms and search related decisions. |
 
-These Apache-2.0 command wrappers do not bundle executables, secrets, hooks, or
+These Apache-2.0 instruction skills do not bundle executables, secrets, hooks, or
 proprietary skill content. They remain useful without a marketplace account.
 
 ## Install the command dependencies
@@ -43,9 +44,10 @@ troubleshooting. The skills never install dependencies automatically.
 | Kimi Code | Install this repository or add `marketplaces/kimi.json` as a custom marketplace. |
 | AutoClaw | Import one checksummed ZIP per skill with **Skills & Connectors → Skills → Create → Add skill file**. |
 | ZCode | Add `marketplaces/zcode.json` as a personal marketplace and install `terraphim-skills-intro`; curated listing is a separate maintainer-reviewed PR. |
-| Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the three skills. |
+| Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the four skills. |
 | skills.sh | Run `npx skills add terraphim/terraphim-cursor-plugin`; use `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. |
 | Claude Code | Add the repository as a marketplace, then install the plugin as shown below. |
+| Kilo | Integration is being prepared; catalog admission and actual Kilo installation remain unqualified. |
 | Grok Build | The marketplace submission pins the signed public release and is awaiting maintainer review; see the [distribution guide](docs/distribution.md) for status. |
 
 Claude Code commands:
@@ -75,7 +77,7 @@ cp -R /path/to/terraphim-cursor-plugin \
   ~/.cursor/plugins/local/terraphim-skills-intro
 ```
 
-Reload Cursor, open **Customize**, and confirm that all three skills appear.
+Reload Cursor, open **Customize**, and confirm that all four skills appear.
 
 ## Use both command-line tools
 
