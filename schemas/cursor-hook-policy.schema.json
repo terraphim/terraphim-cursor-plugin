@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/terraphim/terraphim-cursor-plugin/schemas/cursor-hook-policy.schema.json",
+  "title": "Opt-in Cursor hook policy for pinned Terraphim Agent1.21.20",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectRoot",
+    "agent",
+    "roleConfig",
+    "startupSettings",
+    "correctionRole",
+    "guardRole",
+    "compiledRules",
+    "guardRules",
+    "rewriteEnabled",
+    "captureFailures",
+    "evidence"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "type": "integer"
+    },
+    "projectRoot": {
+      "type": "string",
+      "pattern": "^/",
+      "minLength": 2
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/",
+          "minLength": 2
+        },
+        "sha256": {
+          "enum": [
+            "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec",
+            "5ae520c7034dd125dc6ccb0f6a2f7233794e4bef254381f292566827988f9c52"
+          ]
+        }
+      }
+    },
+    "roleConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/",
+          "minLength": 2
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "startupSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directory",
+        "settingsSha256"
+      ],
+      "properties": {
+        "directory": {
+          "type": "string",
+          "pattern": "^/",
+          "minLength": 2
+        },
+        "settingsSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "correctionRole": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "guardRole": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "compiledRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/",
+          "minLength": 2
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "guardRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/",
+          "minLength": 2
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "rewriteEnabled": {
+      "type": "boolean"
+    },
+    "captureFailures": {
+      "const": false,
+      "description": "Automatic capture is unavailable until actual native result qualification; never infer a numeric exit from failure prose."
+    },
+    "evidence": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled"
+          ],
+          "properties": {
+            "enabled": {
+              "const": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "directory",
+            "outputFiles"
+          ],
+          "properties": {
+            "enabled": {
+              "const": true
+            },
+            "directory": {
+              "type": "string",
+              "pattern": "^/",
+              "minLength": 2
+            },
+            "outputFiles": {
+              "type": "array",
+              "maxItems": 16,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^/",
+                "minLength": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

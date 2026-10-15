@@ -210,8 +210,8 @@ or `applied` records are reported as effectively incomplete; partial atomic
 write files remain preserved for manual investigation. No automatic deletion
 or retry repairs them. After reviewed policy changes, choose a new empty
 private evidence directory and rehash the policy/hook entry. Inspect old
-receipts with their original unchanged policy and digest; a different policy
-cannot adopt that directory.
+receipts with their original unchanged policy, digest and matching reviewed
+adapter/dependencies; a different policy or adapter cannot adopt those records.
 
 Disable by removing only the entries you added, then restart the relevant
 connection. Preserve other hooks/MCP entries, documents, graphs, original
