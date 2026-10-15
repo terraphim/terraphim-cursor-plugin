@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import select
 from pathlib import Path
 import subprocess
 import sys
@@ -391,6 +392,128 @@ class FilesAndProcesses(unittest.TestCase):
             },
         ]:
             self.assertIsNone(A.qualified_success({**event, **change}, "postToolUse"))
+
+    def _real_writer_finishes_during_receipt_scan(self, mode):
+        """Schedule a real writer at a reader boundary; do not replace store code."""
+        evidence = self.root / "evidence"
+        evidence.mkdir(mode=0o700)
+        A.ReceiptStore(evidence, "a" * 64)
+        child_code = r"""import importlib.util,json,linecache,sys
+from pathlib import Path
+spec=importlib.util.spec_from_file_location("adapter",sys.argv[1])
+a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
+store=a.ReceiptStore(Path(sys.argv[2]),"a"*64)
+def rendezvous(path):
+ print(json.dumps({"path":str(path)}),flush=True)
+ assert sys.stdin.readline().strip()=="continue"
+if sys.argv[3]=="lock":
+ with store.locked("b"*64):
+  rendezvous(store.directory/("b"*64+".lock"))
+elif sys.argv[3]=="stable":
+ event={"conversation_id":"c","generation_id":"g","tool_use_id":"stable"}
+ store.begin(event,"printf fixture",[],{})
+ rendezvous(store.path(event))
+ store.path(event).unlink()
+else:
+ def pause_before_atomic_publish(frame,event,arg):
+  if (event=="line" and frame.f_code is a.ReceiptStore.write.__code__
+      and linecache.getline(frame.f_code.co_filename,frame.f_lineno).strip().startswith("os.replace(")):
+   sys.settrace(None)
+   rendezvous(frame.f_locals["temporary"])
+  return pause_before_atomic_publish
+ sys.settrace(pause_before_atomic_publish)
+ store.begin({"conversation_id":"c","generation_id":"g","tool_use_id":"writer"},"printf fixture",[],{})
+ sys.settrace(None)
+print("finished",flush=True)
+"""
+        child = subprocess.Popen(
+            [
+                sys.executable,
+                "-c",
+                child_code,
+                str(ROOT / "integrations/cursor/hook_adapter.py"),
+                str(evidence),
+                mode,
+            ],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        previous_trace = sys.gettrace()
+        resumed = []
+        try:
+            self.assertTrue(select.select([child.stdout], [], [], 5)[0])
+            target = json.loads(child.stdout.readline())["path"]
+            self.assertTrue(Path(target).exists())
+
+            def resume_real_writer(frame, event, _arg):
+                if (
+                    event == "call"
+                    and frame.f_code is A.checked_path.__code__
+                    and frame.f_locals.get("value") == target
+                ):
+                    sys.settrace(previous_trace)
+                    child.stdin.write("continue\n")
+                    child.stdin.flush()
+                    self.assertTrue(select.select([child.stdout], [], [], 5)[0])
+                    self.assertEqual(child.stdout.readline().strip(), "finished")
+                    self.assertEqual(child.wait(timeout=5), 0)
+                    self.assertFalse(Path(target).exists())
+                    resumed.append(target)
+                return resume_real_writer
+
+            sys.settrace(resume_real_writer)
+            observed = A.ReceiptStore(evidence, "a" * 64)
+            self.assertEqual(len(resumed), 1)
+            self.assertEqual(observed.interrupted_writes, [])
+            if mode == "temporary":
+                event = {
+                    "conversation_id": "c",
+                    "generation_id": "g",
+                    "tool_use_id": "writer",
+                }
+                self.assertEqual(
+                    observed.read(observed.key(event))["state"], "prepared"
+                )
+            self.assertEqual(child.stderr.read(), "")
+        finally:
+            sys.settrace(previous_trace)
+            if child.poll() is None:
+                child.kill()
+            child.communicate(timeout=5)
+            for stream in (child.stdin, child.stdout, child.stderr):
+                stream.close()
+
+    def test_real_disappearing_lock_does_not_refuse_another_call(self):
+        self._real_writer_finishes_during_receipt_scan("lock")
+
+    def test_real_atomic_publish_does_not_refuse_another_call(self):
+        self._real_writer_finishes_during_receipt_scan("temporary")
+
+    def test_missing_stable_record_is_still_refused(self):
+        with self.assertRaisesRegex(A.Refusal, "path_missing"):
+            self._real_writer_finishes_during_receipt_scan("stable")
+
+    def test_transient_names_do_not_admit_symlinks_or_public_files(self):
+        evidence = self.root / "evidence"
+        evidence.mkdir(mode=0o700)
+        A.ReceiptStore(evidence, "a" * 64)
+        target = self.root / "actual"
+        target.write_text("preserve")
+        for name in ["b" * 64 + ".lock", "b" * 64 + "." + "c" * 32 + ".tmp"]:
+            path = evidence / name
+            path.symlink_to(target)
+            with self.assertRaisesRegex(A.Refusal, "path_symlink"):
+                A.ReceiptStore(evidence, "a" * 64)
+            path.unlink()
+            path.write_text("preserve")
+            path.chmod(0o644)
+            with self.assertRaisesRegex(A.Refusal, "path_private"):
+                A.ReceiptStore(evidence, "a" * 64)
+            self.assertEqual(path.read_text(), "preserve")
+            path.unlink()
+        self.assertEqual(target.read_text(), "preserve")
 
     def test_real_competing_record_owners_one_wins(self):
         evidence = self.root / "evidence"

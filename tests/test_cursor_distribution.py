@@ -695,6 +695,277 @@ class CursorDistributionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.build()
 
+    def write_file_bound_structural_review(self, folder, record):
+        """Rebind test-only review to actual files, including malformed records."""
+        raw = (json.dumps(record, indent=2) + "\n").encode()
+        (folder / "native-receipt.json").write_bytes(raw)
+        hashes = {
+            path.relative_to(folder).as_posix(): sha(path.read_bytes())
+            for path in folder.rglob("*")
+            if path.is_file()
+            and path.name not in ("native-receipt.json", "review.json")
+        }
+        (folder / "review.json").write_text(
+            json.dumps(
+                {
+                    "schemaVersion": 1,
+                    "status": "PASS",
+                    "sourceCommit": COMMIT,
+                    "reviewer": "STRUCTURAL UNIT TEST ONLY",
+                    "nativeReceiptSha256": sha(raw),
+                    "evidenceHashes": hashes,
+                }
+            )
+        )
+
+    def test_malformed_evidence_manifest_is_rejected_after_review_rebinding(self):
+        archive, folder, original = self.qualification_fixture()
+        values = [None, [], {}, {str(i): {} for i in range(257)}]
+        for value in values:
+            record = copy.deepcopy(original)
+            record["files"] = value
+            self.write_file_bound_structural_review(folder, record)
+            with (
+                self.subTest(value_type=type(value).__name__),
+                self.assertRaisesRegex(
+                    verify.ReleaseError, "actual evidence file manifest required"
+                ),
+            ):
+                verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+        for descriptor in [
+            None,
+            [],
+            {},
+            {"sha256": "0" * 64, "bytes": 1, "kind": "claim"},
+        ]:
+            record = copy.deepcopy(original)
+            record["files"]["outputs/observed.txt"] = descriptor
+            self.write_file_bound_structural_review(folder, record)
+            with (
+                self.subTest(descriptor=descriptor),
+                self.assertRaisesRegex(
+                    verify.ReleaseError, "invalid evidence file descriptor"
+                ),
+            ):
+                verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+
+    def test_host_and_capability_objects_cannot_be_replaced_by_truthy_values(self):
+        archive, folder, original = self.qualification_fixture()
+        for field, message in [
+            ("host", "host identity must be an object"),
+            ("capabilities", "capability record must be an object"),
+        ]:
+            for value in [None, True, ["PASS"], "PASS"]:
+                record = copy.deepcopy(original)
+                record[field] = value
+                self.write_file_bound_structural_review(folder, record)
+                with (
+                    self.subTest(field=field, value=value),
+                    self.assertRaisesRegex(verify.ReleaseError, message),
+                ):
+                    verify.verify_native_qualification(
+                        self.root, archive, folder, COMMIT, 1, 2
+                    )
+
+    def test_installed_payload_and_vendor_claims_refuse_with_valid_file_digests(self):
+        archive, folder, original = self.qualification_fixture()
+        mutations = {
+            "outputs/installed.json": [
+                ("archiveSha256", "0" * 64),
+                ("files", {}),
+                ("files", {"integrations/cursor/hook_adapter.py": "0" * 64}),
+            ],
+            "outputs/vendor.json": [
+                ("status", "NOT_RUN"),
+                ("version", "other"),
+                ("commit", "0" * 40),
+                ("argv", []),
+                ("argv", "codesign"),
+                ("argv", [True]),
+                ("exitCode", True),
+                ("exitCode", 1),
+            ],
+        }
+        for name, cases in mutations.items():
+            target = folder / name
+            original_bytes = target.read_bytes()
+            for key, value in cases:
+                document = json.loads(original_bytes)
+                document[key] = value
+                raw = json.dumps(document).encode()
+                target.write_bytes(raw)
+                record = copy.deepcopy(original)
+                record["files"][name].update(sha256=sha(raw), bytes=len(raw))
+                self.write_file_bound_structural_review(folder, record)
+                message = (
+                    "actual installed payload differs"
+                    if "installed" in name
+                    else "vendor verification evidence is incomplete"
+                )
+                with (
+                    self.subTest(name=name, key=key, value=value),
+                    self.assertRaisesRegex(verify.ReleaseError, message),
+                ):
+                    verify.verify_native_qualification(
+                        self.root, archive, folder, COMMIT, 1, 2
+                    )
+            target.write_bytes(original_bytes)
+
+    def test_oversized_actual_evidence_refuses_even_with_correct_digests(self):
+        archive, folder, record = self.qualification_fixture()
+        raw = b"x" * (2 * 1024 * 1024 + 1)
+        (folder / "outputs/observed.txt").write_bytes(raw)
+        record["files"]["outputs/observed.txt"].update(sha256=sha(raw), bytes=len(raw))
+        self.write_file_bound_structural_review(folder, record)
+        with self.assertRaisesRegex(
+            verify.ReleaseError, "actual evidence bytes differ"
+        ):
+            verify.verify_native_qualification(self.root, archive, folder, COMMIT, 1, 2)
+
+    def test_rewrite_execution_requires_actual_bounded_output_mapping(self):
+        archive, folder, original = self.qualification_fixture()
+        for value, message in [
+            (None, "native rewrite execution chain is required"),
+            ({}, "native rewrite execution chain is required"),
+            (
+                {
+                    "postEvent": "outputs/post.json",
+                    "selectedOutputs": {},
+                    "extra": True,
+                },
+                "native rewrite execution chain is required",
+            ),
+            (
+                {"postEvent": "inputs/public.txt", "selectedOutputs": {}},
+                "native post event and selected outputs are required",
+            ),
+            (
+                {"postEvent": "outputs/post.json", "selectedOutputs": []},
+                "native post event and selected outputs are required",
+            ),
+            (
+                {"postEvent": "outputs/post.json", "selectedOutputs": {}},
+                "native post event and selected outputs are required",
+            ),
+            (
+                {
+                    "postEvent": "outputs/post.json",
+                    "selectedOutputs": {
+                        str(i): "outputs/derived.json" for i in range(17)
+                    },
+                },
+                "native post event and selected outputs are required",
+            ),
+        ]:
+            record = copy.deepcopy(original)
+            record["rewriteExecution"] = value
+            self.write_file_bound_structural_review(folder, record)
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(verify.ReleaseError, message),
+            ):
+                verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+
+    def test_completed_rewrite_descriptor_and_selected_target_are_exact(self):
+        archive, folder, original = self.qualification_fixture()
+        target = folder / "outputs/completed.json"
+        source = json.loads(target.read_text())
+        for descriptor, message in [
+            (None, "invalid completed output descriptor"),
+            (
+                {"path": source["selectedOutputs"][0]},
+                "invalid completed output descriptor",
+            ),
+            (
+                {**source["artifacts"][0], "path": "/unselected"},
+                "completed output path differs",
+            ),
+            ({**source["artifacts"][0], "path": True}, "completed output path differs"),
+        ]:
+            completed = copy.deepcopy(source)
+            completed["artifacts"] = [descriptor]
+            raw = json.dumps(completed).encode()
+            target.write_bytes(raw)
+            record = copy.deepcopy(original)
+            record["files"]["outputs/completed.json"].update(
+                sha256=sha(raw), bytes=len(raw)
+            )
+            self.write_file_bound_structural_review(folder, record)
+            with (
+                self.subTest(descriptor=descriptor),
+                self.assertRaisesRegex(verify.ReleaseError, message),
+            ):
+                verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+        raw = json.dumps(source).encode()
+        target.write_bytes(raw)
+        for value in ["inputs/public.txt", "outputs/absent.json", True]:
+            record = copy.deepcopy(original)
+            record["files"]["outputs/completed.json"].update(
+                sha256=sha(raw), bytes=len(raw)
+            )
+            record["rewriteExecution"]["selectedOutputs"][
+                source["selectedOutputs"][0]
+            ] = value
+            self.write_file_bound_structural_review(folder, record)
+            with (
+                self.subTest(target=value),
+                self.assertRaisesRegex(
+                    verify.ReleaseError,
+                    "selected rewrite output is not an actual output",
+                ),
+            ):
+                verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+
+    def test_real_artifact_extraction_reads_exact_bytes_and_refuses_replacement(self):
+        import io
+
+        stream = io.BytesIO()
+        members = {
+            "nested/source.txt": b"Unicode: \xce\xbb\r\n",
+            "result.json": b'{"result":1}\n',
+        }
+        with zipfile.ZipFile(stream, "w", zipfile.ZIP_DEFLATED) as archive:
+            for name, data in members.items():
+                archive.writestr(name, data)
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            verify._extract_artifact(stream.getvalue(), folder)
+            self.assertEqual(
+                members, {name: (folder / name).read_bytes() for name in members}
+            )
+            with self.assertRaisesRegex(
+                verify.ReleaseError, "cannot safely extract artifact"
+            ):
+                verify._extract_artifact(stream.getvalue(), folder)
+            self.assertEqual(
+                members, {name: (folder / name).read_bytes() for name in members}
+            )
+        for count in [0, 513]:
+            stream = io.BytesIO()
+            with zipfile.ZipFile(stream, "w") as archive:
+                for index in range(count):
+                    archive.writestr(str(index), b"bounded input")
+            with tempfile.TemporaryDirectory() as temporary:
+                folder = Path(temporary)
+                with (
+                    self.subTest(count=count),
+                    self.assertRaisesRegex(
+                        verify.ReleaseError, "artifact member bounds exceeded"
+                    ),
+                ):
+                    verify._extract_artifact(stream.getvalue(), folder)
+                self.assertEqual([], list(folder.iterdir()))
+
     def test_release_notes_link_only_exact_qualified_source_and_digests(self):
         admission = {
             "status": "PASS_REVIEWED_NATIVE_EVIDENCE",

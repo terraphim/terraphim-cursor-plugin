@@ -666,7 +666,23 @@ class ReceiptStore:
                 or temporary,
                 "evidence_unrelated",
             )
-            checked_path(str(item), private=True)
+            try:
+                checked_path(str(item), private=True)
+            except (FileNotFoundError, Refusal) as exc:
+                # Another real writer may publish its temporary file or release
+                # its lock after this directory snapshot. Only an absent known
+                # transient may be ignored; stable records and unsafe paths fail.
+                transient = temporary or re.fullmatch(r"[0-9a-f]{64}\.lock", item.name)
+                if not transient or (
+                    isinstance(exc, Refusal) and str(exc) != "path_missing"
+                ):
+                    raise
+                checked_path(str(self.directory), directory=True, private=True)
+                try:
+                    item.lstat()
+                except FileNotFoundError:
+                    continue
+                raise
             if temporary:
                 self.interrupted_writes.append(
                     {
