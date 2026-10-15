@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Resolve and verify the original signed release
+        id: source
         env:
           RELEASE_TAG: ${{ inputs.tag }}
         shell: bash
@@ -37,12 +38,25 @@ jobs:
             verify-tag "$release_ref"
           mkdir "$RUNNER_TEMP/release-source"
           git archive "$release_ref" | tar -x -C "$RUNNER_TEMP/release-source"
+          echo "commit=$(git rev-list -n 1 "$release_ref")" >> "$GITHUB_OUTPUT"
       - name: Read back public release bytes
         env:
           RELEASE_TAG: ${{ inputs.tag }}
         run: |
+          extra=()
+          source="$RUNNER_TEMP/release-source"
+          if python3 -c 'import json,sys; sys.exit("cursor_integration" not in json.load(open(sys.argv[1])))' "$source/distribution/metadata.json"; then
+            python3 - "$source" "$RUNNER_TEMP/cursor-readback" "${{ steps.source.outputs.commit }}" <<'PYTHON'
+          import importlib.util, pathlib, sys
+          spec = importlib.util.spec_from_file_location("generator", "scripts/generate_distribution.py")
+          module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+          root = pathlib.Path(sys.argv[1])
+          module.build_cursor_archive(root, module.load_metadata(root), pathlib.Path(sys.argv[2]), sys.argv[3])
+          PYTHON
+            extra=(--cursor-archive "$RUNNER_TEMP/cursor-readback/terraphim-cursor-integration-${RELEASE_TAG#v}.zip" --source-commit "${{ steps.source.outputs.commit }}")
+          fi
           python3 scripts/verify_published_release.py \
-            --root "$RUNNER_TEMP/release-source" --tag "$RELEASE_TAG" \
+            --root "$source" --tag "$RELEASE_TAG" "${extra[@]}" \
             --receipt "$RUNNER_TEMP/published-release.json"
       - name: Retain actual public readback
         if: always()

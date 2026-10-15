@@ -8,14 +8,14 @@
         "source": "github",
         "repo": "terraphim/terraphim-cursor-plugin",
         "path": ".",
-        "ref": "v0.2.6"
+        "ref": "v0.2.7"
       },
       "description": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
       "description_i18n": {
         "en": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
         "zh-CN": "在编辑器中创建备选措辞、搜索共享同义词图、记录经验并检索记忆。"
       },
-      "version": "0.2.6",
+      "version": "0.2.7",
       "category": "developer-tools",
       "tags": [
         "terraphim",

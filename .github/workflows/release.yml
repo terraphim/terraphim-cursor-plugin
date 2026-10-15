@@ -1,23 +1,52 @@
 name: Publish marketplace pack
 
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing signed v* tag matching the native-qualified source
+        required: true
+        type: string
+      qualification_artifact_id:
+        description: Same-repository successful main validate artifact ID
+        required: true
+        type: string
+      qualification_artifact_sha256:
+        description: Exact immutable qualification artifact SHA256
+        required: true
+        type: string
   push:
     tags:
       - "v*"
 
 permissions:
   contents: read
+  actions: read
+
+env:
+  RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+  QUALIFICATION_ID: ${{ inputs.qualification_artifact_id }}
+  QUALIFICATION_SHA256: ${{ inputs.qualification_artifact_sha256 }}
 
 jobs:
   validate:
+    if: github.event_name == 'push' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      source_commit: ${{ steps.source.outputs.commit }}
     steps:
+      - name: Validate release tag syntax
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9.-]+)?$ ]]
+
       - name: Check out tagged source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           # Signature verification needs the annotated tag object, not only the
           # commit that a shallow tag checkout resolves to.
           fetch-depth: 0
+          ref: ${{ env.RELEASE_TAG }}
           persist-credentials: false
 
       - name: Set up Python
@@ -44,24 +73,30 @@ jobs:
             --source-root skills --tsm "$RUNNER_TEMP/terraphim-tsm-verifier/tsm"
 
       - name: Validate tagged pack
+        id: source
         env:
           TERRAPHIM_TSM_VERIFIER: ${{ runner.temp }}/terraphim-tsm-verifier/tsm
         run: |
           expected_tag="v$(python3 scripts/generate_distribution.py --print-version)"
-          test "$GITHUB_REF_NAME" = "$expected_tag"
+          test "$RELEASE_TAG" = "$expected_tag"
           # actions/checkout can leave the event tag name pointing at the
           # peeled commit. Fetch the remote annotated tag into a private ref so
           # signature verification always targets the tag object itself.
-          release_ref="refs/release-tags/$GITHUB_REF_NAME"
+          release_ref="refs/release-tags/$RELEASE_TAG"
           git fetch --no-tags --force origin \
-            "refs/tags/$GITHUB_REF_NAME:$release_ref"
-          test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"
+            "refs/tags/$RELEASE_TAG:$release_ref"
+          test "$(git rev-list -n 1 "$release_ref")" = "$(git rev-parse HEAD)"
+          if test "$GITHUB_EVENT_NAME" = push; then
+            test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          fi
           git config gpg.format ssh
           git config gpg.ssh.allowedSignersFile \
             "$GITHUB_WORKSPACE/.github/trusted-release-signers"
           git verify-tag "$release_ref"
           python3 scripts/generate_distribution.py --check
-          python3 -m unittest discover -s tests -p 'test_*.py'
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          set -o pipefail
+          python3 -m unittest discover -s tests -p 'test_*.py' 2>&1 | tee "$RUNNER_TEMP/release-tests.log"
 
       - name: Rebuild and compare AutoClaw archives
         run: |
@@ -73,55 +108,103 @@ jobs:
             cmp "$archive" "$output/$name"
           done
 
+      - name: Build and admit native-qualified Cursor archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/generate_distribution.py --cursor-dist "$RUNNER_TEMP/cursor-release" \
+            --source-commit "$(git rev-parse HEAD)"
+          version="$(python3 scripts/generate_distribution.py --print-version)"
+          python3 scripts/verify_published_release.py --tag "$RELEASE_TAG" \
+            --source-commit "$(git rev-parse HEAD)" --native-only \
+            --cursor-archive "$RUNNER_TEMP/cursor-release/terraphim-cursor-integration-$version.zip" \
+            --qualification-artifact-id "${QUALIFICATION_ID:-0}" \
+            --qualification-artifact-sha256 "$QUALIFICATION_SHA256" \
+            --receipt "$RUNNER_TEMP/native-admission.json"
+
+      - name: Retain release admission including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-release-admission
+          path: |
+            ${{ runner.temp }}/native-admission.json
+            ${{ runner.temp }}/release-tests.log
+          if-no-files-found: warn
+
   publish:
-    needs: validate
+    needs: [validate, protocol-contracts]
     concurrency:
-      group: skills-publish-${{ github.ref }}
+      group: skills-publish-${{ inputs.tag || github.ref }}
       cancel-in-progress: false
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
+      actions: read
     steps:
       - name: Check out validated tagged source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          ref: ${{ needs.validate.outputs.source_commit }}
 
       - name: Re-verify immutable release tag
         run: |
-          release_ref="refs/release-tags/$GITHUB_REF_NAME"
+          release_ref="refs/release-tags/$RELEASE_TAG"
           git fetch --no-tags --force origin \
-            "refs/tags/$GITHUB_REF_NAME:$release_ref"
-          test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"
+            "refs/tags/$RELEASE_TAG:$release_ref"
+          test "$(git rev-list -n 1 "$release_ref")" = "$(git rev-parse HEAD)"
+          if test "$GITHUB_EVENT_NAME" = push; then
+            test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          fi
           git config gpg.format ssh
           git config gpg.ssh.allowedSignersFile \
             "$GITHUB_WORKSPACE/.github/trusted-release-signers"
           git verify-tag "$release_ref"
 
+      - name: Rebuild exact qualified integration archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/generate_distribution.py --cursor-dist "$RUNNER_TEMP/cursor-release" \
+            --source-commit "$(git rev-parse HEAD)"
+          version="$(python3 scripts/generate_distribution.py --print-version)"
+          python3 scripts/verify_published_release.py --tag "$RELEASE_TAG" \
+            --source-commit "$(git rev-parse HEAD)" --native-only \
+            --cursor-archive "$RUNNER_TEMP/cursor-release/terraphim-cursor-integration-$version.zip" \
+            --qualification-artifact-id "${QUALIFICATION_ID:-0}" \
+            --qualification-artifact-sha256 "$QUALIFICATION_SHA256" \
+            --receipt "$RUNNER_TEMP/native-admission.json" \
+            --release-notes "$RUNNER_TEMP/cursor-release-notes.md"
+
       - name: Publish immutable release assets
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --json tagName; then
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json tagName; then
             # A retry never uploads or replaces existing assets. The next step
             # verifies the complete immutable release against this tagged source.
             echo "Release already exists; verifying its published assets."
           else
-            gh release create "$GITHUB_REF_NAME" \
+            gh release create "$RELEASE_TAG" \
               dist/autoclaw/*.zip \
-              dist/autoclaw/SHA256SUMS \
+              "$RUNNER_TEMP"/cursor-release/*.zip \
+              "$RUNNER_TEMP/cursor-release/SHA256SUMS" \
               assets/v-model-overview.svg \
               assets/v-model-overview.png \
               --repo "$GITHUB_REPOSITORY" \
-              --title "Terraphim Skills Introduction $GITHUB_REF_NAME" \
-              --generate-notes \
+              --title "Terraphim Skills Introduction $RELEASE_TAG" \
+              --notes-file "$RUNNER_TEMP/cursor-release-notes.md" \
               --verify-tag
           fi
 
       - name: Read back every public release asset
         run: |
+          version="$(python3 scripts/generate_distribution.py --print-version)"
           python3 scripts/verify_published_release.py \
-            --tag "$GITHUB_REF_NAME" \
+            --tag "$RELEASE_TAG" --source-commit "$(git rev-parse HEAD)" \
+            --cursor-archive "$RUNNER_TEMP/cursor-release/terraphim-cursor-integration-$version.zip" \
             --receipt "$RUNNER_TEMP/published-release.json"
 
       - name: Retain actual public readback
@@ -129,5 +212,79 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: published-release-readback
-          path: ${{ runner.temp }}/published-release.json
+          path: |
+            ${{ runner.temp }}/published-release.json
+            ${{ runner.temp }}/native-admission.json
+            ${{ runner.temp }}/cursor-release-notes.md
           if-no-files-found: error
+
+  protocol-contracts:
+    needs: validate
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          ref: ${{ needs.validate.outputs.source_commit }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Download and admit the selected released ARM agent
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib, io, json, os, pathlib, tarfile, urllib.request
+          root = pathlib.Path(os.environ['RUNNER_TEMP']) / 'cursor-protocol'
+          root.mkdir()
+          inputs = json.loads(pathlib.Path('integrations/cursor/release-inputs.json').read_text())
+          assert inputs['clients']['version'] == '1.21.20'
+          rows = [a for a in inputs['clients']['assets'] if a['tool'] == 'terraphim-agent' and a['target'] == 'aarch64-unknown-linux-musl']
+          assert len(rows) == 1
+          asset = rows[0]
+          assert asset['url'] == 'https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-agent-1.21.20-aarch64-unknown-linux-musl.tar.gz'
+          assert asset['archiveSha256'] == 'cf09f161ff42180308509d8e9b43b66c94bedd3801987cd1112b38b3718b5789'
+          assert asset['binarySha256'] == '5ae520c7034dd125dc6ccb0f6a2f7233794e4bef254381f292566827988f9c52'
+          with urllib.request.urlopen(asset['url'], timeout=30) as response:
+              raw = response.read(16 * 1024 * 1024 + 1)
+          assert len(raw) == asset['bytes'] and hashlib.sha256(raw).hexdigest() == asset['archiveSha256']
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as archive:
+              members = archive.getmembers()
+              binaries = [m for m in members if m.name == asset['member']]
+              assert len(binaries) == 1 and binaries[0].isfile() and binaries[0].size <= 64 * 1024 * 1024
+              with archive.extractfile(binaries[0]) as source:
+                  binary = source.read()
+          assert hashlib.sha256(binary).hexdigest() == asset['binarySha256']
+          executable = root / 'terraphim-agent'
+          executable.write_bytes(binary)
+          executable.chmod(0o700)
+          (root / 'input-identity.json').write_text(json.dumps(asset, indent=2) + '\n')
+          PYTHON
+      - name: Execute real released-agent contracts without skipped tests
+        env:
+          CURSOR_TEST_AGENT: ${{ runner.temp }}/cursor-protocol/terraphim-agent
+          CURSOR_TEST_EVIDENCE: ${{ runner.temp }}/cursor-protocol/outputs
+        run: |
+          set -o pipefail
+          python3 - <<'PYTHON' 2>&1 | tee "$RUNNER_TEMP/cursor-protocol/tests.log"
+          import json, os, pathlib, sys, unittest
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_cursor_integration.py')
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = result.wasSuccessful() and not result.skipped and result.testsRun > 0
+          receipt = {'status': 'PASS' if passed else 'FAIL', 'testsRun': result.testsRun,
+                     'skipped': len(result.skipped), 'failures': len(result.failures), 'errors': len(result.errors),
+                     'scope': 'Real Linux ARM released-agent protocol; not native Cursor acceptance.'}
+          pathlib.Path(os.environ['RUNNER_TEMP'], 'cursor-protocol', 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
+          sys.exit(0 if passed else 1)
+          PYTHON
+      - name: Retain actual protocol outputs and failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-protocol-contracts
+          path: |
+            ${{ runner.temp }}/cursor-protocol/input-identity.json
+            ${{ runner.temp }}/cursor-protocol/outputs/
+            ${{ runner.temp }}/cursor-protocol/tests.log
+            ${{ runner.temp }}/cursor-protocol/receipt.json
+          if-no-files-found: warn
