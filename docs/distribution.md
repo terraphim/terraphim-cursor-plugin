@@ -193,3 +193,18 @@ service has no GitHub OIDC publisher exchange. Existing catalog uploads use
 `tsm push`, and service/site deployment CI does not upload new skill content.
 Unattended catalog publication remains a gate until a supported scoped CI
 publisher identity is available; no human token is copied into this repository.
+
+## Cursor integration release gate
+
+The [read-first project setup](../integrations/cursor/README.md) requires the
+matching release qualification record for native acceptance. Source/examples
+are not proof. The user requires
+**“Hold the update until hooks pass”**: editor/search/memory alone cannot release
+this update. Optional rewriting/capture remain inactive, and automatic failure
+capture is unavailable until its actual native result shape is qualified.
+
+The shared pack uses the existing signed `v*` pipeline with an additive
+Cursor integration archive and matching checksum entry. Original signed skill
+payloads and historical release assets remain immutable. Required native output
+and installed-payload evidence must bind the candidate before release; green
+packaging tests do not grant native or curated marketplace acceptance.

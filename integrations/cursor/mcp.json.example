@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "terraphim-grep": {
+      "command": "/absolute/path/to/Python venv/bin/python",
+      "args": [
+        "/absolute/path/to/Continue 0.1.1/server.py",
+        "--binary",
+        "/absolute/path/to/Terraphim tools/terraphim-grep",
+        "--binary-sha256",
+        "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab",
+        "--graph",
+        "/absolute/path/to/Public Project/exports/risk-concern.knowledge-graph.json",
+        "--corpus",
+        "/absolute/path/to/Public Project/corpus"
+      ]
+    }
+  }
+}

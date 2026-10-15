@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "projectRoot": "/absolute/path/to/Public Project",
+  "agent": {
+    "path": "/absolute/path/to/Terraphim tools/terraphim-agent",
+    "sha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec"
+  },
+  "roleConfig": {
+    "path": "/absolute/path/to/Public Project/terraphim-hooks/role-config.json",
+    "sha256": "80aa80258e02016edb3c5a2c2c7ad97f61ca10d60b905376348e74657a5e1317"
+  },
+  "startupSettings": {
+    "directory": "/absolute/path/to/Public Project/terraphim-hooks/settings",
+    "settingsSha256": "93dd4bc1522378753606b8808cd3558a71607b655b7e0925899cd1ce1e6d2ca0"
+  },
+  "correctionRole": "cursor-corrections",
+  "guardRole": "cursor-guard",
+  "compiledRules": {
+    "path": "/absolute/path/to/Public Project/terraphim-hooks/compiled-corrections.json",
+    "sha256": "b7fcd0f4b8da5c2f181c7321f7b46337eacfb0571c5f50c14a7815188fbc0c3b"
+  },
+  "guardRules": {
+    "path": "/absolute/path/to/Public Project/terraphim-hooks/guard-rules.json",
+    "sha256": "da6ae844512b90d3df60f69ab1855119ee2527f110b61cece8fb2e3cab6ba767"
+  },
+  "rewriteEnabled": false,
+  "captureFailures": false,
+  "evidence": {
+    "enabled": false
+  }
+}

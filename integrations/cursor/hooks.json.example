@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "'/absolute/path/to/Python venv/bin/python' '/absolute/path/to/Terraphim plugin/integrations/cursor/hook_adapter.py' --policy '/absolute/path/to/Public Project/terraphim-hook-policy.json' --policy-sha256 534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7 --event preToolUse",
+        "matcher": "Shell",
+        "timeout": 15,
+        "failClosed": true
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "'/absolute/path/to/Python venv/bin/python' '/absolute/path/to/Terraphim plugin/integrations/cursor/hook_adapter.py' --policy '/absolute/path/to/Public Project/terraphim-hook-policy.json' --policy-sha256 534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7 --event postToolUse",
+        "matcher": "Shell",
+        "timeout": 15,
+        "failClosed": true
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": "'/absolute/path/to/Python venv/bin/python' '/absolute/path/to/Terraphim plugin/integrations/cursor/hook_adapter.py' --policy '/absolute/path/to/Public Project/terraphim-hook-policy.json' --policy-sha256 534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7 --event postToolUseFailure",
+        "matcher": "Shell",
+        "timeout": 15,
+        "failClosed": true
+      }
+    ]
+  }
+}
