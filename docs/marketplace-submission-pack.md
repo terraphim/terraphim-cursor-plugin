@@ -46,10 +46,11 @@ workflows:
 4. `terraphim-editor` guides the existing editor: create and swap alternatives,
    save/reopen, export synonym JSON and search related decisions.
 
-The plugin contains instructions, not bundled executables. Users install the
-signed Terraphim binaries through Homebrew or the checksummed release archives
-and verify both versions before an agent uses them. Search is read-only by default. Learning and memory writes are
-performed only when the user asks for them.
+The plugin contains instructions, not bundled executables. Users install
+Terraphim binaries separately through Homebrew or checksummed release archives
+and verify both versions before use. Skill signatures verify the original skill
+files; they do not authenticate the separate binaries. Search is read-only by
+default. Learning and memory writes occur only when the user asks for them.
 
 The Community skills stand on their own. They also link neutrally to the
 Terraphim Skills catalogue, where users can discover Community, Core, and
@@ -90,7 +91,7 @@ terraphim-agent learn --help
 terraphim-agent memory --help
 ```
 
-See [Install dependencies](install-dependencies.md) for signed-release and
+See [Install dependencies](install-dependencies.md) for release-archive and
 non-Homebrew options.
 
 ## Permissions and data handling
@@ -117,7 +118,7 @@ The repository includes Terraphim-owned V-model artwork in both formats:
 
 | Host | Artefact | Delivery route |
 | --- | --- | --- |
-| Cursor | `.cursor-plugin/plugin.json` | Existing Cursor marketplace listing; do not resubmit |
+| Cursor | `.cursor-plugin/plugin.json` | Prior submission recorded; public listing unverified. Use the [local-copy route](../README.md#local-cursor-installation); do not submit a duplicate application. |
 | Kimi Code | `kimi.plugin.json`, compatibility `plugin.json`, and `marketplaces/kimi.json` | Direct install and publisher-owned marketplace |
 | AutoClaw | `dist/autoclaw/*.zip` and `SHA256SUMS` | Import one skill ZIP at a time |
 | ZCode | `.zcode-plugin/plugin.json` and `marketplaces/zcode.json` | Personal marketplace; separate curated-marketplace PR |
