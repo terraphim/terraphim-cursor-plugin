@@ -40,7 +40,7 @@ troubleshooting. The skills never install dependencies automatically.
 
 | Host | Installation |
 |---|---|
-| Cursor | Already submitted; install from Cursor Marketplace, or use the local-copy instructions below. |
+| Cursor | Use the local-copy instructions below. A prior marketplace submission is recorded; a public listing is not verified. |
 | Kimi Code | Install this repository or add `marketplaces/kimi.json` as a custom marketplace. |
 | AutoClaw | Import one checksummed ZIP per skill with **Skills & Connectors → Skills → Create → Add skill file**. |
 | ZCode | Add `marketplaces/zcode.json` as a personal marketplace and install `terraphim-skills-intro`; curated listing is a separate maintainer-reviewed PR. |

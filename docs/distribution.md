@@ -29,7 +29,9 @@ wrappers, and curated availability does not establish native host qualification.
   immutable GitHub release.
 - **Curated marketplace listing** is controlled by each marketplace maintainer and
   remains pending until that marketplace confirms indexing or approval.
-- Cursor is already submitted and is a regression target, not a new submission.
+- A prior Cursor submission is recorded, but acceptance or rejection is unconfirmed.
+  Use the local-copy route below while its public listing remains unverified;
+  do not submit a duplicate application.
 - The Grok Build submission is open at
   <https://github.com/xai-org/plugin-marketplace/pull/730> and pins the exact
   signed release commit; public listing remains under maintainer review.
@@ -122,8 +124,16 @@ remove it.
 
 ## Cursor
 
-Install from Cursor Marketplace. For local testing, follow the real-directory
-copy instructions in the README; Cursor 3.20 rejects external symlink targets.
+Use the [local-copy instructions](../README.md#local-cursor-installation) to
+install the instruction plugin. Cursor 3.20 rejects external symlink targets,
+so retain the real-directory copy route.
+
+A previous marketplace submission was recorded by 16 September 2026. A public
+[Cursor Marketplace](https://cursor.com/marketplace) search for `terraphim` on
+15 October 2026 returned **No results found**. Neither acceptance nor rejection
+has been confirmed. Keep the existing submission and seek its status before
+submitting another application. The separately distributed Terraphim It VSIX
+editor does not establish marketplace admission of this instruction plugin.
 
 ## Catalogue boundary
 
