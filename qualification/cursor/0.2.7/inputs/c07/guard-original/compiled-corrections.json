@@ -1,0 +1,11 @@
+{
+  "name": "compiled_corrections",
+  "data": {
+    "printf '%s\\n' 'reviewed warning-fixed guard probe'": {
+      "id": 1,
+      "nterm": "printf '%s\\n' 'rm -rf /'",
+      "display_value": "printf '%s\\n' 'rm -rf /'",
+      "pinned": false
+    }
+  }
+}

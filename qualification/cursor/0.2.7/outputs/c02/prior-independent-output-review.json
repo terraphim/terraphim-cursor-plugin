@@ -1,0 +1,314 @@
+{
+  "status": "PASS_BOUNDED_SAVED_OUTPUT_REVIEW",
+  "reviewedAt": "2026-10-16T09:01:57.175069+00:00",
+  "reviewer": "/root/validate_vscode_cursor",
+  "scope": "Independent saved-file and raw direct-MCP output readback only. No CLI/MCP rerun, native UI action, hook activation, source/report/status edit or commit.",
+  "C02": {
+    "savedOutputsVerified": true,
+    "parentNativeActionRecord": "native-outputs/c02-completion.json",
+    "nativeSequenceSource": "Parent observation; not independently replayed by reviewer",
+    "annotatedBytes": 649,
+    "cleanBytes": 129,
+    "graphId": 1,
+    "terms": [
+      "concern",
+      "risk"
+    ]
+  },
+  "C03": {
+    "nativeLiteralBaselineVerified": true,
+    "directDiagnosticPassagesVerified": 3,
+    "nativeMcpInvocationVerified": false,
+    "nativeAcceptanceComplete": false,
+    "parentReportedBlocker": "Cursor usage-limit message before MCP invocation; not independently inspected by this read-only reviewer."
+  },
+  "directDiagnosticScope": "Standalone stdio MCP only; not native Cursor C-03 completion and no synthesis result.",
+  "checks": [
+    {
+      "id": "retained-identity-brief-concern-resaved.md",
+      "status": "PASS",
+      "details": "Actual retained file matches parent-recorded hash and size."
+    },
+    {
+      "id": "source-boundary-brief-concern-resaved.md",
+      "status": "PASS",
+      "details": "Exact allowlisted public-project path."
+    },
+    {
+      "id": "disk-equality-brief-concern-resaved.md",
+      "status": "PASS",
+      "details": "Retained copy is byte-identical to the actual current public-project output."
+    },
+    {
+      "id": "retained-identity-brief.clean.md",
+      "status": "PASS",
+      "details": "Actual retained file matches parent-recorded hash and size."
+    },
+    {
+      "id": "source-boundary-brief.clean.md",
+      "status": "PASS",
+      "details": "Exact allowlisted public-project path."
+    },
+    {
+      "id": "disk-equality-brief.clean.md",
+      "status": "PASS",
+      "details": "Retained copy is byte-identical to the actual current public-project output."
+    },
+    {
+      "id": "retained-identity-brief.knowledge-graph.json",
+      "status": "PASS",
+      "details": "Actual retained file matches parent-recorded hash and size."
+    },
+    {
+      "id": "source-boundary-brief.knowledge-graph.json",
+      "status": "PASS",
+      "details": "Exact allowlisted public-project path."
+    },
+    {
+      "id": "disk-equality-brief.knowledge-graph.json",
+      "status": "PASS",
+      "details": "Retained copy is byte-identical to the actual current public-project output."
+    },
+    {
+      "id": "resaved-equals-prior",
+      "status": "PASS",
+      "details": "Native resave matches the previous649-byte saved annotation exactly."
+    },
+    {
+      "id": "single-human-alternative",
+      "status": "PASS",
+      "details": "One persisted word-alternative span; no ghost data invented."
+    },
+    {
+      "id": "active-human-concern",
+      "status": "PASS",
+      "details": "Original Risk and active human-authored Concern preserved."
+    },
+    {
+      "id": "anchor-matches-body",
+      "status": "PASS",
+      "details": "Saved anchor offsets identify the active text in the actual body."
+    },
+    {
+      "id": "clean-export-content",
+      "status": "PASS",
+      "details": "129-byte clean export equals the annotated visible body with the two annotation-separator newlines removed; no claim of raw body-byte equality."
+    },
+    {
+      "id": "same-id-exported-graph",
+      "status": "PASS",
+      "details": "Actual exported graph links concern/risk to the same concept ID1."
+    },
+    {
+      "id": "literal-output-identity",
+      "status": "PASS",
+      "details": "Parent native Shell output metadata matches the retained JSON."
+    },
+    {
+      "id": "literal-zero",
+      "status": "PASS",
+      "details": "Retained native literal baseline has zero passages and no answer; the original non-Git warning remains retained."
+    },
+    {
+      "id": "literal-source-copy",
+      "status": "PASS",
+      "details": "Retained baseline equals the actual saved public-project file."
+    },
+    {
+      "id": "diagnostic-identity-tools-list.json",
+      "status": "PASS",
+      "details": "Direct diagnostic output hash matches retained receipt."
+    },
+    {
+      "id": "diagnostic-identity-retrieval-result.json",
+      "status": "PASS",
+      "details": "Direct diagnostic output hash matches retained receipt."
+    },
+    {
+      "id": "diagnostic-identity-actual-retrieval.json",
+      "status": "PASS",
+      "details": "Direct diagnostic output hash matches retained receipt."
+    },
+    {
+      "id": "raw-mcp-payload",
+      "status": "PASS",
+      "details": "Parsed actual-retrieval is exactly the retained raw MCP text payload, not a separate reconstructed answer."
+    },
+    {
+      "id": "retrieval-only-negotiation",
+      "status": "PASS",
+      "details": "Saved tools/list exposes only the retrieval tool; no synthesis tool claimed."
+    },
+    {
+      "id": "direct-query-argv",
+      "status": "PASS",
+      "details": "Direct diagnostic uses the actual exported graph and exact public corpus/query."
+    },
+    {
+      "id": "binary-path",
+      "status": "PASS",
+      "details": "Selected released1.21.20 binary only; no execution performed by reviewer."
+    },
+    {
+      "id": "direct-binary-hash",
+      "status": "PASS",
+      "details": "The actual retained released executable matches the diagnostic binary digest."
+    },
+    {
+      "id": "direct-graph-hash",
+      "status": "PASS",
+      "details": "Diagnostic digest binds the actual editor export."
+    },
+    {
+      "id": "direct-three-no-answer",
+      "status": "PASS",
+      "details": "Standalone retrieval returns exactly three chunks without answer."
+    },
+    {
+      "id": "direct-sources",
+      "status": "PASS",
+      "details": "One passage from each exact expected corpus file; no outside file."
+    },
+    {
+      "id": "corpus-match-brief.md",
+      "status": "PASS",
+      "details": "Passage equals actual line1; original corpus contains Risk and no literal Concern."
+    },
+    {
+      "id": "corpus-match-decision.md",
+      "status": "PASS",
+      "details": "Passage equals actual line1; original corpus contains Risk and no literal Concern."
+    },
+    {
+      "id": "corpus-match-review.md",
+      "status": "PASS",
+      "details": "Passage equals actual line1; original corpus contains Risk and no literal Concern."
+    }
+  ],
+  "corpusMatches": [
+    {
+      "source": "brief.md",
+      "content": "Risk: supplier delays require a backup plan.",
+      "line_start": 1,
+      "line_end": 1,
+      "corpusSha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829"
+    },
+    {
+      "source": "decision.md",
+      "content": "Risk: approve a second supplier for delivery continuity.",
+      "line_start": 1,
+      "line_end": 1,
+      "corpusSha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595"
+    },
+    {
+      "source": "review.md",
+      "content": "Risk: review supplier lead times on Friday.",
+      "line_start": 1,
+      "line_end": 1,
+      "corpusSha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/c02-completion.json",
+      "bytes": 1515,
+      "sha256": "ba7a24cab99d7ecdc3d87eab797675d398e38e001cdfe4cac4524fd4b6f2ef6e"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/brief-concern-resaved.md",
+      "bytes": 649,
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/brief.clean.md",
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/brief.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/brief.md",
+      "bytes": 649,
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.clean.md",
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/brief-concern-saved.md",
+      "bytes": 649,
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/literal-baseline.json",
+      "bytes": 344,
+      "sha256": "80a7625c3d12b79cb5131cf4f0bb688423e1eab36de27f6ae525a5abbff9a60c"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/literal-baseline-readback.json",
+      "bytes": 1104,
+      "sha256": "832c7f8a1678e73341a5d0d7ddab128eaeeca2c97ffa6fa8cf4492a1a829ad76"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/literal-baseline.json",
+      "bytes": 344,
+      "sha256": "80a7625c3d12b79cb5131cf4f0bb688423e1eab36de27f6ae525a5abbff9a60c"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/direct-mcp-diagnostic/receipt.json",
+      "bytes": 628,
+      "sha256": "5036045a146ac66134bb0bce4dc4606bcd63bca75db0282ef00e951377110afe"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/direct-mcp-diagnostic/tools-list.json",
+      "bytes": 794,
+      "sha256": "0508a2da40893f34ce3600bc00c349f822b50381ca3d329957b8e2d4b9ee92fb"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/direct-mcp-diagnostic/retrieval-result.json",
+      "bytes": 1825,
+      "sha256": "782b6898de5fc15093339c8ca10d713faa8475e51a74091ec725cc978ba67bc8"
+    },
+    {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/direct-mcp-diagnostic/actual-retrieval.json",
+      "bytes": 1912,
+      "sha256": "63ce2b3ddc050d88d14d37e6bd15d876ad3e59e6a3eafdbc869b4057873054c4"
+    },
+    {
+      "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep",
+      "bytes": 12172752,
+      "sha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/brief.md",
+      "bytes": 45,
+      "sha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/decision.md",
+      "bytes": 57,
+      "sha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/review.md",
+      "bytes": 44,
+      "sha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982"
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Native screenshots were displayed only in parent tool results; no screenshot files are invented.",
+    "Query-response concept IDs are not used as exported graph identity proof; the actual graph itself contains ID1.",
+    "No current-candidate hook/rewrite acceptance or overall release claim follows from these outputs."
+  ]
+}

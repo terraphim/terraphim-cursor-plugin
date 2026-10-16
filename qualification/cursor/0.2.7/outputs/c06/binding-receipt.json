@@ -1,0 +1,70 @@
+{
+  "status": "PASS_ALL_SEVEN_INACTIVE_POLICIES_ADMITTED",
+  "candidateCommit": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapter": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "mainCiRun": 38896230662,
+  "artifactId": 12043813038,
+  "innerArchiveSha256": "86a536a2d522e76c1a81c8acdcc03ac24413ada7ab4c76daa727c3bd5037759f",
+  "cases": [
+    {
+      "name": "success",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "c959d11b6231e095381a8aa3b1375e0cd08fa455233df1be091186973b1192d5",
+      "policySha256": "b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "rewrite-off",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "0e6df372e4b7ac116f45c4f90567c94ec6298cd9d6d112b04387a7919aac1ff0",
+      "policySha256": "7164f69b1478a4c282ba235eff1b5cc7066383b05c222c63fe66d500dfa9034e",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "denied-completion",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/denied-completion/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "ce74fd4dc798e33d1682182e30c98a274ffb88047369d947178bd97d3c9078c4",
+      "policySha256": "86c3b3c1643213824e0548c747a2c7e2109630d9a2b7835b992c6be662911c40",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "guard-original",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "6b6c47015d9d08fb826e54ea23dcfe5186d4aea66b4ddfafd2c58abc1bd6449d",
+      "policySha256": "a6a6cc237fc88bf19cff6a59ba84d10ca3294e7867500d457428b46bd8c40f5e",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "capture-off",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/capture-off/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "318b5e28fa33bb004a5cf4655b76e6f2b69422ff1b0335718cad3d684fe2c702",
+      "policySha256": "97ca7a99e7ec222388a81cb9de372a9e37b20fafb9a8514d6303c33c5f1ef465",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "parallel",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "f7ce97fc5788d65ff8138f700acba2f6a13963278fcc193e582d381a07bd08d8",
+      "policySha256": "ffa09c37bd0b579073abce03073b350b4da3e9e26ba837861af0eb1a587f0650",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    },
+    {
+      "name": "missing-completion",
+      "boundTemplate": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/hooks.entries.WARNING-FIXED-BOUND.json.example",
+      "templateSha256": "86a207a52994aeaecd49e3315d2a0f1aeb18013af0bd50591b79743aa6c0e1dd",
+      "policySha256": "9b318046e1446f1f73d082e76a5051bc21ef10c386240161928639990b0c0ce1",
+      "admission": "PASS_READ_ONLY_EXACT_CI_ADAPTER",
+      "receiptDirectoryEntries": []
+    }
+  ],
+  "checkedAt": "2026-10-16T11:53:45.233536+00:00",
+  "activeConfigWritten": false,
+  "nativeEventsExecuted": false
+}

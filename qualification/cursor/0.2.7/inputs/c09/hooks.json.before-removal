@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py --policy /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/policy.json --policy-sha256 9b318046e1446f1f73d082e76a5051bc21ef10c386240161928639990b0c0ce1 --event preToolUse",
+        "matcher": "Shell",
+        "timeout": 15,
+        "failClosed": true
+      }
+    ],
+    "workspaceOpen": [
+      {
+        "command": "/usr/bin/python3 /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/workspace_open.py",
+        "timeout": 5
+      }
+    ]
+  }
+}

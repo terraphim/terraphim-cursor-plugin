@@ -1,0 +1,29 @@
+{
+  "status": "PASS native host failure boundaries",
+  "host": "Cursor3.25.6",
+  "cases": [
+    {
+      "mode": "nonzero",
+      "call": "a4d931bb-d501-4b7b-ac56-198de709e129",
+      "actual_native_state": "Skipped python3",
+      "selected_output_absent": true,
+      "duration_ms": 169
+    },
+    {
+      "mode": "crash",
+      "call": "2758a5b8-105d-4656-a013-5e222144fcf1",
+      "actual_native_state": "Skipped python3",
+      "selected_output_absent": true,
+      "duration_ms": 85
+    },
+    {
+      "mode": "timeout",
+      "call": "2ae7cb69-eef2-4619-8dec-173866a5b487",
+      "actual_native_state": "Skipped python3",
+      "selected_output_absent": true,
+      "duration_ms": 2005
+    }
+  ],
+  "scope": "Host failClosed behavior; separate from candidate adapter correlation",
+  "probe_timeout_seconds": 2
+}

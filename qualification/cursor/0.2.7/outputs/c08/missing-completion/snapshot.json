@@ -1,0 +1,29 @@
+{
+  "case": "missing-completion",
+  "snapshotAt": "2026-10-16T12:02:37.601576+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "679680d2-bb62-4e9a-982b-40b64ab122c0"
+  ],
+  "actualEventCount": 1,
+  "receiptStates": [
+    "applied"
+  ],
+  "receiptDirectoryEntries": [
+    ".terraphim-cursor-owner.json",
+    "3d6a7a8d3d142189641e09c6063efa3920a9e6f901541c49d181b1e42762e2e6.json"
+  ],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-warning-fixed.json",
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc",
+      "bytes": 175
+    }
+  ],
+  "selectedOutputAbsences": [],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

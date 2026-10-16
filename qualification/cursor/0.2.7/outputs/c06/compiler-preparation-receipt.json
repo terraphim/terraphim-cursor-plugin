@@ -1,0 +1,1033 @@
+{
+  "startedAt": "2026-10-16T11:43:41.776945+00:00",
+  "status": "PASS_INACTIVE_INPUT_PREPARATION_UNBOUND",
+  "source": "Existing hook-inputs prepare.py helpers and released-agent compiler workflow",
+  "helperScript": {
+    "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/hook-inputs/prepare.py",
+    "bytes": 10436,
+    "sha256": "e8dfb800d540a89196ddb934ac7d50bf8de839a3cd0344d0b4d97cde4e5d349d"
+  },
+  "agent": {
+    "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+    "bytes": 19694976,
+    "sha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec"
+  },
+  "expectedMainCommit": "PENDING_PARENT_ADMISSION",
+  "expectedCandidatePath": "/private/tmp/terraphim-cursor-validation-20261016/__pending_warning_fixed_main_candidate__",
+  "candidateBinding": "PENDING_PARENT_ADMISSION_OF_ORIGINAL_MAIN_CI_ARCHIVE",
+  "nativeAcceptance": "NOT_RUN",
+  "cases": [
+    {
+      "name": "success",
+      "nativeCommands": [
+        "python3 validate_brief.py --chek --output outputs/native-rewrite-warning-fixed.json"
+      ],
+      "compiledOriginal": "python3 validate_brief.py --chek --output outputs/native-rewrite-warning-fixed.json",
+      "compiledReplacement": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/success/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/success",
+          "exitCode": 0,
+          "elapsedSeconds": 0.27545225000358187,
+          "stdoutBytes": 188,
+          "stdoutSha256": "d5651838f01c2c5eca49949b972e0e4a59dc574ecceaaa8d511ad8daf627f4f4",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "python3 validate_brief.py --chek --output outputs/native-rewrite-warning-fixed.json",
+            "--corrected",
+            "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/success",
+          "exitCode": 0,
+          "elapsedSeconds": 0.38494762498885393,
+          "stdoutBytes": 226,
+          "stdoutSha256": "36979e27a8e5152a85d4bb62506519b56bfd85fecaba0504c4aa33120cb0f891",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/success/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/success",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2957515419984702,
+          "stdoutBytes": 197,
+          "stdoutSha256": "80300a7192ca6c0fa26fd8b9594891f60c65dde7eec61a8dfe021d71343af726",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/policy.json",
+        "bytes": 1796,
+        "sha256": "b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/hooks.entries.UNBOUND.json.example",
+        "bytes": 1593,
+        "sha256": "06066ad4e12b7701a1cab13b59a50dd8ae2a91134706521907e4a6fb3d30dad7"
+      },
+      "manualSelectedOutputPaths": [
+        "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-warning-fixed.json"
+      ],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/actual-correction.md",
+        "bytes": 659,
+        "sha256": "eb933a8547a45d4585dfa32381d651c2346a0bc3a5d506cac49324d436d1838b"
+      }
+    },
+    {
+      "name": "rewrite-off",
+      "nativeCommands": [
+        "python3 validate_brief.py --chek --output outputs/native-rewrite-off-warning-fixed.json"
+      ],
+      "compiledOriginal": "python3 validate_brief.py --chek --output outputs/native-rewrite-off-warning-fixed.json",
+      "compiledReplacement": "python3 validate_brief.py --check --output outputs/native-rewrite-off-warning-fixed.json",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/rewrite-off/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/rewrite-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.35872620801092125,
+          "stdoutBytes": 192,
+          "stdoutSha256": "da12a49bab0535a8f616697474ea704acfbbfa555efe5f430aff5a0626f75377",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "python3 validate_brief.py --chek --output outputs/native-rewrite-off-warning-fixed.json",
+            "--corrected",
+            "python3 validate_brief.py --check --output outputs/native-rewrite-off-warning-fixed.json",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/rewrite-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.330321792018367,
+          "stdoutBytes": 230,
+          "stdoutSha256": "a74c65cbc3ea71bdfd7395745b77c1268d8bcd3ea54d19d36d303a7bfdc7ac1c",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/rewrite-off/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/rewrite-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2717225829837844,
+          "stdoutBytes": 201,
+          "stdoutSha256": "73b8b9bee5a489fbd06a3549b33d5498c5e2c3e69b4e07825e68cc3484c153ca",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/policy.json",
+        "bytes": 1821,
+        "sha256": "7164f69b1478a4c282ba235eff1b5cc7066383b05c222c63fe66d500dfa9034e"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/hooks.entries.UNBOUND.json.example",
+        "bytes": 1605,
+        "sha256": "9e5a6bcbe0af84668267c0d83c34fc4bd403753d1d64f59bc7f3790206bfcc1c"
+      },
+      "manualSelectedOutputPaths": [
+        "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-off-warning-fixed.json"
+      ],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/actual-correction.md",
+        "bytes": 671,
+        "sha256": "a845669e5cac5c212b8455c7c80c41d41c9260f2ce520d50f642e5dc0256db46"
+      }
+    },
+    {
+      "name": "denied-completion",
+      "nativeCommands": [
+        "printf '%s\\n' 'reviewed warning-fixed guard probe'"
+      ],
+      "compiledOriginal": "printf '%s\\n' 'reviewed warning-fixed guard probe'",
+      "compiledReplacement": "printf '%s\\n' 'rm -rf /'",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/denied-completion/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/denied-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.23287391700432636,
+          "stdoutBytes": 198,
+          "stdoutSha256": "0b5cdb66a2b58d8e4eb6a9298c50a31002135a961f753a792d613a6fbfc29276",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "printf '%s\\n' 'reviewed warning-fixed guard probe'",
+            "--corrected",
+            "printf '%s\\n' 'rm -rf /'",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/denied-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.19714679100434296,
+          "stdoutBytes": 236,
+          "stdoutSha256": "857f91477427cc2966e1b0b2814358db2ef3c8333e0e640571294803f35443ba",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/denied-completion/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/denied-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.29152674999204464,
+          "stdoutBytes": 207,
+          "stdoutSha256": "8c8446baf0b086da4ae2dd09d68643f0ef9e8d50c59671ccb91a074e52176c57",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/denied-completion/policy.json",
+        "bytes": 1726,
+        "sha256": "86c3b3c1643213824e0548c747a2c7e2109630d9a2b7835b992c6be662911c40"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/denied-completion/hooks.entries.UNBOUND.json.example",
+        "bytes": 1623,
+        "sha256": "3b0a8c849dc4c83456bdc557668f8ea1e3c4011a4e8b12b2adc7331bf75ca660"
+      },
+      "manualSelectedOutputPaths": [],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/denied-completion/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/denied-completion/actual-correction.md",
+        "bytes": 576,
+        "sha256": "4b5be1357a831ff4182bc86bc3d322ed62f81185eaac68ee809bc84c4a0492c9"
+      }
+    },
+    {
+      "name": "guard-original",
+      "nativeCommands": [
+        "printf '%s\\n' 'rm -rf /'"
+      ],
+      "compiledOriginal": "printf '%s\\n' 'reviewed warning-fixed guard probe'",
+      "compiledReplacement": "printf '%s\\n' 'rm -rf /'",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/guard-original/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/guard-original",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2976120829989668,
+          "stdoutBytes": 195,
+          "stdoutSha256": "9fadfb856dbb1762c8052e54c8ed94febe4db587c21c3482c5a2a1acc3762d7a",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "printf '%s\\n' 'reviewed warning-fixed guard probe'",
+            "--corrected",
+            "printf '%s\\n' 'rm -rf /'",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/guard-original",
+          "exitCode": 0,
+          "elapsedSeconds": 0.5506498329923488,
+          "stdoutBytes": 233,
+          "stdoutSha256": "709fda3a11231db0d5dddc3cee70051d382c5fb8fe8be1bb514b82e2e373041c",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/guard-original/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/guard-original",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2263621250167489,
+          "stdoutBytes": 204,
+          "stdoutSha256": "ee1741d8130d25a2b02ba68b07ea0b2b9655d612ff95a3bbcd5e55199d832daa",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/policy.json",
+        "bytes": 1711,
+        "sha256": "a6a6cc237fc88bf19cff6a59ba84d10ca3294e7867500d457428b46bd8c40f5e"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/hooks.entries.UNBOUND.json.example",
+        "bytes": 1614,
+        "sha256": "657a708329764e7d5e3633ea274fab5da0872636e8984d5e21e45c9b691f01af"
+      },
+      "manualSelectedOutputPaths": [],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/actual-correction.md",
+        "bytes": 573,
+        "sha256": "11a3e0059e25f4089bfa7248dcade6c33e5fc8b97b966ca582fe5279f1b80c53"
+      }
+    },
+    {
+      "name": "capture-off",
+      "nativeCommands": [
+        "python3 validate_brief.py --chek --output outputs/native-capture-off-warning-fixed.json"
+      ],
+      "compiledOriginal": "python3 validate_brief.py --chek --output outputs/native-capture-off-warning-fixed.json",
+      "compiledReplacement": "python3 validate_brief.py --check --output outputs/native-capture-off-warning-fixed.json",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/capture-off/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/capture-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.1895220840233378,
+          "stdoutBytes": 192,
+          "stdoutSha256": "de3eb4d5521d16606d941c43f70e1db8d2260ef7eb6247fa8745cb3713e53a41",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "python3 validate_brief.py --chek --output outputs/native-capture-off-warning-fixed.json",
+            "--corrected",
+            "python3 validate_brief.py --check --output outputs/native-capture-off-warning-fixed.json",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/capture-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.3110556669998914,
+          "stdoutBytes": 230,
+          "stdoutSha256": "2a02b47655ff997b264bc012b86788eba637a4a85f5682ae69f4557f222bf211",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/capture-off/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/capture-off",
+          "exitCode": 0,
+          "elapsedSeconds": 0.20547366701066494,
+          "stdoutBytes": 201,
+          "stdoutSha256": "9ab9a62e0605b50d45bff5153ab1140d543d35dc3c2ee019165d559eda8d3c79",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/capture-off/policy.json",
+        "bytes": 1527,
+        "sha256": "97ca7a99e7ec222388a81cb9de372a9e37b20fafb9a8514d6303c33c5f1ef465"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/capture-off/hooks.entries.UNBOUND.json.example",
+        "bytes": 1605,
+        "sha256": "94ab5ab3cd836d2709d06411969c14e6d87f85f7a10c4096ade3559e9dc59355"
+      },
+      "manualSelectedOutputPaths": [
+        "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-warning-fixed.json"
+      ],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/capture-off/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": false,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/capture-off/actual-correction.md",
+        "bytes": 671,
+        "sha256": "85d9c6e0470bc3b01cdd935ff6824b035ca1ee048a47b5adb8e7a830450918ff"
+      }
+    },
+    {
+      "name": "parallel",
+      "nativeCommands": [
+        "python3 -c 'import time; time.sleep(1.7)'",
+        "python3 -c 'import time; time.sleep(0.2)'"
+      ],
+      "compiledOriginal": "python3 -c 'import time; time.slep(1.7)'",
+      "compiledReplacement": "python3 -c 'import time; time.sleep(1.7)'",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/parallel/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/parallel",
+          "exitCode": 0,
+          "elapsedSeconds": 0.3279037499742117,
+          "stdoutBytes": 189,
+          "stdoutSha256": "01d339373c42c9a35452f0debbb06c0e242da595bef1d81d97152c0f05727ef0",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "python3 -c 'import time; time.slep(1.7)'",
+            "--corrected",
+            "python3 -c 'import time; time.sleep(1.7)'",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/parallel",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2691472909937147,
+          "stdoutBytes": 227,
+          "stdoutSha256": "cf9cd0f5adcf6580309a26957333b362acfb2b411abe64cbb3ee9f2e11e965b6",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/parallel/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/parallel",
+          "exitCode": 0,
+          "elapsedSeconds": 0.2611620829848107,
+          "stdoutBytes": 198,
+          "stdoutSha256": "2100a8aa157cd7795c64efddfc4da5465c9def0d5c4b25e04858a223e5b9e9aa",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/policy.json",
+        "bytes": 1682,
+        "sha256": "ffa09c37bd0b579073abce03073b350b4da3e9e26ba837861af0eb1a587f0650"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/hooks.entries.UNBOUND.json.example",
+        "bytes": 1596,
+        "sha256": "7b978ec794e42a1feda899e20583b7f1ec0cb2b9d2a3c9793cde8338d55fcd66"
+      },
+      "manualSelectedOutputPaths": [],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse",
+        "postToolUse",
+        "postToolUseFailure"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/actual-correction.md",
+        "bytes": 574,
+        "sha256": "801625bc83f901b9f5429cd5a934babae26d231c744c1fcbc1fc701f402de30f"
+      }
+    },
+    {
+      "name": "missing-completion",
+      "nativeCommands": [
+        "python3 validate_brief.py --chek --output outputs/native-missing-post-warning-fixed.json"
+      ],
+      "compiledOriginal": "python3 validate_brief.py --chek --output outputs/native-missing-post-warning-fixed.json",
+      "compiledReplacement": "python3 validate_brief.py --check --output outputs/native-missing-post-warning-fixed.json",
+      "preparationCommands": [
+        {
+          "label": "empty-compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/missing-completion/guard-rules.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/missing-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.18397620899486355,
+          "stdoutBytes": 199,
+          "stdoutSha256": "e901a31863c64f0ad2ac33cf30741eb2483564b2bd9e0e855503b0357b5f32f9",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "add-explicit-rule",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "correction",
+            "add",
+            "--original",
+            "python3 validate_brief.py --chek --output outputs/native-missing-post-warning-fixed.json",
+            "--corrected",
+            "python3 validate_brief.py --check --output outputs/native-missing-post-warning-fixed.json",
+            "--correction-type",
+            "tool-preference",
+            "--context",
+            "Reviewed isolated new-candidate native validation input; not executed during preparation."
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/missing-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.30699716601520777,
+          "stdoutBytes": 237,
+          "stdoutSha256": "e456fbcbcf94b0fcb6f8116d93629b9b363baff22c0bb6feddd29d25e1dad2da",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "compile",
+          "argv": [
+            "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+            "learn",
+            "compile",
+            "--output",
+            "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/missing-completion/compiled-corrections.json"
+          ],
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/compiler/missing-completion",
+          "exitCode": 0,
+          "elapsedSeconds": 0.21812674999819137,
+          "stdoutBytes": 208,
+          "stdoutSha256": "13afdf24d65a614f931f93a70c9177182c2dd31212e0631555634c7ff1b467d5",
+          "stderrBytes": 0,
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "nativeStatus": "NOT_RUN",
+      "policy": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/policy.json",
+        "bytes": 1856,
+        "sha256": "9b318046e1446f1f73d082e76a5051bc21ef10c386240161928639990b0c0ce1"
+      },
+      "unboundHookTemplate": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/hooks.entries.UNBOUND.json.example",
+        "bytes": 560,
+        "sha256": "c008bd3b8dc607297677319dc1c0d1990d95a324308c8d43556f6a87541dde6d"
+      },
+      "manualSelectedOutputPaths": [
+        "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-warning-fixed.json"
+      ],
+      "receiptDirectory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/receipts",
+      "receiptDirectoryEmpty": true,
+      "captureFailures": false,
+      "evidenceEnabled": true,
+      "hooksIncluded": [
+        "preToolUse"
+      ],
+      "targetCommandsExecuted": false,
+      "compiledRuleNote": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/actual-correction.md",
+        "bytes": 680,
+        "sha256": "b8ecc2c7fdcf38e9b1ebd636b0e03c635a09042623e2ed96f924cb3f7f2f91de"
+      }
+    }
+  ],
+  "finishedAt": "2026-10-16T11:43:47.829243+00:00",
+  "preExistingProtectedFiles": {
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/brief.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/brief.md",
+      "bytes": 649,
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/validate_brief.py": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/validate_brief.py",
+      "bytes": 976,
+      "sha256": "9ddb22cc68499439be190b71e90f88ce4984d6d76f62cefb670d3e4c13d10749"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/brief.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/brief.md",
+      "bytes": 45,
+      "sha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/review.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/review.md",
+      "bytes": 44,
+      "sha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/decision.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/decision.md",
+      "bytes": 57,
+      "sha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-success.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-success.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.clean.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.clean.md",
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-retrieval.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-retrieval.json",
+      "bytes": 1503,
+      "sha256": "35d5ef9402b778520f411ee08505aec047800f36ade886293bf48a232a3f02b0"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-new-candidate.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-new-candidate.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-new-candidate.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-new-candidate.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-reviewed-drift-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-reviewed-drift-graph.json",
+      "bytes": 1513,
+      "sha256": "7bd00a59b2e42aa07f0cdfbea3f07c0a72845da128250583ccf0cfb17cde087d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-new-candidate.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-new-candidate.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.clean.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.clean.md",
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-final-candidate.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-final-candidate.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/literal-baseline.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/literal-baseline.json",
+      "bytes": 344,
+      "sha256": "80a7625c3d12b79cb5131cf4f0bb688423e1eab36de27f6ae525a5abbff9a60c"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-synthesis.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-synthesis.json",
+      "bytes": 2227,
+      "sha256": "396a6f3a732fdb8a02142eee320e0cc3b8b7593285eec4b34ebd9a5d2990191c"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-default-open.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-default-open.json",
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/cursor-provenance.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/cursor-provenance.json",
+      "bytes": 5464,
+      "sha256": "d4cf07530d675e41055d40e9a32adff219f43d0508e78a42f112c65b95fdcaff"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/LICENSE": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/LICENSE",
+      "bytes": 10242,
+      "sha256": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/NOTICE": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/NOTICE",
+      "bytes": 223,
+      "sha256": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/.cursor-plugin/plugin.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/.cursor-plugin/plugin.json",
+      "bytes": 813,
+      "sha256": "56f23ca462d2a90bed53c51ba37cf5c393920ac2188a94c27e9fa03e9b176393"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/docs/cli-workflows.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/docs/cli-workflows.md",
+      "bytes": 5059,
+      "sha256": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/schemas/cursor-hook-receipt.schema.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/schemas/cursor-hook-receipt.schema.json",
+      "bytes": 3642,
+      "sha256": "9a95499fdaeefcd55130f35d4a84eab57f4d17495a4db4b3d6ddf7dabbfda3e0"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/schemas/cursor-hook-policy.schema.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/schemas/cursor-hook-policy.schema.json",
+      "bytes": 4289,
+      "sha256": "09db8dacf521e1d7ba5cb0506b7fa4abbd823fa23d59a5bc90d63592cf34fce1"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/assets/logo.svg": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/assets/logo.svg",
+      "bytes": 1220,
+      "sha256": "cc9e4d6e87e31c0fe6b5cc75f2d71f0319f246f6de269826d6ddc78cb31faea3"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/docs/examples/risk-concern.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/docs/examples/risk-concern.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/release-inputs.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/release-inputs.json",
+      "bytes": 3034,
+      "sha256": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/hooks.json.example": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/hooks.json.example",
+      "bytes": 1344,
+      "sha256": "4e0056dff9a17235c246f00e2e9f1136d680d89fba7d156d7a790f19e6a27308"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/mcp.json.example": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/mcp.json.example",
+      "bytes": 553,
+      "sha256": "c4272beb5644163805e64f2027821ef4b710588e92a9a9d5b7dedf53ee413651"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/README.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/README.md",
+      "bytes": 12183,
+      "sha256": "dc4e97bc0f08be38e22f0e963540924485fdc984f349eecf7dde9e2513deb22d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/hook_adapter.py": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/hook_adapter.py",
+      "bytes": 41396,
+      "sha256": "71204587d8ec720b7ed493c4fe6eb491b00d567460a9bf72e762ef0fab355850"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/policy.json.example": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/policy.json.example",
+      "bytes": 1174,
+      "sha256": "534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/compiled-corrections.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/compiled-corrections.json",
+      "bytes": 248,
+      "sha256": "b7fcd0f4b8da5c2f181c7321f7b46337eacfb0571c5f50c14a7815188fbc0c3b"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/settings.toml.example": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/settings.toml.example",
+      "bytes": 294,
+      "sha256": "93dd4bc1522378753606b8808cd3558a71607b655b7e0925899cd1ce1e6d2ca0"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/README.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/README.md",
+      "bytes": 1232,
+      "sha256": "24086bccca25265089e66944e7541ec444cca4711d7f79843c4daf5d3f459a82"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/role-config.json.example": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/role-config.json.example",
+      "bytes": 1053,
+      "sha256": "80aa80258e02016edb3c5a2c2c7ad97f61ca10d60b905376348e74657a5e1317"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/guard-rules.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/guard-rules.json",
+      "bytes": 43,
+      "sha256": "da6ae844512b90d3df60f69ab1855119ee2527f110b61cece8fb2e3cab6ba767"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/commands/terraphim-setup.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/commands/terraphim-setup.md",
+      "bytes": 1806,
+      "sha256": "690b2c0d8640ae4a833e8d7c00b61060e0daafc263ef57fbeaec32a691ff9196"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/brief.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/brief.md",
+      "bytes": 45,
+      "sha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/review.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/review.md",
+      "bytes": 44,
+      "sha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/decision.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/corpus/decision.md",
+      "bytes": 57,
+      "sha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/concepts/Risk.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/examples/concepts/Risk.md",
+      "bytes": 26,
+      "sha256": "c716a263b270185ef3ef0a6742d12d6b42766dea971af7410c05c64fd778bcf1"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/skill.toml": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/skill.toml",
+      "bytes": 1133,
+      "sha256": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/SKILL.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/SKILL.md",
+      "bytes": 4236,
+      "sha256": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/skill.toml": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/skill.toml",
+      "bytes": 1147,
+      "sha256": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/SKILL.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/SKILL.md",
+      "bytes": 4429,
+      "sha256": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/skill.toml": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/skill.toml",
+      "bytes": 1152,
+      "sha256": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/SKILL.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/SKILL.md",
+      "bytes": 5344,
+      "sha256": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/skill.toml": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/skill.toml",
+      "bytes": 1077,
+      "sha256": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/SKILL.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/SKILL.md",
+      "bytes": 3035,
+      "sha256": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/workflows.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/workflows.md",
+      "bytes": 4529,
+      "sha256": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/command-guide.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-learn/references/command-guide.md",
+      "bytes": 1331,
+      "sha256": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/workflows.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/workflows.md",
+      "bytes": 4529,
+      "sha256": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/command-guide.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-agent-memory/references/command-guide.md",
+      "bytes": 1281,
+      "sha256": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/risk-concern.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/risk-concern.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/workflows.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/workflows.md",
+      "bytes": 4529,
+      "sha256": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/command-guide.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-editor/references/command-guide.md",
+      "bytes": 1970,
+      "sha256": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/risk-concern.knowledge-graph.json": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/risk-concern.knowledge-graph.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/workflows.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/workflows.md",
+      "bytes": 4529,
+      "sha256": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad"
+    },
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/command-guide.md": {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/skills/terraphim-grep/references/command-guide.md",
+      "bytes": 730,
+      "sha256": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b"
+    }
+  },
+  "concurrentProtectedChangesObserved": [],
+  "preparationWroteOnly": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases",
+    "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-hooks/warning-fixed-cases"
+  ],
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false,
+  "activeConfigExistenceBefore": {
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/hooks.json": false,
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/mcp.json": false
+  },
+  "activeConfigExistenceAfter": {
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/hooks.json": false,
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/mcp.json": false
+  },
+  "homeAndCodexHomeChanged": false,
+  "projectDiscoveryStillEmpty": true
+}

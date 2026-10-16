@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-16T11:54:52.566795+00:00",
+  "status": "COMPONENT_COMPARISON_ONLY_NOT_WHOLE_CANDIDATE_EXECUTION",
+  "finalSourceCommit": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "finalArchiveSha256": "86a536a2d522e76c1a81c8acdcc03ac24413ada7ab4c76daa727c3bd5037759f",
+  "comparisons": {
+    "8ace6368": {
+      "executionSourceCommit": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+      "executionArchiveSha256": "a284c208b6f2fe35b3ba7013f91cfd3f54424634330f8f6cd391686d0a1b6bcd",
+      "changedMembers": {
+        "cursor-provenance.json": {
+          "executionSha256": "d4cf07530d675e41055d40e9a32adff219f43d0508e78a42f112c65b95fdcaff",
+          "finalSha256": "ed3eff82d652fd1677ee8e4ba1c506766c0004a3f3c33be85ebe066076befc9c"
+        },
+        "integrations/cursor/README.md": {
+          "executionSha256": "dc4e97bc0f08be38e22f0e963540924485fdc984f349eecf7dde9e2513deb22d",
+          "finalSha256": "012f7aa05af352718d72a2c7edba9d63e75ed08c068f31c75fc26b942d1a2210"
+        },
+        "integrations/cursor/hook_adapter.py": {
+          "executionSha256": "71204587d8ec720b7ed493c4fe6eb491b00d567460a9bf72e762ef0fab355850",
+          "finalSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33"
+        }
+      },
+      "unchangedMembers": {
+        ".cursor-plugin/plugin.json": "56f23ca462d2a90bed53c51ba37cf5c393920ac2188a94c27e9fa03e9b176393",
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+        "assets/logo.svg": "cc9e4d6e87e31c0fe6b5cc75f2d71f0319f246f6de269826d6ddc78cb31faea3",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "docs/examples/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "integrations/cursor/commands/terraphim-setup.md": "690b2c0d8640ae4a833e8d7c00b61060e0daafc263ef57fbeaec32a691ff9196",
+        "integrations/cursor/examples/README.md": "24086bccca25265089e66944e7541ec444cca4711d7f79843c4daf5d3f459a82",
+        "integrations/cursor/examples/compiled-corrections.json": "b7fcd0f4b8da5c2f181c7321f7b46337eacfb0571c5f50c14a7815188fbc0c3b",
+        "integrations/cursor/examples/concepts/Risk.md": "c716a263b270185ef3ef0a6742d12d6b42766dea971af7410c05c64fd778bcf1",
+        "integrations/cursor/examples/corpus/brief.md": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829",
+        "integrations/cursor/examples/corpus/decision.md": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595",
+        "integrations/cursor/examples/corpus/review.md": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982",
+        "integrations/cursor/examples/guard-rules.json": "da6ae844512b90d3df60f69ab1855119ee2527f110b61cece8fb2e3cab6ba767",
+        "integrations/cursor/examples/role-config.json.example": "80aa80258e02016edb3c5a2c2c7ad97f61ca10d60b905376348e74657a5e1317",
+        "integrations/cursor/examples/settings.toml.example": "93dd4bc1522378753606b8808cd3558a71607b655b7e0925899cd1ce1e6d2ca0",
+        "integrations/cursor/hooks.json.example": "4e0056dff9a17235c246f00e2e9f1136d680d89fba7d156d7a790f19e6a27308",
+        "integrations/cursor/mcp.json.example": "c4272beb5644163805e64f2027821ef4b710588e92a9a9d5b7dedf53ee413651",
+        "integrations/cursor/policy.json.example": "534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f",
+        "schemas/cursor-hook-policy.schema.json": "09db8dacf521e1d7ba5cb0506b7fa4abbd823fa23d59a5bc90d63592cf34fce1",
+        "schemas/cursor-hook-receipt.schema.json": "9a95499fdaeefcd55130f35d4a84eab57f4d17495a4db4b3d6ddf7dabbfda3e0",
+        "skills/terraphim-agent-learn/SKILL.md": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec",
+        "skills/terraphim-agent-learn/references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+        "skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-learn/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-learn/skill.toml": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76",
+        "skills/terraphim-agent-memory/SKILL.md": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e",
+        "skills/terraphim-agent-memory/references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+        "skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-memory/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-memory/skill.toml": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11",
+        "skills/terraphim-editor/SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
+        "skills/terraphim-editor/references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+        "skills/terraphim-editor/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-editor/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-editor/skill.toml": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28",
+        "skills/terraphim-grep/SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "skills/terraphim-grep/references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-grep/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-grep/skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0"
+      },
+      "unchangedCount": 42
+    },
+    "a466c0ec": {
+      "executionSourceCommit": "a466c0ec571dc3454d5f6c4159092e6c7e4d2f6e",
+      "executionArchiveSha256": "99722d080cbd77006dbef0ab04e8f548bab8a34a478240d8ddec6a72f9633902",
+      "changedMembers": {
+        "cursor-provenance.json": {
+          "executionSha256": "21a0c1432db4981e7928e71090c8e2facdcdf25eb4005e43df87a30e76bb3e54",
+          "finalSha256": "ed3eff82d652fd1677ee8e4ba1c506766c0004a3f3c33be85ebe066076befc9c"
+        },
+        "integrations/cursor/README.md": {
+          "executionSha256": "f197fb0629111c1b0d9e819f0453b8f4c3b912a5bec38f160c18f5344a502c61",
+          "finalSha256": "012f7aa05af352718d72a2c7edba9d63e75ed08c068f31c75fc26b942d1a2210"
+        },
+        "integrations/cursor/hook_adapter.py": {
+          "executionSha256": "cd7232371cb518a84a07da1597b26f7d049d552a8169ee1151bd351cfb7f966f",
+          "finalSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33"
+        }
+      },
+      "unchangedMembers": {
+        ".cursor-plugin/plugin.json": "56f23ca462d2a90bed53c51ba37cf5c393920ac2188a94c27e9fa03e9b176393",
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+        "assets/logo.svg": "cc9e4d6e87e31c0fe6b5cc75f2d71f0319f246f6de269826d6ddc78cb31faea3",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "docs/examples/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "integrations/cursor/commands/terraphim-setup.md": "690b2c0d8640ae4a833e8d7c00b61060e0daafc263ef57fbeaec32a691ff9196",
+        "integrations/cursor/examples/README.md": "24086bccca25265089e66944e7541ec444cca4711d7f79843c4daf5d3f459a82",
+        "integrations/cursor/examples/compiled-corrections.json": "b7fcd0f4b8da5c2f181c7321f7b46337eacfb0571c5f50c14a7815188fbc0c3b",
+        "integrations/cursor/examples/concepts/Risk.md": "c716a263b270185ef3ef0a6742d12d6b42766dea971af7410c05c64fd778bcf1",
+        "integrations/cursor/examples/corpus/brief.md": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829",
+        "integrations/cursor/examples/corpus/decision.md": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595",
+        "integrations/cursor/examples/corpus/review.md": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982",
+        "integrations/cursor/examples/guard-rules.json": "da6ae844512b90d3df60f69ab1855119ee2527f110b61cece8fb2e3cab6ba767",
+        "integrations/cursor/examples/role-config.json.example": "80aa80258e02016edb3c5a2c2c7ad97f61ca10d60b905376348e74657a5e1317",
+        "integrations/cursor/examples/settings.toml.example": "93dd4bc1522378753606b8808cd3558a71607b655b7e0925899cd1ce1e6d2ca0",
+        "integrations/cursor/hooks.json.example": "4e0056dff9a17235c246f00e2e9f1136d680d89fba7d156d7a790f19e6a27308",
+        "integrations/cursor/mcp.json.example": "c4272beb5644163805e64f2027821ef4b710588e92a9a9d5b7dedf53ee413651",
+        "integrations/cursor/policy.json.example": "534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f",
+        "schemas/cursor-hook-policy.schema.json": "09db8dacf521e1d7ba5cb0506b7fa4abbd823fa23d59a5bc90d63592cf34fce1",
+        "schemas/cursor-hook-receipt.schema.json": "9a95499fdaeefcd55130f35d4a84eab57f4d17495a4db4b3d6ddf7dabbfda3e0",
+        "skills/terraphim-agent-learn/SKILL.md": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec",
+        "skills/terraphim-agent-learn/references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+        "skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-learn/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-learn/skill.toml": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76",
+        "skills/terraphim-agent-memory/SKILL.md": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e",
+        "skills/terraphim-agent-memory/references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+        "skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-memory/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-memory/skill.toml": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11",
+        "skills/terraphim-editor/SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
+        "skills/terraphim-editor/references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+        "skills/terraphim-editor/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-editor/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-editor/skill.toml": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28",
+        "skills/terraphim-grep/SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "skills/terraphim-grep/references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-grep/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-grep/skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0"
+      },
+      "unchangedCount": 42
+    },
+    "9563ce8e": {
+      "executionSourceCommit": "9563ce8e905adf6eafdda5768c685b2677a1252d",
+      "executionArchiveSha256": "7da8e1f60ce7b46615fc896c4b1b8007c26b8f0988cb960017083caee5afe57f",
+      "changedMembers": {
+        "cursor-provenance.json": {
+          "executionSha256": "5fbc2ad602a872609108ee05ce3c536ba24b70b22b8015848a87932a3e165129",
+          "finalSha256": "ed3eff82d652fd1677ee8e4ba1c506766c0004a3f3c33be85ebe066076befc9c"
+        },
+        "integrations/cursor/README.md": {
+          "executionSha256": "f197fb0629111c1b0d9e819f0453b8f4c3b912a5bec38f160c18f5344a502c61",
+          "finalSha256": "012f7aa05af352718d72a2c7edba9d63e75ed08c068f31c75fc26b942d1a2210"
+        },
+        "integrations/cursor/hook_adapter.py": {
+          "executionSha256": "cd7232371cb518a84a07da1597b26f7d049d552a8169ee1151bd351cfb7f966f",
+          "finalSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33"
+        }
+      },
+      "unchangedMembers": {
+        ".cursor-plugin/plugin.json": "56f23ca462d2a90bed53c51ba37cf5c393920ac2188a94c27e9fa03e9b176393",
+        "LICENSE": "bd6930ed220ef9feae8be4721c84e845318b060bcd08e19007d4d10171dd45f2",
+        "NOTICE": "52f3456ba8b6e845956338bd08bc2fadadbcf1263a052dc968f1524521367115",
+        "assets/logo.svg": "cc9e4d6e87e31c0fe6b5cc75f2d71f0319f246f6de269826d6ddc78cb31faea3",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "docs/examples/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "integrations/cursor/commands/terraphim-setup.md": "690b2c0d8640ae4a833e8d7c00b61060e0daafc263ef57fbeaec32a691ff9196",
+        "integrations/cursor/examples/README.md": "24086bccca25265089e66944e7541ec444cca4711d7f79843c4daf5d3f459a82",
+        "integrations/cursor/examples/compiled-corrections.json": "b7fcd0f4b8da5c2f181c7321f7b46337eacfb0571c5f50c14a7815188fbc0c3b",
+        "integrations/cursor/examples/concepts/Risk.md": "c716a263b270185ef3ef0a6742d12d6b42766dea971af7410c05c64fd778bcf1",
+        "integrations/cursor/examples/corpus/brief.md": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829",
+        "integrations/cursor/examples/corpus/decision.md": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595",
+        "integrations/cursor/examples/corpus/review.md": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982",
+        "integrations/cursor/examples/guard-rules.json": "da6ae844512b90d3df60f69ab1855119ee2527f110b61cece8fb2e3cab6ba767",
+        "integrations/cursor/examples/role-config.json.example": "80aa80258e02016edb3c5a2c2c7ad97f61ca10d60b905376348e74657a5e1317",
+        "integrations/cursor/examples/settings.toml.example": "93dd4bc1522378753606b8808cd3558a71607b655b7e0925899cd1ce1e6d2ca0",
+        "integrations/cursor/hooks.json.example": "4e0056dff9a17235c246f00e2e9f1136d680d89fba7d156d7a790f19e6a27308",
+        "integrations/cursor/mcp.json.example": "c4272beb5644163805e64f2027821ef4b710588e92a9a9d5b7dedf53ee413651",
+        "integrations/cursor/policy.json.example": "534bd7e4144d0417bf25f3a7d1436e03e9d65b2d8fd1bf2ad1cc8713086362b7",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f",
+        "schemas/cursor-hook-policy.schema.json": "09db8dacf521e1d7ba5cb0506b7fa4abbd823fa23d59a5bc90d63592cf34fce1",
+        "schemas/cursor-hook-receipt.schema.json": "9a95499fdaeefcd55130f35d4a84eab57f4d17495a4db4b3d6ddf7dabbfda3e0",
+        "skills/terraphim-agent-learn/SKILL.md": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec",
+        "skills/terraphim-agent-learn/references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+        "skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-learn/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-learn/skill.toml": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76",
+        "skills/terraphim-agent-memory/SKILL.md": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e",
+        "skills/terraphim-agent-memory/references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+        "skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-memory/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-memory/skill.toml": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11",
+        "skills/terraphim-editor/SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
+        "skills/terraphim-editor/references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+        "skills/terraphim-editor/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-editor/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-editor/skill.toml": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28",
+        "skills/terraphim-grep/SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "skills/terraphim-grep/references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-grep/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-grep/skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0"
+      },
+      "unchangedCount": 42
+    }
+  },
+  "caseComponents": {
+    "C-02": {
+      "executionCandidate": "8ace6368",
+      "componentFiles": [
+        "skills/terraphim-editor/SKILL.md",
+        "skills/terraphim-editor/references/command-guide.md",
+        "skills/terraphim-editor/references/risk-concern.knowledge-graph.json",
+        "skills/terraphim-editor/references/workflows.md",
+        "skills/terraphim-editor/skill.toml",
+        "integrations/cursor/release-inputs.json"
+      ],
+      "externalRuntime": {
+        "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/released/terraphim-it.vsix",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 5973230,
+        "sha256": "b25a70d50cc839503bbcd873f12b1c9287d72e61b4d15cfc13241f2212086131",
+        "extensionId": "applied-knowledge-systems.terraphim-it",
+        "version": "0.1.5",
+        "packageJsonSha256": "1c2714516508b7dc0f52e87d5d49bc2695163dcf81045cc931d2b8c805da1c5e",
+        "officialAssetUrl": "https://github.com/terraphim/terraphim-ai/releases/download/terraphim_vscode-v0.1.5/terraphim-it.vsix",
+        "sourceCommit": "2a189963cca58fb8583c27d5e85ac2ca2f4187d0",
+        "sourceRepository": "terraphim/terraphim-ai",
+        "tag": "terraphim_vscode-v0.1.5",
+        "priorGalleryReceipt": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/cursor-gallery-install-indexed/installed-package.json",
+        "releaseReadback": {
+          "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/released/release-readback.json",
+          "exists": true,
+          "symlink": false,
+          "regularFile": true,
+          "bytes": 6245,
+          "sha256": "745de337acabdc5341137e4a013a046949b9e6c359171a53aa55207a61b97496"
+        }
+      },
+      "scope": "Actual released editor0.1.5 interaction/outputs; final hooks are not inferred from this case.",
+      "componentHashes": {
+        "skills/terraphim-editor/SKILL.md": "58ad8d0369c0f0fefb1dad33fa3441ee8540b47ace14eea3f43e14a66de6e9ea",
+        "skills/terraphim-editor/references/command-guide.md": "7092a7849c5143543cd98fc563e0d566be731c13ab5eeadd5bb6d2d9816e9590",
+        "skills/terraphim-editor/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-editor/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-editor/skill.toml": "8f97c21971398e496885bc00cfe93276959f60b14d1cc684d0f8986773d89c28",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+      },
+      "executionSourceCommit": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+      "executionArchiveSha256": "a284c208b6f2fe35b3ba7013f91cfd3f54424634330f8f6cd391686d0a1b6bcd",
+      "equivalenceResult": "PASS_BYTE_IDENTITY_OF_LISTED_COMPONENTS_ONLY",
+      "finalNativeAcceptance": "RETAINED_COMPONENT_OUTPUTS_SUBMITTED_FOR_INDEPENDENT_REVIEW"
+    },
+    "C-03": {
+      "executionCandidate": "8ace6368",
+      "componentFiles": [
+        "skills/terraphim-grep/SKILL.md",
+        "skills/terraphim-grep/references/command-guide.md",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json",
+        "skills/terraphim-grep/references/workflows.md",
+        "skills/terraphim-grep/skill.toml",
+        "docs/cli-workflows.md",
+        "docs/examples/risk-concern.knowledge-graph.json",
+        "integrations/cursor/release-inputs.json"
+      ],
+      "externalRuntime": {
+        "terraphimGrepSha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab",
+        "continueVersion": "0.1.1",
+        "continueServerSha256": "bfa55c6c7edebf5c370ec8b7166298167f97e8faa16eb5e68ae2afd7143a86bc",
+        "continueArchiveSha256": "ada7b4a5605d73c7d58534d33a6bb82f32096f09b506e1014b29a12061c4b1f7",
+        "continueRequirementsSha256": "041f051d52c80d80584fabc4e90b6eb7a30a5ba41ea5ac340060875e9c919e94",
+        "evidence": "outputs/search-runtime/historical-runtime-readback.json"
+      },
+      "scope": "Actual native MCP retrieval from released grep1.21.20; source instruction/support files unchanged.",
+      "componentHashes": {
+        "skills/terraphim-grep/SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "skills/terraphim-grep/references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-grep/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-grep/skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "docs/examples/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+      },
+      "executionSourceCommit": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+      "executionArchiveSha256": "a284c208b6f2fe35b3ba7013f91cfd3f54424634330f8f6cd391686d0a1b6bcd",
+      "equivalenceResult": "PASS_BYTE_IDENTITY_OF_LISTED_COMPONENTS_ONLY",
+      "finalNativeAcceptance": "RETAINED_COMPONENT_OUTPUTS_SUBMITTED_FOR_INDEPENDENT_REVIEW"
+    },
+    "C-04": {
+      "executionCandidate": "8ace6368",
+      "componentFiles": [
+        "skills/terraphim-grep/SKILL.md",
+        "skills/terraphim-grep/references/command-guide.md",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json",
+        "skills/terraphim-grep/references/workflows.md",
+        "skills/terraphim-grep/skill.toml",
+        "docs/cli-workflows.md",
+        "integrations/cursor/release-inputs.json"
+      ],
+      "externalRuntime": {
+        "terraphimGrepSha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab",
+        "continueVersion": "0.1.1",
+        "continueServerSha256": "bfa55c6c7edebf5c370ec8b7166298167f97e8faa16eb5e68ae2afd7143a86bc",
+        "continueArchiveSha256": "ada7b4a5605d73c7d58534d33a6bb82f32096f09b506e1014b29a12061c4b1f7",
+        "continueRequirementsSha256": "041f051d52c80d80584fabc4e90b6eb7a30a5ba41ea5ac340060875e9c919e94",
+        "evidence": "outputs/search-runtime/historical-runtime-readback.json"
+      },
+      "scope": "Actual native synthesis/drift/refusal/restart; the rejected first restart stays rejected.",
+      "componentHashes": {
+        "skills/terraphim-grep/SKILL.md": "1aec86c301cd31f64a72e5ac81455a734d889a09bb019da31d4e28ebf03a9821",
+        "skills/terraphim-grep/references/command-guide.md": "79b5993fd6087dc104b5270d16abd4beddbecbd5f038f1eb1f711326645aa97b",
+        "skills/terraphim-grep/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-grep/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-grep/skill.toml": "51f4889ac9cd02c5a917a4d2059bf3c9229c7f2a0fe3459618aca730ff628ef0",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+      },
+      "executionSourceCommit": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+      "executionArchiveSha256": "a284c208b6f2fe35b3ba7013f91cfd3f54424634330f8f6cd391686d0a1b6bcd",
+      "equivalenceResult": "PASS_BYTE_IDENTITY_OF_LISTED_COMPONENTS_ONLY",
+      "finalNativeAcceptance": "RETAINED_COMPONENT_OUTPUTS_SUBMITTED_FOR_INDEPENDENT_REVIEW"
+    },
+    "C-05": {
+      "executionCandidate": "8ace6368",
+      "componentFiles": [
+        "skills/terraphim-agent-learn/SKILL.md",
+        "skills/terraphim-agent-learn/references/command-guide.md",
+        "skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json",
+        "skills/terraphim-agent-learn/references/workflows.md",
+        "skills/terraphim-agent-learn/skill.toml",
+        "skills/terraphim-agent-memory/SKILL.md",
+        "skills/terraphim-agent-memory/references/command-guide.md",
+        "skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json",
+        "skills/terraphim-agent-memory/references/workflows.md",
+        "skills/terraphim-agent-memory/skill.toml",
+        "docs/cli-workflows.md",
+        "integrations/cursor/release-inputs.json"
+      ],
+      "externalRuntime": {
+        "agent": {
+          "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+          "bytes": 19694976,
+          "sha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec"
+        },
+        "grep": {
+          "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep",
+          "bytes": 12172752,
+          "sha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab"
+        }
+      },
+      "scope": "Native-initiated actual released CLI harness; not automatic hook failure capture.",
+      "componentHashes": {
+        "skills/terraphim-agent-learn/SKILL.md": "38283275884b8ffcc581b6ef73d3fed1e6e5ee57deab79404409bec4525a15ec",
+        "skills/terraphim-agent-learn/references/command-guide.md": "d076dfb8ad82fc2db1296549fa2c2cab606b28836a42a43e20e4f91b056529b2",
+        "skills/terraphim-agent-learn/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-learn/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-learn/skill.toml": "b1dfaf37ea17cfa74a3564d39b2308a1c0d3951dd7dddf73db17bc1d8a5d6b76",
+        "skills/terraphim-agent-memory/SKILL.md": "6bb242978369119366f87b415c848668c22e885b5745ece7c2b04947114e8d6e",
+        "skills/terraphim-agent-memory/references/command-guide.md": "fd9af409bae86ec3b77495fad94694af021c1fc1d42081fd0ce13cdeab99bc89",
+        "skills/terraphim-agent-memory/references/risk-concern.knowledge-graph.json": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+        "skills/terraphim-agent-memory/references/workflows.md": "77d840f59c99c502413161985be10eedb09162a6e3dd337caa2a24aceccc0fad",
+        "skills/terraphim-agent-memory/skill.toml": "249fbecb60b3b27c6a0f20f6942ad348d488108c03f72d33ee1610a9eb67ac11",
+        "docs/cli-workflows.md": "fff8aed561177ce234e8d1a4a03b445eec56d7c458432c796045023a17feb9ca",
+        "integrations/cursor/release-inputs.json": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+      },
+      "executionSourceCommit": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+      "executionArchiveSha256": "a284c208b6f2fe35b3ba7013f91cfd3f54424634330f8f6cd391686d0a1b6bcd",
+      "equivalenceResult": "PASS_BYTE_IDENTITY_OF_LISTED_COMPONENTS_ONLY",
+      "finalNativeAcceptance": "RETAINED_COMPONENT_OUTPUTS_SUBMITTED_FOR_INDEPENDENT_REVIEW"
+    }
+  },
+  "limits": [
+    "All three historical candidates have 42 byte-identical members against f6. Adapter, README and source provenance changed.",
+    "C02-C05 retain their original execution source and only claim byte identity for explicitly listed unchanged components/external runtime.",
+    "Prior C08 is excluded from final qualification because the adapter changed; fresh C01/C06/C07/C08/C09 are required.",
+    "Host fail-closed and default-open controls qualify the unchanged vendor host response handling; they are not executions of the new adapter."
+  ]
+}

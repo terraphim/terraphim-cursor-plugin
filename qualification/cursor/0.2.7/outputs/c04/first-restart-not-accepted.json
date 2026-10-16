@@ -1,0 +1,8 @@
+{
+  "status": "NOT_ACCEPTED",
+  "observed_original_graph_in_raw_response": true,
+  "actual_graphSha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+  "expected_graphSha256": "01e38b24dd32a410a6d23fc010ddc06b48a090fbbb2e13359a01f05b06f6b01f",
+  "cause": "not established; stale connection or tool response; do not infer reviewed new-graph success",
+  "next": "distinct temporary MCP name to distinguish test connection"
+}

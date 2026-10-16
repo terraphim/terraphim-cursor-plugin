@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "checks": {
+    "guardReplacement": {
+      "status": "PASS_ACTUAL_DENIAL_AND_TERMINAL_NOOP",
+      "toolUseId": "c5919a40-4365-4e4a-a75d-46fccf6a8b51",
+      "attemptedCommand": "printf '%s\\n' 'reviewed warning-fixed guard probe'",
+      "compiledReplacement": "printf '%s\\n' 'rm -rf /'",
+      "receiptState": "denied",
+      "terminalResponse": {},
+      "evidence": "outputs/c07/denied-completion/native-envelopes.json",
+      "scope": "Actual native guard refusal and original-command terminal acknowledgment; no execution inferred from hook process exit"
+    },
+    "guardOriginal": {
+      "status": "PASS_ACTUAL_DENIAL_AND_TERMINAL_NOOP",
+      "toolUseId": "35fee96b-378d-4234-b932-06c4aacb319c",
+      "attemptedCommand": "printf '%s\\n' 'rm -rf /'",
+      "compiledReplacement": null,
+      "receiptState": "denied",
+      "terminalResponse": {},
+      "evidence": "outputs/c07/guard-original/native-envelopes.json",
+      "scope": "Actual native guard refusal and original-command terminal acknowledgment; no execution inferred from hook process exit"
+    }
+  }
+}

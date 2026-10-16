@@ -1,0 +1,40 @@
+{
+  "id": "Embedded",
+  "global_shortcut": null,
+  "default_role": "cursor-corrections",
+  "selected_role": "cursor-corrections",
+  "roles": {
+    "cursor-corrections": {
+      "name": "cursor-corrections",
+      "shortname": null,
+      "relevance_function": "title-scorer",
+      "terraphim_it": false,
+      "theme": "default",
+      "kg": {
+        "automata_path": {
+          "Local": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/compiled-corrections.json"
+        },
+        "knowledge_graph_local": null,
+        "public": false,
+        "publish": false
+      },
+      "haystacks": []
+    },
+    "cursor-guard": {
+      "name": "cursor-guard",
+      "shortname": null,
+      "relevance_function": "title-scorer",
+      "terraphim_it": false,
+      "theme": "default",
+      "kg": {
+        "automata_path": {
+          "Local": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/guard-original/guard-rules.json"
+        },
+        "knowledge_graph_local": null,
+        "public": false,
+        "publish": false
+      },
+      "haystacks": []
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_ACTUAL_NATIVE_WARNING_DIAGNOSTIC_AND_INPUT_PRESERVATION",
+  "actualToolUseId": "ce61a15f-7723-4712-9dd0-013ad33100bb",
+  "actualPreStderr": "Terraphim: agent_warnings count=1",
+  "diagnosticCount": 1,
+  "diagnosticContainsRawWarningText": false,
+  "diagnosticSource": "Exact selected native preToolUse STDERR block, not a direct replay",
+  "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T125353/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+  "originalCommandPreserved": true,
+  "hookResponse": {
+    "permission": "allow"
+  },
+  "receiptState": "incomplete",
+  "receiptExitCode": null,
+  "nativeNumericFailureExit": "not supplied by actual postToolUseFailure envelope",
+  "selectedOutputAbsent": true,
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33"
+}

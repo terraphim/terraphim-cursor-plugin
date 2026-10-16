@@ -1,0 +1,29 @@
+{
+  "observedAt": "2026-10-16T12:02:46.193325+00:00",
+  "removedOnly": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/hooks.json"
+  ],
+  "sha256Before": "b18728aeeb662b1f1ff9e380b53de321a619c385c10f91168158447ee3989869",
+  "backup": "hooks.json.before-removal",
+  "mcpConfigurationAlreadyAbsent": true,
+  "originallyAbsentConfigurationRestored": true,
+  "nativeReload": "PASS",
+  "nativeObservedAt": "2026-10-16T12:03:44.689924+00:00",
+  "nativeObservations": {
+    "candidateAbsent": true,
+    "existingTerraphimSkillsIntroPresent": true,
+    "hookInventoryEmpty": true,
+    "hookExecutionLogCount": 0,
+    "taskGrepMcpAbsent": true,
+    "unrelatedUserMcpsRemainDisabled": [
+      "cached-context",
+      "mcp-agent-mail",
+      "Origin"
+    ]
+  },
+  "screenshots": [
+    "plugins-after-removal.png",
+    "hooks-after-removal.png",
+    "mcp-after-removal.png"
+  ]
+}

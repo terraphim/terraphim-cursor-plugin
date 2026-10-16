@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "testsRun": 45,
+  "skipped": 0,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Real Linux ARM released-agent protocol; not native Cursor acceptance."
+}

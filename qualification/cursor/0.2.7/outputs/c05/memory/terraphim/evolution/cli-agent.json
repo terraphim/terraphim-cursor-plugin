@@ -1,0 +1,54 @@
+{
+  "agent_id": "cli-agent",
+  "lessons": {
+    "domain_lessons": [],
+    "failure_lessons": [],
+    "lesson_index": {},
+    "metadata": {
+      "average_success_rate": 0.0,
+      "created_at": "2026-10-16T10:59:28.398435Z",
+      "last_updated": "2026-10-16T10:59:28.398435Z",
+      "total_applications": 0,
+      "total_lessons": 0,
+      "validated_lessons": 0
+    },
+    "process_lessons": [],
+    "success_patterns": [],
+    "technical_lessons": []
+  },
+  "memory": {
+    "episodic_memory": [],
+    "long_term": {},
+    "metadata": {
+      "created_at": "2026-10-16T10:59:28.398432Z",
+      "last_updated": "2026-10-16T10:59:28.398469Z",
+      "memory_efficiency": 1.0,
+      "total_consolidations": 0
+    },
+    "semantic_memory": {
+      "concepts": {},
+      "relationships": []
+    },
+    "short_term": [
+      {
+        "access_count": 0,
+        "associations": {},
+        "content": "Risk requires a Decision: approve a second supplier as the mitigation.",
+        "created_at": "2026-10-16T10:59:28.398455Z",
+        "id": "c7ac1a17-6bcc-419e-bd1e-302dea24c125",
+        "importance": "Medium",
+        "item_type": "Experience",
+        "last_accessed": null,
+        "tags": [
+          "provenance:public-project-brief"
+        ]
+      }
+    ],
+    "working_memory": {
+      "active_goals": [],
+      "attention_focus": [],
+      "current_context": {}
+    }
+  },
+  "saved_at": "2026-10-16T10:59:28.399253+00:00"
+}

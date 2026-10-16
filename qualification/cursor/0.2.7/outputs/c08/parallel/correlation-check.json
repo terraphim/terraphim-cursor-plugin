@@ -1,0 +1,46 @@
+{
+  "status": "PASS_ACTUAL_NATIVE_INTERLEAVED_CORRELATION",
+  "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T125353/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+  "actualHookLogOrder": [
+    {
+      "event": "preToolUse",
+      "toolUseId": "02bb49b5-6208-4a3d-a50a-6265f1c12006",
+      "command": "python3 -c 'import time; time.sleep(1.7)'"
+    },
+    {
+      "event": "preToolUse",
+      "toolUseId": "e7ecdbb1-241c-4058-9243-f6471fabfeaa",
+      "command": "python3 -c 'import time; time.sleep(0.2)'"
+    },
+    {
+      "event": "postToolUse",
+      "toolUseId": "e7ecdbb1-241c-4058-9243-f6471fabfeaa",
+      "command": "python3 -c 'import time; time.sleep(0.2)'"
+    },
+    {
+      "event": "postToolUse",
+      "toolUseId": "02bb49b5-6208-4a3d-a50a-6265f1c12006",
+      "command": "python3 -c 'import time; time.sleep(1.7)'"
+    }
+  ],
+  "distinctCalls": 2,
+  "bothPreResponsesBeforeEitherPost": true,
+  "shorterCallPostBeforeLongerCallPost": true,
+  "completedReceipts": [
+    {
+      "actualToolUseId": "e7ecdbb1-241c-4058-9243-f6471fabfeaa",
+      "callKey": "e88d36609af898020367ce66d8ad35b2698365152c65c4d55b5c4c9472982457",
+      "command": "python3 -c 'import time; time.sleep(0.2)'",
+      "actualHostReportedDurationMs": 864.075,
+      "receiptCreatedAtNs": 1792152084398120000
+    },
+    {
+      "actualToolUseId": "02bb49b5-6208-4a3d-a50a-6265f1c12006",
+      "callKey": "17eaffe11fb6f4f37e9481a0d8ea4facd0b1455ce7a6cd33fc7e7f3e834a808e",
+      "command": "python3 -c 'import time; time.sleep(1.7)'",
+      "actualHostReportedDurationMs": 2376.608,
+      "receiptCreatedAtNs": 1792152084397706000
+    }
+  ],
+  "scope": "Actual interleaved native hook lifecycles and independently recomputed receipt keys; no inference from agent prose or invented call timing."
+}

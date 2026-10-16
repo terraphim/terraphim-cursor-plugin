@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-16T10:58:55.258543+00:00",
+  "status": "PASS synthesis comparison; native drift and reviewed restart remain pending",
+  "host_version": "3.25.6",
+  "capture_method": "Expanded native MCP call > Copy output > new untitled file > Save As; read actual saved JSON",
+  "tool": "terraphim_answer",
+  "output_sha256": "396a6f3a732fdb8a02142eee320e0cc3b8b7593285eec4b34ebd9a5d2990191c",
+  "graph_sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+  "binary_sha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab",
+  "same_three_chunks_as_native_retrieval": true,
+  "all_three_citations_match_corpus_lines": true,
+  "provider_identity": "not reported; no provider identity inferred",
+  "claimed_completion": false
+}

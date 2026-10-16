@@ -1,0 +1,2815 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-16T08:34:49.998046+00:00",
+  "status": "INSTALLED_RELEASE_PAYLOAD_AND_SCOPED_STATE_VERIFIED",
+  "snapshot": {
+    "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-isolation/snapshot.json",
+    "exists": true,
+    "symlink": false,
+    "regularFile": true,
+    "bytes": 5711,
+    "sha256": "5533ba73d7584a5f335280e0b01e73fbf5fc07e48c07adde9d841b58bcbd8a6b"
+  },
+  "nativeSetup": {
+    "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-isolation/native-setup.json",
+    "exists": true,
+    "symlink": false,
+    "regularFile": true,
+    "bytes": 1186,
+    "sha256": "e3228b63b6dd3058a18e2f4c88301f3625752313fd32148d45ceae3c5e49414c"
+  },
+  "package": {
+    "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/released/terraphim-it.vsix",
+    "exists": true,
+    "symlink": false,
+    "regularFile": true,
+    "bytes": 5973230,
+    "sha256": "b25a70d50cc839503bbcd873f12b1c9287d72e61b4d15cfc13241f2212086131",
+    "extensionId": "applied-knowledge-systems.terraphim-it",
+    "version": "0.1.5",
+    "packageJsonSha256": "1c2714516508b7dc0f52e87d5d49bc2695163dcf81045cc931d2b8c805da1c5e",
+    "officialAssetUrl": "https://github.com/terraphim/terraphim-ai/releases/download/terraphim_vscode-v0.1.5/terraphim-it.vsix",
+    "sourceCommit": "2a189963cca58fb8583c27d5e85ac2ca2f4187d0",
+    "sourceRepository": "terraphim/terraphim-ai",
+    "tag": "terraphim_vscode-v0.1.5",
+    "priorGalleryReceipt": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/cursor-gallery-install-indexed/installed-package.json",
+    "releaseReadback": {
+      "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/shortcut-conflict/release-015/released/release-readback.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 6245,
+      "sha256": "745de337acabdc5341137e4a013a046949b9e6c359171a53aa55207a61b97496"
+    }
+  },
+  "installedPath": "/private/tmp/tc-ext-20261016/applied-knowledge-systems.terraphim-it-0.1.5",
+  "payloadFilesMatched": 440,
+  "payloadFiles": [
+    {
+      "path": "LICENSE.txt",
+      "packageSha256": "47528e762efc05e17ae569ffeacf044b65cbe2c94bc9c58c576f267a5cd7d039",
+      "installedSha256": "47528e762efc05e17ae569ffeacf044b65cbe2c94bc9c58c576f267a5cd7d039",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "README-alternative-control.md",
+      "packageSha256": "cf79f7a0bc84a2d88b608b45613d6ba51c88c3e397c5edcff70759f90b829a2e",
+      "installedSha256": "cf79f7a0bc84a2d88b608b45613d6ba51c88c3e397c5edcff70759f90b829a2e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "atomic.config.json",
+      "packageSha256": "f77faac29ee47b011b5827e9f96b9e4f77d79d2494e86466e06560bb45736e2f",
+      "installedSha256": "f77faac29ee47b011b5827e9f96b9e4f77d79d2494e86466e06560bb45736e2f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "changelog.md",
+      "packageSha256": "474624d43a11f74ca7e396fb476d7f50ca67146fe5ccd337668ba9bf5cda1592",
+      "installedSha256": "474624d43a11f74ca7e396fb476d7f50ca67146fe5ccd337668ba9bf5cda1592",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/alternative-control.css",
+      "packageSha256": "2a82c42335d520c8340c9e5e16f7d00a32aace8fb529b076a5879d5fc5df4db3",
+      "installedSha256": "2a82c42335d520c8340c9e5e16f7d00a32aace8fb529b076a5879d5fc5df4db3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/alternative-control.js",
+      "packageSha256": "6d0db16bc25df2cdb175009e546b211342ba737a35a3fc606990cd9cf0e99f9b",
+      "installedSha256": "6d0db16bc25df2cdb175009e546b211342ba737a35a3fc606990cd9cf0e99f9b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor-build.json",
+      "packageSha256": "fe5aba43ad0fbe445925386f0cf04ddc6655ae6bb2db32e2267c63e87355ceba",
+      "installedSha256": "fe5aba43ad0fbe445925386f0cf04ddc6655ae6bb2db32e2267c63e87355ceba",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/alternatives-panel-f7a68a7707d04dfa.css",
+      "packageSha256": "a99a407d3f6aa52f48e3013bf865ef4b44bd0b9e4028d9e68c1a6dd32f8a68a8",
+      "installedSha256": "a99a407d3f6aa52f48e3013bf865ef4b44bd0b9e4028d9e68c1a6dd32f8a68a8",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/blocks-b2480c8f9f3d63b3.css",
+      "packageSha256": "383c0e9197f015d651363e3abd31fdf67b56a6b4bde72ebe764a7b1e417c5b4c",
+      "installedSha256": "383c0e9197f015d651363e3abd31fdf67b56a6b4bde72ebe764a7b1e417c5b4c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/example.html",
+      "packageSha256": "fda475be8b87ff7a0789f167b4906357c3d8d7e7d1fcd0348f8c908d65e731d3",
+      "installedSha256": "fda475be8b87ff7a0789f167b4906357c3d8d7e7d1fcd0348f8c908d65e731d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/host-assets.json",
+      "packageSha256": "fe5aba43ad0fbe445925386f0cf04ddc6655ae6bb2db32e2267c63e87355ceba",
+      "installedSha256": "fe5aba43ad0fbe445925386f0cf04ddc6655ae6bb2db32e2267c63e87355ceba",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/host-session.js",
+      "packageSha256": "9e5efc4c3f1f2003cd86f05b266b6666e546c68a065eaca67c897c2328a09388",
+      "installedSha256": "9e5efc4c3f1f2003cd86f05b266b6666e546c68a065eaca67c897c2328a09388",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/index.html",
+      "packageSha256": "a9334870599b5656b377655bf78a066bd526aa430d4eefa4e1bdba4c3062e3d7",
+      "installedSha256": "a9334870599b5656b377655bf78a066bd526aa430d4eefa4e1bdba4c3062e3d7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/js/rolegraph-worker.js",
+      "packageSha256": "8240803c0aef05acd66b6ec91eaee16e53a556252aa48c8487a4c3bd9a8924d9",
+      "installedSha256": "8240803c0aef05acd66b6ec91eaee16e53a556252aa48c8487a4c3bd9a8924d9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/lab-3fee6e89acf44fa1.css",
+      "packageSha256": "1fe0441a83177e9713ac112fac85336ad3315b3ac755ec8a625e008c4ca1f967",
+      "installedSha256": "1fe0441a83177e9713ac112fac85336ad3315b3ac755ec8a625e008c4ca1f967",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/overflow-cc1be2ca3843f438.css",
+      "packageSha256": "8fa1a611df91541508b1532d3628addffecec02b2516a3f7a2c98bc385ada218",
+      "installedSha256": "8fa1a611df91541508b1532d3628addffecec02b2516a3f7a2c98bc385ada218",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/persistence-c4310be97ce197ef.css",
+      "packageSha256": "2d9825e27391a177e65032952923eb03f505fa95f86590f98e24f753fa2ba660",
+      "installedSha256": "2d9825e27391a177e65032952923eb03f505fa95f86590f98e24f753fa2ba660",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/rolegraph/rolegraph-worker.js",
+      "packageSha256": "8240803c0aef05acd66b6ec91eaee16e53a556252aa48c8487a4c3bd9a8924d9",
+      "installedSha256": "8240803c0aef05acd66b6ec91eaee16e53a556252aa48c8487a4c3bd9a8924d9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/rolegraph/terraphim_rolegraph_browser.d.ts",
+      "packageSha256": "95094622b3805fed54e96cdcbb1c732d1244fbecceadb24dd13e0f28c1d8f7e2",
+      "installedSha256": "95094622b3805fed54e96cdcbb1c732d1244fbecceadb24dd13e0f28c1d8f7e2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/rolegraph/terraphim_rolegraph_browser.js",
+      "packageSha256": "0f155f7ebe48ffd9958266c153f965447f98e26724e8fa994d1e18d879a9f4dc",
+      "installedSha256": "0f155f7ebe48ffd9958266c153f965447f98e26724e8fa994d1e18d879a9f4dc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/rolegraph/terraphim_rolegraph_browser_bg.wasm",
+      "packageSha256": "128bf553be2185e2140e68dcd47ff4127aeed47ea49fcf1dae942b99ac84a0d1",
+      "installedSha256": "128bf553be2185e2140e68dcd47ff4127aeed47ea49fcf1dae942b99ac84a0d1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/rolegraph/terraphim_rolegraph_browser_bg.wasm.d.ts",
+      "packageSha256": "f6cc0427ac07ca31fc3882c5f9487347717f887a0c9ebba69a1323eda3a822ea",
+      "installedSha256": "f6cc0427ac07ca31fc3882c5f9487347717f887a0c9ebba69a1323eda3a822ea",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/roles/default.json",
+      "packageSha256": "e850422ec72faa06aae0d6c2893a9f1d2e36d60a5aef79bd8f863daa2d71b015",
+      "installedSha256": "e850422ec72faa06aae0d6c2893a9f1d2e36d60a5aef79bd8f863daa2d71b015",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/selection-menu-317cedafb0e3952e.css",
+      "packageSha256": "7d0790ed1bf0c6e3955e5305d31ace2bd67f6df5f5f2b7be9692f9c79843891e",
+      "installedSha256": "7d0790ed1bf0c6e3955e5305d31ace2bd67f6df5f5f2b7be9692f9c79843891e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim-editor-2718c4e298c1b7b6.js",
+      "packageSha256": "9ccd7ddee55764ca47067c809d6dbf9881843b6649fd3a8677871df0e5601b24",
+      "installedSha256": "9ccd7ddee55764ca47067c809d6dbf9881843b6649fd3a8677871df0e5601b24",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim-editor-2718c4e298c1b7b6_bg.wasm",
+      "packageSha256": "93796edac11424d45457a77c3e635d5d59b139c21a08bf09126c88c5ed28ea18",
+      "installedSha256": "93796edac11424d45457a77c3e635d5d59b139c21a08bf09126c88c5ed28ea18",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim-editor.min.css",
+      "packageSha256": "147cd5ce172f00873b002ac215b004631c7c17aaadf23fb7c786a90628dfe1f3",
+      "installedSha256": "147cd5ce172f00873b002ac215b004631c7c17aaadf23fb7c786a90628dfe1f3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim-editor.min.js",
+      "packageSha256": "a650ab15ac36d0868268099175d60da1e228283fc0f2a46b61dd1fa752ef4fba",
+      "installedSha256": "a650ab15ac36d0868268099175d60da1e228283fc0f2a46b61dd1fa752ef4fba",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim_editor.js",
+      "packageSha256": "9ccd7ddee55764ca47067c809d6dbf9881843b6649fd3a8677871df0e5601b24",
+      "installedSha256": "9ccd7ddee55764ca47067c809d6dbf9881843b6649fd3a8677871df0e5601b24",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/terraphim_editor_bg.wasm",
+      "packageSha256": "93796edac11424d45457a77c3e635d5d59b139c21a08bf09126c88c5ed28ea18",
+      "installedSha256": "93796edac11424d45457a77c3e635d5d59b139c21a08bf09126c88c5ed28ea18",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/tokens-36540e1e0e83eb54.css",
+      "packageSha256": "71e359d23d7ec44c9c838f74cf77f6e33aa3c33c57757cfc4cfb96e22a09de55",
+      "installedSha256": "71e359d23d7ec44c9c838f74cf77f6e33aa3c33c57757cfc4cfb96e22a09de55",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/trim-a64aceacb4246fba.css",
+      "packageSha256": "fe79acb70b9906e404d30e19b7d5e1cf6589bc0aa155f1c1dc93ed18e6dee81d",
+      "installedSha256": "fe79acb70b9906e404d30e19b7d5e1cf6589bc0aa155f1c1dc93ed18e6dee81d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/LICENSE.txt",
+      "packageSha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+      "installedSha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/css/brands.min.css",
+      "packageSha256": "e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e",
+      "installedSha256": "e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/css/fontawesome.min.css",
+      "packageSha256": "137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519",
+      "installedSha256": "137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/css/regular.min.css",
+      "packageSha256": "6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f",
+      "installedSha256": "6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/css/solid.min.css",
+      "packageSha256": "e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3",
+      "installedSha256": "e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.ttf",
+      "packageSha256": "e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51",
+      "installedSha256": "e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2",
+      "packageSha256": "232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92",
+      "installedSha256": "232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.ttf",
+      "packageSha256": "9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351",
+      "installedSha256": "9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2",
+      "packageSha256": "c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76",
+      "installedSha256": "c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.ttf",
+      "packageSha256": "b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b",
+      "installedSha256": "b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2",
+      "packageSha256": "ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f",
+      "installedSha256": "ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/manifest.json",
+      "packageSha256": "ab09bfd030127e9476d9bf35aa063b445d48324c903a8806bebaf9584a373141",
+      "installedSha256": "ab09bfd030127e9476d9bf35aa063b445d48324c903a8806bebaf9584a373141",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/LICENSE.md",
+      "packageSha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054",
+      "installedSha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/LICENSE",
+      "packageSha256": "0623348b57e817b6897c41b6065380b599d5befe2839d83270566c605e430441",
+      "installedSha256": "0623348b57e817b6897c41b6065380b599d5befe2839d83270566c605e430441",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/code.svg",
+      "packageSha256": "e66b460f5fd8ca4327d155aa79510cb114d11c50d1b62d25c7520ad1baa02e1b",
+      "installedSha256": "e66b460f5fd8ca4327d155aa79510cb114d11c50d1b62d25c7520ad1baa02e1b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/link.svg",
+      "packageSha256": "0634bc395f62df3ff42772c56af5c07bb6eba6ab23a70613ad0f255737e6511f",
+      "installedSha256": "0634bc395f62df3ff42772c56af5c07bb6eba6ab23a70613ad0f255737e6511f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/question-circle.svg",
+      "packageSha256": "b9408c681dfb0002a76f91c9ac864b7127ae52428aa81eca188985504a61d7e0",
+      "installedSha256": "b9408c681dfb0002a76f91c9ac864b7127ae52428aa81eca188985504a61d7e0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-bold.svg",
+      "packageSha256": "8e7adb4a29d9fd60445e2e9d96461ddc1212ef14bfd76f41ffb951fa9968eade",
+      "installedSha256": "8e7adb4a29d9fd60445e2e9d96461ddc1212ef14bfd76f41ffb951fa9968eade",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-h1.svg",
+      "packageSha256": "9a211647fe7df5c57c0b86e6625cd9c661e3df540f646c30465890aece8e1207",
+      "installedSha256": "9a211647fe7df5c57c0b86e6625cd9c661e3df540f646c30465890aece8e1207",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-h2.svg",
+      "packageSha256": "0a5ce744585975247d8784149d3807ad57f1cbf834a34a5ab8e394a8660ba934",
+      "installedSha256": "0a5ce744585975247d8784149d3807ad57f1cbf834a34a5ab8e394a8660ba934",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-h3.svg",
+      "packageSha256": "c588ec487945d9306c1005196ed7f84bd314633423171559f0aefa6b18c97211",
+      "installedSha256": "c588ec487945d9306c1005196ed7f84bd314633423171559f0aefa6b18c97211",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-italic.svg",
+      "packageSha256": "29722685928ea226f897ebb7784132e810e976ffb61e21f625d875467f853153",
+      "installedSha256": "29722685928ea226f897ebb7784132e810e976ffb61e21f625d875467f853153",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/assets/icons/type-underline.svg",
+      "packageSha256": "e1038bb0001fe6f8e4e7f250bd497b71df555a093a1970aa99be189a83a3089e",
+      "installedSha256": "e1038bb0001fe6f8e4e7f250bd497b71df555a093a1970aa99be189a83a3089e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.24R5WE5A.js",
+      "packageSha256": "d820009490ad7b49fb616d2eac3eab89a9159c7e3d29796e522b6b903fa01be1",
+      "installedSha256": "d820009490ad7b49fb616d2eac3eab89a9159c7e3d29796e522b6b903fa01be1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.27ILGUWR.js",
+      "packageSha256": "c7a8c01697a327f9a24f20a80892eba4289b275114876996b7468d95a889ad94",
+      "installedSha256": "c7a8c01697a327f9a24f20a80892eba4289b275114876996b7468d95a889ad94",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.2AIXAFCV.js",
+      "packageSha256": "243637209fe98b86324a9e50bc4b119786f749087a83f769fa5d35540e9cee8c",
+      "installedSha256": "243637209fe98b86324a9e50bc4b119786f749087a83f769fa5d35540e9cee8c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.2SZPKEN5.js",
+      "packageSha256": "a06102043565da0ed6dbff17f50fdacadbb9cae0cf43f1904535101fc8938413",
+      "installedSha256": "a06102043565da0ed6dbff17f50fdacadbb9cae0cf43f1904535101fc8938413",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.2X5EERK2.js",
+      "packageSha256": "b08f0ec5efc3540bab614d7b5f6c4ccbdbf2ef9b517cf1e3ddf7d204d223aaa2",
+      "installedSha256": "b08f0ec5efc3540bab614d7b5f6c4ccbdbf2ef9b517cf1e3ddf7d204d223aaa2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.3GITBIC4.js",
+      "packageSha256": "65f42f91445f0b5123f13e695f2973cbeb3a643a10dccb86baa620de0f0a32ef",
+      "installedSha256": "65f42f91445f0b5123f13e695f2973cbeb3a643a10dccb86baa620de0f0a32ef",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.3TFKS637.js",
+      "packageSha256": "14f82f632089ec1a68784a8aa36aec1e4a713623749ad880fbbd0119f78da043",
+      "installedSha256": "14f82f632089ec1a68784a8aa36aec1e4a713623749ad880fbbd0119f78da043",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.3Y6SB6QS.js",
+      "packageSha256": "f1cea1705e0c978806be53c89f206e9c4be9cac5348d77fae76b8d759ff2a9c9",
+      "installedSha256": "f1cea1705e0c978806be53c89f206e9c4be9cac5348d77fae76b8d759ff2a9c9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.43GPPE74.js",
+      "packageSha256": "bb0054a347cbb37a414c64621c5151385e305c5a51451b9346ecd636dfde9c1b",
+      "installedSha256": "bb0054a347cbb37a414c64621c5151385e305c5a51451b9346ecd636dfde9c1b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.4S3RCQCG.js",
+      "packageSha256": "822f662c32036ec0fd981cee20a7726a5d21c160a57dcc5597bddcc639349a98",
+      "installedSha256": "822f662c32036ec0fd981cee20a7726a5d21c160a57dcc5597bddcc639349a98",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.52GJFLW5.js",
+      "packageSha256": "1c85cb5aba7188eb4a8587a8076781f49a5819be22740985e9b0c31e3fd8e0a3",
+      "installedSha256": "1c85cb5aba7188eb4a8587a8076781f49a5819be22740985e9b0c31e3fd8e0a3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.52OC5JIK.js",
+      "packageSha256": "8e6b5b64330fa64475326259787126ac9a69fd19e63e0d872461ad8f42d00f79",
+      "installedSha256": "8e6b5b64330fa64475326259787126ac9a69fd19e63e0d872461ad8f42d00f79",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.6LJMKLWZ.js",
+      "packageSha256": "14a4528f459174f043fc09a0c85870a3a13c622e99db52a52f653cc12cc49de3",
+      "installedSha256": "14a4528f459174f043fc09a0c85870a3a13c622e99db52a52f653cc12cc49de3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.6U4GOUZA.js",
+      "packageSha256": "68684064e5e3af813bcf7022ce4cfe32f9169cc87de96cd5a6541c51a2904813",
+      "installedSha256": "68684064e5e3af813bcf7022ce4cfe32f9169cc87de96cd5a6541c51a2904813",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.7G6CFCYN.js",
+      "packageSha256": "008d0d801c35fdea8829b0a18af142786bac4aa5403d8d2450140f0523a57363",
+      "installedSha256": "008d0d801c35fdea8829b0a18af142786bac4aa5403d8d2450140f0523a57363",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.7I3HGH5I.js",
+      "packageSha256": "5ff9e71578f1148596cd76ff6518f4a9350c3a78dcdc7ec83a1f968bb575e113",
+      "installedSha256": "5ff9e71578f1148596cd76ff6518f4a9350c3a78dcdc7ec83a1f968bb575e113",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.ABG77QVN.js",
+      "packageSha256": "eb49eecff1bdad654b2ccd12a899c841708f42b4941d06a3a588c6e24fb2ae5c",
+      "installedSha256": "eb49eecff1bdad654b2ccd12a899c841708f42b4941d06a3a588c6e24fb2ae5c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.B3ILE7LN.js",
+      "packageSha256": "0fb77ecfeabdd945703ef57a818c219a87889d5409f0287e9e8d3c6be3241d48",
+      "installedSha256": "0fb77ecfeabdd945703ef57a818c219a87889d5409f0287e9e8d3c6be3241d48",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.B4BZKR24.js",
+      "packageSha256": "8bdb8b4bf886773489e9b8436aaf39a63de270073002ff62341649d857ea27cd",
+      "installedSha256": "8bdb8b4bf886773489e9b8436aaf39a63de270073002ff62341649d857ea27cd",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.BXWBYEBW.js",
+      "packageSha256": "fe753faaca5c419872f5816aebc4af4afa97ded7380ec52675cf0908929652f9",
+      "installedSha256": "fe753faaca5c419872f5816aebc4af4afa97ded7380ec52675cf0908929652f9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.DOYC4G7X.js",
+      "packageSha256": "cbccc5fca4cded950114904fb9db9471eb581c03eea6242c0c8bc47bbd56ee9a",
+      "installedSha256": "cbccc5fca4cded950114904fb9db9471eb581c03eea6242c0c8bc47bbd56ee9a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.E7LAXGG4.js",
+      "packageSha256": "4a6f1bf858fb8735a9fde90e6c7ba7a1aff940d5d1240f3701802cb504208cd2",
+      "installedSha256": "4a6f1bf858fb8735a9fde90e6c7ba7a1aff940d5d1240f3701802cb504208cd2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.ESELY2US.js",
+      "packageSha256": "c4097a6aa14847ee845e5f0cfe35a3a4291962c383d08d3523e3056878af9720",
+      "installedSha256": "c4097a6aa14847ee845e5f0cfe35a3a4291962c383d08d3523e3056878af9720",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.FDFOFJDR.js",
+      "packageSha256": "fb369159ef9c20b824925cee0f9978ffdb3a6c521d2f07a8fc135291d535a177",
+      "installedSha256": "fb369159ef9c20b824925cee0f9978ffdb3a6c521d2f07a8fc135291d535a177",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.FZX37GM3.js",
+      "packageSha256": "2cbb7c5c4a53cb51a470e8d569ea78933aeaf5d5ed17e5380059fb70aa1fab9c",
+      "installedSha256": "2cbb7c5c4a53cb51a470e8d569ea78933aeaf5d5ed17e5380059fb70aa1fab9c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.G2QSU2BF.js",
+      "packageSha256": "7828cb2a3a091d166721f1080ea93372f7dda91dc08f2f85878b5f87d58cb52f",
+      "installedSha256": "7828cb2a3a091d166721f1080ea93372f7dda91dc08f2f85878b5f87d58cb52f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.GL3UMKIL.js",
+      "packageSha256": "ebb9e48d84cb4d0a9dffe8c8f6e63bb4c59d0e8555710fb7adf5e34052edb226",
+      "installedSha256": "ebb9e48d84cb4d0a9dffe8c8f6e63bb4c59d0e8555710fb7adf5e34052edb226",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.HAL7R4WT.js",
+      "packageSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "installedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.HF7GESMZ.js",
+      "packageSha256": "4f1d59a3fb42615764c821c9f633ef85fd2ec5e7701355c82ea22eac263950a4",
+      "installedSha256": "4f1d59a3fb42615764c821c9f633ef85fd2ec5e7701355c82ea22eac263950a4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.HPQ3PGLN.js",
+      "packageSha256": "bffc0c50bd516e7403b794eb9af5e894775bc1a13bd2b5ecc66ddbed1b53f31b",
+      "installedSha256": "bffc0c50bd516e7403b794eb9af5e894775bc1a13bd2b5ecc66ddbed1b53f31b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.HQAAUCQS.js",
+      "packageSha256": "e0c9a4907115439faf7167b42a66b711858b930809afbe5ef3d04ff733811b98",
+      "installedSha256": "e0c9a4907115439faf7167b42a66b711858b930809afbe5ef3d04ff733811b98",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.HTWHAKXT.js",
+      "packageSha256": "86ba3477e5fff6f7844ac3343b2b2812ca299c7f537d6904855a112111f90ac3",
+      "installedSha256": "86ba3477e5fff6f7844ac3343b2b2812ca299c7f537d6904855a112111f90ac3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.I5LOVG5T.js",
+      "packageSha256": "637e9bc9f021553298c96430c3057a266f3cf4d6746b687a4d5057bd4342acfd",
+      "installedSha256": "637e9bc9f021553298c96430c3057a266f3cf4d6746b687a4d5057bd4342acfd",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.JJNPZ52S.js",
+      "packageSha256": "e869c821cc70ece9f594c1cf6cb2d8458ee6de5b33d2f7c4abb75544aa1cb29d",
+      "installedSha256": "e869c821cc70ece9f594c1cf6cb2d8458ee6de5b33d2f7c4abb75544aa1cb29d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.M2U2QT2K.js",
+      "packageSha256": "7c7463cbf1286d791c43b09b02ddf87828b07f2d2156454e7c59edf593641f91",
+      "installedSha256": "7c7463cbf1286d791c43b09b02ddf87828b07f2d2156454e7c59edf593641f91",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.MKSGYDJ7.js",
+      "packageSha256": "8ec92f56da768dd469e9c4e1b2d84bf305598eeb487b5172f54f390973c4ebb0",
+      "installedSha256": "8ec92f56da768dd469e9c4e1b2d84bf305598eeb487b5172f54f390973c4ebb0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.MOUXRZGR.js",
+      "packageSha256": "4b6060f74725dfa6d2e00708eeb68622e80032c29e8a29690cd32c3e7cf43b16",
+      "installedSha256": "4b6060f74725dfa6d2e00708eeb68622e80032c29e8a29690cd32c3e7cf43b16",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.MTYRJPGI.js",
+      "packageSha256": "66a0947074c14ad59db09bca8d072469ef928736c3705cc7deeb98e029b5324d",
+      "installedSha256": "66a0947074c14ad59db09bca8d072469ef928736c3705cc7deeb98e029b5324d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.NEZCQBYJ.js",
+      "packageSha256": "89adf06f2beac497d981a3fc37b45698bb90fb349a72938ba4a60ad7cd22d959",
+      "installedSha256": "89adf06f2beac497d981a3fc37b45698bb90fb349a72938ba4a60ad7cd22d959",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.NH3SRVOC.js",
+      "packageSha256": "76b91e0a54ce01582a347456246f7433e936029ab1f9e80a87ced715864c4fa9",
+      "installedSha256": "76b91e0a54ce01582a347456246f7433e936029ab1f9e80a87ced715864c4fa9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.NYIIDP5N.js",
+      "packageSha256": "32772b78bca61210992bc3a593669ce2621d213e72b0b382e60cc09ddd87a539",
+      "installedSha256": "32772b78bca61210992bc3a593669ce2621d213e72b0b382e60cc09ddd87a539",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.O27EHOBW.js",
+      "packageSha256": "1a9aeba601f49a8ddb7507d1be6dac6ada4757edd7a69c9252f3421040854476",
+      "installedSha256": "1a9aeba601f49a8ddb7507d1be6dac6ada4757edd7a69c9252f3421040854476",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.OQXQSIH6.js",
+      "packageSha256": "f72e99e832ab8262e441cd7fc4aef6cae99dfa32e7aa2d663184dcde34e5be0d",
+      "installedSha256": "f72e99e832ab8262e441cd7fc4aef6cae99dfa32e7aa2d663184dcde34e5be0d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.OZPGMRHW.js",
+      "packageSha256": "3ba2b5e16c8626a2ed2df8f71152bcc0c95df1b1903093bbfab76dae8082c65a",
+      "installedSha256": "3ba2b5e16c8626a2ed2df8f71152bcc0c95df1b1903093bbfab76dae8082c65a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.P7ZG6EMR.js",
+      "packageSha256": "11da9e127aa1b30b0969bf5d90bfbeb62e0c6e35c7e0c165d35d7171358b06d5",
+      "installedSha256": "11da9e127aa1b30b0969bf5d90bfbeb62e0c6e35c7e0c165d35d7171358b06d5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.PCNTRSPK.js",
+      "packageSha256": "d50534e993927bedc5b34e6d1561e767e7b8f72fa6357e62bfcb7b954ccc0e21",
+      "installedSha256": "d50534e993927bedc5b34e6d1561e767e7b8f72fa6357e62bfcb7b954ccc0e21",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.PNPJ7KDG.js",
+      "packageSha256": "0cdc32350809cc64b71ecca105bd7ea95f177ca11a7e65f0a8cdb70202f8bfde",
+      "installedSha256": "0cdc32350809cc64b71ecca105bd7ea95f177ca11a7e65f0a8cdb70202f8bfde",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.QOTN4UPW.js",
+      "packageSha256": "f0a57a7554f90327e24beea70b9d933fe294549d9c3a3352051bb5403bf27bae",
+      "installedSha256": "f0a57a7554f90327e24beea70b9d933fe294549d9c3a3352051bb5403bf27bae",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.QPSNFEB2.js",
+      "packageSha256": "9363a2487d32bff55b2ac56dcb57bfe1c07630c74d35171cd00ab492d16a3a47",
+      "installedSha256": "9363a2487d32bff55b2ac56dcb57bfe1c07630c74d35171cd00ab492d16a3a47",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.RBTTBYTX.js",
+      "packageSha256": "6be2e7bdfc5e93af07b81a78bd188f24e22e7b3f0f7597626a924e17bb30601a",
+      "installedSha256": "6be2e7bdfc5e93af07b81a78bd188f24e22e7b3f0f7597626a924e17bb30601a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.RIBKWZXP.js",
+      "packageSha256": "1f1d6889fc039c40fbd5ef439b79c05fba241aa1e221619f1d6e8ee7042ded6b",
+      "installedSha256": "1f1d6889fc039c40fbd5ef439b79c05fba241aa1e221619f1d6e8ee7042ded6b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.RK73WSZS.js",
+      "packageSha256": "06df6b1b1b699b5a462620b1aeacad9bef7ca4706d3d0fe146292d7316bc3357",
+      "installedSha256": "06df6b1b1b699b5a462620b1aeacad9bef7ca4706d3d0fe146292d7316bc3357",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.TDLFM7SW.js",
+      "packageSha256": "a1d916205572ca7dea93311989aac9706f7d66147bb7619ce8104107fc1ab5cc",
+      "installedSha256": "a1d916205572ca7dea93311989aac9706f7d66147bb7619ce8104107fc1ab5cc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.WAIE6M2P.js",
+      "packageSha256": "047a6b9e403b0e2c6e7986dedfee63031379cb31ec23a2a08bf5b5ca1fa4cace",
+      "installedSha256": "047a6b9e403b0e2c6e7986dedfee63031379cb31ec23a2a08bf5b5ca1fa4cace",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.WFFSQ5E5.js",
+      "packageSha256": "408c5d6195fcd0e23b8d97797d96289a2cff9b298ca6d37680243b564121d1d0",
+      "installedSha256": "408c5d6195fcd0e23b8d97797d96289a2cff9b298ca6d37680243b564121d1d0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.XAOA43RZ.js",
+      "packageSha256": "223cef3722caa4e3fb6efb90d5d4bc67ec30d51683e6df6e163a1c29884f72ce",
+      "installedSha256": "223cef3722caa4e3fb6efb90d5d4bc67ec30d51683e6df6e163a1c29884f72ce",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.XQ4KBI5G.js",
+      "packageSha256": "6b8ea2bf689231baa347d7c13c65e018f0876cbfc73b2f32d217dd7c5b070899",
+      "installedSha256": "6b8ea2bf689231baa347d7c13c65e018f0876cbfc73b2f32d217dd7c5b070899",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.XXIXGO5R.js",
+      "packageSha256": "1ed2486116dcc58a15b579402169f054027b1e7bef36ee258d98014976656e03",
+      "installedSha256": "1ed2486116dcc58a15b579402169f054027b1e7bef36ee258d98014976656e03",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.XZMYMJVO.js",
+      "packageSha256": "b4f349ee02e854ba3dd6888bdbda3248c91da52772de86261d630b22c1f865e4",
+      "installedSha256": "b4f349ee02e854ba3dd6888bdbda3248c91da52772de86261d630b22c1f865e4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.YCHBWCKL.js",
+      "packageSha256": "bd70677c7a805a7f0af02c88b2c217f96ae6391679b04938252238efaaf4710f",
+      "installedSha256": "bd70677c7a805a7f0af02c88b2c217f96ae6391679b04938252238efaaf4710f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.YGMDV7QR.js",
+      "packageSha256": "f81b5a698455691fc798d0c778899017d2935cb288692f0ccb837b899bf46243",
+      "installedSha256": "f81b5a698455691fc798d0c778899017d2935cb288692f0ccb837b899bf46243",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.YPBP7XEQ.js",
+      "packageSha256": "65de5249054ea64c13504137a773c08a3ecedf2f6c9762bf9ca8e670b762a20a",
+      "installedSha256": "65de5249054ea64c13504137a773c08a3ecedf2f6c9762bf9ca8e670b762a20a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.YZETUBD6.js",
+      "packageSha256": "78fb7c2ef495d0c74629aa6aee0ae3592bbd4c5103d6d37bc179b7695f2f74b3",
+      "installedSha256": "78fb7c2ef495d0c74629aa6aee0ae3592bbd4c5103d6d37bc179b7695f2f74b3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/chunks/chunk.ZL53POKZ.js",
+      "packageSha256": "1f0c820ee81e8cd783cefcba1b28f075b64014f72932823c134cfbd45aee61c1",
+      "installedSha256": "1f0c820ee81e8cd783cefcba1b28f075b64014f72932823c134cfbd45aee61c1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/badge/badge.js",
+      "packageSha256": "d8ee2039ef00280a52f17661d088647e328c677e090830381f3749fa343eccd9",
+      "installedSha256": "d8ee2039ef00280a52f17661d088647e328c677e090830381f3749fa343eccd9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/button-group/button-group.js",
+      "packageSha256": "d40c5473fa0a54722f6bbb5442339e9ae7fc10b34a8bc7d5bc5ac6138713ed31",
+      "installedSha256": "d40c5473fa0a54722f6bbb5442339e9ae7fc10b34a8bc7d5bc5ac6138713ed31",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/button/button.js",
+      "packageSha256": "d2c4baaf63d05b25d7e5d9950ae2a4cecdedff13f484387767dffa937beaf3c9",
+      "installedSha256": "d2c4baaf63d05b25d7e5d9950ae2a4cecdedff13f484387767dffa937beaf3c9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/dialog/dialog.js",
+      "packageSha256": "62df6c895cd87fc0c7731b094695ed80b62a23fb13b895b124fcb9f1d9154ea9",
+      "installedSha256": "62df6c895cd87fc0c7731b094695ed80b62a23fb13b895b124fcb9f1d9154ea9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/divider/divider.js",
+      "packageSha256": "79e2fd331684c7fc545ce40cfdf9bcc92f3e26ec40566a08703da4c9dde8ad6a",
+      "installedSha256": "79e2fd331684c7fc545ce40cfdf9bcc92f3e26ec40566a08703da4c9dde8ad6a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/icon/icon.js",
+      "packageSha256": "b2eb2f56da87f532693ad0bce20a9c258d19964a37f4ebc51db6893cf306c636",
+      "installedSha256": "b2eb2f56da87f532693ad0bce20a9c258d19964a37f4ebc51db6893cf306c636",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/input/input.js",
+      "packageSha256": "084441c5b23b3842cc405fbc5e9fa54676f558b6a3bba5884582c667d8b057c3",
+      "installedSha256": "084441c5b23b3842cc405fbc5e9fa54676f558b6a3bba5884582c667d8b057c3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/split-panel/split-panel.js",
+      "packageSha256": "e1780bedaa9c3b17612eae9560c39f448fd03c1f224c953fdc4c6df44ad38ae4",
+      "installedSha256": "e1780bedaa9c3b17612eae9560c39f448fd03c1f224c953fdc4c6df44ad38ae4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/components/tooltip/tooltip.js",
+      "packageSha256": "7e435dd2b5b7aa59e00e2967b90c8a9db61df5de781d55ec7f6b689007499d5e",
+      "installedSha256": "7e435dd2b5b7aa59e00e2967b90c8a9db61df5de781d55ec7f6b689007499d5e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/themes/light.css",
+      "packageSha256": "7bc8fb762a0f357d171df3126797e53cc0210d798080472fac6f72093acaf708",
+      "installedSha256": "7bc8fb762a0f357d171df3126797e53cc0210d798080472fac6f72093acaf708",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/utilities/base-path.js",
+      "packageSha256": "81b967daca7f541a910bdfabf297dbb0ec3d7fbf4588a9fb8bb8bae1b2ae28e1",
+      "installedSha256": "81b967daca7f541a910bdfabf297dbb0ec3d7fbf4588a9fb8bb8bae1b2ae28e1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/cdn/utilities/icon-library.js",
+      "packageSha256": "dbbfd83ee038e1c5d94f7107e5117fdf835523cbf595bcc87c7ec21a76157b19",
+      "installedSha256": "dbbfd83ee038e1c5d94f7107e5117fdf835523cbf595bcc87c7ec21a76157b19",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/composed-offset-position/LICENSE.md",
+      "packageSha256": "086c588bc8fd118a6a316d4701cf46bba36aa934f94fcfd933a35127c24627e4",
+      "installedSha256": "086c588bc8fd118a6a316d4701cf46bba36aa934f94fcfd933a35127c24627e4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/floating-ui_core/LICENSE",
+      "packageSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "installedSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/floating-ui_dom/LICENSE",
+      "packageSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "installedSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/floating-ui_utils/LICENSE",
+      "packageSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "installedSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/lit-element/LICENSE",
+      "packageSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "installedSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/lit/LICENSE",
+      "packageSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "installedSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/lit_node_modules_lit-html/LICENSE",
+      "packageSha256": "2b66f9390afde29edfe4314daff93f01fb182e1178053e228120178987e5db75",
+      "installedSha256": "2b66f9390afde29edfe4314daff93f01fb182e1178053e228120178987e5db75",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/lit_node_modules_lit_reactive-element/LICENSE",
+      "packageSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "installedSha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/vendor/shoelace/2.12.0/third-party-notices/shoelace-style_localize/LICENSE.md",
+      "packageSha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054",
+      "installedSha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/editor/write-on-6a8fd9449457dd74.css",
+      "packageSha256": "bd3b7471c8a7ba32c38927d47eefe26e5680ffa6ec96262380f4cf383340674c",
+      "installedSha256": "bd3b7471c8a7ba32c38927d47eefe26e5680ffa6ec96262380f4cf383340674c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/export-intent.js",
+      "packageSha256": "5d6823c172ae668d6ce90566933c64d8c14362740cb2834ff7e5b917fb26798f",
+      "installedSha256": "5d6823c172ae668d6ce90566933c64d8c14362740cb2834ff7e5b917fb26798f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/export-target.cjs",
+      "packageSha256": "bde94abc3156687d0336b16aab91df230fefd5bac62ff4e3ad86493b54964f54",
+      "installedSha256": "bde94abc3156687d0336b16aab91df230fefd5bac62ff4e3ad86493b54964f54",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/export-target.d.cts",
+      "packageSha256": "1cf8231a643ae2f585e6c9648fb33757c16c31d7400bbf19375846630ccb2803",
+      "installedSha256": "1cf8231a643ae2f585e6c9648fb33757c16c31d7400bbf19375846630ccb2803",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/knowledge-graph.cjs",
+      "packageSha256": "fd30549999ee0e1be95fef6cab7c392302d41f3db35446c965f8910f3a7dbfa0",
+      "installedSha256": "fd30549999ee0e1be95fef6cab7c392302d41f3db35446c965f8910f3a7dbfa0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/knowledge-graph.d.cts",
+      "packageSha256": "45907378c0db293622866be8ffb2ff060d9e35daca6b969b883ffec875e03d97",
+      "installedSha256": "45907378c0db293622866be8ffb2ff060d9e35daca6b969b883ffec875e03d97",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "media/legacy-build.json",
+      "packageSha256": "fd49f0a73534c1a313ba60223f20d5009fb2c49cdd8b006011bd8ee17d43fd8e",
+      "installedSha256": "fd49f0a73534c1a313ba60223f20d5009fb2c49cdd8b006011bd8ee17d43fd8e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/LICENSE",
+      "packageSha256": "394c2e6e5552e5dba202bee6390b9d6aa2754d657f5b9869e83b3d265a315501",
+      "installedSha256": "394c2e6e5552e5dba202bee6390b9d6aa2754d657f5b9869e83b3d265a315501",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/README.md",
+      "packageSha256": "1340a23f922c7cf4725044b0c853805c1cd22e166a3b9925378f068d2f9457bc",
+      "installedSha256": "1340a23f922c7cf4725044b0c853805c1cd22e166a3b9925378f068d2f9457bc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/lib/esm/index.js",
+      "packageSha256": "97acc10dd598fbb9a797c4a4364cb842bae8feac87f4c1610537ee5a2c6c4b5d",
+      "installedSha256": "97acc10dd598fbb9a797c4a4364cb842bae8feac87f4c1610537ee5a2c6c4b5d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/lib/esm/package.json",
+      "packageSha256": "0b049d258600610791478acd20a727368f706cf0d1396b63338c43a4619a8c02",
+      "installedSha256": "0b049d258600610791478acd20a727368f706cf0d1396b63338c43a4619a8c02",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/lib/index.d.ts",
+      "packageSha256": "8f348c1444112d4d938251a6f135aa9a8d6518573a40ed127e5a6e75a0b9060f",
+      "installedSha256": "8f348c1444112d4d938251a6f135aa9a8d6518573a40ed127e5a6e75a0b9060f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/lib/index.js",
+      "packageSha256": "04cb2e39dafa01dc0a472fea3f00dbfb3ecdd49e8e14eca942bc239c7f01c86f",
+      "installedSha256": "04cb2e39dafa01dc0a472fea3f00dbfb3ecdd49e8e14eca942bc239c7f01c86f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/ed25519/package.json",
+      "packageSha256": "c2b4fc4abeb64f9b1cc4749ca91a50b75f7edbbdb6fb4801b593c9ccda966532",
+      "installedSha256": "c2b4fc4abeb64f9b1cc4749ca91a50b75f7edbbdb6fb4801b593c9ccda966532",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/LICENSE",
+      "packageSha256": "3af2a890e9cba7cdfcb42674bc441d76126ca79a7ea69fea548f2d806738a572",
+      "installedSha256": "3af2a890e9cba7cdfcb42674bc441d76126ca79a7ea69fea548f2d806738a572",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/README.md",
+      "packageSha256": "5e869d9f8e2f43fc5a4f401fb3c2f067cc6b3490ad610c31037569e344c5e702",
+      "installedSha256": "5e869d9f8e2f43fc5a4f401fb3c2f067cc6b3490ad610c31037569e344c5e702",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_blake2.d.ts",
+      "packageSha256": "863733a13dec8dae32d46fa9df058e20afb0ba865bd07ec9fc01eeb7c56eca9c",
+      "installedSha256": "863733a13dec8dae32d46fa9df058e20afb0ba865bd07ec9fc01eeb7c56eca9c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_blake2.js",
+      "packageSha256": "7c95b5c8870b9fd8dec2355b73d7cb7a9ca7d4a2a1e712141d1bfc39194dd2d3",
+      "installedSha256": "7c95b5c8870b9fd8dec2355b73d7cb7a9ca7d4a2a1e712141d1bfc39194dd2d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_sha2.d.ts",
+      "packageSha256": "1e7146a407bf85762b80681cd4aa3b544000e30c9b24d04685dfa69f82a48fd9",
+      "installedSha256": "1e7146a407bf85762b80681cd4aa3b544000e30c9b24d04685dfa69f82a48fd9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_sha2.js",
+      "packageSha256": "942c8c4199831db87d5c750b6dc1fe644080aae06df905a48541cc676edc275a",
+      "installedSha256": "942c8c4199831db87d5c750b6dc1fe644080aae06df905a48541cc676edc275a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_u64.d.ts",
+      "packageSha256": "182b36436111c0ad9a1dc385ff327ffb2587c12d5274ffdedf8e7e5d1c0c4525",
+      "installedSha256": "182b36436111c0ad9a1dc385ff327ffb2587c12d5274ffdedf8e7e5d1c0c4525",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/_u64.js",
+      "packageSha256": "32d4e2d5a7f35b311dc96ead20a8e450a13cd7835f10819a5f98015f498aa0e6",
+      "installedSha256": "32d4e2d5a7f35b311dc96ead20a8e450a13cd7835f10819a5f98015f498aa0e6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake2b.d.ts",
+      "packageSha256": "92fd8a55044ec79fd280a10681656710314461142e103d09fc41ca566349489f",
+      "installedSha256": "92fd8a55044ec79fd280a10681656710314461142e103d09fc41ca566349489f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake2b.js",
+      "packageSha256": "1e53203557481a78c8f29a4374ef166c22a9c281ebe6b8f637beb76a279e8d03",
+      "installedSha256": "1e53203557481a78c8f29a4374ef166c22a9c281ebe6b8f637beb76a279e8d03",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake2s.d.ts",
+      "packageSha256": "4f1b1779b93939f53eebe22a05d1bfccc8dfe3a5c9322851c1db26053d8b7b08",
+      "installedSha256": "4f1b1779b93939f53eebe22a05d1bfccc8dfe3a5c9322851c1db26053d8b7b08",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake2s.js",
+      "packageSha256": "aa35af57ff35c2ff3d071b0fc10b06f0a68971d41a48ecdb94bd41202358a825",
+      "installedSha256": "aa35af57ff35c2ff3d071b0fc10b06f0a68971d41a48ecdb94bd41202358a825",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake3.d.ts",
+      "packageSha256": "8f1f5ecf0bbd044171a59d86c79172eab39a3f080b078a0d78dc0fb75bbd9bc7",
+      "installedSha256": "8f1f5ecf0bbd044171a59d86c79172eab39a3f080b078a0d78dc0fb75bbd9bc7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/blake3.js",
+      "packageSha256": "0313990ab1dd68c494b0ea3e8f0c4a4244a7bdee14a8bd709db2da8d1ab03cc8",
+      "installedSha256": "0313990ab1dd68c494b0ea3e8f0c4a4244a7bdee14a8bd709db2da8d1ab03cc8",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/crypto.d.ts",
+      "packageSha256": "2882fa2ef686e268b9c4fc22376b57b954eb56ab415c659b6b654385b3b20fa7",
+      "installedSha256": "2882fa2ef686e268b9c4fc22376b57b954eb56ab415c659b6b654385b3b20fa7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/crypto.js",
+      "packageSha256": "ede53f66d0117d6620e3f336e20a56caef9209de7761c7fe676818ff2b6081a6",
+      "installedSha256": "ede53f66d0117d6620e3f336e20a56caef9209de7761c7fe676818ff2b6081a6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/cryptoBrowser.d.ts",
+      "packageSha256": "2882fa2ef686e268b9c4fc22376b57b954eb56ab415c659b6b654385b3b20fa7",
+      "installedSha256": "2882fa2ef686e268b9c4fc22376b57b954eb56ab415c659b6b654385b3b20fa7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/cryptoBrowser.js",
+      "packageSha256": "445c21083b5b96b9f01afabf9f07c8e5dce2edca0e1798dd45f2e2046a21a17c",
+      "installedSha256": "445c21083b5b96b9f01afabf9f07c8e5dce2edca0e1798dd45f2e2046a21a17c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/eskdf.d.ts",
+      "packageSha256": "e9ab408543aad9ff38b35a8181cc5d5bb9b2536c75d2692b7453b30204210cca",
+      "installedSha256": "e9ab408543aad9ff38b35a8181cc5d5bb9b2536c75d2692b7453b30204210cca",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/eskdf.js",
+      "packageSha256": "52c7831feb8649b2cc3d9501243e3838a80e6af73f139e22c2b6140f113a167e",
+      "installedSha256": "52c7831feb8649b2cc3d9501243e3838a80e6af73f139e22c2b6140f113a167e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/_blake2.js",
+      "packageSha256": "a11567165e01ed2696fca654029a388ca483b5a1428c9262fa178b0f951ee527",
+      "installedSha256": "a11567165e01ed2696fca654029a388ca483b5a1428c9262fa178b0f951ee527",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/_sha2.js",
+      "packageSha256": "dababab0cb7c9ee823d5f40f7a41f5865588a6fd706431ce9cb2d85257f7e3e6",
+      "installedSha256": "dababab0cb7c9ee823d5f40f7a41f5865588a6fd706431ce9cb2d85257f7e3e6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/_u64.js",
+      "packageSha256": "4d1e788780ea650b4e2fd81238018f8f261ec23b5559ed11c421e85de6c74f42",
+      "installedSha256": "4d1e788780ea650b4e2fd81238018f8f261ec23b5559ed11c421e85de6c74f42",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/blake2b.js",
+      "packageSha256": "dde932bf8fbaba579a8903a3fa8fa7bded43edf2c6ae3815b454e24af8d32cc3",
+      "installedSha256": "dde932bf8fbaba579a8903a3fa8fa7bded43edf2c6ae3815b454e24af8d32cc3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/blake2s.js",
+      "packageSha256": "172d2aa3dd7b2b840bf5dbfaa7f93c00e0b06c9ccca0ae8c03578a39a229db65",
+      "installedSha256": "172d2aa3dd7b2b840bf5dbfaa7f93c00e0b06c9ccca0ae8c03578a39a229db65",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/blake3.js",
+      "packageSha256": "1986cf8d7d510618a8c0f817f83f15943cf65a5d31d162d7faf8249f6aacf162",
+      "installedSha256": "1986cf8d7d510618a8c0f817f83f15943cf65a5d31d162d7faf8249f6aacf162",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/crypto.js",
+      "packageSha256": "0cadf5fd6a9d96392251bfb058756a21794be50febc16ffcf77b61f2b4e1c79e",
+      "installedSha256": "0cadf5fd6a9d96392251bfb058756a21794be50febc16ffcf77b61f2b4e1c79e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/cryptoBrowser.js",
+      "packageSha256": "be868ec0111a3470d50750375a825e611dce9f78dc01f7e139de1d4962dd0516",
+      "installedSha256": "be868ec0111a3470d50750375a825e611dce9f78dc01f7e139de1d4962dd0516",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/eskdf.js",
+      "packageSha256": "35d1f5e2da928aa3b3c2e1106c82490d558a7fd9c550cb1dddd00e3ccc15cd9c",
+      "installedSha256": "35d1f5e2da928aa3b3c2e1106c82490d558a7fd9c550cb1dddd00e3ccc15cd9c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/hkdf.js",
+      "packageSha256": "8ffb733609607c692b42f5fbb1da6b54fb228271ad8c68146b00448fa716137b",
+      "installedSha256": "8ffb733609607c692b42f5fbb1da6b54fb228271ad8c68146b00448fa716137b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/hmac.js",
+      "packageSha256": "7ea80c6e2a925fcf90061815481fc3e12194e8a4a295b15453ac407ad466f918",
+      "installedSha256": "7ea80c6e2a925fcf90061815481fc3e12194e8a4a295b15453ac407ad466f918",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/index.js",
+      "packageSha256": "f124c09f2d4b3289889c2f1b974531be8d3ba909e8d3d1954b1bde2b4c18e12e",
+      "installedSha256": "f124c09f2d4b3289889c2f1b974531be8d3ba909e8d3d1954b1bde2b4c18e12e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/package.json",
+      "packageSha256": "4117a61f061a9fa8b9c2c221e8ba38680ffbeb5a395a2bc7f1cac2d92c6260ac",
+      "installedSha256": "4117a61f061a9fa8b9c2c221e8ba38680ffbeb5a395a2bc7f1cac2d92c6260ac",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/pbkdf2.js",
+      "packageSha256": "ec98c26d5b32ec63919d265216fd5c9f8576b202de4e1a5252badaa4f52f274d",
+      "installedSha256": "ec98c26d5b32ec63919d265216fd5c9f8576b202de4e1a5252badaa4f52f274d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/ripemd160.js",
+      "packageSha256": "3bf9dac870207c6991c645acc03565b96a55713489cfa5431e6882b55e3b2fe9",
+      "installedSha256": "3bf9dac870207c6991c645acc03565b96a55713489cfa5431e6882b55e3b2fe9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/scrypt.js",
+      "packageSha256": "2cebf4179f60ab99ed3d5689ff739e16da467a3a7d5c69ebf0624a8e51f6ca35",
+      "installedSha256": "2cebf4179f60ab99ed3d5689ff739e16da467a3a7d5c69ebf0624a8e51f6ca35",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/sha256.js",
+      "packageSha256": "fb669cacf69d3223e8e57ddbb3ca7d47c82ffc780d331107852557bc8a746539",
+      "installedSha256": "fb669cacf69d3223e8e57ddbb3ca7d47c82ffc780d331107852557bc8a746539",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/sha3-addons.js",
+      "packageSha256": "283a00c19cfe6708c290e1ee4ab3b75b3afe731394314f85f273d442be1db05d",
+      "installedSha256": "283a00c19cfe6708c290e1ee4ab3b75b3afe731394314f85f273d442be1db05d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/sha3.js",
+      "packageSha256": "82c03d0ea96f5935fcf3a4e9db46fe99318fca35302e7c768b87eeeedf0f6a9f",
+      "installedSha256": "82c03d0ea96f5935fcf3a4e9db46fe99318fca35302e7c768b87eeeedf0f6a9f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/sha512.js",
+      "packageSha256": "2ab0693804882394597aecd37b261f16d6dae601cfdca2652a1a2fe7f5854048",
+      "installedSha256": "2ab0693804882394597aecd37b261f16d6dae601cfdca2652a1a2fe7f5854048",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/esm/utils.js",
+      "packageSha256": "65c0bd5ca15c97d63c71afd0ed15b1372a81a223fb2e404fccdea7f64ff31162",
+      "installedSha256": "65c0bd5ca15c97d63c71afd0ed15b1372a81a223fb2e404fccdea7f64ff31162",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/hkdf.d.ts",
+      "packageSha256": "032af134af679db0b055a169c2695cfd39be51b2a103f81ed109506f7499da5c",
+      "installedSha256": "032af134af679db0b055a169c2695cfd39be51b2a103f81ed109506f7499da5c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/hkdf.js",
+      "packageSha256": "49a2250de2d9db17b394429172c14d20930230f50f2c4a3bd888219defd6a456",
+      "installedSha256": "49a2250de2d9db17b394429172c14d20930230f50f2c4a3bd888219defd6a456",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/hmac.d.ts",
+      "packageSha256": "64be6d76f7123c3dc5284ab17871d66dfac0ea658934619ab9e01efd9224dbb5",
+      "installedSha256": "64be6d76f7123c3dc5284ab17871d66dfac0ea658934619ab9e01efd9224dbb5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/hmac.js",
+      "packageSha256": "92ac9219d4d599cdd1aa806cfabb36973236b9b49afaf125124e85fe1131285f",
+      "installedSha256": "92ac9219d4d599cdd1aa806cfabb36973236b9b49afaf125124e85fe1131285f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/index.d.ts",
+      "packageSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "installedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/index.js",
+      "packageSha256": "f124c09f2d4b3289889c2f1b974531be8d3ba909e8d3d1954b1bde2b4c18e12e",
+      "installedSha256": "f124c09f2d4b3289889c2f1b974531be8d3ba909e8d3d1954b1bde2b4c18e12e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/package.json",
+      "packageSha256": "935812a2b0f68218c5f49914ad5fd36f9b576ab767f58ae142ae8dc19f2d133e",
+      "installedSha256": "935812a2b0f68218c5f49914ad5fd36f9b576ab767f58ae142ae8dc19f2d133e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/pbkdf2.d.ts",
+      "packageSha256": "dcf33fd133407a91a2e5146dc9ed71c58e9b4c5ca53633cbe1c52bf11af99c2e",
+      "installedSha256": "dcf33fd133407a91a2e5146dc9ed71c58e9b4c5ca53633cbe1c52bf11af99c2e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/pbkdf2.js",
+      "packageSha256": "be3689205c8b9f164ecba1628b6592ba2dea9a571a2b06fa03439b760f1044f6",
+      "installedSha256": "be3689205c8b9f164ecba1628b6592ba2dea9a571a2b06fa03439b760f1044f6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/ripemd160.d.ts",
+      "packageSha256": "90fa19b742058de47d7edd7f0e894b4325eac983392f506d8ae5243f27bd3a11",
+      "installedSha256": "90fa19b742058de47d7edd7f0e894b4325eac983392f506d8ae5243f27bd3a11",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/ripemd160.js",
+      "packageSha256": "0b351b339714d57b9ceb4cae0ebc595a7e78d3eea2822e54e87eea0bb7049d16",
+      "installedSha256": "0b351b339714d57b9ceb4cae0ebc595a7e78d3eea2822e54e87eea0bb7049d16",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/scrypt.d.ts",
+      "packageSha256": "a3f2b2f3e96f29a0b2a98ae151df3d1f6ee78340da0b463d277c0995181aa232",
+      "installedSha256": "a3f2b2f3e96f29a0b2a98ae151df3d1f6ee78340da0b463d277c0995181aa232",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/scrypt.js",
+      "packageSha256": "68db0e610c7fac877bbd2f22807b34b3e9368b8d0a0acbeab6e33ce58cb819e1",
+      "installedSha256": "68db0e610c7fac877bbd2f22807b34b3e9368b8d0a0acbeab6e33ce58cb819e1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha256.d.ts",
+      "packageSha256": "733c66c376e4304662d5abbf395fbe88f3622653a8f56ffddfe4473bc53a7289",
+      "installedSha256": "733c66c376e4304662d5abbf395fbe88f3622653a8f56ffddfe4473bc53a7289",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha256.js",
+      "packageSha256": "d6462889f168b2179196ce4375996aff9ced49fb7740d2ebb6c73b8942975bf6",
+      "installedSha256": "d6462889f168b2179196ce4375996aff9ced49fb7740d2ebb6c73b8942975bf6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha3-addons.d.ts",
+      "packageSha256": "e1c74321ee704cd3c8086a3fc7767b004384da9d6203d4441ac90aa7deb8b916",
+      "installedSha256": "e1c74321ee704cd3c8086a3fc7767b004384da9d6203d4441ac90aa7deb8b916",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha3-addons.js",
+      "packageSha256": "a8a6540b70a4f047329e41ec7b1d214c8737803532605b0313d3fc117931b496",
+      "installedSha256": "a8a6540b70a4f047329e41ec7b1d214c8737803532605b0313d3fc117931b496",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha3.d.ts",
+      "packageSha256": "2afa0c12f459fe92db7c5bba1988ac0db137adc8a91bde3ccc08e4f223a69ac6",
+      "installedSha256": "2afa0c12f459fe92db7c5bba1988ac0db137adc8a91bde3ccc08e4f223a69ac6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha3.js",
+      "packageSha256": "2630d98f116c740bcb2ae2b8e844e1c44541223c6e010cd1f45950bfe1c1129a",
+      "installedSha256": "2630d98f116c740bcb2ae2b8e844e1c44541223c6e010cd1f45950bfe1c1129a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha512.d.ts",
+      "packageSha256": "9ea5c376e24aaf867850064e040a92ce7a55a24d4b12cd70780180cbc1481c72",
+      "installedSha256": "9ea5c376e24aaf867850064e040a92ce7a55a24d4b12cd70780180cbc1481c72",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/sha512.js",
+      "packageSha256": "9342c64fd59452d3073e62bf0969c5119bd2f2dba39d360ab183e880f3309fc5",
+      "installedSha256": "9342c64fd59452d3073e62bf0969c5119bd2f2dba39d360ab183e880f3309fc5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/utils.d.ts",
+      "packageSha256": "7f595dd81ec82ba6f4664bcfe162d13a9a6c58097d4f509a77302e9207d7879c",
+      "installedSha256": "7f595dd81ec82ba6f4664bcfe162d13a9a6c58097d4f509a77302e9207d7879c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@noble/hashes/utils.js",
+      "packageSha256": "bc78d0a57ac000e39f1170f6cbc7cf7852664d161993e6141aba61e88966ccaf",
+      "installedSha256": "bc78d0a57ac000e39f1170f6cbc7cf7852664d161993e6141aba61e88966ccaf",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/LICENSE",
+      "packageSha256": "d48a13809ebe6ed341b51482ea80c0cc7c4ecf8def1d6e1b791147ec57bbce68",
+      "installedSha256": "d48a13809ebe6ed341b51482ea80c0cc7c4ecf8def1d6e1b791147ec57bbce68",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/DatatypeToTSTypeMap.js",
+      "packageSha256": "d2882adc19eeb03b9a58ec636f8d9943c2b259dcdd19538f5e66eaf4b16f2c79",
+      "installedSha256": "d2882adc19eeb03b9a58ec636f8d9943c2b259dcdd19538f5e66eaf4b16f2c79",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/PropertyRecord.js",
+      "packageSha256": "7086c12e79b8b268e7d815ee3dd41cf9f40b7f4d875eed4c6e13dcce2486ae0e",
+      "installedSha256": "7086c12e79b8b268e7d815ee3dd41cf9f40b7f4d875eed4c6e13dcce2486ae0e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/commands/init.js",
+      "packageSha256": "bc4fabf492c44dd6a77f690a7e2757ade06be9dea9bcb33a7874ce0de12a2aa2",
+      "installedSha256": "bc4fabf492c44dd6a77f690a7e2757ade06be9dea9bcb33a7874ce0de12a2aa2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/commands/ontologies.js",
+      "packageSha256": "dbbd0f0082b012331f23d5c7259dbc37c4dc2c5b5ef876f90d75bdc82cff3745",
+      "installedSha256": "dbbd0f0082b012331f23d5c7259dbc37c4dc2c5b5ef876f90d75bdc82cff3745",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/config.js",
+      "packageSha256": "6f04fc7f095c15f22aa2f616a658151e3cff6816c1cb77282743d0e75a00d562",
+      "installedSha256": "6f04fc7f095c15f22aa2f616a658151e3cff6816c1cb77282743d0e75a00d562",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateBaseObject.js",
+      "packageSha256": "589642f17e33011611ea8311adab84e7b1f9636a1571817d89b91c30afb45e8e",
+      "installedSha256": "589642f17e33011611ea8311adab84e7b1f9636a1571817d89b91c30afb45e8e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateClassExports.js",
+      "packageSha256": "8331d6606bc8fa81715da486c5e66a023f079478ecd07ca76f138d0395493a98",
+      "installedSha256": "8331d6606bc8fa81715da486c5e66a023f079478ecd07ca76f138d0395493a98",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateClasses.js",
+      "packageSha256": "2ad1220816aaf4e274e8734a11e1ca62ea14f5d7f4cbc26e3985ff4e5fdfe3bb",
+      "installedSha256": "2ad1220816aaf4e274e8734a11e1ca62ea14f5d7f4cbc26e3985ff4e5fdfe3bb",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateExternals.js",
+      "packageSha256": "8c96c16a1d0395834322a9251eb7a08b9db6457ddc60541da53cd6e457069269",
+      "installedSha256": "8c96c16a1d0395834322a9251eb7a08b9db6457ddc60541da53cd6e457069269",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateIndex.js",
+      "packageSha256": "4b300e0d5edc5b25ab108ef30e4cdfae632078c341fc4abab571fdfaedb3ab58",
+      "installedSha256": "4b300e0d5edc5b25ab108ef30e4cdfae632078c341fc4abab571fdfaedb3ab58",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateOntology.js",
+      "packageSha256": "2a7a81e0b08045e16fad566bad7902547b7b044c40aa860d135d404597c15f3f",
+      "installedSha256": "2a7a81e0b08045e16fad566bad7902547b7b044c40aa860d135d404597c15f3f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generatePropTypeMapping.js",
+      "packageSha256": "519ac735a1becc8a5b2de0b9a76547d58cfb173218c3daeb184efa765d8391b7",
+      "installedSha256": "519ac735a1becc8a5b2de0b9a76547d58cfb173218c3daeb184efa765d8391b7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/generateSubjectToNameMapping.js",
+      "packageSha256": "6ea25ba9faad8f9a297f3dbc51cfe91e6efc9842c5378c6af9a28db360677d2e",
+      "installedSha256": "6ea25ba9faad8f9a297f3dbc51cfe91e6efc9842c5378c6af9a28db360677d2e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/index.js",
+      "packageSha256": "242c79ede749e942d9dcea1646fb9266b441450def7d3239f445c80ff43a07d7",
+      "installedSha256": "242c79ede749e942d9dcea1646fb9266b441450def7d3239f445c80ff43a07d7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/store.js",
+      "packageSha256": "6e58178131f9172da674928bfc0a8f239199793f7b0d0a9d2c8060f14c2058b7",
+      "installedSha256": "6e58178131f9172da674928bfc0a8f239199793f7b0d0a9d2c8060f14c2058b7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/usage.js",
+      "packageSha256": "eac7a3c7321cd1430ec4fcb0e5507e338ef0ca709b6253111708c55c8f2d25a0",
+      "installedSha256": "eac7a3c7321cd1430ec4fcb0e5507e338ef0ca709b6253111708c55c8f2d25a0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/utils.js",
+      "packageSha256": "80906201c7fee6f3702c4d77c4054da7d0f5c3c54d53e7bc223936f3b4670674",
+      "installedSha256": "80906201c7fee6f3702c4d77c4054da7d0f5c3c54d53e7bc223936f3b4670674",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/bin/src/validateOntologies.js",
+      "packageSha256": "d7dc956d151cb1e891aa8df8aa8729ed6ee9dbf6c5fc9273b9b2e7bec9e2545f",
+      "installedSha256": "d7dc956d151cb1e891aa8df8aa8729ed6ee9dbf6c5fc9273b9b2e7bec9e2545f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/license",
+      "packageSha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "installedSha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/package.json",
+      "packageSha256": "ff033c93b0d4256138f9e4c59283d9f5ffbb0630bf2e87a1b15033e51cddc582",
+      "installedSha256": "ff033c93b0d4256138f9e4c59283d9f5ffbb0630bf2e87a1b15033e51cddc582",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/readme.md",
+      "packageSha256": "6786ead4bbaa069df98a9dce0334180b46afe783620e01ba4760a779487e4aa0",
+      "installedSha256": "6786ead4bbaa069df98a9dce0334180b46afe783620e01ba4760a779487e4aa0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/index.d.ts",
+      "packageSha256": "b1adbadd9e2b45fa099362a19f95fec9d145b4b7f74f81c18d8fa1a163da47e0",
+      "installedSha256": "b1adbadd9e2b45fa099362a19f95fec9d145b4b7f74f81c18d8fa1a163da47e0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/index.js",
+      "packageSha256": "64b22b1c442e6d460069807b521bf0a84e112c00c2b4163bc59deab20a9292db",
+      "installedSha256": "64b22b1c442e6d460069807b521bf0a84e112c00c2b4163bc59deab20a9292db",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/utilities.js",
+      "packageSha256": "698ce3cb21b00b570631742d3a9e168de31df74b3a88220c4bcf18ac30fd00cd",
+      "installedSha256": "698ce3cb21b00b570631742d3a9e168de31df74b3a88220c4bcf18ac30fd00cd",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/ansi-styles/index.d.ts",
+      "packageSha256": "acfed6cc001e7f7f26d2ba42222a180ba669bb966d4dd9cb4ad5596516061b13",
+      "installedSha256": "acfed6cc001e7f7f26d2ba42222a180ba669bb966d4dd9cb4ad5596516061b13",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/ansi-styles/index.js",
+      "packageSha256": "92efdc3e5203d02d1710ff60dea3965066f97a77c0feaaa919b2693c989b7ec1",
+      "installedSha256": "92efdc3e5203d02d1710ff60dea3965066f97a77c0feaaa919b2693c989b7ec1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/supports-color/browser.d.ts",
+      "packageSha256": "09d791bf6471207eb7553c17a6cb03d6e6bd1d789f19bbec67da2b08ec9bb570",
+      "installedSha256": "09d791bf6471207eb7553c17a6cb03d6e6bd1d789f19bbec67da2b08ec9bb570",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/supports-color/browser.js",
+      "packageSha256": "42ed5cbaa24f7baf29c28cae4debdfbca0c33b9282c079d6851130143605b1fc",
+      "installedSha256": "42ed5cbaa24f7baf29c28cae4debdfbca0c33b9282c079d6851130143605b1fc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/supports-color/index.d.ts",
+      "packageSha256": "f61a4dc92450609c353738f0a2daebf8cae71b24716dbd952456d80b1e1a48b6",
+      "installedSha256": "f61a4dc92450609c353738f0a2daebf8cae71b24716dbd952456d80b1e1a48b6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/node_modules/chalk/source/vendor/supports-color/index.js",
+      "packageSha256": "13b5fc8a0b139d257260d1e625726744609c24a3b58535afbb602389997e60d6",
+      "installedSha256": "13b5fc8a0b139d257260d1e625726744609c24a3b58535afbb602389997e60d6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/package.json",
+      "packageSha256": "deb3b82cd3534678b2903b207796e9f68434d310dc11a1389af68f8c4fb9b112",
+      "installedSha256": "deb3b82cd3534678b2903b207796e9f68434d310dc11a1389af68f8c4fb9b112",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/readme.md",
+      "packageSha256": "a68037f00799960d68cd90fdb337b92d6b03dc3396c303b971952cfafb899506",
+      "installedSha256": "a68037f00799960d68cd90fdb337b92d6b03dc3396c303b971952cfafb899506",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/DatatypeToTSTypeMap.ts",
+      "packageSha256": "026d0e3d821c993d2898761fab83c1a5b320da6aa838c538f680ea22f6459ba6",
+      "installedSha256": "026d0e3d821c993d2898761fab83c1a5b320da6aa838c538f680ea22f6459ba6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/PropertyRecord.ts",
+      "packageSha256": "99805f0e1ffb33a3a8730f87aae9cc5bd99c2cfe61677294216f9c9740ee2d2c",
+      "installedSha256": "99805f0e1ffb33a3a8730f87aae9cc5bd99c2cfe61677294216f9c9740ee2d2c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/commands/init.ts",
+      "packageSha256": "2d301404e1463e447ea5f789cf6f98bccf8a968612e19145fbab206827ed6ceb",
+      "installedSha256": "2d301404e1463e447ea5f789cf6f98bccf8a968612e19145fbab206827ed6ceb",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/commands/ontologies.ts",
+      "packageSha256": "4b5f5fba2386b40d4bc485535f568f4af8abe1b9e1d63e0fc7769742d8a4ede7",
+      "installedSha256": "4b5f5fba2386b40d4bc485535f568f4af8abe1b9e1d63e0fc7769742d8a4ede7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/config.ts",
+      "packageSha256": "e5cf364d43a2c6d8eb42f63ac96303f20170fde7c9b510ff6154a62ddd9cd97c",
+      "installedSha256": "e5cf364d43a2c6d8eb42f63ac96303f20170fde7c9b510ff6154a62ddd9cd97c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateBaseObject.ts",
+      "packageSha256": "a84e6b97de1df0b19201055b5b5dea9c250375c2f82aabd268da064bf9d62270",
+      "installedSha256": "a84e6b97de1df0b19201055b5b5dea9c250375c2f82aabd268da064bf9d62270",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateClassExports.ts",
+      "packageSha256": "22e6554744a203a7c88bf97f4feab3797ee5ca323cfd4ee0074b50fec21c12c2",
+      "installedSha256": "22e6554744a203a7c88bf97f4feab3797ee5ca323cfd4ee0074b50fec21c12c2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateClasses.ts",
+      "packageSha256": "e493c3be78c0836af6efb43d9a1eea7c8eea1d21fd32edd930f24c3f9b0ee221",
+      "installedSha256": "e493c3be78c0836af6efb43d9a1eea7c8eea1d21fd32edd930f24c3f9b0ee221",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateExternals.ts",
+      "packageSha256": "308f6466f4f8c39a49d188a5d12a654f3b9b7098856aa943ed526797b1d36e93",
+      "installedSha256": "308f6466f4f8c39a49d188a5d12a654f3b9b7098856aa943ed526797b1d36e93",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateIndex.ts",
+      "packageSha256": "9948850034a1d0fe0f1c0035c8b4ff266725e3f851e0784dd4fdd9f1786a3ad6",
+      "installedSha256": "9948850034a1d0fe0f1c0035c8b4ff266725e3f851e0784dd4fdd9f1786a3ad6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateOntology.ts",
+      "packageSha256": "d68cd05cc32e775c4f257481e627b048b1da12eec494499bcddef64d6b9c33fa",
+      "installedSha256": "d68cd05cc32e775c4f257481e627b048b1da12eec494499bcddef64d6b9c33fa",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generatePropTypeMapping.ts",
+      "packageSha256": "56515b2538a96a3b3bd82ee2ad7ba877ce6827812562d8f5aade79a6173434a9",
+      "installedSha256": "56515b2538a96a3b3bd82ee2ad7ba877ce6827812562d8f5aade79a6173434a9",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/generateSubjectToNameMapping.ts",
+      "packageSha256": "c77287b0071d481e59f00c097ae5542c327a8c93b20acb486e929abe4a1e7c56",
+      "installedSha256": "c77287b0071d481e59f00c097ae5542c327a8c93b20acb486e929abe4a1e7c56",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/index.ts",
+      "packageSha256": "e71949b45aa41ebff63b507e86e8e0ff03f41827f95fcfc312fda507801fea66",
+      "installedSha256": "e71949b45aa41ebff63b507e86e8e0ff03f41827f95fcfc312fda507801fea66",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/store.ts",
+      "packageSha256": "8201a691781849528edef79d76704e0accc1820ea8b3764af87c340aa18d6bc5",
+      "installedSha256": "8201a691781849528edef79d76704e0accc1820ea8b3764af87c340aa18d6bc5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/usage.ts",
+      "packageSha256": "eac7a3c7321cd1430ec4fcb0e5507e338ef0ca709b6253111708c55c8f2d25a0",
+      "installedSha256": "eac7a3c7321cd1430ec4fcb0e5507e338ef0ca709b6253111708c55c8f2d25a0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/utils.ts",
+      "packageSha256": "ba47b109dbbaddbb9f4c5ceda86bcb21f224e86c4821390fbd31f295285d7680",
+      "installedSha256": "ba47b109dbbaddbb9f4c5ceda86bcb21f224e86c4821390fbd31f295285d7680",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/src/validateOntologies.ts",
+      "packageSha256": "33adedb75635312ab05e1dba827141e6849160c33559829e361361822da0b2a3",
+      "installedSha256": "33adedb75635312ab05e1dba827141e6849160c33559829e361361822da0b2a3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/cli/tsconfig.json",
+      "packageSha256": "43fc2ffbb5322fc9249fea060340ac7e91f63b78cca1d459e42ec4af69a8e25f",
+      "installedSha256": "43fc2ffbb5322fc9249fea060340ac7e91f63b78cca1d459e42ec4af69a8e25f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/LICENSE",
+      "packageSha256": "d48a13809ebe6ed341b51482ea80c0cc7c4ecf8def1d6e1b791147ec57bbce68",
+      "installedSha256": "d48a13809ebe6ed341b51482ea80c0cc7c4ecf8def1d6e1b791147ec57bbce68",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/README.md",
+      "packageSha256": "f643e3d55cf2db15c3621751260bda3509dcb7da9178d02dba44256dc207bbc8",
+      "installedSha256": "f643e3d55cf2db15c3621751260bda3509dcb7da9178d02dba44256dc207bbc8",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/.vite/manifest.json",
+      "packageSha256": "950db98f4648199e76d800e12b4d0bb6058c4db969bb4c62439f4d2a1fffec34",
+      "installedSha256": "950db98f4648199e76d800e12b4d0bb6058c4db969bb4c62439f4d2a1fffec34",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/index.cjs",
+      "packageSha256": "ac20503c1a614ef6d2d7790c750db3dc1af49f03333d3101b444118e332b10d0",
+      "installedSha256": "ac20503c1a614ef6d2d7790c750db3dc1af49f03333d3101b444118e332b10d0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/index.js",
+      "packageSha256": "a2cc13e57cac92f92236252bd0658f67e508f233a62d3a8b09726de3e8a7ce90",
+      "installedSha256": "a2cc13e57cac92f92236252bd0658f67e508f233a62d3a8b09726de3e8a7ce90",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/EventManager.d.ts",
+      "packageSha256": "007df71c665cd55e7aa340a523f81862ba55ed4146cef6a227c6abd8b48341db",
+      "installedSha256": "007df71c665cd55e7aa340a523f81862ba55ed4146cef6a227c6abd8b48341db",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/EventManager.test.d.ts",
+      "packageSha256": "a20b5376d65d9f266c7f9157a53f7173d4d6ace66b47a9c204c2c3647925c408",
+      "installedSha256": "a20b5376d65d9f266c7f9157a53f7173d4d6ace66b47a9c204c2c3647925c408",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/agent.d.ts",
+      "packageSha256": "2f31e8b9e8c821e08166e6d7c886844e1956f8fbe2c4d4dd56459d933e9a3f0c",
+      "installedSha256": "2f31e8b9e8c821e08166e6d7c886844e1956f8fbe2c4d4dd56459d933e9a3f0c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/agent.test.d.ts",
+      "packageSha256": "7f601221f4a5cbdc0a75fdee4b5ba8afa54b3b5df6aa3727139dae2de7e3c277",
+      "installedSha256": "7f601221f4a5cbdc0a75fdee4b5ba8afa54b3b5df6aa3727139dae2de7e3c277",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/authentication.d.ts",
+      "packageSha256": "58862f307149c77a8f569021f31a4cf5d4729a83a16daafe4bfaaf0baabf1b67",
+      "installedSha256": "58862f307149c77a8f569021f31a4cf5d4729a83a16daafe4bfaaf0baabf1b67",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/client.d.ts",
+      "packageSha256": "9519c924b29aaed1adf9f69705028e39ba91eb402efe41929b1e8af4e7b035ad",
+      "installedSha256": "9519c924b29aaed1adf9f69705028e39ba91eb402efe41929b1e8af4e7b035ad",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/collection.d.ts",
+      "packageSha256": "3133bb505dbf9686981728bc223af248b8760e910eb8ffd0649f6decb799e769",
+      "installedSha256": "3133bb505dbf9686981728bc223af248b8760e910eb8ffd0649f6decb799e769",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/collectionBuilder.d.ts",
+      "packageSha256": "78720afd5176dc9848fc48d92fdcbfc08a8d623fae9a8b66c6ad2896afdeb4cb",
+      "installedSha256": "78720afd5176dc9848fc48d92fdcbfc08a8d623fae9a8b66c6ad2896afdeb4cb",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/commit.d.ts",
+      "packageSha256": "8bfa6e272a01224a6ce6c3946336049ef2100191b1b61f2aa1f706fa12fa9701",
+      "installedSha256": "8bfa6e272a01224a6ce6c3946336049ef2100191b1b61f2aa1f706fa12fa9701",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/commit.test.d.ts",
+      "packageSha256": "a7bb1cfdcb60c6a7e57fd2984c014f3aa94e3671cb1182b09164acd9a8d14cf5",
+      "installedSha256": "a7bb1cfdcb60c6a7e57fd2984c014f3aa94e3671cb1182b09164acd9a8d14cf5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/datatypes.d.ts",
+      "packageSha256": "2a7ee06afbc29a82812866bebd4722556e1720c51ad67ff6ab0450d7a15ff45d",
+      "installedSha256": "2a7ee06afbc29a82812866bebd4722556e1720c51ad67ff6ab0450d7a15ff45d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/datatypes.test.d.ts",
+      "packageSha256": "4513e8f268eae1894c78ee1fb8ddb339c73d575c943fb5c95dd7a2bad68048dc",
+      "installedSha256": "4513e8f268eae1894c78ee1fb8ddb339c73d575c943fb5c95dd7a2bad68048dc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/error.d.ts",
+      "packageSha256": "d5a608ea5f2206199208f9276c14db07a076d98ee1c4e10097aa9ca07abc04b0",
+      "installedSha256": "d5a608ea5f2206199208f9276c14db07a076d98ee1c4e10097aa9ca07abc04b0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/hasBrowserAPI.d.ts",
+      "packageSha256": "52638137b6f3d9535235d993f0a505ae17b8a249f9a3a05da929eaf6d0158958",
+      "installedSha256": "52638137b6f3d9535235d993f0a505ae17b8a249f9a3a05da929eaf6d0158958",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/index.d.ts",
+      "packageSha256": "cfa662e34fad333476787f92cc4011ba4b1d1663ddf0b7ceb2c8382e45585d89",
+      "installedSha256": "cfa662e34fad333476787f92cc4011ba4b1d1663ddf0b7ceb2c8382e45585d89",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/collections.d.ts",
+      "packageSha256": "30a778b5c169242e379c787449c01771634e05d47fbadf9e7e685f0382ccea9e",
+      "installedSha256": "30a778b5c169242e379c787449c01771634e05d47fbadf9e7e685f0382ccea9e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/commits.d.ts",
+      "packageSha256": "640d6bcd3941fbb869173868ecbade6d13f21a9a61a321d3d73250f8a559a8d7",
+      "installedSha256": "640d6bcd3941fbb869173868ecbade6d13f21a9a61a321d3d73250f8a559a8d7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/core.d.ts",
+      "packageSha256": "e76d32be669d94e95723d904b872f75ff33728c48a9a0d00f477f8fa61431868",
+      "installedSha256": "e76d32be669d94e95723d904b872f75ff33728c48a9a0d00f477f8fa61431868",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/dataBrowser.d.ts",
+      "packageSha256": "45848c48ff0df0ef588181c727a970977619ef1a52b1120469abb4bae3c92630",
+      "installedSha256": "45848c48ff0df0ef588181c727a970977619ef1a52b1120469abb4bae3c92630",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/index.d.ts",
+      "packageSha256": "7ec29d3bfc5acb3bce60ccf88993d8466a38aeb6c20d43f368c97a647f6ddd41",
+      "installedSha256": "7ec29d3bfc5acb3bce60ccf88993d8466a38aeb6c20d43f368c97a647f6ddd41",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontologies/server.d.ts",
+      "packageSha256": "7ca905c6bc46aefd351370a668205c5e71c1b50ad25ebec96532084f7cdda860",
+      "installedSha256": "7ca905c6bc46aefd351370a668205c5e71c1b50ad25ebec96532084f7cdda860",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/ontology.d.ts",
+      "packageSha256": "b56f718a7eabf83e31d30462ca014e44df9daf408f8ff159e21b85327803a641",
+      "installedSha256": "b56f718a7eabf83e31d30462ca014e44df9daf408f8ff159e21b85327803a641",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/parse.d.ts",
+      "packageSha256": "8404fe47e23939685e9c35651ed6429a098be36bd913907828f5e7e71bd06c3d",
+      "installedSha256": "8404fe47e23939685e9c35651ed6429a098be36bd913907828f5e7e71bd06c3d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/parse.test.d.ts",
+      "packageSha256": "3e2dc2be6b1c0da869d7d4869b693678a64de42a5afb4ce5496bbd3541422f47",
+      "installedSha256": "3e2dc2be6b1c0da869d7d4869b693678a64de42a5afb4ce5496bbd3541422f47",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/resource.d.ts",
+      "packageSha256": "616148de8a5850d327111484d8b89ffff00b2ef5a01edd09567694515e6b998b",
+      "installedSha256": "616148de8a5850d327111484d8b89ffff00b2ef5a01edd09567694515e6b998b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/resource.test.d.ts",
+      "packageSha256": "a4fc583c85ea42108693d4d14811cf008fa765ec86a5255156347549aa060637",
+      "installedSha256": "a4fc583c85ea42108693d4d14811cf008fa765ec86a5255156347549aa060637",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/search.d.ts",
+      "packageSha256": "65be7479e354031775ab632b8a5f2698477c30669b0f19aea10a04ed8e078ce2",
+      "installedSha256": "65be7479e354031775ab632b8a5f2698477c30669b0f19aea10a04ed8e078ce2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/search.test.d.ts",
+      "packageSha256": "0dd4b6d823d0224744cb254982c7c5356c1735d24214d2a51c456070d0f8e60d",
+      "installedSha256": "0dd4b6d823d0224744cb254982c7c5356c1735d24214d2a51c456070d0f8e60d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/store.d.ts",
+      "packageSha256": "18c277c84c6a7f267bf42f4fdf16416a98ef27f633c7c5428c4a1c69fba531b3",
+      "installedSha256": "18c277c84c6a7f267bf42f4fdf16416a98ef27f633c7c5428c4a1c69fba531b3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/store.test.d.ts",
+      "packageSha256": "05a23230bea89b6c7256b356c5e1822b4f3252c958d6b0a352a5b1e022a72dbf",
+      "installedSha256": "05a23230bea89b6c7256b356c5e1822b4f3252c958d6b0a352a5b1e022a72dbf",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/stringToSlug.d.ts",
+      "packageSha256": "3315736d8cd6a757de49df9f2d0a03afef8b303c26e18559bb5efa892250a995",
+      "installedSha256": "3315736d8cd6a757de49df9f2d0a03afef8b303c26e18559bb5efa892250a995",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/truncate.d.ts",
+      "packageSha256": "a3f44414a63df9ccac32fe8f3321e831cece4829a0ffe9b3bc7427e7c882f2e2",
+      "installedSha256": "a3f44414a63df9ccac32fe8f3321e831cece4829a0ffe9b3bc7427e7c882f2e2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/urls.d.ts",
+      "packageSha256": "62dfc7eb16ab8d7a886c17d0fd43c2bb12463bfe4ea5ee7c8b7073d8d55cdc75",
+      "installedSha256": "62dfc7eb16ab8d7a886c17d0fd43c2bb12463bfe4ea5ee7c8b7073d8d55cdc75",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/value.d.ts",
+      "packageSha256": "429032343f148ada0c6a58add0f89e094072af4a846a15e284c4b2e3431403e0",
+      "installedSha256": "429032343f148ada0c6a58add0f89e094072af4a846a15e284c4b2e3431403e0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/dist/src/websockets.d.ts",
+      "packageSha256": "dfc333afbd15753fa8b0547b97c3083710cfb838b3de3949677bbb81adaa920d",
+      "installedSha256": "dfc333afbd15753fa8b0547b97c3083710cfb838b3de3949677bbb81adaa920d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/@tomic/lib/package.json",
+      "packageSha256": "609877ed1fa214bd33ebb0e71a13a8434b33c83832507485673f028f8708c6a8",
+      "installedSha256": "609877ed1fa214bd33ebb0e71a13a8434b33c83832507485673f028f8708c6a8",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/CHANGELOG.md",
+      "packageSha256": "bf63f67a79b23d515f4307a39e5154c78b44b0fd6cf67e1c15477ffd8f2a8334",
+      "installedSha256": "bf63f67a79b23d515f4307a39e5154c78b44b0fd6cf67e1c15477ffd8f2a8334",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/LICENSE",
+      "packageSha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "installedSha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/README.md",
+      "packageSha256": "62eb255c966e25935f419615c665a20fbbda535fa11ed0823d1c4d57746e8ba2",
+      "installedSha256": "62eb255c966e25935f419615c665a20fbbda535fa11ed0823d1c4d57746e8ba2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js",
+      "packageSha256": "00e9d626e818eb62faaf7ce0db01f91bbe106457a2836c19e0eed9e006242a89",
+      "installedSha256": "00e9d626e818eb62faaf7ce0db01f91bbe106457a2836c19e0eed9e006242a89",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/dist/base64-arraybuffer.umd.js",
+      "packageSha256": "9e1f571f59104360726423ede8ee9457f3e6528833767fee6220442ac80dd11f",
+      "installedSha256": "9e1f571f59104360726423ede8ee9457f3e6528833767fee6220442ac80dd11f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/dist/lib/index.js",
+      "packageSha256": "d86bc3b21fcb550012009f38e400ed7d7791738aa44ebbac00f1bac83e0fb477",
+      "installedSha256": "d86bc3b21fcb550012009f38e400ed7d7791738aa44ebbac00f1bac83e0fb477",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/dist/types/index.d.ts",
+      "packageSha256": "22dcca4a59712f959872f6fa9daab731baed6fe5d0a9fdda1e26401ffbf1c83f",
+      "installedSha256": "22dcca4a59712f959872f6fa9daab731baed6fe5d0a9fdda1e26401ffbf1c83f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/package.json",
+      "packageSha256": "b8186cb74136ee5068e9d5a0491e9b1a6a31d45f4ed8d3d69784c46694f60f4c",
+      "installedSha256": "b8186cb74136ee5068e9d5a0491e9b1a6a31d45f4ed8d3d69784c46694f60f4c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/base64-arraybuffer/rollup.config.ts",
+      "packageSha256": "1ca27825098d2e64b934a10f52e4523ce1240afcb242018f64e1c13dfc595016",
+      "installedSha256": "1ca27825098d2e64b934a10f52e4523ce1240afcb242018f64e1c13dfc595016",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/.eslintrc.yml",
+      "packageSha256": "9fc0c7b5ab3b3d5780cc373e7ebc03f789a512aca4a37f6e23948559bfe007f4",
+      "installedSha256": "9fc0c7b5ab3b3d5780cc373e7ebc03f789a512aca4a37f6e23948559bfe007f4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/.github/FUNDING.yml",
+      "packageSha256": "b8999ab070976cb259c0a5c7955477027d75de717ed125706f92be900008181d",
+      "installedSha256": "b8999ab070976cb259c0a5c7955477027d75de717ed125706f92be900008181d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/.travis.yml",
+      "packageSha256": "28b0f73d5f8a073c9473bc3a4c29468f89570725859a75df9e64b0419ac7470d",
+      "installedSha256": "28b0f73d5f8a073c9473bc3a4c29468f89570725859a75df9e64b0419ac7470d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/LICENSE",
+      "packageSha256": "a833d366242c298cf1b10263516572fb8dcbe68eb5072cdcac2b4546e2b4eb36",
+      "installedSha256": "a833d366242c298cf1b10263516572fb8dcbe68eb5072cdcac2b4546e2b4eb36",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/README.md",
+      "packageSha256": "6f9ef416a3605e2a65ddacf76d820fc4d18664117bbd49ffba4bbfc999f74f11",
+      "installedSha256": "6f9ef416a3605e2a65ddacf76d820fc4d18664117bbd49ffba4bbfc999f74f11",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/benchmark/index.js",
+      "packageSha256": "3429c2ef7994839b04e472f561412650595ef997a8173673c6d409b58eb73b73",
+      "installedSha256": "3429c2ef7994839b04e472f561412650595ef997a8173673c6d409b58eb73b73",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/benchmark/test.json",
+      "packageSha256": "6e92665257a4cdb5d0a7408e25b81e1661831e2a28017ba132a04c6ae3cfbe2b",
+      "installedSha256": "6e92665257a4cdb5d0a7408e25b81e1661831e2a28017ba132a04c6ae3cfbe2b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/example/key_cmp.js",
+      "packageSha256": "8bfb1825ceaa31e04eb55d48796bd1ebb599d61921f9ed632238482258c2ade3",
+      "installedSha256": "8bfb1825ceaa31e04eb55d48796bd1ebb599d61921f9ed632238482258c2ade3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/example/nested.js",
+      "packageSha256": "2407719be20d1f8e84d0eb52019a850e3e97d0bad79d1e21c215d5ba9fb8031e",
+      "installedSha256": "2407719be20d1f8e84d0eb52019a850e3e97d0bad79d1e21c215d5ba9fb8031e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/example/str.js",
+      "packageSha256": "7b78227c48a3373d053728a6fa70b5eca194e2121ade3410b44623c45ce77d89",
+      "installedSha256": "7b78227c48a3373d053728a6fa70b5eca194e2121ade3410b44623c45ce77d89",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/example/value_cmp.js",
+      "packageSha256": "a90e841d945d9d1cb9ee27705e95f242f7c7cfc05924fec35fa0bc9db4743130",
+      "installedSha256": "a90e841d945d9d1cb9ee27705e95f242f7c7cfc05924fec35fa0bc9db4743130",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/index.d.ts",
+      "packageSha256": "6c360ff81ea615810619342d67cea417bb971ada8961ac1aa86c23aff366c58f",
+      "installedSha256": "6c360ff81ea615810619342d67cea417bb971ada8961ac1aa86c23aff366c58f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/index.js",
+      "packageSha256": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b",
+      "installedSha256": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/package.json",
+      "packageSha256": "c4907a6cf1a242f65589b9bb762b9330088aa4a940d382b470d3c47b5309ef44",
+      "installedSha256": "c4907a6cf1a242f65589b9bb762b9330088aa4a940d382b470d3c47b5309ef44",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/test/cmp.js",
+      "packageSha256": "9f4226c99dadc75838025a79ef44f1b45f5ed0a5ca78de895ea3b1de009a12eb",
+      "installedSha256": "9f4226c99dadc75838025a79ef44f1b45f5ed0a5ca78de895ea3b1de009a12eb",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/test/nested.js",
+      "packageSha256": "ec8da51cd7c5c943590adf563cc2284cd60ddc7b680227741c135f7a4bf8077c",
+      "installedSha256": "ec8da51cd7c5c943590adf563cc2284cd60ddc7b680227741c135f7a4bf8077c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/test/str.js",
+      "packageSha256": "c79fac4531b2c0769a645ef651f8ab1323e4d3c64d422e15cd4e024ff96679b8",
+      "installedSha256": "c79fac4531b2c0769a645ef651f8ab1323e4d3c64d422e15cd4e024ff96679b8",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify/test/to-json.js",
+      "packageSha256": "296484301720987d495831a69a05a500b23ad0d9bd5074ff441b86aa0efd6a5f",
+      "installedSha256": "296484301720987d495831a69a05a500b23ad0d9bd5074ff441b86aa0efd6a5f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/CHANGELOG.md",
+      "packageSha256": "f8e693bd928e7cd4c761c5aa91ab5b3d153145e695447f0bd7a6ae173ccb7c38",
+      "installedSha256": "f8e693bd928e7cd4c761c5aa91ab5b3d153145e695447f0bd7a6ae173ccb7c38",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/LICENSE",
+      "packageSha256": "b23aae8ec7f17cfc2b04b5acb4eeaa9a0c89d6fe3f79ddfac18870d3098e9907",
+      "installedSha256": "b23aae8ec7f17cfc2b04b5acb4eeaa9a0c89d6fe3f79ddfac18870d3098e9907",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/README.md",
+      "packageSha256": "6cb9ce950d74bed858bfc1b38ce53a07ede8dfd0c805fc2e1bc620b132c915ed",
+      "installedSha256": "6cb9ce950d74bed858bfc1b38ce53a07ede8dfd0c805fc2e1bc620b132c915ed",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/error.d.ts",
+      "packageSha256": "4725c33b984f4ef3a493d22484c6bdab4698686fb8b68cde473055be892df9c3",
+      "installedSha256": "4725c33b984f4ef3a493d22484c6bdab4698686fb8b68cde473055be892df9c3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/error.js",
+      "packageSha256": "677922a10ebdb47f553cf71401c5cc866e69ed8de8957cbae2683347cac656ee",
+      "installedSha256": "677922a10ebdb47f553cf71401c5cc866e69ed8de8957cbae2683347cac656ee",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/global.d.ts",
+      "packageSha256": "cd0f1c69fe678c68deb9efc8c458c39d5083d4d2d20bf0f459ed9975c29ea6ae",
+      "installedSha256": "cd0f1c69fe678c68deb9efc8c458c39d5083d4d2d20bf0f459ed9975c29ea6ae",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/global.js",
+      "packageSha256": "7a497411ce43b7f67a4b0b83ec3e6c1bb09882f84936d6512aa08f7b08bdc81d",
+      "installedSha256": "7a497411ce43b7f67a4b0b83ec3e6c1bb09882f84936d6512aa08f7b08bdc81d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/index.d.ts",
+      "packageSha256": "dce2e61fbe49c1992c84c1ac602fe7a9485622306e251cb0bf6f938f8bc9555c",
+      "installedSha256": "dce2e61fbe49c1992c84c1ac602fe7a9485622306e251cb0bf6f938f8bc9555c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/index.js",
+      "packageSha256": "dce2e61fbe49c1992c84c1ac602fe7a9485622306e251cb0bf6f938f8bc9555c",
+      "installedSha256": "dce2e61fbe49c1992c84c1ac602fe7a9485622306e251cb0bf6f938f8bc9555c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/layerr.d.ts",
+      "packageSha256": "c1d1481cb023cb7c4ee46716b5f0405f7b288974fd5c60b2edc71351cc773a49",
+      "installedSha256": "c1d1481cb023cb7c4ee46716b5f0405f7b288974fd5c60b2edc71351cc773a49",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/layerr.js",
+      "packageSha256": "495316afd100af033f61c08c4d2819f3c2082ac628cdf7f2d834bf0cfeeb1584",
+      "installedSha256": "495316afd100af033f61c08c4d2819f3c2082ac628cdf7f2d834bf0cfeeb1584",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/tools.d.ts",
+      "packageSha256": "0b8f1b589147f7973d1f6ded236ee006f1c3d4edd08cbe4eaf8dfdd2aa003402",
+      "installedSha256": "0b8f1b589147f7973d1f6ded236ee006f1c3d4edd08cbe4eaf8dfdd2aa003402",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/tools.js",
+      "packageSha256": "3d0704314d72c1ec84e23e7676d55e4594c1b5db6571fa0c5955d2ed9501a8f1",
+      "installedSha256": "3d0704314d72c1ec84e23e7676d55e4594c1b5db6571fa0c5955d2ed9501a8f1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/types.d.ts",
+      "packageSha256": "a821f85e51d4638dfd518b49a144cf11fdd9c86cf9e1d5a43c06cbb10432bbd7",
+      "installedSha256": "a821f85e51d4638dfd518b49a144cf11fdd9c86cf9e1d5a43c06cbb10432bbd7",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/dist/types.js",
+      "packageSha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "installedSha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/layerr/package.json",
+      "packageSha256": "6c5a12aa5661348681dd689dbb41844caca907c501011192012c5d847ab4a733",
+      "installedSha256": "6c5a12aa5661348681dd689dbb41844caca907c501011192012c5d847ab4a733",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/LICENSE",
+      "packageSha256": "c21d9f34e7c9a660580cc5d1d54af8052c9fba7ea1c436d3dc0d27863f0f2633",
+      "installedSha256": "c21d9f34e7c9a660580cc5d1d54af8052c9fba7ea1c436d3dc0d27863f0f2633",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/README.md",
+      "packageSha256": "282dad7d42dcfc6054c9c2e78093231f56b4604c438f95e887dac73d95069e0d",
+      "installedSha256": "282dad7d42dcfc6054c9c2e78093231f56b4604c438f95e887dac73d95069e0d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/bin/prettier.cjs",
+      "packageSha256": "c4685d0683dca28db7b88ee0898e52d0eac03b1a30b42fab5ead054557eddd37",
+      "installedSha256": "c4685d0683dca28db7b88ee0898e52d0eac03b1a30b42fab5ead054557eddd37",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/doc.d.ts",
+      "packageSha256": "2f848b4e660b568651a6350565afc8ac5b0644853a2a863862807602cf244a05",
+      "installedSha256": "2f848b4e660b568651a6350565afc8ac5b0644853a2a863862807602cf244a05",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/doc.js",
+      "packageSha256": "d871b0398f1cee67dca7f31fa5b16a5c18899225cc53eb8cc844c8886186b587",
+      "installedSha256": "d871b0398f1cee67dca7f31fa5b16a5c18899225cc53eb8cc844c8886186b587",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/doc.mjs",
+      "packageSha256": "8f646d5599cca41ce219d2f15909ef5ee73fd03635ac7bf0164a368b22a6e285",
+      "installedSha256": "8f646d5599cca41ce219d2f15909ef5ee73fd03635ac7bf0164a368b22a6e285",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/index.cjs",
+      "packageSha256": "bb3b1dc386a4ef2184a89ab197b6dc4c089ca66043898aa18ba44133729a31ef",
+      "installedSha256": "bb3b1dc386a4ef2184a89ab197b6dc4c089ca66043898aa18ba44133729a31ef",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/index.d.ts",
+      "packageSha256": "87c316128d18c34881619a529fe0446125405fa073f1a9e533a8f66f66b6b340",
+      "installedSha256": "87c316128d18c34881619a529fe0446125405fa073f1a9e533a8f66f66b6b340",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/index.mjs",
+      "packageSha256": "f60c5cc7d97408af5af28f6009a3a8ca100cab67105c7494d58a95130b5d6876",
+      "installedSha256": "f60c5cc7d97408af5af28f6009a3a8ca100cab67105c7494d58a95130b5d6876",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/internal/cli.mjs",
+      "packageSha256": "70d42e22d9c9dd3ba949362aba2ab709d06896625ad80afc6b47ea6b011dc9d3",
+      "installedSha256": "70d42e22d9c9dd3ba949362aba2ab709d06896625ad80afc6b47ea6b011dc9d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/internal/internal.mjs",
+      "packageSha256": "7ff00b00d47381d2870ebecec688ca4163035d6ec1dacbe35347b1db55d99ccb",
+      "installedSha256": "7ff00b00d47381d2870ebecec688ca4163035d6ec1dacbe35347b1db55d99ccb",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/package.json",
+      "packageSha256": "741e865b436ab7b5a4a5fe54f5f54bc7716bc57f8e690a5d66e97662bae934d3",
+      "installedSha256": "741e865b436ab7b5a4a5fe54f5f54bc7716bc57f8e690a5d66e97662bae934d3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/acorn.d.ts",
+      "packageSha256": "c25cb166f252a094fc146d0470422472fc7c7974adbf76a37f3d368899dfe7b0",
+      "installedSha256": "c25cb166f252a094fc146d0470422472fc7c7974adbf76a37f3d368899dfe7b0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/acorn.js",
+      "packageSha256": "f83b2ff41bb8be681f184c7e705189eb9b5dc986a09f75a38b306c2ced774432",
+      "installedSha256": "f83b2ff41bb8be681f184c7e705189eb9b5dc986a09f75a38b306c2ced774432",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/acorn.mjs",
+      "packageSha256": "c0e6251c79598114fcb7a161a7a553f105324e1cabe3912b0a6912054dc28276",
+      "installedSha256": "c0e6251c79598114fcb7a161a7a553f105324e1cabe3912b0a6912054dc28276",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/angular.d.ts",
+      "packageSha256": "025fbe2956c42bd21b9692c6198b9f2ca3785686f60bcba0939a6721b06daa6e",
+      "installedSha256": "025fbe2956c42bd21b9692c6198b9f2ca3785686f60bcba0939a6721b06daa6e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/angular.js",
+      "packageSha256": "679622f4f061ef0f5e8e91b5e885e74e075a859bd7c3b4ea88414ce3c9090553",
+      "installedSha256": "679622f4f061ef0f5e8e91b5e885e74e075a859bd7c3b4ea88414ce3c9090553",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/angular.mjs",
+      "packageSha256": "c8604d381860f226eb1a76c0d0efc76ebe24244453678847a280ad5ee5088620",
+      "installedSha256": "c8604d381860f226eb1a76c0d0efc76ebe24244453678847a280ad5ee5088620",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/babel.d.ts",
+      "packageSha256": "806cca01c2a6f0636c8a29ed26d968b5dad0aef6ee32b1f05233c7a1b6936668",
+      "installedSha256": "806cca01c2a6f0636c8a29ed26d968b5dad0aef6ee32b1f05233c7a1b6936668",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/babel.js",
+      "packageSha256": "8e3d94e567e02d70b71491c1a73d2b9c2bb4042ab938de58aca94286b3b1b198",
+      "installedSha256": "8e3d94e567e02d70b71491c1a73d2b9c2bb4042ab938de58aca94286b3b1b198",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/babel.mjs",
+      "packageSha256": "8adac06cbee6ce337b72522ec2ac66c1813d432c16a59e06e270e68dd9a86fbe",
+      "installedSha256": "8adac06cbee6ce337b72522ec2ac66c1813d432c16a59e06e270e68dd9a86fbe",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/estree.d.ts",
+      "packageSha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "installedSha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/estree.js",
+      "packageSha256": "5bab630125c5b395ae58f90d2bbf9314a2712c10771c6faa4d326f88f680ce58",
+      "installedSha256": "5bab630125c5b395ae58f90d2bbf9314a2712c10771c6faa4d326f88f680ce58",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/estree.mjs",
+      "packageSha256": "e18a1447c6d59f09677811339be77246c2280341d30b493e776b228702b77702",
+      "installedSha256": "e18a1447c6d59f09677811339be77246c2280341d30b493e776b228702b77702",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/flow.d.ts",
+      "packageSha256": "daddd33d442b517c56d78f6545285e8c5c7f09c514afbb3de111262ed1820270",
+      "installedSha256": "daddd33d442b517c56d78f6545285e8c5c7f09c514afbb3de111262ed1820270",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/flow.js",
+      "packageSha256": "f635932a58ce9c0470b8c4f661021e93636b9cd08e266f0f081d44388820b166",
+      "installedSha256": "f635932a58ce9c0470b8c4f661021e93636b9cd08e266f0f081d44388820b166",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/flow.mjs",
+      "packageSha256": "fe3694e795a9bf125b9a28d570def05857eee3dda90ef20370c916548f427235",
+      "installedSha256": "fe3694e795a9bf125b9a28d570def05857eee3dda90ef20370c916548f427235",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/glimmer.d.ts",
+      "packageSha256": "a01f55de3790d5a61630784a6d125a623db45883c3e7f18eb673eb67c3eb92cd",
+      "installedSha256": "a01f55de3790d5a61630784a6d125a623db45883c3e7f18eb673eb67c3eb92cd",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/glimmer.js",
+      "packageSha256": "7654bd3fafa54072508cad728ed9bc7942587982860dfc5f5f27ff24c1c40351",
+      "installedSha256": "7654bd3fafa54072508cad728ed9bc7942587982860dfc5f5f27ff24c1c40351",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/glimmer.mjs",
+      "packageSha256": "348f1cfb0f9f40117ce950f672e99cc332e09bdf8b76b37c67cf1b8d0446a081",
+      "installedSha256": "348f1cfb0f9f40117ce950f672e99cc332e09bdf8b76b37c67cf1b8d0446a081",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/graphql.d.ts",
+      "packageSha256": "652159c4b662e13b50d50333d00761137dbcef171c983edf870d15ca5a86e449",
+      "installedSha256": "652159c4b662e13b50d50333d00761137dbcef171c983edf870d15ca5a86e449",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/graphql.js",
+      "packageSha256": "7ceec36c60ca8e0a6bd139a55160e135b84f3d977c1168022beb1912dbf3a1b3",
+      "installedSha256": "7ceec36c60ca8e0a6bd139a55160e135b84f3d977c1168022beb1912dbf3a1b3",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/graphql.mjs",
+      "packageSha256": "9a2129deb065a0b646a1fb83ee3d2de6e08870071dd61d41169fa2a4989d5d97",
+      "installedSha256": "9a2129deb065a0b646a1fb83ee3d2de6e08870071dd61d41169fa2a4989d5d97",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/html.d.ts",
+      "packageSha256": "8cd8e0205112fe2234576f9b0e2a42b0b26ace0872dce31ed71845e770117f08",
+      "installedSha256": "8cd8e0205112fe2234576f9b0e2a42b0b26ace0872dce31ed71845e770117f08",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/html.js",
+      "packageSha256": "4ba613801cc10bc532edd726b45c1a0ef5420590010b9baadc0c270588e87544",
+      "installedSha256": "4ba613801cc10bc532edd726b45c1a0ef5420590010b9baadc0c270588e87544",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/html.mjs",
+      "packageSha256": "dce4cf7981e28d806779b4f7c7861705fe78c263d4aaa7ae303661b0e8778b3a",
+      "installedSha256": "dce4cf7981e28d806779b4f7c7861705fe78c263d4aaa7ae303661b0e8778b3a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/markdown.d.ts",
+      "packageSha256": "1d078fe48bef1ae002241a2bffdb2e0e9c783d9f53f15bf9d6dea5fd3e78e6fc",
+      "installedSha256": "1d078fe48bef1ae002241a2bffdb2e0e9c783d9f53f15bf9d6dea5fd3e78e6fc",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/markdown.js",
+      "packageSha256": "58a216116056632ddf1fcc88bc523362a46cd51dbbbb97d9065ebdec752fece0",
+      "installedSha256": "58a216116056632ddf1fcc88bc523362a46cd51dbbbb97d9065ebdec752fece0",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/markdown.mjs",
+      "packageSha256": "3ed9b02fbe7a52cc70d3945fb0b28c469fb959c34e95d66fc85321568563ac42",
+      "installedSha256": "3ed9b02fbe7a52cc70d3945fb0b28c469fb959c34e95d66fc85321568563ac42",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/meriyah.d.ts",
+      "packageSha256": "7a764eac31a2b218ebed35e27f9dff2dfc85eee443472fbb871ba0999ba0b41a",
+      "installedSha256": "7a764eac31a2b218ebed35e27f9dff2dfc85eee443472fbb871ba0999ba0b41a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/meriyah.js",
+      "packageSha256": "4ee6aaa266d4e11ef8ae191297d19c1040f1258ba3db869828b95035ebc59cb5",
+      "installedSha256": "4ee6aaa266d4e11ef8ae191297d19c1040f1258ba3db869828b95035ebc59cb5",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/meriyah.mjs",
+      "packageSha256": "dadb8572c1686170bd83d08bc02cef2e709f141eb1b8c64a1fc9778c4d57979c",
+      "installedSha256": "dadb8572c1686170bd83d08bc02cef2e709f141eb1b8c64a1fc9778c4d57979c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/postcss.d.ts",
+      "packageSha256": "0e8cc5081dc73d397c9438c3358a351e5cf90c33a579378489d74093daccb687",
+      "installedSha256": "0e8cc5081dc73d397c9438c3358a351e5cf90c33a579378489d74093daccb687",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/postcss.js",
+      "packageSha256": "6f8f31025d789703ae81f73ee71a7b239132aa605b145bce21ee9d5174108f58",
+      "installedSha256": "6f8f31025d789703ae81f73ee71a7b239132aa605b145bce21ee9d5174108f58",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/postcss.mjs",
+      "packageSha256": "dc746ae224535eda8f2e5f58f2e1e1962d98f2bb1b4b90bd79ee2cb578023bbf",
+      "installedSha256": "dc746ae224535eda8f2e5f58f2e1e1962d98f2bb1b4b90bd79ee2cb578023bbf",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/typescript.d.ts",
+      "packageSha256": "f6b8391a3411a2ae9dee204645977fc70d39355df8b3e2f4ed8f3022fee41f2d",
+      "installedSha256": "f6b8391a3411a2ae9dee204645977fc70d39355df8b3e2f4ed8f3022fee41f2d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/typescript.js",
+      "packageSha256": "3f8c44f0536d1f0ea1c37f01390bed631cc0361477922d0f9424b5839cce8d49",
+      "installedSha256": "3f8c44f0536d1f0ea1c37f01390bed631cc0361477922d0f9424b5839cce8d49",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/typescript.mjs",
+      "packageSha256": "3ff3a5028ba4b8f563438f96d124d23f9b6e3cdb28b3bb565f34609e97e15824",
+      "installedSha256": "3ff3a5028ba4b8f563438f96d124d23f9b6e3cdb28b3bb565f34609e97e15824",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/yaml.d.ts",
+      "packageSha256": "8a900e38fabbc7fdc3461313e4771239f4f2d81043abb329c5ac8636c56df14b",
+      "installedSha256": "8a900e38fabbc7fdc3461313e4771239f4f2d81043abb329c5ac8636c56df14b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/yaml.js",
+      "packageSha256": "e357619481ee72f9b6df412c11fe5574c90f0e3f19decaa05a69788e552b8e79",
+      "installedSha256": "e357619481ee72f9b6df412c11fe5574c90f0e3f19decaa05a69788e552b8e79",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/plugins/yaml.mjs",
+      "packageSha256": "50a4f8847ac2d103b5429e208b7d8f6fa8cf76d38b8707b6067bf0e100ef2b0b",
+      "installedSha256": "50a4f8847ac2d103b5429e208b7d8f6fa8cf76d38b8707b6067bf0e100ef2b0b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/standalone.d.ts",
+      "packageSha256": "5dc165229ad3db8fabf95c0673475bd24bec4fdd678e523505d6b9a2e183031e",
+      "installedSha256": "5dc165229ad3db8fabf95c0673475bd24bec4fdd678e523505d6b9a2e183031e",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/standalone.js",
+      "packageSha256": "a60c02c06d8958e32798fd254d4f1c9f6477fd857cbd915f644736b458228010",
+      "installedSha256": "a60c02c06d8958e32798fd254d4f1c9f6477fd857cbd915f644736b458228010",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/prettier/standalone.mjs",
+      "packageSha256": "a6eb1a3c9efd5c4f60ac6c79aa0786e823675e5858ec91bde24d259bff7f0215",
+      "installedSha256": "a6eb1a3c9efd5c4f60ac6c79aa0786e823675e5858ec91bde24d259bff7f0215",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/LICENSE",
+      "packageSha256": "55653dff416fee3ec5027601e4adfb9d0c4df9be3dd8e1eada64d9a41e138fa4",
+      "installedSha256": "55653dff416fee3ec5027601e4adfb9d0c4df9be3dd8e1eada64d9a41e138fa4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/README.md",
+      "packageSha256": "c745aa57cdb22af29e268366e1032a9dfac0e9acf06a4c5ac70cf06a5248a486",
+      "installedSha256": "c745aa57cdb22af29e268366e1032a9dfac0e9acf06a4c5ac70cf06a5248a486",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/browser/index.cjs",
+      "packageSha256": "01df1fe34251c3731537ebc03584611fb240fc5f9bd3fc8daaf9fe06882c30af",
+      "installedSha256": "01df1fe34251c3731537ebc03584611fb240fc5f9bd3fc8daaf9fe06882c30af",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/browser/index.js",
+      "packageSha256": "7c96abb47a30bf99940f0bd756e60e1f4cddf1665d6e1824537c41a291f62519",
+      "installedSha256": "7c96abb47a30bf99940f0bd756e60e1f4cddf1665d6e1824537c41a291f62519",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/constants.d.cts",
+      "packageSha256": "31b49604ccfefe542191c41de8874b1893bf24a821007c215a4373a682f09556",
+      "installedSha256": "31b49604ccfefe542191c41de8874b1893bf24a821007c215a4373a682f09556",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/constants.d.ts",
+      "packageSha256": "31b49604ccfefe542191c41de8874b1893bf24a821007c215a4373a682f09556",
+      "installedSha256": "31b49604ccfefe542191c41de8874b1893bf24a821007c215a4373a682f09556",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/crockford.d.cts",
+      "packageSha256": "28f71f13469206362715a82aa4b2f7590ec978866c8220610768606a91b7cb86",
+      "installedSha256": "28f71f13469206362715a82aa4b2f7590ec978866c8220610768606a91b7cb86",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/crockford.d.ts",
+      "packageSha256": "28f71f13469206362715a82aa4b2f7590ec978866c8220610768606a91b7cb86",
+      "installedSha256": "28f71f13469206362715a82aa4b2f7590ec978866c8220610768606a91b7cb86",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/index.d.cts",
+      "packageSha256": "a1ae64f5958e3f1c0c3879ff45fb40c7ef41f37214493a43296954ce27c6c4f1",
+      "installedSha256": "a1ae64f5958e3f1c0c3879ff45fb40c7ef41f37214493a43296954ce27c6c4f1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/index.d.ts",
+      "packageSha256": "a1ae64f5958e3f1c0c3879ff45fb40c7ef41f37214493a43296954ce27c6c4f1",
+      "installedSha256": "a1ae64f5958e3f1c0c3879ff45fb40c7ef41f37214493a43296954ce27c6c4f1",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/node/index.cjs",
+      "packageSha256": "dd98444b2b70d93f6e58a56f51db20cc51ea73482287c8eb5017324380d915a2",
+      "installedSha256": "dd98444b2b70d93f6e58a56f51db20cc51ea73482287c8eb5017324380d915a2",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/node/index.js",
+      "packageSha256": "8eb88bccb9dd2d3d3d5d8eb3cff969f1f981cdb9fe446c6b3677d1b07bca0a2d",
+      "installedSha256": "8eb88bccb9dd2d3d3d5d8eb3cff969f1f981cdb9fe446c6b3677d1b07bca0a2d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/stub.d.cts",
+      "packageSha256": "66a4236f993281f92d3b7160eab7bd5d4951fbb58460173496b79af027c41d57",
+      "installedSha256": "66a4236f993281f92d3b7160eab7bd5d4951fbb58460173496b79af027c41d57",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/stub.d.ts",
+      "packageSha256": "66a4236f993281f92d3b7160eab7bd5d4951fbb58460173496b79af027c41d57",
+      "installedSha256": "66a4236f993281f92d3b7160eab7bd5d4951fbb58460173496b79af027c41d57",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/types.d.cts",
+      "packageSha256": "0828dd60d0ea50ec9edc32fedd4ac30dc4af97fc1b3e3ce07c9640ce1103d92a",
+      "installedSha256": "0828dd60d0ea50ec9edc32fedd4ac30dc4af97fc1b3e3ce07c9640ce1103d92a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/types.d.ts",
+      "packageSha256": "0828dd60d0ea50ec9edc32fedd4ac30dc4af97fc1b3e3ce07c9640ce1103d92a",
+      "installedSha256": "0828dd60d0ea50ec9edc32fedd4ac30dc4af97fc1b3e3ce07c9640ce1103d92a",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/ulid.d.cts",
+      "packageSha256": "412e2558ef05b165e9ed93bacd719c38a99b3c481e6dd09642d83c8d90817241",
+      "installedSha256": "412e2558ef05b165e9ed93bacd719c38a99b3c481e6dd09642d83c8d90817241",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/dist/ulid.d.ts",
+      "packageSha256": "412e2558ef05b165e9ed93bacd719c38a99b3c481e6dd09642d83c8d90817241",
+      "installedSha256": "412e2558ef05b165e9ed93bacd719c38a99b3c481e6dd09642d83c8d90817241",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "node_modules/ulidx/package.json",
+      "packageSha256": "a4449601f08e4f18b7f5224ad436af25a7ae4f3f2d75281fea6426b098ee3129",
+      "installedSha256": "a4449601f08e4f18b7f5224ad436af25a7ae4f3f2d75281fea6426b098ee3129",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/alternativeControl.js",
+      "packageSha256": "181d6dbb5162cfe730a2a3702dc48deb80c80abe68680ead948a753aa697ec15",
+      "installedSha256": "181d6dbb5162cfe730a2a3702dc48deb80c80abe68680ead948a753aa697ec15",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/extension.js",
+      "packageSha256": "917f496717c3f191120ce960d05980ea16cb11e629a8819c2f6403b2abbae46b",
+      "installedSha256": "917f496717c3f191120ce960d05980ea16cb11e629a8819c2f6403b2abbae46b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/helpers/completionCache.js",
+      "packageSha256": "26bb629e6fc709ed6bf7c19932d41bd07cfc5a09a970a71197237333e489893b",
+      "installedSha256": "26bb629e6fc709ed6bf7c19932d41bd07cfc5a09a970a71197237333e489893b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/helpers/getStore.js",
+      "packageSha256": "93eca20deec1586d251e4ea3e3a3c7b322b913c12b50fbf8452c01987b25a33d",
+      "installedSha256": "93eca20deec1586d251e4ea3e3a3c7b322b913c12b50fbf8452c01987b25a33d",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/helpers/linkReplacement.js",
+      "packageSha256": "1053035fb9ea4ba4ad706b390dfbc0a07615e7ecde33510342ac9503eb65e4b6",
+      "installedSha256": "1053035fb9ea4ba4ad706b390dfbc0a07615e7ecde33510342ac9503eb65e4b6",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/helpers/serverConnection.js",
+      "packageSha256": "d5438b2428a9dee4c57c833810fa28a3876fb007e731a99177624bfb1a8dadd4",
+      "installedSha256": "d5438b2428a9dee4c57c833810fa28a3876fb007e731a99177624bfb1a8dadd4",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/ontologies/airportOntology.js",
+      "packageSha256": "9939f45056ba1901abedf43f74dbe43bea2b4a93e5a34e88b4c05979f2e43656",
+      "installedSha256": "9939f45056ba1901abedf43f74dbe43bea2b4a93e5a34e88b4c05979f2e43656",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/ontologies/externals.js",
+      "packageSha256": "6b8a8cd23dd9d5c81354d56ed8c5f0e711a6213e0d5f6d5c7bea5c9d29f6fc10",
+      "installedSha256": "6b8a8cd23dd9d5c81354d56ed8c5f0e711a6213e0d5f6d5c7bea5c9d29f6fc10",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "out/ontologies/index.js",
+      "packageSha256": "4ead68b881bb51ab1eb129c95bfeb2344ebb5df0d18d1a7990cdde4716125d4f",
+      "installedSha256": "4ead68b881bb51ab1eb129c95bfeb2344ebb5df0d18d1a7990cdde4716125d4f",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "package.json",
+      "packageSha256": "1c2714516508b7dc0f52e87d5d49bc2695163dcf81045cc931d2b8c805da1c5e",
+      "installedSha256": "6646f739a51c06a4cc712dbff5bf70667a764ae0df74c730884c7a66efebd4db",
+      "comparison": "JSON-identical after removing installer-only __metadata"
+    },
+    {
+      "path": "readme.md",
+      "packageSha256": "0dd3eef171cc40b5dfbaaafe5e51990a6a5ccbb8afc2a9256843c6ef7decf57c",
+      "installedSha256": "0dd3eef171cc40b5dfbaaafe5e51990a6a5ccbb8afc2a9256843c6ef7decf57c",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "rust-lib/pkg/terraphim_it.js",
+      "packageSha256": "dd417e10627e0eb52364866988de0d3722e892d7982d10dd83eb1282af135d2b",
+      "installedSha256": "dd417e10627e0eb52364866988de0d3722e892d7982d10dd83eb1282af135d2b",
+      "comparison": "byte-identical"
+    },
+    {
+      "path": "rust-lib/pkg/terraphim_it_bg.wasm",
+      "packageSha256": "624194f8cc9bd329242629ec38ae4ade94b24c261b427bb8283e2d80ca3e86d5",
+      "installedSha256": "624194f8cc9bd329242629ec38ae4ade94b24c261b427bb8283e2d80ca3e86d5",
+      "comparison": "byte-identical"
+    }
+  ],
+  "installerMetadata": {
+    "installedTimestamp": 1792139515495,
+    "targetPlatform": "undefined",
+    "size": 18913843
+  },
+  "installerManifest": {
+    "path": ".vsixmanifest",
+    "bytes": 2753,
+    "sha256": "d590921b12183d9bcee8431f7e1cb358befa6e3c7e0718d0945791e02c4094b2",
+    "comparison": "byte-identical to archive extension.vsixmanifest"
+  },
+  "extensionRegistryEntry": {
+    "identifier": {
+      "id": "applied-knowledge-systems.terraphim-it"
+    },
+    "version": "0.1.5",
+    "location": {
+      "$mid": 1,
+      "fsPath": "/private/tmp/tc-ext-20261016/applied-knowledge-systems.terraphim-it-0.1.5",
+      "external": "file:///private/tmp/tc-ext-20261016/applied-knowledge-systems.terraphim-it-0.1.5",
+      "path": "/private/tmp/tc-ext-20261016/applied-knowledge-systems.terraphim-it-0.1.5",
+      "scheme": "file"
+    },
+    "relativeLocation": "applied-knowledge-systems.terraphim-it-0.1.5",
+    "metadata": {
+      "installedTimestamp": 1792139515372,
+      "pinned": true,
+      "source": "vsix"
+    }
+  },
+  "inheritedConfigComparison": [
+    {
+      "before": {
+        "path": "/Users/alex/.cursor/hooks.json",
+        "exists": false
+      },
+      "after": {
+        "path": "/Users/alex/.cursor/hooks.json",
+        "exists": false
+      },
+      "unchanged": true
+    },
+    {
+      "before": {
+        "path": "/Users/alex/.cursor/mcp.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 411,
+        "sha256": "842b9c2650935dd3bc62e0817e425a7fc91270dc9d5e895fdb0586e58aa9d6a6"
+      },
+      "after": {
+        "path": "/Users/alex/.cursor/mcp.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 411,
+        "sha256": "842b9c2650935dd3bc62e0817e425a7fc91270dc9d5e895fdb0586e58aa9d6a6"
+      },
+      "unchanged": true
+    },
+    {
+      "before": {
+        "path": "/Users/alex/.claude/settings.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 7952,
+        "sha256": "553be8d036c62b98f5db78325592dff6ce7f311277741bc07080188e8a38e1a6"
+      },
+      "after": {
+        "path": "/Users/alex/.claude/settings.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 7952,
+        "sha256": "553be8d036c62b98f5db78325592dff6ce7f311277741bc07080188e8a38e1a6"
+      },
+      "unchanged": true
+    },
+    {
+      "before": {
+        "path": "/Library/Application Support/Cursor/hooks.json",
+        "exists": false
+      },
+      "after": {
+        "path": "/Library/Application Support/Cursor/hooks.json",
+        "exists": false
+      },
+      "unchanged": true
+    }
+  ],
+  "storageKeyComparison": [
+    {
+      "store": "normal",
+      "path": "/Users/alex/Library/Application Support/Cursor/User/globalStorage/state.vscdb",
+      "key": "cursor/thirdPartyExtensibilityEnabled",
+      "before": {
+        "present": false,
+        "effectiveValue": true
+      },
+      "after": {
+        "present": false,
+        "effectiveValue": true
+      },
+      "unchanged": true
+    },
+    {
+      "store": "isolated",
+      "path": "/private/tmp/tc-qual-20261016/User/globalStorage/state.vscdb",
+      "key": "cursor/thirdPartyExtensibilityEnabled",
+      "before": {
+        "present": true,
+        "value": false,
+        "effectiveValue": false
+      },
+      "after": {
+        "present": true,
+        "value": false,
+        "effectiveValue": false
+      },
+      "unchanged": true
+    }
+  ],
+  "scope": "Read-only installed payload and the prior exact key/config paths. VSIX sideload, not new gallery resolution or native functional acceptance. No full-profile preservation claim.",
+  "setupObservation": "An initial assumed -universal suffix was absent. Directory listing identified the actual host-created version-only path; no installer retry or modification performed."
+}

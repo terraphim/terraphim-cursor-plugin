@@ -1,0 +1,13 @@
+{
+  "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/exthost/anysphere.cursor-agent-exec/Cursor Plugins.log",
+  "scope": "Only native registration lines for this exact package retained; unrelated plugins/chat logs excluded",
+  "selectedLines": [
+    {
+      "line": 1089,
+      "text": "2026-10-16 12:53:58.172 [info] [2026-10-16T11:53:58.171Z] [info] Registered extension plugin: original-main-package-f6c157e6 from /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6 (extension: cursor-hook)"
+    }
+  ],
+  "observedAt": "2026-10-16T11:58:15.644891+00:00",
+  "expectedPackagePath": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6",
+  "sourceCommit": "f6c157e60713f91d662edd4075b0d705e50ae839"
+}

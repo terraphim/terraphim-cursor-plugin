@@ -1,0 +1,11 @@
+{
+  "status": "PASS_NATIVE_CAPTURE_OFF_NO_RECEIPT_OR_LEARNING_WRITE",
+  "actualCallId": "9261616f-d14e-4210-b36e-33913868bfbc",
+  "actualExitCode": 0,
+  "receiptDirectoryEntries": [],
+  "projectDiscoveryEntries": [],
+  "manualSelectedOutputSha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc",
+  "policyEvidenceEnabled": false,
+  "policyCaptureFailures": false,
+  "scope": "Native pre/post and actual selected tool file; output exists because tool was explicitly instructed to create it, not because disabled evidence capture wrote anything."
+}

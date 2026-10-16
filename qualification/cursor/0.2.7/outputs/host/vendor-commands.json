@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-16T11:26:16.837317+00:00",
+  "host": {
+    "productVersion": "3.25.6",
+    "packageVersion": "3.25.6",
+    "commit": "f0df777c412b670d09e3eaf214967d779e67c080",
+    "productSha256": "aa6562ffb40086eff61897c576c97243106d8310fe6e7259e70d66384dfeee9c",
+    "packageSha256": "2a08ed68f39fc6e9534ad156f2badffe6527f84eb7e345a5aad78fe90a2676d1",
+    "existingSignatureEvidence": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-outputs/host-3.25.6-signature.json",
+    "existingSignatureEvidenceSha256": "14f3c31b02374362ce7281319180ebd0d0128d3868876734422c3477514dec28"
+  },
+  "results": [
+    {
+      "argv": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Applications/Cursor.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "spctl",
+        "--assess",
+        "--type",
+        "execute",
+        "/Applications/Cursor.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS"
+}

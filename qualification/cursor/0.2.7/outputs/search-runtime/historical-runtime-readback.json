@@ -1,0 +1,156 @@
+{
+  "recordedAt": "2026-10-16T08:42:10.656496+00:00",
+  "scope": "Read-only pinned dependency metadata and retained archive/member comparison; no MCP process or CLI search started.",
+  "candidateSource": "8ace636884c08620eff81a46249fcb6dee08ee6d",
+  "candidateReleaseInputs": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-8ace6368/integrations/cursor/release-inputs.json",
+    "bytes": 3034,
+    "sha256": "57f8351efd1bd3899e263055b6a2f340f984b5b36b98a606a4283447fc78709f"
+  },
+  "selectedClientsVersion": "1.21.20",
+  "selectedContinueVersion": "0.1.1",
+  "files": [
+    {
+      "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep",
+      "bytes": 12172752,
+      "sha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab"
+    },
+    {
+      "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/terraphim-grep-1.21.20-aarch64-apple-darwin.tar.gz",
+      "bytes": 5809133,
+      "sha256": "3c9801c80ff0451ee2d319d00eada5b0624e4ceb5fc5898d4e1e1625ce3d4769"
+    },
+    {
+      "path": "/private/tmp/vscode-release-continuation-20261014/released-continue/extracted/terraphim-continue/server.py",
+      "bytes": 5564,
+      "sha256": "bfa55c6c7edebf5c370ec8b7166298167f97e8faa16eb5e68ae2afd7143a86bc"
+    },
+    {
+      "path": "/private/tmp/vscode-release-continuation-20261014/released-continue/terraphim-continue-integration-0.1.1.zip",
+      "bytes": 16489,
+      "sha256": "ada7b4a5605d73c7d58534d33a6bb82f32096f09b506e1014b29a12061c4b1f7"
+    },
+    {
+      "path": "/private/tmp/vscode-release-continuation-20261014/released-continue/extracted/terraphim-continue/requirements.txt",
+      "bytes": 96,
+      "sha256": "041f051d52c80d80584fabc4e90b6eb7a30a5ba41ea5ac340060875e9c919e94"
+    }
+  ],
+  "grepArchiveMemberEqualsExecutable": true,
+  "continueArchiveMembers": [
+    {
+      "member": "terraphim-continue/README.md",
+      "bytes": 10086,
+      "sha256": "410ff157261452f769988319b10056e15bde909f03ba72f588c18bf335d4a48a"
+    },
+    {
+      "member": "terraphim-continue/install.py",
+      "bytes": 2516,
+      "sha256": "20ad3d9dc1f516c06a968d45b1d5de0c6b15fe06c7fc1c7b9efb4bddbd0b8a41"
+    },
+    {
+      "member": "terraphim-continue/server.py",
+      "bytes": 5564,
+      "sha256": "bfa55c6c7edebf5c370ec8b7166298167f97e8faa16eb5e68ae2afd7143a86bc"
+    },
+    {
+      "member": "terraphim-continue/requirements.txt",
+      "bytes": 96,
+      "sha256": "041f051d52c80d80584fabc4e90b6eb7a30a5ba41ea5ac340060875e9c919e94"
+    },
+    {
+      "member": "terraphim-continue/integration.json",
+      "bytes": 142,
+      "sha256": "3afc920ea14c874be16d08ca2078d88b8baa0abaf90e9d5b6884e351484c27f8"
+    },
+    {
+      "member": "terraphim-continue/risk-concern.exported.json",
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    {
+      "member": "terraphim-continue/test_install.py",
+      "bytes": 1955,
+      "sha256": "7eed8d945acfadfbc6374fb9b350f172b03ca60a01d819d81a042c145c9d40c0"
+    },
+    {
+      "member": "terraphim-continue/test_transport.py",
+      "bytes": 4890,
+      "sha256": "2849bd054ccab3f95667517e801aafc957eb0fc704650ce18ea6e419c47fd205"
+    },
+    {
+      "member": "terraphim-continue/test_package.py",
+      "bytes": 1130,
+      "sha256": "6f1ae29fef4632e3cfaed713913037debb508d62c4a456d41c7b0ac233ceaca9"
+    },
+    {
+      "member": "terraphim-continue/package.py",
+      "bytes": 2610,
+      "sha256": "9c630508814bdcbdf38a1a307cea9b4587e269962180b290059011f8e5311648"
+    },
+    {
+      "member": "terraphim-continue/verify_source.py",
+      "bytes": 2822,
+      "sha256": "30f8ad26618286f4343c73d649c2a782ec5d69bc3b6b4847fd5a876d8b221a6c"
+    },
+    {
+      "member": "terraphim-continue/test_source.py",
+      "bytes": 3499,
+      "sha256": "804ab6ad3056a92df779c7354ed17433b4e91f47fedd03c59f2215bc9d126f82"
+    },
+    {
+      "member": "terraphim-continue/.gitignore",
+      "bytes": 33,
+      "sha256": "2874c28384c174d45bd90025557c0ad82eb61833f1be3ce16540dc2b621d8852"
+    },
+    {
+      "member": "terraphim-continue/source.json",
+      "bytes": 1213,
+      "sha256": "ca62ea134393e22b4b25c0bad09cabb8e4709db1c9845dcd606ff2a5808af699"
+    }
+  ],
+  "pythonMetadataCommand": [
+    "/private/tmp/published-continue-skills-audit-20261014/venv/bin/python",
+    "-c",
+    "import sys,importlib.metadata,json; print(json.dumps({\"executable\":sys.executable,\"version\":sys.version,\"mcp\":importlib.metadata.version(\"mcp\")}))"
+  ],
+  "pythonMetadata": {
+    "executable": "/private/tmp/published-continue-skills-audit-20261014/venv/bin/python",
+    "version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "mcp": "1.30.0"
+  },
+  "pythonExecutable": {
+    "path": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12",
+    "bytes": 6768736,
+    "sha256": "146d54b73c93183d6347bd3461501da4e3190e70a91346949b552a7b196c845d"
+  },
+  "corpus": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/brief.md",
+      "bytes": 45,
+      "sha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829",
+      "text": "Risk: supplier delays require a backup plan.\n"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/decision.md",
+      "bytes": 57,
+      "sha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595",
+      "text": "Risk: approve a second supplier for delivery continuity.\n"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/review.md",
+      "bytes": 44,
+      "sha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982",
+      "text": "Risk: review supplier lead times on Friday.\n"
+    }
+  ],
+  "expectedGraph": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json",
+    "existsAtReadback": false,
+    "admitted": false,
+    "requirement": "Parent must obtain fresh native editor export, inspect same concept ID for Risk/Concern, and record digest before activation."
+  },
+  "configurationWritten": false,
+  "nativeChecksRun": false,
+  "secretsRead": false
+}

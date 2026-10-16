@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-16T11:14:02.036921+00:00",
+  "status": "PASS native graph drift/refusal and reviewed new-connection startup",
+  "native_error": "Admitted binary or graph changed; restart after reviewing new inputs",
+  "initial_restart": "Not accepted: raw result carried old original graph path/hash; retained separately",
+  "reviewed_restart_route": "Renamed task-only MCP connection terraphim-grep-drift, explicitly enabled it, native call returned reviewed test graph path/hash",
+  "reviewed_graph_sha256": "01e38b24dd32a410a6d23fc010ddc06b48a090fbbb2e13359a01f05b06f6b01f",
+  "raw_saved_response_sha256": "7bd00a59b2e42aa07f0cdfbea3f07c0a72845da128250583ccf0cfb17cde087d",
+  "same_three_chunks": true,
+  "original_editor_export_preserved": true
+}

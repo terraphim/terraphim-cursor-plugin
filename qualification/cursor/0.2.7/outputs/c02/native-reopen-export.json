@@ -1,0 +1,40 @@
+{
+  "observedAt": "2026-10-16T08:52:18.310865+00:00",
+  "result": "PASS",
+  "criterion": "C-02",
+  "nativeActions": [
+    "Reopened saved brief in released editor 0.1.5",
+    "Viewed restored original Risk and authored Concern",
+    "ArrowUp selected Risk; ArrowDown selected Concern; Escape closed alternatives",
+    "Save document",
+    "Export clean Markdown using native save dialog",
+    "Export Document Knowledge Graph using native command and save dialog"
+  ],
+  "outputChecks": {
+    "sameId": 1,
+    "normalizedTerms": [
+      "concern",
+      "risk"
+    ],
+    "cleanContainsConcern": true,
+    "annotatedSaveByteEqualToPriorSave": true
+  },
+  "files": {
+    "brief-concern-resaved.md": {
+      "source": "/private/tmp/terraphim-cursor-validation-20261016/public-project/brief.md",
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50",
+      "bytes": 649
+    },
+    "brief.clean.md": {
+      "source": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.clean.md",
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1",
+      "bytes": 129
+    },
+    "brief.knowledge-graph.json": {
+      "source": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json",
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+      "bytes": 281
+    }
+  },
+  "screenshotScope": "CUA screenshots displayed in tool output; no durable screenshot file claimed"
+}

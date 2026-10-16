@@ -1,0 +1,82 @@
+{
+  "scope": "Actual isolated native hook logs only; no event replay",
+  "events": [
+    {
+      "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T125353/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+      "lastPrecedingLogTimestamp": "2026-10-16T11:57:52.916Z",
+      "timestampScope": "Nearest shared log timestamp, not independently measured event time",
+      "event": {
+        "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "generation_id": "7a75e2bd-8c9d-4f44-a108-07c0e2068a05",
+        "tool_name": "Shell",
+        "tool_input": {
+          "command": "python3 validate_brief.py --chek --output outputs/native-rewrite-warning-fixed.json",
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+          "timeout": 30000
+        },
+        "tool_use_id": "5d4617b5-ca0f-45b5-b20b-8adb992e3cdd",
+        "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+        "session_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "hook_event_name": "preToolUse",
+        "cursor_version": "3.25.6",
+        "workspace_roots": [
+          "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+        ]
+      },
+      "hookResponse": {
+        "permission": "allow",
+        "updated_input": {
+          "command": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+          "timeout": 30000
+        }
+      },
+      "executedHookCommand": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py --policy /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/policy.json --policy-sha256 b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605 --event preToolUse",
+      "executedHookLogLine": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py --policy /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/policy.json --policy-sha256 b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605 --event preToolUse (918ms) exit code: 0",
+      "hookElapsedMs": 918,
+      "hookProcessExitCode": 0,
+      "omittedToolDiagnostic": null,
+      "omittedPrivacyFields": [
+        "user_email",
+        "model",
+        "transcript_path"
+      ]
+    },
+    {
+      "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T125353/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+      "lastPrecedingLogTimestamp": "2026-10-16T11:57:56.472Z",
+      "timestampScope": "Nearest shared log timestamp, not independently measured event time",
+      "event": {
+        "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "generation_id": "7a75e2bd-8c9d-4f44-a108-07c0e2068a05",
+        "tool_name": "Shell",
+        "tool_input": {
+          "command": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+          "timeout": 30000
+        },
+        "tool_output": "{\"output\":\"\",\"exitCode\":0}",
+        "duration": 2582.079,
+        "tool_use_id": "5d4617b5-ca0f-45b5-b20b-8adb992e3cdd",
+        "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+        "session_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "hook_event_name": "postToolUse",
+        "cursor_version": "3.25.6",
+        "workspace_roots": [
+          "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+        ]
+      },
+      "hookResponse": {},
+      "executedHookCommand": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py --policy /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/policy.json --policy-sha256 b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605 --event postToolUse",
+      "executedHookLogLine": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py --policy /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/success/policy.json --policy-sha256 b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605 --event postToolUse (91ms) exit code: 0",
+      "hookElapsedMs": 91,
+      "hookProcessExitCode": 0,
+      "omittedToolDiagnostic": null,
+      "omittedPrivacyFields": [
+        "user_email",
+        "model",
+        "transcript_path"
+      ]
+    }
+  ]
+}

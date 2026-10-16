@@ -1,0 +1,25 @@
+{
+  "case": "rewrite-off",
+  "snapshotAt": "2026-10-16T11:59:05.538804+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "ce61a15f-7723-4712-9dd0-013ad33100bb"
+  ],
+  "actualEventCount": 2,
+  "receiptStates": [
+    "incomplete"
+  ],
+  "receiptDirectoryEntries": [
+    ".terraphim-cursor-owner.json",
+    "38b3065106a7baa1b022ba3cdaecf567881a346e01e735ef5fbea0b2f4134615.json"
+  ],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [],
+  "selectedOutputAbsences": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-off-warning-fixed.json"
+  ],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

@@ -1,0 +1,23 @@
+{
+  "case": "guard-original",
+  "snapshotAt": "2026-10-16T12:00:08.418540+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "35fee96b-378d-4234-b932-06c4aacb319c"
+  ],
+  "actualEventCount": 2,
+  "receiptStates": [
+    "denied"
+  ],
+  "receiptDirectoryEntries": [
+    ".terraphim-cursor-owner.json",
+    "e363582453f20adca2cf20c49c01f587fc2ffdbef47267b28d359a997ea77d1d.json"
+  ],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [],
+  "selectedOutputAbsences": [],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

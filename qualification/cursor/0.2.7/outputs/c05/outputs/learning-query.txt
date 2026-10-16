@@ -1,0 +1,2 @@
+Learnings matching 'python3 validate_brief.py --chek --output outputs/native-cli-correction.json'.
+  [P] [cmd] python3 validate_brief.py --chek --output outputs/native-cli-correction.json (exit: 2)

@@ -1,0 +1,11 @@
+{
+  "name": "compiled_corrections",
+  "data": {
+    "python3 validate_brief.py --chek --output outputs/native-cli-correction.json": {
+      "id": 1,
+      "nterm": "python3 validate_brief.py --check --output outputs/native-cli-correction.json",
+      "display_value": "python3 validate_brief.py --check --output outputs/native-cli-correction.json",
+      "pinned": false
+    }
+  }
+}

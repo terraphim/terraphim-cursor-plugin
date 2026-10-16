@@ -1,0 +1,46 @@
+{
+  "hook_event_name": "postToolUse",
+  "cursor_version": "3.25.6",
+  "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+  "generation_id": "7a75e2bd-8c9d-4f44-a108-07c0e2068a05",
+  "tool_use_id": "5d4617b5-ca0f-45b5-b20b-8adb992e3cdd",
+  "tool_name": "Shell",
+  "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+  "workspace_roots": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+  ],
+  "inputShape": {
+    "command": "str",
+    "cwd": "str",
+    "timeout": "int"
+  },
+  "command": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+  "outerShape": {
+    "conversation_id": "str",
+    "generation_id": "str",
+    "model": "str",
+    "tool_name": "str",
+    "tool_input": {
+      "command": "str",
+      "cwd": "str",
+      "timeout": "int"
+    },
+    "tool_output": "str",
+    "duration": "float",
+    "tool_use_id": "str",
+    "cwd": "str",
+    "session_id": "str",
+    "hook_event_name": "str",
+    "cursor_version": "str",
+    "workspace_roots": [
+      "str"
+    ],
+    "user_email": "str",
+    "transcript_path": "str"
+  },
+  "resultShape": {
+    "output": "str",
+    "exitCode": 0
+  },
+  "observedUnixNs": 1792151876465570000
+}

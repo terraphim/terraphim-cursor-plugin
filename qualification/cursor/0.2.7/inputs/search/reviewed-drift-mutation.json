@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-16T11:07:06.271642+00:00",
+  "before_sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+  "after_sha256": "01e38b24dd32a410a6d23fc010ddc06b48a090fbbb2e13359a01f05b06f6b01f",
+  "change": "one trailing newline in separate test graph; valid JSON with same semantics",
+  "original_export_unchanged": true,
+  "observed_started_server_pid": 8670,
+  "native_call": "pending"
+}
