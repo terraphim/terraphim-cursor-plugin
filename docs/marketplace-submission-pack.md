@@ -147,3 +147,14 @@ confirms it.
    separate write-scoped job to attach the deterministic AutoClaw archives,
    checksums, and V-model artwork.
 8. Save the host's submission URL and status in the release evidence.
+
+## Cursor integration qualification
+
+The [Cursor setup guide](../integrations/cursor/README.md) adds a read-first
+setup command and separately opted-in existing grep MCP/project hooks. Native
+acceptance requires the matching release qualification record; source/examples
+are not proof. The whole update cannot publish until native hooks pass.
+Do not advertise automatic capture,
+rewrite execution or marketplace admission from the presence of example files.
+Original signed skills remain unchanged; recover the existing Cursor submission
+identity before another application.

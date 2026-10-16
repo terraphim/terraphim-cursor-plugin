@@ -3,7 +3,7 @@
   "plugin": {
     "name": "terraphim-skills-intro",
     "display_name": "Terraphim Skills Introduction",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "Create editor alternatives, search a shared synonym graph, capture learning, and retrieve memory with Terraphim.",
     "description_zh_cn": "在编辑器中创建备选措辞、搜索共享同义词图、记录经验并检索记忆。",
     "author_name": "Terraphim AI",
@@ -61,5 +61,30 @@
       "command": "terraphim-grep",
       "mode": "explicit-writes"
     }
-  ]
+  ],
+  "cursor_integration": {
+    "schema_version": 1,
+    "files": [
+      "docs/cli-workflows.md",
+      "docs/examples/risk-concern.knowledge-graph.json",
+      "integrations/cursor/README.md",
+      "integrations/cursor/commands/terraphim-setup.md",
+      "integrations/cursor/examples/README.md",
+      "integrations/cursor/examples/compiled-corrections.json",
+      "integrations/cursor/examples/concepts/Risk.md",
+      "integrations/cursor/examples/corpus/brief.md",
+      "integrations/cursor/examples/corpus/decision.md",
+      "integrations/cursor/examples/corpus/review.md",
+      "integrations/cursor/examples/guard-rules.json",
+      "integrations/cursor/examples/role-config.json.example",
+      "integrations/cursor/examples/settings.toml.example",
+      "integrations/cursor/hook_adapter.py",
+      "integrations/cursor/hooks.json.example",
+      "integrations/cursor/mcp.json.example",
+      "integrations/cursor/policy.json.example",
+      "integrations/cursor/release-inputs.json",
+      "schemas/cursor-hook-policy.schema.json",
+      "schemas/cursor-hook-receipt.schema.json"
+    ]
+  }
 }

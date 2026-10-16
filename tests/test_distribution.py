@@ -31,11 +31,11 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(GENERATOR.ALLOWED_SKILLS, names)
 
     def test_print_version_matches_manifests(self) -> None:
-        self.assertEqual("0.2.6", self.metadata["plugin"]["version"])
+        self.assertEqual("0.2.7", self.metadata["plugin"]["version"])
         output = io.StringIO()
         with redirect_stdout(output):
             self.assertEqual(0, GENERATOR.main(["--print-version"]))
-        self.assertEqual("0.2.6\n", output.getvalue())
+        self.assertEqual("0.2.7\n", output.getvalue())
 
     def test_generated_manifests_are_current_and_deterministic(self) -> None:
         expected = GENERATOR.generated_files(ROOT, self.metadata)
@@ -73,7 +73,12 @@ class DistributionTests(unittest.TestCase):
             ROOT / ".claude-plugin/plugin.json",
         ):
             manifest = json.loads(path.read_text())
-            self.assertTrue(forbidden.isdisjoint(manifest), path)
+            expected = (
+                forbidden - {"commands"}
+                if path.parent.name == ".cursor-plugin"
+                else forbidden
+            )
+            self.assertTrue(expected.isdisjoint(manifest), path)
 
     def test_kimi_marketplace_uses_current_v2_contract(self) -> None:
         marketplace = json.loads((ROOT / "marketplaces/kimi.json").read_text())
@@ -93,7 +98,7 @@ class DistributionTests(unittest.TestCase):
         entry = marketplace["plugins"][0]
         self.assertEqual("terraphim-skills-intro", entry["name"])
         self.assertEqual("developer-tools", entry["category"])
-        self.assertEqual("v0.2.6", entry["source"]["ref"])
+        self.assertEqual("v0.2.7", entry["source"]["ref"])
         self.assertTrue(entry["strict"])
         self.assertEqual({"en", "zh-CN"}, set(entry["description_i18n"]))
         manifest = json.loads((ROOT / ".zcode-plugin/plugin.json").read_text())
@@ -136,14 +141,15 @@ class DistributionTests(unittest.TestCase):
     def test_release_checkout_fetches_annotated_tag_object(self) -> None:
         workflow = (ROOT / ".github/workflows/release.yml").read_text()
         self.assertIn("fetch-depth: 0", workflow)
-        self.assertIn('release_ref="refs/release-tags/$GITHUB_REF_NAME"', workflow)
-        self.assertIn('"refs/tags/$GITHUB_REF_NAME:$release_ref"', workflow)
+        self.assertIn('release_ref="refs/release-tags/$RELEASE_TAG"', workflow)
+        self.assertIn('"refs/tags/$RELEASE_TAG:$release_ref"', workflow)
         self.assertEqual(
             2,
             workflow.count(
-                'test "$(git rev-list -n 1 "$release_ref")" = "$GITHUB_SHA"'
+                'test "$(git rev-list -n 1 "$release_ref")" = "$(git rev-parse HEAD)"'
             ),
         )
+        self.assertIn('test "$(git rev-parse HEAD)" = "$GITHUB_SHA"', workflow)
         self.assertIn('git verify-tag "$release_ref"', workflow)
         self.assertEqual(2, workflow.count('git verify-tag "$release_ref"'))
 

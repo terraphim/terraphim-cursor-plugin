@@ -71,3 +71,13 @@ terraphim-agent memory show "$memory_id" --json > saved-memory.json
 `captured-memory.json` contains the actual new `memory_id`. `saved-memory.json` must contain the same ID, the exact authored lesson, and the `provenance:public-project-brief` tag. The tag labels the source of the lesson.
 
 For role-ranked retrieval and its distinct configuration, follow the [agent memory walkthrough](https://terraphim.ai/posts/cold-start-tax-agentic-memory/). For actual failed-command learning and the difference between a proposed command, a hook rewrite and executed output, see [the hooks walkthrough](https://terraphim.ai/posts/native-hook-support/).
+
+## Optional Cursor connection
+
+The [Cursor setup guide](../integrations/cursor/README.md) reuses Clients
+1.21.20 and Continue grep MCP 0.1.1. It separates the direct no-thesaurus CLI
+baseline from graph-required MCP retrieval. Native acceptance requires the
+matching release qualification record; source/examples are not proof. Hooks
+default inactive, and the complete update cannot publish until native rewrite
+and saved-output checks pass. Existing command receipts above do not establish
+new Cursor qualification.

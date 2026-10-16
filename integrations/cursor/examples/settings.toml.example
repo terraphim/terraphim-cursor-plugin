@@ -1,0 +1,8 @@
+server_hostname = "127.0.0.1:8000"
+api_endpoint = "http://localhost:8000/api"
+initialized = true
+default_data_path = "/absolute/path/to/Public Project/terraphim-hooks/settings/data"
+
+[profiles.dashmap]
+type = "dashmap"
+root = "/absolute/path/to/Public Project/terraphim-hooks/settings/dashmap"

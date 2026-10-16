@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "releaseGate": "Hold the update until hooks pass",
+  "clients": {
+    "version": "1.21.20",
+    "sourceCommit": "d55d373ec2eb100d334712f086dc95a2829856e7",
+    "checksumsUrl": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/SHA256SUMS",
+    "assets": [
+      {
+        "tool": "terraphim-agent",
+        "target": "aarch64-apple-darwin",
+        "url": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-agent-1.21.20-aarch64-apple-darwin.tar.gz",
+        "archiveSha256": "e7e075d47e79b03f41f646ca388d8c7104065cfb8ea0966761b1f6ae796166bd",
+        "bytes": 8973418,
+        "binarySha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec",
+        "member": "terraphim-agent"
+      },
+      {
+        "tool": "terraphim-agent",
+        "target": "aarch64-unknown-linux-musl",
+        "url": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-agent-1.21.20-aarch64-unknown-linux-musl.tar.gz",
+        "archiveSha256": "cf09f161ff42180308509d8e9b43b66c94bedd3801987cd1112b38b3718b5789",
+        "bytes": 9393380,
+        "binarySha256": "5ae520c7034dd125dc6ccb0f6a2f7233794e4bef254381f292566827988f9c52",
+        "member": "terraphim-agent"
+      },
+      {
+        "tool": "terraphim-grep",
+        "target": "aarch64-apple-darwin",
+        "url": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-grep-1.21.20-aarch64-apple-darwin.tar.gz",
+        "archiveSha256": "3c9801c80ff0451ee2d319d00eada5b0624e4ceb5fc5898d4e1e1625ce3d4769",
+        "bytes": 5809133,
+        "binarySha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab",
+        "member": "terraphim-grep"
+      },
+      {
+        "tool": "terraphim-grep",
+        "target": "aarch64-unknown-linux-musl",
+        "url": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-grep-1.21.20-aarch64-unknown-linux-musl.tar.gz",
+        "archiveSha256": "320690a756083cccac28c11d918f549e7a7e1fbcbce31250388d6638087215d8",
+        "bytes": 5949005,
+        "binarySha256": "ea9f4e12b2169794c49f9f506793ae5537e9e35f7149b28317740ea01ced03c2",
+        "member": "terraphim-grep"
+      }
+    ]
+  },
+  "grepMcp": {
+    "version": "0.1.1",
+    "sourceCommit": "7fefd368af8cd09ed8d9505ebca7bcdf3e914560",
+    "url": "https://github.com/terraphim/terraphim-ai/releases/download/terraphim_continue-v0.1.1/terraphim-continue-integration-0.1.1.zip",
+    "archiveSha256": "ada7b4a5605d73c7d58534d33a6bb82f32096f09b506e1014b29a12061c4b1f7",
+    "serverSha256": "bfa55c6c7edebf5c370ec8b7166298167f97e8faa16eb5e68ae2afd7143a86bc",
+    "sdkRequirement": "mcp==1.30.0",
+    "pythonMinimum": "3.11"
+  },
+  "scope": "Public released input identities only. No new Cursor runtime or marketplace acceptance is established by this file.",
+  "qualificationRequirement": "Native acceptance requires the matching release qualification record; source and examples are not proof."
+}

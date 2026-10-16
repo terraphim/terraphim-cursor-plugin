@@ -11,8 +11,13 @@ Hermes Agent, skills.sh, Claude Code, and Grok Build.
 | `terraphim-agent-memory` | `terraphim-agent memory` | Save authored lessons, inspect saved content and source tags, and retrieve memory. |
 | `terraphim-editor` | Editor UI → `terraphim-grep` | Create and swap alternatives, export synonyms and search related decisions. |
 
-These Apache-2.0 instruction skills do not bundle executables, secrets, hooks, or
+These Apache-2.0 instruction skills do not bundle CLI executables, secrets, or
 proprietary skill content. They remain useful without a marketplace account.
+The [Cursor setup guide](integrations/cursor/README.md) provides a read-first
+setup command and inactive optional integration examples. Installing the
+instruction plugin does not activate MCP, hooks, rewriting or capture. Native
+acceptance requires the matching release qualification record; source and
+examples are not proof. The complete update cannot publish until native hooks pass.
 
 ## Install the command dependencies
 

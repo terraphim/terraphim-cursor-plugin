@@ -1,6 +1,7 @@
 name: Validate public marketplace pack
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -12,6 +13,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Check out repository
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -47,7 +49,9 @@ jobs:
       - name: Run tests
         env:
           TERRAPHIM_TSM_VERIFIER: ${{ runner.temp }}/terraphim-tsm-verifier/tsm
-        run: python3 -m unittest discover -s tests -p 'test_*.py'
+        run: |
+          set -o pipefail
+          python3 -m unittest discover -s tests -p 'test_*.py' 2>&1 | tee "$RUNNER_TEMP/cursor-tests.log"
 
       - name: Verify reproducible AutoClaw archives
         run: |
@@ -57,3 +61,118 @@ jobs:
 
       - name: Reject whitespace errors
         run: git diff --check
+
+      - name: Build source-bound Cursor candidate
+        run: |
+          python3 scripts/generate_distribution.py --cursor-dist "$RUNNER_TEMP/cursor-candidate" \
+            --source-commit "$(git rev-parse HEAD)"
+
+      - name: Retain exact candidate for native qualification
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-integration-candidate
+          path: ${{ runner.temp }}/cursor-candidate/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Check optional reviewed native evidence
+        id: qualification
+        run: |
+          version="$(python3 scripts/generate_distribution.py --print-version)"
+          folder="qualification/cursor/$version"
+          if test -d "$folder"; then
+            python3 scripts/verify_published_release.py --tag "v$version" \
+              --check-native-folder "$folder" --receipt "$RUNNER_TEMP/native-structure.json"
+            echo "present=true" >> "$GITHUB_OUTPUT"
+            echo "folder=$folder" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Retain reviewed native evidence for release admission
+        if: steps.qualification.outputs.present == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-native-qualification
+          path: ${{ steps.qualification.outputs.folder }}/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Retain actual validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-validation-diagnostics
+          path: |
+            ${{ runner.temp }}/cursor-tests.log
+            ${{ runner.temp }}/native-structure.json
+          if-no-files-found: warn
+
+  protocol-contracts:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Download and admit the selected released ARM agent
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib, io, json, os, pathlib, tarfile, urllib.request
+          root = pathlib.Path(os.environ['RUNNER_TEMP']) / 'cursor-protocol'
+          root.mkdir()
+          inputs = json.loads(pathlib.Path('integrations/cursor/release-inputs.json').read_text())
+          assert inputs['clients']['version'] == '1.21.20'
+          rows = [a for a in inputs['clients']['assets'] if a['tool'] == 'terraphim-agent' and a['target'] == 'aarch64-unknown-linux-musl']
+          assert len(rows) == 1
+          asset = rows[0]
+          assert asset['url'] == 'https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-agent-1.21.20-aarch64-unknown-linux-musl.tar.gz'
+          assert asset['archiveSha256'] == 'cf09f161ff42180308509d8e9b43b66c94bedd3801987cd1112b38b3718b5789'
+          assert asset['binarySha256'] == '5ae520c7034dd125dc6ccb0f6a2f7233794e4bef254381f292566827988f9c52'
+          with urllib.request.urlopen(asset['url'], timeout=30) as response:
+              raw = response.read(16 * 1024 * 1024 + 1)
+          assert len(raw) == asset['bytes'] and hashlib.sha256(raw).hexdigest() == asset['archiveSha256']
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as archive:
+              members = archive.getmembers()
+              binaries = [m for m in members if m.name == asset['member']]
+              assert len(binaries) == 1 and binaries[0].isfile() and binaries[0].size <= 64 * 1024 * 1024
+              with archive.extractfile(binaries[0]) as source:
+                  binary = source.read()
+          assert hashlib.sha256(binary).hexdigest() == asset['binarySha256']
+          executable = root / 'terraphim-agent'
+          executable.write_bytes(binary)
+          executable.chmod(0o700)
+          (root / 'input-identity.json').write_text(json.dumps(asset, indent=2) + '\n')
+          PYTHON
+      - name: Execute real released-agent contracts without skipped tests
+        env:
+          CURSOR_TEST_AGENT: ${{ runner.temp }}/cursor-protocol/terraphim-agent
+          CURSOR_TEST_EVIDENCE: ${{ runner.temp }}/cursor-protocol/outputs
+        run: |
+          set -o pipefail
+          python3 - <<'PYTHON' 2>&1 | tee "$RUNNER_TEMP/cursor-protocol/tests.log"
+          import json, os, pathlib, sys, unittest
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_cursor_integration.py')
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = result.wasSuccessful() and not result.skipped and result.testsRun > 0
+          receipt = {'status': 'PASS' if passed else 'FAIL', 'testsRun': result.testsRun,
+                     'skipped': len(result.skipped), 'failures': len(result.failures), 'errors': len(result.errors),
+                     'scope': 'Real Linux ARM released-agent protocol; not native Cursor acceptance.'}
+          pathlib.Path(os.environ['RUNNER_TEMP'], 'cursor-protocol', 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
+          sys.exit(0 if passed else 1)
+          PYTHON
+      - name: Retain actual protocol outputs and failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cursor-protocol-contracts
+          path: |
+            ${{ runner.temp }}/cursor-protocol/input-identity.json
+            ${{ runner.temp }}/cursor-protocol/outputs/
+            ${{ runner.temp }}/cursor-protocol/tests.log
+            ${{ runner.temp }}/cursor-protocol/receipt.json
+          if-no-files-found: warn

@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/terraphim/terraphim-cursor-plugin/schemas/cursor-hook-receipt.schema.json",
+  "title": "Local owned Cursor hook receipt; applied is not executed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "owner",
+    "callKey",
+    "recordId",
+    "policySha256",
+    "state",
+    "createdAtNs",
+    "attemptedCommand",
+    "appliedCommand",
+    "identities",
+    "selectedOutputs",
+    "artifacts",
+    "exitCode",
+    "reason"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "owner": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "callKey": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "recordId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "policySha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "state": {
+      "enum": [
+        "prepared",
+        "applied",
+        "completed",
+        "denied",
+        "incomplete",
+        "evidence_error"
+      ]
+    },
+    "createdAtNs": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "attemptedCommand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "appliedCommand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent",
+        "roleConfig",
+        "compiledRules",
+        "guardRules",
+        "adapter",
+        "settings"
+      ],
+      "properties": {
+        "agent": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "roleConfig": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "compiledRules": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "guardRules": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "adapter": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "settings": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "selectedOutputs": {
+      "type": "array",
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^/",
+        "minLength": 2
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "bytes"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^/",
+            "minLength": 2
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1048576
+          }
+        }
+      }
+    },
+    "exitCode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "exitCode": {
+            "type": "integer"
+          },
+          "appliedCommand": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

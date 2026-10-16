@@ -156,6 +156,8 @@ def render_cursor(metadata: dict[str, object]) -> dict[str, object]:
     value = _identity(metadata)
     value["logo"] = "assets/logo.svg"
     value["skills"] = _skill_paths(metadata)
+    if metadata.get("cursor_integration") is not None:
+        value["commands"] = ["integrations/cursor/commands/terraphim-setup.md"]
     return value
 
 
@@ -356,11 +358,145 @@ def build_autoclaw_archives(
     return archives
 
 
+def safe_member(name: str) -> bool:
+    """Whether a file name is a canonical relative POSIX archive member."""
+    return (
+        isinstance(name, str)
+        and bool(name)
+        and not any(
+            ord(char) < 32 or ord(char) == 127 or char in "\\:" for char in name
+        )
+        and all(part not in ("", ".", "..") for part in name.split("/"))
+    )
+
+
+def cursor_payload(root: Path, metadata: dict[str, object]) -> dict[str, bytes]:
+    """Read the explicit Cursor payload, refusing links and ambient discovery."""
+    root = root.resolve()
+    errors = validate_metadata(root, metadata)
+    if errors:
+        raise ValueError("invalid source distribution: " + "; ".join(errors))
+    config = metadata.get("cursor_integration")
+    if (
+        not isinstance(config, dict)
+        or set(config) != {"schema_version", "files"}
+        or type(config["schema_version"]) is not int
+        or config["schema_version"] != 1
+    ):
+        raise ValueError("cursor integration contract is missing or invalid")
+    files = config["files"]
+    if (
+        not isinstance(files, list)
+        or any(not safe_member(name) for name in files)
+        or len(files) != len(set(files))
+    ):
+        raise ValueError("cursor integration members must be unique canonical paths")
+    required = {
+        "integrations/cursor/commands/terraphim-setup.md",
+        "integrations/cursor/hook_adapter.py",
+        "integrations/cursor/README.md",
+        "integrations/cursor/mcp.json.example",
+        "integrations/cursor/hooks.json.example",
+        "integrations/cursor/policy.json.example",
+        "integrations/cursor/release-inputs.json",
+        "schemas/cursor-hook-policy.schema.json",
+        "schemas/cursor-hook-receipt.schema.json",
+    }
+    if not required <= set(files) or any(
+        not (
+            name.startswith("integrations/cursor/")
+            or name
+            in {
+                "docs/cli-workflows.md",
+                "docs/examples/risk-concern.knowledge-graph.json",
+            }
+            or name in required
+        )
+        for name in files
+    ):
+        raise ValueError(
+            "cursor integration member allowlist is incomplete or out of scope"
+        )
+    for name in ("commands", "mcp.json", "hooks", "agents"):
+        if (root / name).exists() or (root / name).is_symlink():
+            raise ValueError(f"ambient component discovery is forbidden: {name}")
+    names = set(files) | {
+        ".cursor-plugin/plugin.json",
+        "LICENSE",
+        "NOTICE",
+        "assets/logo.svg",
+    }
+    for skill in ALLOWED_SKILLS:
+        directory = root / "skills" / skill
+        if directory.is_symlink() or any(
+            not (directory / name).is_file() for name in ("SKILL.md", "skill.toml")
+        ):
+            raise ValueError("signed skill body or manifest is missing")
+        for path in directory.rglob("*"):
+            if path.is_symlink():
+                raise ValueError("signed skill tree contains a symlink")
+            if path.is_file():
+                names.add(path.relative_to(root).as_posix())
+    payload = {}
+    for name in sorted(names):
+        path = root / name
+        if not safe_member(name) or any(
+            (root / Path(*Path(name).parts[:index])).is_symlink()
+            for index in range(1, len(Path(name).parts) + 1)
+        ):
+            raise ValueError(f"noncanonical or linked payload: {name}")
+        if not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
+            raise ValueError(f"missing or escaping payload: {name}")
+        data = path.read_bytes()
+        if len(data) > 2 * 1024 * 1024:
+            raise ValueError(f"payload member too large: {name}")
+        payload[name] = data
+    expected = json.dumps(render_cursor(metadata), indent=2, ensure_ascii=False) + "\n"
+    if payload[".cursor-plugin/plugin.json"] != expected.encode():
+        raise ValueError("Cursor manifest differs from generated contract")
+    if sum(map(len, payload.values())) > 16 * 1024 * 1024:
+        raise ValueError("Cursor payload exceeds total byte limit")
+    return payload
+
+
+def build_cursor_archive(
+    root: Path, metadata: dict[str, object], output: Path, source_commit: str
+) -> Path:
+    """Build an additive source-bound archive; no native qualification is implied."""
+    if not re.fullmatch(r"[0-9a-f]{40}", source_commit):
+        raise ValueError("source commit must be an exact lowercase Git SHA")
+    payload = cursor_payload(root, metadata)
+    version = str(metadata["plugin"]["version"])
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+(?:-[A-Za-z0-9.-]+)?", version):
+        raise ValueError("invalid pack version")
+    provenance = {
+        "schemaVersion": 1,
+        "repository": "terraphim/terraphim-cursor-plugin",
+        "version": version,
+        "sourceCommit": source_commit,
+        "files": {
+            name: hashlib.sha256(data).hexdigest() for name, data in payload.items()
+        },
+        "qualification": "Candidate only; native acceptance is a separate required gate.",
+    }
+    payload["cursor-provenance.json"] = (
+        json.dumps(provenance, sort_keys=True, indent=2) + "\n"
+    ).encode()
+    output.mkdir(parents=True, exist_ok=True)
+    archive = output / f"terraphim-cursor-integration-{version}.zip"
+    with zipfile.ZipFile(archive, "w") as target:
+        for name, data in sorted(payload.items()):
+            target.writestr(_zip_info(name), data, compresslevel=9)
+    return archive
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--print-version", action="store_true")
     parser.add_argument("--autoclaw-dist", type=Path)
+    parser.add_argument("--cursor-dist", type=Path)
+    parser.add_argument("--source-commit")
     args = parser.parse_args(argv)
     if args.print_version:
         metadata = load_metadata(ROOT)
@@ -374,10 +510,24 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(plugin["version"])
         return 0
     result = write_or_check(ROOT, check=args.check)
-    if result or args.check or args.autoclaw_dist is None:
+    if result or args.check:
         return result
     metadata = load_metadata(ROOT)
-    build_autoclaw_archives(ROOT, metadata, args.autoclaw_dist)
+    if args.autoclaw_dist is not None:
+        build_autoclaw_archives(ROOT, metadata, args.autoclaw_dist)
+    if args.cursor_dist is not None:
+        archive = build_cursor_archive(
+            ROOT, metadata, args.cursor_dist, args.source_commit or ""
+        )
+        receipt = {
+            "schemaVersion": 1,
+            "sourceCommit": args.source_commit,
+            "archive": archive.name,
+            "sha256": hashlib.sha256(archive.read_bytes()).hexdigest(),
+        }
+        (args.cursor_dist / "candidate.json").write_text(
+            json.dumps(receipt, indent=2) + "\n"
+        )
     return 0
 
 
