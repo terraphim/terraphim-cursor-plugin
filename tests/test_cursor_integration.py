@@ -393,6 +393,70 @@ class FilesAndProcesses(unittest.TestCase):
         ]:
             self.assertIsNone(A.qualified_success({**event, **change}, "postToolUse"))
 
+    def test_observed_cursor_3_25_6_success_shape_is_qualified(self):
+        # Actual native postToolUse returned this exact empty-output JSON string.
+        # This is a parser regression, not a replacement for native qualification.
+        event = {
+            "cursor_version": "3.25.6",
+            "hook_event_name": "postToolUse",
+            "tool_output": '{"output":"","exitCode":0}',
+        }
+        self.assertEqual(A.qualified_success(event, "postToolUse"), 0)
+
+    def test_native_success_versions_and_result_shapes_remain_closed(self):
+        base = {
+            "hook_event_name": "postToolUse",
+            "tool_output": '{"output":"","exitCode":0}',
+        }
+        for version in [
+            "3.25.5",
+            "3.25.7",
+            "3.24.19",
+            "3.25.6-insider",
+            "",
+            None,
+            [],
+            {},
+        ]:
+            with self.subTest(version=version):
+                self.assertIsNone(
+                    A.qualified_success(
+                        {**base, "cursor_version": version}, "postToolUse"
+                    )
+                )
+        for version in ["3.24.18", "3.25.6"]:
+            for raw in [
+                '{"output":"","exitCode":false}',
+                '{"output":"","exitCode":0.0}',
+                '{"output":"","exitCode":2}',
+                '{"output":"","exitCode":0,"exitCode":1}',
+                '{"output":"","exitCode":0,"extra":1}',
+                '{"exitCode":0}',
+                '{"output":{},"exitCode":0}',
+                "{",
+                {"output": "", "exitCode": 0},
+                None,
+            ]:
+                with self.subTest(version=version, raw=raw):
+                    self.assertIsNone(
+                        A.qualified_success(
+                            {**base, "cursor_version": version, "tool_output": raw},
+                            "postToolUse",
+                        )
+                    )
+            for kind in ["preToolUse", "postToolUseFailure"]:
+                with self.subTest(version=version, kind=kind):
+                    self.assertIsNone(
+                        A.qualified_success(
+                            {
+                                **base,
+                                "cursor_version": version,
+                                "hook_event_name": kind,
+                            },
+                            kind,
+                        )
+                    )
+
     def _real_writer_finishes_during_receipt_scan(self, mode):
         """Schedule a real writer at a reader boundary; do not replace store code."""
         evidence = self.root / "evidence"
@@ -880,6 +944,115 @@ class ReleasedAgentContracts(unittest.TestCase):
             )
         self.assertEqual(store.path(event).read_bytes(), before)
 
+    def test_native_guard_denial_completion_is_matching_terminal_noop(self):
+        evidence = self.root / "evidence"
+        evidence.mkdir(mode=0o700)
+        self.policy["evidence"] = {
+            "enabled": True,
+            "directory": str(evidence),
+            "outputFiles": [],
+        }
+        rules = json.loads(self.rules.read_text())
+        rules["data"]["printf old"].update(nterm="rm -rf /", display_value="rm -rf /")
+        self.rules.write_text(json.dumps(rules))
+        self.policy["compiledRules"]["sha256"] = digest(self.rules)
+        self.write_policy()
+        event = {
+            **self.event,
+            "conversation_id": "denied-c",
+            "generation_id": "denied-g",
+            "tool_use_id": "denied-t",
+            "cursor_version": "3.25.6",
+        }
+        # The actual released agent's second guard refuses; no Shell is executed.
+        with self.assertRaisesRegex(A.Refusal, "agent_denied"):
+            A.handle_event(event, "preToolUse", str(self.path), self.expected)
+        store = A.ReceiptStore(evidence, self.expected)
+        before = store.path(event).read_bytes()
+        denied = json.loads(before)
+        self.assertEqual(denied["state"], "denied")
+        self.assertIsNone(denied["appliedCommand"])
+        post = {
+            **event,
+            "hook_event_name": "postToolUseFailure",
+            "failure_type": "permission_denied",
+            "error_message": "Terraphim: agent_denied",
+        }
+        for _ in range(2):
+            self.assertEqual(
+                A.handle_event(
+                    post, "postToolUseFailure", str(self.path), self.expected
+                ),
+                {},
+            )
+            self.assertEqual(store.path(event).read_bytes(), before)
+        for change in [
+            {"cursor_version": "3.25.7"},
+            {"failure_type": "error"},
+            {"error_message": "different refusal"},
+            {"error_message": "Terraphim:agent_denied"},
+            {"tool_input": {**event["tool_input"], "command": "foreign command"}},
+            {
+                "hook_event_name": "postToolUse",
+                "tool_output": '{"output":"","exitCode":0}',
+            },
+        ]:
+            altered = {**post, **change}
+            with (
+                self.subTest(change=change),
+                self.assertRaisesRegex(A.Refusal, "evidence_command_mismatch"),
+            ):
+                A.handle_event(
+                    altered, altered["hook_event_name"], str(self.path), self.expected
+                )
+            self.assertEqual(store.path(event).read_bytes(), before)
+        foreign = {**post, "tool_use_id": "different-call"}
+        self.assertEqual(
+            A.handle_event(
+                foreign, "postToolUseFailure", str(self.path), self.expected
+            ),
+            {},
+        )
+        self.assertEqual(store.path(event).read_bytes(), before)
+        self.assertFalse(store.path(foreign).exists())
+        missing_kind = {k: v for k, v in post.items() if k != "hook_event_name"}
+        with self.assertRaisesRegex(A.Refusal, "evidence_command_mismatch"):
+            A.handle_event(
+                missing_kind, "postToolUseFailure", str(self.path), self.expected
+            )
+        for field, value in [
+            ("conversation_id", None),
+            ("generation_id", []),
+            ("tool_use_id", ""),
+        ]:
+            with (
+                self.subTest(field=field),
+                self.assertRaisesRegex(A.Refusal, "evidence_ids"),
+            ):
+                A.handle_event(
+                    {**post, field: value},
+                    "postToolUseFailure",
+                    str(self.path),
+                    self.expected,
+                )
+        self.assertEqual(
+            A.handle_event(
+                {**post, "tool_name": "Read"},
+                "postToolUseFailure",
+                str(self.path),
+                self.expected,
+            ),
+            {},
+        )
+        with self.assertRaisesRegex(A.Refusal, "event_tool"):
+            A.handle_event(
+                {**post, "tool_name": None},
+                "postToolUseFailure",
+                str(self.path),
+                self.expected,
+            )
+        self.assertEqual(store.path(event).read_bytes(), before)
+
     def test_tampered_receipt_cannot_expand_policy_or_change_identities(self):
         evidence = self.root / "evidence"
         evidence.mkdir(mode=0o700)
@@ -985,7 +1158,7 @@ class ReleasedAgentContracts(unittest.TestCase):
             "conversation_id": "c",
             "generation_id": "g",
             "tool_use_id": "t",
-            "cursor_version": "3.24.18",
+            "cursor_version": "3.25.6",
         }
         result = A.handle_event(event, "preToolUse", str(self.path), self.expected)
         self.assertEqual(result["updated_input"]["command"], "printf new")

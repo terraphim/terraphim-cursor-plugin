@@ -32,7 +32,7 @@ RELEASED_AGENT_SHA256 = frozenset(
     }
 )
 AUTOMATIC_FAILURE_CAPTURE_AVAILABLE = False
-NATIVE_RESULT_PROFILE = "cursor-3.24.18-postToolUse-success"
+NATIVE_SUCCESS_VERSIONS = ("3.24.18", "3.25.6")
 DIGEST = re.compile(r"[0-9a-f]{64}\Z")
 TERMINAL = frozenset({"completed", "denied", "incomplete", "evidence_error"})
 
@@ -907,14 +907,14 @@ class ReceiptStore:
 def qualified_success(event: dict, kind: str) -> int | None:
     """Recognize only the observed released-Cursor success result; discard output.
 
-    Cursor 3.24.18 emitted postToolUse with a JSON string containing output and
-    exitCode=0. Its observed failure event had no numeric exit, so it is never
-    inferred here. This parser does not qualify another host/version.
+    Cursor 3.24.18 and 3.25.6 emitted postToolUse with a JSON string containing
+    output and exitCode=0. Observed failure events had no numeric exit, so it is
+    never inferred here. Unobserved host versions remain unqualified.
     """
     if (
         kind != "postToolUse"
         or event.get("hook_event_name") != kind
-        or event.get("cursor_version") != "3.24.18"
+        or event.get("cursor_version") not in NATIVE_SUCCESS_VERSIONS
     ):
         return None
     raw = event.get("tool_output")
@@ -976,6 +976,24 @@ def handle_event(event: dict, kind: str, policy_path: str, expected: str) -> dic
             key = store.key(event)
             if store.path(event).exists():
                 record = store.read(key)
+                # Observed 3.25.6 guard denial reports the attempted command:
+                # no updated input was applied and this terminal receipt stays
+                # unchanged. Never promote permission denial to execution.
+                if (
+                    record["state"] == "denied"
+                    and record["appliedCommand"] is None
+                    and record["reason"] == "pretool_refused"
+                    and kind == "postToolUseFailure"
+                    and event.get("hook_event_name") == kind
+                    and event.get("cursor_version") == "3.25.6"
+                    and event.get("failure_type") == "permission_denied"
+                    and event.get("error_message") == "Terraphim: agent_denied"
+                ):
+                    require(
+                        record["attemptedCommand"] == original,
+                        "evidence_command_mismatch",
+                    )
+                    return {}
                 require(
                     record["appliedCommand"] == original, "evidence_command_mismatch"
                 )
