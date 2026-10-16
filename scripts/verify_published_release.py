@@ -19,6 +19,11 @@ from urllib.request import Request, urlopen
 
 REPOSITORY = "terraphim/terraphim-cursor-plugin"
 MAX_ASSET_BYTES = 32 * 1024 * 1024
+# Exact vendor-verified builds; matching version and commit are inseparable.
+NATIVE_CURSOR_BUILDS = (
+    ("3.24.18", "be4c9e5350d77747b42cd467cbd3370a753d4640"),
+    ("3.25.6", "f0df777c412b670d09e3eaf214967d779e67c080"),
+)
 
 
 class ReleaseError(RuntimeError):
@@ -451,8 +456,7 @@ def verify_native_qualification(
         raise ReleaseError("host identity must be an object")
     if (
         host.get("platform") != "darwin-arm64"
-        or host.get("version") != "3.24.18"
-        or host.get("commit") != "be4c9e5350d77747b42cd467cbd3370a753d4640"
+        or (host.get("version"), host.get("commit")) not in NATIVE_CURSOR_BUILDS
         or host.get("vendorEvidence") not in outputs
         or host.get("installedManifest") not in outputs
     ):

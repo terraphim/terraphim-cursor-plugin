@@ -203,7 +203,11 @@ class CursorDistributionTests(unittest.TestCase):
                 self.root, self.build(), Path(self.temp.name) / "absent", COMMIT, 1, 2
             )
 
-    def qualification_fixture(self):
+    def qualification_fixture(
+        self,
+        host_version="3.24.18",
+        host_commit="be4c9e5350d77747b42cd467cbd3370a753d4640",
+    ):
         """Structural unit-test data only; never actual native acceptance."""
         archive = self.build()
         folder = Path(self.temp.name) / "qualification-structure"
@@ -216,8 +220,8 @@ class CursorDistributionTests(unittest.TestCase):
             "outputs/vendor.json": json.dumps(
                 {
                     "status": "VALID",
-                    "version": "3.24.18",
-                    "commit": "be4c9e5350d77747b42cd467cbd3370a753d4640",
+                    "version": host_version,
+                    "commit": host_commit,
                     "argv": ["structural-fixture-only"],
                     "exitCode": 0,
                 }
@@ -247,8 +251,8 @@ class CursorDistributionTests(unittest.TestCase):
             },
             "host": {
                 "platform": "darwin-arm64",
-                "version": "3.24.18",
-                "commit": "be4c9e5350d77747b42cd467cbd3370a753d4640",
+                "version": host_version,
+                "commit": host_commit,
                 "vendorEvidence": "outputs/vendor.json",
                 "installedManifest": "outputs/installed.json",
             },
@@ -304,7 +308,7 @@ class CursorDistributionTests(unittest.TestCase):
         result = json.dumps({"fixture": "derived output; not native evidence"}).encode()
         post = {
             "hook_event_name": "postToolUse",
-            "cursor_version": "3.24.18",
+            "cursor_version": host_version,
             "tool_name": "Shell",
             "conversation_id": ids[0],
             "generation_id": ids[1],
@@ -375,6 +379,79 @@ class CursorDistributionTests(unittest.TestCase):
         self.assertFalse(result["capabilities"]["automaticFailureCaptureAvailable"])
         # Only admit_native_artifacts adds trusted same-repository run and Git
         # evidence-tree provenance. These local fixture bytes never enter it.
+
+    def test_exact_vendor_verified_cursor_builds_remain_admitted(self):
+        # Structural parser fixtures, never native execution/qualification.
+        for version, commit in (
+            ("3.24.18", "be4c9e5350d77747b42cd467cbd3370a753d4640"),
+            ("3.25.6", "f0df777c412b670d09e3eaf214967d779e67c080"),
+        ):
+            with self.subTest(version=version):
+                archive, folder, _record = self.qualification_fixture(version, commit)
+                result = verify.verify_native_qualification(
+                    self.root, archive, folder, COMMIT, 1, 2
+                )
+                self.assertEqual("PASS_REVIEWED_NATIVE_EVIDENCE", result["status"])
+                self.assertEqual(sha(archive.read_bytes()), result["archiveSha256"])
+                self.assertNotIn("qualificationArtifact", result)
+
+    def test_cursor_build_admission_rejects_unknown_and_mixed_identities(self):
+        old_commit = "be4c9e5350d77747b42cd467cbd3370a753d4640"
+        new_commit = "f0df777c412b670d09e3eaf214967d779e67c080"
+        pairs = [
+            ("3.25.6", old_commit),
+            ("3.24.18", new_commit),
+            ("3.25.5", new_commit),
+            ("3.25.7", new_commit),
+            ("3.25.6-insider", new_commit),
+            ("3.25.6", "0" * 40),
+            ("3.25.6", new_commit.upper()),
+            ("3.25.6", None),
+            ("3.25.6", []),
+            ("3.25.6", {}),
+            (None, new_commit),
+            ([], new_commit),
+            ({}, new_commit),
+        ]
+        for version, commit in pairs:
+            with self.subTest(version=version, commit=commit):
+                # Vendor and post-event identities agree with the host so only
+                # the reviewed-build admission boundary can reject this tuple.
+                archive, folder, _record = self.qualification_fixture(version, commit)
+                with self.assertRaisesRegex(
+                    verify.ReleaseError, "actual released Cursor identity"
+                ):
+                    verify.verify_native_qualification(
+                        self.root, archive, folder, COMMIT, 1, 2
+                    )
+
+    def test_new_cursor_build_still_requires_matching_vendor_verification(self):
+        archive, folder, record = self.qualification_fixture(
+            "3.25.6", "f0df777c412b670d09e3eaf214967d779e67c080"
+        )
+        path = folder / "outputs/vendor.json"
+        original = json.loads(path.read_bytes())
+        for change in (
+            {"version": "3.24.18"},
+            {"commit": "be4c9e5350d77747b42cd467cbd3370a753d4640"},
+            {"status": "INVALID"},
+            {"exitCode": 1},
+            {"exitCode": False},
+            {"argv": []},
+        ):
+            with self.subTest(change=change):
+                raw = json.dumps({**original, **change}).encode()
+                path.write_bytes(raw)
+                record["files"]["outputs/vendor.json"].update(
+                    sha256=sha(raw), bytes=len(raw)
+                )
+                self.write_structural_review(folder, record)
+                with self.assertRaisesRegex(
+                    verify.ReleaseError, "vendor verification evidence is incomplete"
+                ):
+                    verify.verify_native_qualification(
+                        self.root, archive, folder, COMMIT, 1, 2
+                    )
 
     def test_source_candidate_host_and_evidence_mutations_refuse(self):
         archive, folder, original = self.qualification_fixture()
