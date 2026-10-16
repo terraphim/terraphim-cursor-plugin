@@ -166,9 +166,12 @@ host status and fresh selected output file before calling it successful.
 
 The adapter admits the selected project in both the event cwd and
 `tool_input.cwd` (or `working_directory` when supplied), preserving other input
-fields. Its completion parser recognizes only the observed Cursor 3.24.18
-success envelope. The observed failure event has a missing exit code; it cannot
+fields. Its completion parser recognizes only the observed Cursor 3.24.18 and
+3.25.6 success envelopes; unknown versions remain unqualified. The observed
+failure event has a missing exit code; it cannot
 prove a numeric failed-command result or authorize automatic learning capture.
+A matching observed 3.25.6 guard-denial completion leaves its already-denied
+receipt unchanged; it never becomes an executed or successful command.
 
 The command examples specify `failClosed:true` and a 15-second host timeout.
 Actual crash, timeout and denial behavior must be tested on the selected
