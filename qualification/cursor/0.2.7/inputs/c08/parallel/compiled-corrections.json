@@ -1,0 +1,11 @@
+{
+  "name": "compiled_corrections",
+  "data": {
+    "python3 -c 'import time; time.slep(1.7)'": {
+      "id": 1,
+      "nterm": "python3 -c 'import time; time.sleep(1.7)'",
+      "display_value": "python3 -c 'import time; time.sleep(1.7)'",
+      "pinned": false
+    }
+  }
+}

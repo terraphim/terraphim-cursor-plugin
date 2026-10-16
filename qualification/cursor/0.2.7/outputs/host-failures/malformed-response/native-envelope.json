@@ -1,0 +1,45 @@
+{
+  "status": "ACTUAL_NATIVE_HOST_BOUNDARY_OBSERVED",
+  "scope": "Disposable host protocol probe, not candidate adapter execution",
+  "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T122455/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+  "events": [
+    {
+      "event": {
+        "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "generation_id": "a37c6ca2-961f-41c6-9e74-def3efb16d7d",
+        "tool_name": "Shell",
+        "tool_input": {
+          "command": "python3 validate_brief.py --check --output outputs/native-host-malformed-response.json",
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+          "timeout": 30000
+        },
+        "tool_use_id": "f0f831c0-d9f7-43b5-b5ad-7056ad90413a",
+        "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+        "session_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "hook_event_name": "preToolUse",
+        "cursor_version": "3.25.6",
+        "workspace_roots": [
+          "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+        ]
+      },
+      "executedHookLogLine": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/probe_response.py malformed-response /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/malformed-response/observations (55ms) exit code: 0",
+      "nativeLoggedOutput": "(empty)",
+      "nativeDiagnosticLines": [
+        "[2026-10-16T11:30:21.766Z] ERROR: Failed to parse JSON response from hook 1",
+        "[2026-10-16T11:30:21.766Z] Error: Failed to parse hook stdout as JSON",
+        "[2026-10-16T11:30:21.766Z] Merged 1 valid response(s) for step preToolUse"
+      ],
+      "omittedPrivacyFields": [
+        "model",
+        "user_email",
+        "transcript_path"
+      ]
+    }
+  ],
+  "selectedOutputAbsent": true,
+  "selectedOutputPath": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-malformed-response.json",
+  "checkedAt": "2026-10-16T11:32:08.547035+00:00",
+  "nativeUiEvidence": "../host-malformed-response-native.png",
+  "rawInvalidStdoutNotRetainedByHost": true,
+  "hookEventsReplayed": false
+}

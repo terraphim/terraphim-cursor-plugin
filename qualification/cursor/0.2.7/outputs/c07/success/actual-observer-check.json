@@ -1,0 +1,21 @@
+{
+  "status": "PASS_NATIVE_COMPLETED_RECEIPT_AND_REAL_POST_OBSERVER",
+  "actualToolUseId": "5d4617b5-ca0f-45b5-b20b-8adb992e3cdd",
+  "actualCallKey": "f8a84f9273f34383260c970a277a9eaf1c6e2ff1c0821755bf4a36bc5773644e",
+  "receiptCreatedAtNs": 1792151873068774000,
+  "actualObservedUnixNs": 1792151876465570000,
+  "resultShape": {
+    "output": "str",
+    "exitCode": 0
+  },
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "selectedOutputs": [
+    {
+      "bytes": 175,
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-warning-fixed.json",
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    }
+  ],
+  "nativeEventReplayed": false,
+  "timestampInvented": false
+}

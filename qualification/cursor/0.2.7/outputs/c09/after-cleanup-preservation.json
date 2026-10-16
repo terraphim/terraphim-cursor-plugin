@@ -1,0 +1,568 @@
+{
+  "observedAt": "2026-10-16T12:03:13.144121+00:00",
+  "scope": "Read-only fixed inherited-config hashes, one exact database key and task-owned public files. No broad profile or transcript enumeration.",
+  "inheritedConfigurations": [
+    {
+      "path": "/Users/alex/.cursor/hooks.json",
+      "exists": false
+    },
+    {
+      "path": "/Users/alex/.cursor/mcp.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 411,
+      "sha256": "842b9c2650935dd3bc62e0817e425a7fc91270dc9d5e895fdb0586e58aa9d6a6"
+    },
+    {
+      "path": "/Users/alex/.claude/settings.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 7952,
+      "sha256": "553be8d036c62b98f5db78325592dff6ce7f311277741bc07080188e8a38e1a6"
+    },
+    {
+      "path": "/Library/Application Support/Cursor/hooks.json",
+      "exists": false
+    }
+  ],
+  "inheritedConfigurationsMatchOriginalSnapshot": true,
+  "storage": {
+    "normal": {
+      "path": "/Users/alex/Library/Application Support/Cursor/User/globalStorage/state.vscdb",
+      "key": "cursor/thirdPartyExtensibilityEnabled",
+      "exists": true,
+      "present": false
+    },
+    "isolated": {
+      "path": "/private/tmp/tc-qual-20261016/User/globalStorage/state.vscdb",
+      "key": "cursor/thirdPartyExtensibilityEnabled",
+      "exists": true,
+      "present": true,
+      "value": false
+    }
+  },
+  "publicFiles": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/brief.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 649,
+      "sha256": "24eb22fdd63770a10df9fa633f141c57297924f0f1b4dc9d9d4c47774c9d4f50"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/brief.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 45,
+      "sha256": "adf2843f9951cb47c0d481940c83f048464dd6299132b9da576411806ffd7829"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/decision.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 57,
+      "sha256": "ca9a886c8304bf3569e8856cdb607fb9f846fdf06c756ae2b7c5209565cd8595"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/corpus/review.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 44,
+      "sha256": "aac6d9a4e5281060990b9ff0320db20b07fd916dd22e2709710d921fc5657982"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.clean.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief-3.25.6.knowledge-graph.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.clean.md",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 129,
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/brief.knowledge-graph.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 281,
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/literal-baseline.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 344,
+      "sha256": "80a7625c3d12b79cb5131cf4f0bb688423e1eab36de27f6ae525a5abbff9a60c"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-new-candidate.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-warning-fixed.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-default-open.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-new-candidate.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-warning-fixed.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-retrieval.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 1503,
+      "sha256": "35d5ef9402b778520f411ee08505aec047800f36ade886293bf48a232a3f02b0"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-reviewed-drift-graph.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 1513,
+      "sha256": "7bd00a59b2e42aa07f0cdfbea3f07c0a72845da128250583ccf0cfb17cde087d"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-final-candidate.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-new-candidate.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-success.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-warning-fixed.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 175,
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-synthesis.json",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 2227,
+      "sha256": "396a6f3a732fdb8a02142eee320e0cc3b8b7593285eec4b34ebd9a5d2990191c"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/validate_brief.py",
+      "exists": true,
+      "symlink": false,
+      "regularFile": true,
+      "bytes": 976,
+      "sha256": "9ddb22cc68499439be190b71e90f88ce4984d6d76f62cefb670d3e4c13d10749"
+    }
+  ],
+  "ownedActiveConfigHashes": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/hooks.json",
+      "exists": false
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/.cursor/mcp.json",
+      "exists": false
+    }
+  ],
+  "projectDiscoveryEntries": [],
+  "c05OriginalFiles": [
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/memory/terraphim/evolution/cli-agent.json",
+        "bytes": 1430,
+        "sha256": "12fd826a0bcae917e4371a67d09c784a051c43cc6cbeaac81048b9255cefde57"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/memory/terraphim/evolution/cli-agent.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 1430,
+        "sha256": "12fd826a0bcae917e4371a67d09c784a051c43cc6cbeaac81048b9255cefde57"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/agent-version.txt",
+        "bytes": 24,
+        "sha256": "78d27a317617e529b2e39d159a5c2e6b2d1ef495a2a8f4b97776dd427fd7bc95"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/agent-version.txt",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 24,
+        "sha256": "78d27a317617e529b2e39d159a5c2e6b2d1ef495a2a8f4b97776dd427fd7bc95"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/captured-memory.json",
+        "bytes": 126,
+        "sha256": "cccc03607d4b3debd3c326e0ae68b5d6c6cac8eee436acffa7453a1416f97f91"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/captured-memory.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 126,
+        "sha256": "cccc03607d4b3debd3c326e0ae68b5d6c6cac8eee436acffa7453a1416f97f91"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-before-rule.json",
+        "bytes": 50,
+        "sha256": "f594d2295f27290d5239f2ac0d78808756994c92b83f550747dfc438220466ef"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-before-rule.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 50,
+        "sha256": "f594d2295f27290d5239f2ac0d78808756994c92b83f550747dfc438220466ef"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-reviewed-corrections.json",
+        "bytes": 382,
+        "sha256": "04924c0429365e1cd05dc0a1cadf30a5927a864f1fc05a74a8870e635adbc53b"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-reviewed-corrections.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 382,
+        "sha256": "04924c0429365e1cd05dc0a1cadf30a5927a864f1fc05a74a8870e635adbc53b"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/correction-path.txt",
+        "bytes": 176,
+        "sha256": "8e926b5c1e6a3a7e24fc2d5c4f3461693e8e1c6c2f0d7510af894a4491659174"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/correction-path.txt",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 176,
+        "sha256": "8e926b5c1e6a3a7e24fc2d5c4f3461693e8e1c6c2f0d7510af894a4491659174"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/grep-version.txt",
+        "bytes": 23,
+        "sha256": "b5a4aac3876f4d7519476cfa809b81d9f4bd529a524acad1e5fe80c94d954263"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/grep-version.txt",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 23,
+        "sha256": "b5a4aac3876f4d7519476cfa809b81d9f4bd529a524acad1e5fe80c94d954263"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-after-annotation.md",
+        "bytes": 916,
+        "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-after-annotation.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 916,
+        "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-before-annotation.md",
+        "bytes": 720,
+        "sha256": "e9e4196c0a8602eac359a0c00bbfd8d8191904a5366445bdb4834d3a57e8640f"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-before-annotation.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 720,
+        "sha256": "e9e4196c0a8602eac359a0c00bbfd8d8191904a5366445bdb4834d3a57e8640f"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-path.txt",
+        "bytes": 172,
+        "sha256": "ee101497d84e18bf8db0c7138088047bd11778a824883936317de68ae86bf1fb"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-path.txt",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 172,
+        "sha256": "ee101497d84e18bf8db0c7138088047bd11778a824883936317de68ae86bf1fb"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-query.txt",
+        "bytes": 198,
+        "sha256": "bc6c6c3567921c1c4a2b57d78cba7b0d4b53e4666068134bc6210d652990e235"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-query.txt",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 198,
+        "sha256": "bc6c6c3567921c1c4a2b57d78cba7b0d4b53e4666068134bc6210d652990e235"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/memory-baseline.json",
+        "bytes": 53,
+        "sha256": "de3193b24f4a03deefbadbca59d90908c30e2cdef3bb9db08ac373efae9cc5e5"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/memory-baseline.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 53,
+        "sha256": "de3193b24f4a03deefbadbca59d90908c30e2cdef3bb9db08ac373efae9cc5e5"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/reviewed-kg/python3-validate_brief-py---check---output-outputs-native-cli-correction-json.md",
+        "bytes": 681,
+        "sha256": "b40f6196ae84100982f4adac44ec452d8db9d80efb158c94f1d89e83242343bc"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/reviewed-kg/python3-validate_brief-py---check---output-outputs-native-cli-correction-json.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 681,
+        "sha256": "b40f6196ae84100982f4adac44ec452d8db9d80efb158c94f1d89e83242343bc"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/saved-memory.json",
+        "bytes": 512,
+        "sha256": "f71913f0dd235ca9d8d9deb5319c9b2892ee82102de491ae1590e30b0089ae0f"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/saved-memory.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 512,
+        "sha256": "f71913f0dd235ca9d8d9deb5319c9b2892ee82102de491ae1590e30b0089ae0f"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/correction-0175fea49e2048458ec2e86b903cf27f-1792148377618.md",
+        "bytes": 611,
+        "sha256": "8a785367d841201176827cad79040bc69297c04fc744af3eda302d2f58049d23"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/correction-0175fea49e2048458ec2e86b903cf27f-1792148377618.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 611,
+        "sha256": "8a785367d841201176827cad79040bc69297c04fc744af3eda302d2f58049d23"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/learning-e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513.md",
+        "bytes": 916,
+        "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/learning-e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 916,
+        "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/brief.md",
+        "bytes": 106,
+        "sha256": "22d85a57a9a1ba416f822ab340e8207a0ec3b90f891445cb721bbb6c978ad4a7"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/brief.md",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 106,
+        "sha256": "22d85a57a9a1ba416f822ab340e8207a0ec3b90f891445cb721bbb6c978ad4a7"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/outputs/native-cli-correction.json",
+        "bytes": 175,
+        "sha256": "01335579698c8c9bcc235a44591e96b137a8bd2b3a89a6fdbeb3dde0b4499d05"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/outputs/native-cli-correction.json",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 175,
+        "sha256": "01335579698c8c9bcc235a44591e96b137a8bd2b3a89a6fdbeb3dde0b4499d05"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/validate_brief.py",
+        "bytes": 956,
+        "sha256": "ba871dd95e39a3cb21fb4aecc9f8e6509e2873f22ce923a9a85b7867321e7e27"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/validate_brief.py",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 956,
+        "sha256": "ba871dd95e39a3cb21fb4aecc9f8e6509e2873f22ce923a9a85b7867321e7e27"
+      },
+      "matches": true
+    },
+    {
+      "expected": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/settings/settings.toml",
+        "bytes": 327,
+        "sha256": "0f2084e7cd13f8fed2dbe78a3b69dcf74836f3460036ab9265268150045cc228"
+      },
+      "current": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/settings/settings.toml",
+        "exists": true,
+        "symlink": false,
+        "regularFile": true,
+        "bytes": 327,
+        "sha256": "0f2084e7cd13f8fed2dbe78a3b69dcf74836f3460036ab9265268150045cc228"
+      },
+      "matches": true
+    }
+  ],
+  "configurationWritten": false,
+  "limitations": [
+    "Original configuration observation began after the isolated Third-Party Imports toggle; no pre-toggle normal-profile proof is invented.",
+    "Owned active configs are expected to change during approved validation and cleanup."
+  ],
+  "previouslySavedPublicFilesPreserved": true,
+  "newPublicFiles": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-warning-fixed.json",
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-missing-post-warning-fixed.json",
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-rewrite-warning-fixed.json"
+  ]
+}

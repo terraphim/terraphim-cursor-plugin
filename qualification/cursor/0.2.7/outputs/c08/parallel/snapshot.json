@@ -1,0 +1,26 @@
+{
+  "case": "parallel",
+  "snapshotAt": "2026-10-16T12:01:53.112403+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "02bb49b5-6208-4a3d-a50a-6265f1c12006",
+    "e7ecdbb1-241c-4058-9243-f6471fabfeaa"
+  ],
+  "actualEventCount": 4,
+  "receiptStates": [
+    "completed",
+    "completed"
+  ],
+  "receiptDirectoryEntries": [
+    ".terraphim-cursor-owner.json",
+    "17eaffe11fb6f4f37e9481a0d8ea4facd0b1455ce7a6cd33fc7e7f3e834a808e.json",
+    "e88d36609af898020367ce66d8ad35b2698365152c65c4d55b5c4c9472982457.json"
+  ],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [],
+  "selectedOutputAbsences": [],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

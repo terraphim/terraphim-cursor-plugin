@@ -1,0 +1,42 @@
+{
+  "hook_event_name": "preToolUse",
+  "cursor_version": "3.25.6",
+  "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+  "generation_id": "6bb3b89a-6e62-48d5-9b36-efa56a1f99a4",
+  "tool_use_id": "2ae7cb69-eef2-4619-8dec-173866a5b487",
+  "tool_name": "Shell",
+  "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+  "workspace_roots": [
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+  ],
+  "inputShape": {
+    "command": "str",
+    "cwd": "str",
+    "timeout": "int"
+  },
+  "command": "python3 validate_brief.py --check --output outputs/host-timeout-should-not-exist.json",
+  "outerShape": {
+    "conversation_id": "str",
+    "generation_id": "str",
+    "model": "str",
+    "tool_name": "str",
+    "tool_input": {
+      "command": "str",
+      "cwd": "str",
+      "timeout": "int"
+    },
+    "tool_use_id": "str",
+    "cwd": "str",
+    "session_id": "str",
+    "hook_event_name": "str",
+    "cursor_version": "str",
+    "workspace_roots": [
+      "str"
+    ],
+    "user_email": "str",
+    "transcript_path": "str"
+  },
+  "failureMode": "timeout",
+  "observedUnixNs": 1792149069569530000,
+  "pid": 26007
+}

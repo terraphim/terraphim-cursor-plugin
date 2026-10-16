@@ -1,0 +1,14 @@
+{
+  "hook_event_name": "preToolUse",
+  "cursor_version": "3.25.6",
+  "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+  "generation_id": "a37c6ca2-961f-41c6-9e74-def3efb16d7d",
+  "tool_use_id": "f0f831c0-d9f7-43b5-b5ad-7056ad90413a",
+  "tool_name": "Shell",
+  "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+  "command": "python3 validate_brief.py --check --output outputs/native-host-malformed-response.json",
+  "failureMode": "malformed-response",
+  "observedUnixNs": 1792150221760070000,
+  "injectedExitCode": 0,
+  "injectedResponse": "invalid JSON"
+}

@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-16T11:00:29.368896+00:00",
+  "host": "Cursor 3.25.6",
+  "status": "PASS",
+  "method": "Cursor native Shell executed retained reviewed harness once; expanded actual Shell output observed",
+  "shell_appended_status_echo": true,
+  "observed_shell_tail": "native-cli-correction.json; echo \"EXIT:$?\"",
+  "observed_exit": 0,
+  "harness_commands": 14,
+  "harness_receipt_sha256": "dbaca3dace6e79560d3712a5985a4153f11528f630ea04f8fcbdafc7ec4d4c43",
+  "all_recorded_files_rehashed": true,
+  "scope": "C-05 native initiation plus released CLI outputs; not C-07 native rewriting",
+  "native_hook_activation": false
+}

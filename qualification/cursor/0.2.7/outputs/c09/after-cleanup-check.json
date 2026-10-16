@@ -1,0 +1,11 @@
+{
+  "status": "PASS_AFTER_CLEANUP_CONFIG_PUBLIC_FILES_AND_C05_PRESERVED",
+  "checkedAt": "2026-10-16T12:03:13.198143+00:00",
+  "inheritedConfigurationsMatchOriginalSnapshot": true,
+  "priorPublicFilesPreserved": true,
+  "c05OriginalFilesChecked": 20,
+  "c05OriginalFilesPreserved": true,
+  "taskOwnedHookAndMcpConfigsAbsent": true,
+  "projectDiscoveryEmpty": true,
+  "scope": "Read-only exact file identities and one exact database setting key; native UI inventory is separately checked by parent."
+}

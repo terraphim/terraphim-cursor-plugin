@@ -1,0 +1,24 @@
+{
+  "status": "PASS_ACTUAL_INCOMPLETE_INSPECTION_WITHOUT_MUTATION",
+  "argv": [
+    "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12",
+    "/private/tmp/terraphim-cursor-validation-20261016/original-main-package-f6c157e6/integrations/cursor/hook_adapter.py",
+    "--policy",
+    "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/missing-completion/policy.json",
+    "--policy-sha256",
+    "9b318046e1446f1f73d082e76a5051bc21ef10c386240161928639990b0c0ce1",
+    "--inspect-receipts"
+  ],
+  "exitCode": 0,
+  "receiptHashesBefore": {
+    "3d6a7a8d3d142189641e09c6063efa3920a9e6f901541c49d181b1e42762e2e6.json": "87097ab6622723ba81844c173c85aa84f117a53fa2b6355987e5541ebf12888c",
+    ".terraphim-cursor-owner.json": "7a749e819b4567bf6bfb0066d94384700bdc149a9f5ad2a6263c59db5ced1e0c"
+  },
+  "receiptHashesAfter": {
+    "3d6a7a8d3d142189641e09c6063efa3920a9e6f901541c49d181b1e42762e2e6.json": "87097ab6622723ba81844c173c85aa84f117a53fa2b6355987e5541ebf12888c",
+    ".terraphim-cursor-owner.json": "7a749e819b4567bf6bfb0066d94384700bdc149a9f5ad2a6263c59db5ced1e0c"
+  },
+  "unchanged": true,
+  "nativeEventReplayed": false,
+  "scope": "Read-only exact admitted adapter inspection after actual native pre-only run; actual selected file never promotes missing completion to success."
+}

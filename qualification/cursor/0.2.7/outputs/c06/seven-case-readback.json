@@ -1,0 +1,110 @@
+{
+  "status": "PASS_SEVEN_NATIVE_CASES_AND_INDEPENDENT_READBACK",
+  "candidateCommit": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "checkedAt": "2026-10-16T12:04:44.260671+00:00",
+  "nativeCases": 7,
+  "actualCandidateEvents": 15,
+  "actualToolCalls": 8,
+  "cases": [
+    {
+      "case": "success",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 2,
+      "actualToolUseIds": [
+        "5d4617b5-ca0f-45b5-b20b-8adb992e3cdd"
+      ],
+      "receiptStates": [
+        "completed"
+      ],
+      "policySha256": "b379d4e03fdbd896a3b6d5877047f8d41499b34dbd5d3ce84bc2dda58cc0b605",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "rewrite-off",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 2,
+      "actualToolUseIds": [
+        "ce61a15f-7723-4712-9dd0-013ad33100bb"
+      ],
+      "receiptStates": [
+        "incomplete"
+      ],
+      "policySha256": "7164f69b1478a4c282ba235eff1b5cc7066383b05c222c63fe66d500dfa9034e",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "denied-completion",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 2,
+      "actualToolUseIds": [
+        "c5919a40-4365-4e4a-a75d-46fccf6a8b51"
+      ],
+      "receiptStates": [
+        "denied"
+      ],
+      "policySha256": "86c3b3c1643213824e0548c747a2c7e2109630d9a2b7835b992c6be662911c40",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "guard-original",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 2,
+      "actualToolUseIds": [
+        "35fee96b-378d-4234-b932-06c4aacb319c"
+      ],
+      "receiptStates": [
+        "denied"
+      ],
+      "policySha256": "a6a6cc237fc88bf19cff6a59ba84d10ca3294e7867500d457428b46bd8c40f5e",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "capture-off",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 2,
+      "actualToolUseIds": [
+        "9261616f-d14e-4210-b36e-33913868bfbc"
+      ],
+      "receiptStates": [],
+      "policySha256": "97ca7a99e7ec222388a81cb9de372a9e37b20fafb9a8514d6303c33c5f1ef465",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "parallel",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 4,
+      "actualToolUseIds": [
+        "02bb49b5-6208-4a3d-a50a-6265f1c12006",
+        "e7ecdbb1-241c-4058-9243-f6471fabfeaa"
+      ],
+      "receiptStates": [
+        "completed",
+        "completed"
+      ],
+      "policySha256": "ffa09c37bd0b579073abce03073b350b4da3e9e26ba837861af0eb1a587f0650",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    },
+    {
+      "case": "missing-completion",
+      "status": "PASS_SCOPED_NATIVE_ACCEPTANCE",
+      "actualEvents": 1,
+      "actualToolUseIds": [
+        "679680d2-bb62-4e9a-982b-40b64ab122c0"
+      ],
+      "receiptStates": [
+        "applied"
+      ],
+      "policySha256": "9b318046e1446f1f73d082e76a5051bc21ef10c386240161928639990b0c0ce1",
+      "allFiveInputsAndReceiptIdentitiesMatch": true
+    }
+  ],
+  "limitations": [
+    "Warning is verified as a bounded native stderr diagnostic, not a guarantee of visible chat UI warning.",
+    "Native failure envelopes omit numeric exit; incomplete/null receipts preserve that uncertainty.",
+    "Missing completion is deliberately tested with only a pre hook and remains incomplete.",
+    "Whole-plugin release and external listing approval are separate parent-owned gates."
+  ],
+  "afterCleanupReadback": "after-cleanup-check.json",
+  "parentNativeCleanupEvidence": "cleanup/removal.json"
+}

@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-16T08:55:42.984769+00:00",
+  "stage": "C-03 literal baseline only",
+  "nativeInitiation": "Cursor Shell via public-project agent",
+  "observedCommand": "(set -o noclobber; /private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep Concern --search-only --haystack all --paths /private/tmp/terraphim-cursor-validation-20261016/public-project/corpus --json -n 3 > /private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/literal-baseline.json); echo \"EXIT:$?\"",
+  "rawCommandOutput": "2026-10-16T08:52:36.146597Z  WARN fff_search::file_picker: No git repository found for path: /private/tmp/terraphim-cursor-validation-20261016/public-project/corpus\nEXIT:0",
+  "rawOutputSource": "Expanded native Shell card read through CUA accessibility tree",
+  "savedOutputSha256": "80a7625c3d12b79cb5131cf4f0bb688423e1eab36de27f6ae525a5abbff9a60c",
+  "chunks": 0,
+  "answer": null,
+  "warning": "Fixture corpus is not a Git repository; actual warning preserved.",
+  "fullC03": "pending native graph-aware MCP call and negative cases"
+}

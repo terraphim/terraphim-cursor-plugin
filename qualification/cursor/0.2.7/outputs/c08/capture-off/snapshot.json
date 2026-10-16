@@ -1,0 +1,24 @@
+{
+  "case": "capture-off",
+  "snapshotAt": "2026-10-16T12:01:14.322589+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "9261616f-d14e-4210-b36e-33913868bfbc"
+  ],
+  "actualEventCount": 2,
+  "receiptStates": [],
+  "receiptDirectoryEntries": [],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-capture-off-warning-fixed.json",
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc",
+      "bytes": 175
+    }
+  ],
+  "selectedOutputAbsences": [],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

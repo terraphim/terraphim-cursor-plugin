@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-16T11:16:11.223393+00:00",
+  "status": "PASS bounded new-host recheck",
+  "host": "3.25.6",
+  "actions": [
+    "Reopened retained annotated document",
+    "Ctrl+Shift+A opened saved alternatives",
+    "ArrowUp selected Risk",
+    "ArrowDown restored Concern",
+    "Escape closed alternatives",
+    "Save document",
+    "Native dialogs exported fresh clean Markdown and fresh document graph"
+  ],
+  "annotated_save_unchanged": true,
+  "fresh_exports": {
+    "outputs/brief-3.25.6.clean.md": {
+      "sha256": "3ddff3223df52185992d63e273ee765121688bf6bbababa92bdbbec450c9edb1",
+      "bytes": 129,
+      "byte_equal_to_prior": true
+    },
+    "outputs/brief-3.25.6.knowledge-graph.json": {
+      "sha256": "f8648b16470e764bdff5c95064078419d71e8d41d2ca30d4b1508017c166a45d",
+      "bytes": 281,
+      "byte_equal_to_prior": true
+    }
+  }
+}

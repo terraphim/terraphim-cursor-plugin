@@ -1,0 +1,17 @@
+{
+  "status": "VALID",
+  "version": "3.25.6",
+  "commit": "f0df777c412b670d09e3eaf214967d779e67c080",
+  "argv": [
+    "codesign",
+    "--verify",
+    "--deep",
+    "--strict",
+    "/Applications/Cursor.app"
+  ],
+  "exitCode": 0,
+  "observedAt": "2026-10-16T11:26:16.837317+00:00",
+  "evidence": "outputs/host/vendor-commands.json",
+  "sourceEvidenceSha256": "eafcdc0a0b86e819eed10f2810e46095938d394bb70272d1c6a0d085244e66c3",
+  "scope": "Normalization of saved actual vendor verification, not a new signature check at assembly time."
+}

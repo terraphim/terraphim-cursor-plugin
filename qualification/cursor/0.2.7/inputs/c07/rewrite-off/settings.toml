@@ -1,0 +1,7 @@
+server_hostname = "127.0.0.1:8000"
+api_endpoint = "http://localhost:8000/api"
+initialized = true
+default_data_path = "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/settings/data"
+[profiles.dashmap]
+type = "dashmap"
+root = "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/rewrite-off/settings/dashmap"

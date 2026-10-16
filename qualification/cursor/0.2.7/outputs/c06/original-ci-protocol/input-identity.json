@@ -1,0 +1,9 @@
+{
+  "tool": "terraphim-agent",
+  "target": "aarch64-unknown-linux-musl",
+  "url": "https://github.com/terraphim/terraphim-clients/releases/download/v1.21.20/terraphim-agent-1.21.20-aarch64-unknown-linux-musl.tar.gz",
+  "archiveSha256": "cf09f161ff42180308509d8e9b43b66c94bedd3801987cd1112b38b3718b5789",
+  "bytes": 9393380,
+  "binarySha256": "5ae520c7034dd125dc6ccb0f6a2f7233794e4bef254381f292566827988f9c52",
+  "member": "terraphim-agent"
+}

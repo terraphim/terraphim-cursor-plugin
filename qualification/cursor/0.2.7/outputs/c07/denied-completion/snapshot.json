@@ -1,0 +1,23 @@
+{
+  "case": "denied-completion",
+  "snapshotAt": "2026-10-16T12:00:08.411240+00:00",
+  "scope": "Actual native observations; acceptance assessment recorded separately",
+  "actualCallIds": [
+    "c5919a40-4365-4e4a-a75d-46fccf6a8b51"
+  ],
+  "actualEventCount": 2,
+  "receiptStates": [
+    "denied"
+  ],
+  "receiptDirectoryEntries": [
+    ".terraphim-cursor-owner.json",
+    "7f4f34698ee823e50b5c0b55ae1f9c93c7f3ff48796d30c9967666a76a5316c7.json"
+  ],
+  "projectDiscoveryEntries": [],
+  "selectedOutputs": [],
+  "selectedOutputAbsences": [],
+  "sourceCandidate": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateAdapterSha256": "4159e975c8bedf1c8c0ab300eae199a70f6de579f147d5596e2a7d358061fd33",
+  "activeConfigurationWritten": false,
+  "hookEventsReplayed": false
+}

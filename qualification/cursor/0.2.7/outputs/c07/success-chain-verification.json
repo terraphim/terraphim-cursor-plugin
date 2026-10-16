@@ -1,0 +1,21 @@
+{
+  "status": "PASS_ACTUAL_REWRITE_CHAIN_ONLY",
+  "sourceCommit": "f6c157e60713f91d662edd4075b0d705e50ae839",
+  "candidateRunId": 38896230662,
+  "candidateArtifactId": 12043813038,
+  "archiveSha256": "86a536a2d522e76c1a81c8acdcc03ac24413ada7ab4c76daa727c3bd5037759f",
+  "chain": {
+    "attemptedCommand": "python3 validate_brief.py --chek --output outputs/native-rewrite-warning-fixed.json",
+    "appliedCommand": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+    "executedCommand": "python3 validate_brief.py --check --output outputs/native-rewrite-warning-fixed.json",
+    "exitCode": 0,
+    "callKey": "f8a84f9273f34383260c970a277a9eaf1c6e2ff1c0821755bf4a36bc5773644e",
+    "outputs": {
+      "outputs/c07/success/native-rewrite-warning-fixed.json": {
+        "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc",
+        "bytes": 175
+      }
+    }
+  },
+  "scope": "Existing final-source verifier checks actual native receipt/post observer and fresh selected bytes; other cases and independent review remain pending."
+}

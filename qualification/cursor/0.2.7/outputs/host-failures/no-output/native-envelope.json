@@ -1,0 +1,44 @@
+{
+  "status": "ACTUAL_NATIVE_HOST_BOUNDARY_OBSERVED",
+  "scope": "Disposable host protocol probe, not candidate adapter execution",
+  "sourceLog": "/private/tmp/tc-qual-20261016/logs/20261016T114710/window3/output_20261016T122455/cursor.hooks.workspaceId-79abc2074a89b26fe455c6d1df9374ec.log",
+  "events": [
+    {
+      "event": {
+        "conversation_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "generation_id": "a1db8a8b-b641-4753-98d8-0ef31155c83e",
+        "tool_name": "Shell",
+        "tool_input": {
+          "command": "python3 validate_brief.py --check --output outputs/native-host-no-output.json",
+          "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+          "timeout": 30000
+        },
+        "tool_use_id": "6102a4b6-e40b-4fb3-ae34-980f55ae4b48",
+        "cwd": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+        "session_id": "5019f0cf-d10e-4a49-9ccc-e909faa9989d",
+        "hook_event_name": "preToolUse",
+        "cursor_version": "3.25.6",
+        "workspace_roots": [
+          "/private/tmp/terraphim-cursor-validation-20261016/public-project"
+        ]
+      },
+      "executedHookLogLine": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/probe_response.py no-output /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/no-output/observations (60ms) exit code: 0",
+      "nativeLoggedOutput": "(empty)",
+      "nativeDiagnosticLines": [
+        "[2026-10-16T11:29:47.642Z] Hook 1 produced no output",
+        "[2026-10-16T11:29:47.643Z] Merged 1 valid response(s) for step preToolUse"
+      ],
+      "omittedPrivacyFields": [
+        "model",
+        "user_email",
+        "transcript_path"
+      ]
+    }
+  ],
+  "selectedOutputAbsent": true,
+  "selectedOutputPath": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-no-output.json",
+  "checkedAt": "2026-10-16T11:32:08.544766+00:00",
+  "nativeUiEvidence": "../host-no-output-native.png",
+  "rawInvalidStdoutNotRetainedByHost": false,
+  "hookEventsReplayed": false
+}

@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-16T11:46:55.890088+00:00",
+  "scope": "Retained actual default-open comparison; successful execution is expected for this control and is not evidence of fail-closed protection. Native UI interpretation remains with parent/reviewer.",
+  "files": [
+    {
+      "source": "/private/tmp/terraphim-cursor-validation-20261016/public-project/outputs/native-host-default-open.json",
+      "destination": "outputs/host-failures/default-open/actual-output.json",
+      "sha256": "3ea652ba31895fe613ecee845ffe9ab5ddef4343268eba26a954c177ad14bedc",
+      "bytes": 175,
+      "kind": "output"
+    },
+    {
+      "source": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-hooks/remaining-cases/host-default-open-native.png",
+      "destination": "outputs/host-failures/default-open/native.png",
+      "sha256": "26b2e6ac904f1952257cc51ad8932bedd80b136d67bbf3e63aaeb29e48de5a81",
+      "bytes": 384901,
+      "kind": "output"
+    },
+    {
+      "source": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261016/cursor-plugin-validation/native-hooks/remaining-cases/host-default-open-active-hooks.json",
+      "destination": "inputs/host-failures/default-open/active-hooks.json",
+      "sha256": "37c56d3121f0f7d3635ebbe4747f68cae2fb209d9ea6982b90324f0a459373b5",
+      "bytes": 718,
+      "kind": "input"
+    }
+  ],
+  "nativeRunRepeated": false,
+  "candidateIdentityRelabeled": false
+}

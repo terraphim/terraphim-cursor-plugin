@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "projectRoot": "/private/tmp/terraphim-cursor-validation-20261016/public-project",
+  "agent": {
+    "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+    "sha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec"
+  },
+  "roleConfig": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/role-config.json",
+    "sha256": "0e74e825932d2fd3879bc4390f1484535b1d273947b5b16d76cbe914f132b492"
+  },
+  "startupSettings": {
+    "directory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/settings",
+    "settingsSha256": "c6e676cb4588c4e7c9b37bbc18013d72548c4666d82a29816a971847e8838a6e"
+  },
+  "correctionRole": "cursor-corrections",
+  "guardRole": "cursor-guard",
+  "compiledRules": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/compiled-corrections.json",
+    "sha256": "d30626189c4b7fc45439ade1426b18782bf2310fac84d4e2d117e0e92194b0fb"
+  },
+  "guardRules": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/guard-rules.json",
+    "sha256": "f594d2295f27290d5239f2ac0d78808756994c92b83f550747dfc438220466ef"
+  },
+  "rewriteEnabled": false,
+  "captureFailures": false,
+  "evidence": {
+    "enabled": true,
+    "directory": "/private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/warning-fixed-cases/parallel/receipts",
+    "outputFiles": []
+  }
+}

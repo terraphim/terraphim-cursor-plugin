@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12 /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/probe_response.py no-output /private/tmp/terraphim-cursor-validation-20261016/public-project/qualification-inputs/new-candidate-cases/host-response-probes/no-output/observations",
+        "matcher": "Shell",
+        "timeout": 2,
+        "failClosed": true
+      }
+    ]
+  }
+}

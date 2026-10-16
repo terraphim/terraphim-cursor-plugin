@@ -1,0 +1,506 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-16T10:59:25.279478+00:00",
+  "scope": "Fresh released CLI component execution; not native Cursor or hook activation",
+  "requirements": [
+    "C-05/CUR-05"
+  ],
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "root": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run",
+  "binaryInputs": {
+    "agent": {
+      "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+      "bytes": 19694976,
+      "sha256": "bff31dc42d6d1a99bf51291039d7719c6a48c2326e582e5e24eaa1eaf11e17ec"
+    },
+    "grep": {
+      "path": "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep",
+      "bytes": 12172752,
+      "sha256": "95491857b6a115ce7f4ec2a9d24bd0f7b8efcc1a52bd1403b34a62dd704012ab"
+    }
+  },
+  "python": {
+    "path": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.12",
+    "bytes": 6768736,
+    "sha256": "146d54b73c93183d6347bd3461501da4e3190e70a91346949b552a7b196c845d"
+  },
+  "inputs": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/brief.md",
+      "bytes": 106,
+      "sha256": "22d85a57a9a1ba416f822ab340e8207a0ec3b90f891445cb721bbb6c978ad4a7"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/validate_brief.py",
+      "bytes": 956,
+      "sha256": "ba871dd95e39a3cb21fb4aecc9f8e6509e2873f22ce923a9a85b7867321e7e27"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/settings/settings.toml",
+      "bytes": 327,
+      "sha256": "0f2084e7cd13f8fed2dbe78a3b69dcf74836f3460036ab9265268150045cc228"
+    }
+  ],
+  "commands": [
+    {
+      "name": "agent-version",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "--version"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:25.310417+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 0.019002457993337885,
+      "stdoutBytes": 24,
+      "stdoutSha256": "78d27a317617e529b2e39d159a5c2e6b2d1ef495a2a8f4b97776dd427fd7bc95",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/agent-version.txt",
+        "bytes": 24,
+        "sha256": "78d27a317617e529b2e39d159a5c2e6b2d1ef495a2a8f4b97776dd427fd7bc95"
+      }
+    },
+    {
+      "name": "grep-version",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-grep",
+        "--version"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:25.330106+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 0.010689416987588629,
+      "stdoutBytes": 23,
+      "stdoutSha256": "b5a4aac3876f4d7519476cfa809b81d9f4bd529a524acad1e5fe80c94d954263",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/grep-version.txt",
+        "bytes": 23,
+        "sha256": "b5a4aac3876f4d7519476cfa809b81d9f4bd529a524acad1e5fe80c94d954263"
+      }
+    },
+    {
+      "name": "memory-baseline",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "--format",
+        "json",
+        "memory",
+        "list"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:25.341789+00:00",
+      "memoryOverride": true,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5309190839761868,
+      "stdoutBytes": 53,
+      "stdoutSha256": "de3193b24f4a03deefbadbca59d90908c30e2cdef3bb9db08ac373efae9cc5e5",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/memory-baseline.json",
+        "bytes": 53,
+        "sha256": "de3193b24f4a03deefbadbca59d90908c30e2cdef3bb9db08ac373efae9cc5e5"
+      }
+    },
+    {
+      "name": "memory-capture",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "--format",
+        "json",
+        "memory",
+        "capture",
+        "--content",
+        "Risk requires a Decision: approve a second supplier as the mitigation.",
+        "--provenance-tag",
+        "public-project-brief"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:26.873130+00:00",
+      "memoryOverride": true,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5272031660133507,
+      "stdoutBytes": 126,
+      "stdoutSha256": "cccc03607d4b3debd3c326e0ae68b5d6c6cac8eee436acffa7453a1416f97f91",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/captured-memory.json",
+        "bytes": 126,
+        "sha256": "cccc03607d4b3debd3c326e0ae68b5d6c6cac8eee436acffa7453a1416f97f91"
+      }
+    },
+    {
+      "name": "memory-show-new-process",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "memory",
+        "show",
+        "c7ac1a17-6bcc-419e-bd1e-302dea24c125",
+        "--json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:28.401003+00:00",
+      "memoryOverride": true,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5223286669934168,
+      "stdoutBytes": 512,
+      "stdoutSha256": "f71913f0dd235ca9d8d9deb5319c9b2892ee82102de491ae1590e30b0089ae0f",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/saved-memory.json",
+        "bytes": 512,
+        "sha256": "f71913f0dd235ca9d8d9deb5319c9b2892ee82102de491ae1590e30b0089ae0f"
+      }
+    },
+    {
+      "name": "actual-validator-failure",
+      "argv": [
+        "/bin/sh",
+        "-c",
+        "python3 validate_brief.py --chek --output outputs/native-cli-correction.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:29.924253+00:00",
+      "memoryOverride": false,
+      "exitCode": 2,
+      "elapsedSeconds": 0.06391679198713973,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 126,
+      "stderrSha256": "b2f51a476b9089c52abc085eac7b9c1b522062ef14595f5290af8218edd8348b"
+    },
+    {
+      "name": "learn-capture",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "capture",
+        "--error",
+        "usage: validate_brief.py [-h] --check --output OUTPUT\nvalidate_brief.py: error: the following arguments are required: --check\n",
+        "--exit-code",
+        "2",
+        "python3 validate_brief.py --chek --output outputs/native-cli-correction.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:29.988350+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5265724579803646,
+      "stdoutBytes": 172,
+      "stdoutSha256": "ee101497d84e18bf8db0c7138088047bd11778a824883936317de68ae86bf1fb",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-path.txt",
+        "bytes": 172,
+        "sha256": "ee101497d84e18bf8db0c7138088047bd11778a824883936317de68ae86bf1fb"
+      }
+    },
+    {
+      "name": "learn-query",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "query",
+        "python3 validate_brief.py --chek --output outputs/native-cli-correction.json",
+        "--exact"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:31.515753+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5248958329902962,
+      "stdoutBytes": 198,
+      "stdoutSha256": "bc6c6c3567921c1c4a2b57d78cba7b0d4b53e4666068134bc6210d652990e235",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-query.txt",
+        "bytes": 198,
+        "sha256": "bc6c6c3567921c1c4a2b57d78cba7b0d4b53e4666068134bc6210d652990e235"
+      }
+    },
+    {
+      "name": "annotate-failure",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "correct",
+        "e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513",
+        "--correction",
+        "python3 validate_brief.py --check --output outputs/native-cli-correction.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:33.041140+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.521352834010031,
+      "stdoutBytes": 230,
+      "stdoutSha256": "7a1ef2c105fe45f0ebbf6e95ae69f0403c46f58da7f6ba3ba09c9392eb70f609",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "compile-annotation-only",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "compile",
+        "--output",
+        "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-before-rule.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:34.563033+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5263079589931294,
+      "stdoutBytes": 147,
+      "stdoutSha256": "69c2e97db26d98513e8b97aed62228865ec44eca500271ad03dc44eff4b46f34",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "add-explicit-reviewed-rule",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "correction",
+        "add",
+        "--original",
+        "python3 validate_brief.py --chek --output outputs/native-cli-correction.json",
+        "--corrected",
+        "python3 validate_brief.py --check --output outputs/native-cli-correction.json",
+        "--correction-type",
+        "tool-preference",
+        "--context",
+        "Reviewed public validator fixture: the required option is --check; keep the chosen output path unchanged."
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:36.089750+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5301580840023234,
+      "stdoutBytes": 176,
+      "stdoutSha256": "8e926b5c1e6a3a7e24fc2d5c4f3461693e8e1c6c2f0d7510af894a4491659174",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selectedOutput": {
+        "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/correction-path.txt",
+        "bytes": 176,
+        "sha256": "8e926b5c1e6a3a7e24fc2d5c4f3461693e8e1c6c2f0d7510af894a4491659174"
+      }
+    },
+    {
+      "name": "compile-reviewed-rule",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "compile",
+        "--output",
+        "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-reviewed-corrections.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:37.621329+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.5313441669859458,
+      "stdoutBytes": 156,
+      "stdoutSha256": "ed3aa44ba0d86fd47668bf290024c191ed33280a948d49677f9d96b5ed56bec4",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "export-reviewed-kg",
+      "argv": [
+        "/private/tmp/published-continue-skills-audit-20261014/clients-1.21.20/extracted/terraphim-agent",
+        "learn",
+        "export-kg",
+        "--output",
+        "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/reviewed-kg"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:39.152947+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 1.52374662499642,
+      "stdoutBytes": 129,
+      "stdoutSha256": "966f82554183cc6a0f361ae35d2edd9d95f4c77288cc293b422eff46978cd679",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "execute-exact-compiled-replacement",
+      "argv": [
+        "/bin/sh",
+        "-c",
+        "python3 validate_brief.py --check --output outputs/native-cli-correction.json"
+      ],
+      "cwd": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project",
+      "startedAt": "2026-10-16T10:59:40.677191+00:00",
+      "memoryOverride": false,
+      "exitCode": 0,
+      "elapsedSeconds": 0.06150183398858644,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "storage": {
+    "settingsDirectory": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/settings",
+    "backend": "dashmap",
+    "memoryDataOverride": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/memory",
+    "learningProject": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim",
+    "homeAndCodexHomeModified": false,
+    "inheritedEnvironmentNames": [
+      "HOME",
+      "LANG",
+      "LOGNAME",
+      "PATH",
+      "USER"
+    ],
+    "memoryOverrideUsedOnlyForMemoryCommands": true
+  },
+  "privacy": "Only public fixture argv/status and explicitly selected CLI/learning/output files; no environment values or general diagnostic logs",
+  "memoryId": "c7ac1a17-6bcc-419e-bd1e-302dea24c125",
+  "memoryContent": "Risk requires a Decision: approve a second supplier as the mitigation.",
+  "memoryTag": "provenance:public-project-brief",
+  "actualMemoryStore": {
+    "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/memory/terraphim/evolution/cli-agent.json",
+    "bytes": 1430,
+    "sha256": "12fd826a0bcae917e4371a67d09c784a051c43cc6cbeaac81048b9255cefde57"
+  },
+  "learningId": "e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513",
+  "actualLearningPath": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/learning-e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513.md",
+  "actualCorrectionPath": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/correction-0175fea49e2048458ec2e86b903cf27f-1792148377618.md",
+  "annotationOnlyCompiledCount": 0,
+  "explicitRuleCompiledCount": 1,
+  "originalCommand": "python3 validate_brief.py --chek --output outputs/native-cli-correction.json",
+  "exactCompiledExecutedReplacement": "python3 validate_brief.py --check --output outputs/native-cli-correction.json",
+  "failureExit": 2,
+  "validatorOutput": {
+    "source": "brief.md",
+    "sha256": "22d85a57a9a1ba416f822ab340e8207a0ec3b90f891445cb721bbb6c978ad4a7",
+    "bytes": 106,
+    "riskOccurrences": 1,
+    "decisionOccurrences": 1
+  },
+  "activation": false,
+  "nativeCursor": "NOT_RUN",
+  "finishedAt": "2026-10-16T10:59:40.761464+00:00",
+  "files": [
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/memory/terraphim/evolution/cli-agent.json",
+      "bytes": 1430,
+      "sha256": "12fd826a0bcae917e4371a67d09c784a051c43cc6cbeaac81048b9255cefde57"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/agent-version.txt",
+      "bytes": 24,
+      "sha256": "78d27a317617e529b2e39d159a5c2e6b2d1ef495a2a8f4b97776dd427fd7bc95"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/captured-memory.json",
+      "bytes": 126,
+      "sha256": "cccc03607d4b3debd3c326e0ae68b5d6c6cac8eee436acffa7453a1416f97f91"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-before-rule.json",
+      "bytes": 50,
+      "sha256": "f594d2295f27290d5239f2ac0d78808756994c92b83f550747dfc438220466ef"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/compiled-reviewed-corrections.json",
+      "bytes": 382,
+      "sha256": "04924c0429365e1cd05dc0a1cadf30a5927a864f1fc05a74a8870e635adbc53b"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/correction-path.txt",
+      "bytes": 176,
+      "sha256": "8e926b5c1e6a3a7e24fc2d5c4f3461693e8e1c6c2f0d7510af894a4491659174"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/grep-version.txt",
+      "bytes": 23,
+      "sha256": "b5a4aac3876f4d7519476cfa809b81d9f4bd529a524acad1e5fe80c94d954263"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-after-annotation.md",
+      "bytes": 916,
+      "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-before-annotation.md",
+      "bytes": 720,
+      "sha256": "e9e4196c0a8602eac359a0c00bbfd8d8191904a5366445bdb4834d3a57e8640f"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-path.txt",
+      "bytes": 172,
+      "sha256": "ee101497d84e18bf8db0c7138088047bd11778a824883936317de68ae86bf1fb"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/learning-query.txt",
+      "bytes": 198,
+      "sha256": "bc6c6c3567921c1c4a2b57d78cba7b0d4b53e4666068134bc6210d652990e235"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/memory-baseline.json",
+      "bytes": 53,
+      "sha256": "de3193b24f4a03deefbadbca59d90908c30e2cdef3bb9db08ac373efae9cc5e5"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/reviewed-kg/python3-validate_brief-py---check---output-outputs-native-cli-correction-json.md",
+      "bytes": 681,
+      "sha256": "b40f6196ae84100982f4adac44ec452d8db9d80efb158c94f1d89e83242343bc"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/outputs/saved-memory.json",
+      "bytes": 512,
+      "sha256": "f71913f0dd235ca9d8d9deb5319c9b2892ee82102de491ae1590e30b0089ae0f"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/correction-0175fea49e2048458ec2e86b903cf27f-1792148377618.md",
+      "bytes": 611,
+      "sha256": "8a785367d841201176827cad79040bc69297c04fc744af3eda302d2f58049d23"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/.terraphim/learnings/learning-e6cbb0c89df341d0b0f23a7480c6fbe8-1792148371513.md",
+      "bytes": 916,
+      "sha256": "4cfaf8afa288e0f95d0dd306aa0c5ee9afd4f935dec5a002636df53f6ce3ef74"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/brief.md",
+      "bytes": 106,
+      "sha256": "22d85a57a9a1ba416f822ab340e8207a0ec3b90f891445cb721bbb6c978ad4a7"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/outputs/native-cli-correction.json",
+      "bytes": 175,
+      "sha256": "01335579698c8c9bcc235a44591e96b137a8bd2b3a89a6fdbeb3dde0b4499d05"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/project/validate_brief.py",
+      "bytes": 956,
+      "sha256": "ba871dd95e39a3cb21fb4aecc9f8e6509e2873f22ce923a9a85b7867321e7e27"
+    },
+    {
+      "path": "/private/tmp/terraphim-cursor-validation-20261016/native-cli-run/settings/settings.toml",
+      "bytes": 327,
+      "sha256": "0f2084e7cd13f8fed2dbe78a3b69dcf74836f3460036ab9265268150045cc228"
+    }
+  ],
+  "harness": {
+    "path": "/Users/alex/projects/terraphim/terraphim-editor/publication/extension-marketplaces-20261013/execution-20261015/cursor-plugin-implementation/cli-workflows/qualify_released_cli.py",
+    "bytes": 14985,
+    "sha256": "1713206da9ac78d084e2f98e676753d0d56d2d20fbbafc034327fba327275626"
+  }
+}
