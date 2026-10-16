@@ -160,7 +160,10 @@ alone does not isolate settings or learning writes.
 
 The adapter delegates replacement to the released agent; it does not execute
 the Shell command. A changed command needs exact rule attribution and a second
-unmodified guard check. With rewriting off, preserve input. A hook rewrite is
+unmodified guard check. With rewriting off, preserve input. Validated agent
+warnings emit only the bounded local stderr diagnostic
+`Terraphim: agent_warnings count=N`; warning text and commands are never echoed.
+The host's stdout allow response is unchanged. A hook rewrite is
 not an execution result: compare attempted command, applied command, actual
 host status and fresh selected output file before calling it successful.
 

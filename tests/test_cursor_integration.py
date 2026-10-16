@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import copy
+from contextlib import redirect_stderr
 import hashlib
 import importlib.util
+import io
 import json
 import os
 import select
@@ -73,6 +75,44 @@ class JsonContracts(unittest.TestCase):
         output["tool_input"]["nested"]["flag"] = 1
         with self.assertRaises(A.Refusal):
             A.agent_command(output, tool)
+
+    def test_valid_agent_warnings_emit_only_bounded_count(self):
+        tool = {"command": "printf private-command", "description": "private input"}
+        for warnings in [[], [""], ["secret\n\x1b[31m"], ["private text"] * 1000]:
+            output = {"tool_name": "Bash", "tool_input": tool, "warnings": warnings}
+            diagnostic = io.StringIO()
+            with self.subTest(count=len(warnings)), redirect_stderr(diagnostic):
+                self.assertEqual(A.agent_command(output, tool), tool["command"])
+            expected = (
+                f"Terraphim: agent_warnings count={len(warnings)}\n" if warnings else ""
+            )
+            self.assertEqual(diagnostic.getvalue(), expected)
+            self.assertLess(len(diagnostic.getvalue().encode()), 64)
+            self.assertNotIn(tool["command"], diagnostic.getvalue())
+            self.assertNotIn("private", diagnostic.getvalue())
+            self.assertNotIn("secret", diagnostic.getvalue())
+
+    def test_invalid_agent_warning_response_emits_no_diagnostic(self):
+        tool = {"command": "printf unchanged"}
+        valid = {"tool_name": "Bash", "tool_input": tool, "warnings": ["private text"]}
+        invalid = [
+            {**valid, "warnings": value}
+            for value in [None, "text", {}, [1], [False], [None], [{}]]
+        ]
+        invalid += [
+            {**valid, "validations": "invalid"},
+            {**valid, "tool_input": {"command": ""}},
+            {**valid, "tool_input": {"command": "x", "extra": True}},
+        ]
+        for output in invalid:
+            diagnostic = io.StringIO()
+            with (
+                self.subTest(output=output),
+                redirect_stderr(diagnostic),
+                self.assertRaises(A.Refusal),
+            ):
+                A.agent_command(output, tool)
+            self.assertEqual(diagnostic.getvalue(), "")
 
     def test_deny_envelope_and_unexpected_outputs(self):
         denial = {
@@ -761,6 +801,41 @@ class ReleasedAgentContracts(unittest.TestCase):
         self.assertEqual(
             digest(self.settings_file), self.policy["startupSettings"]["settingsSha256"]
         )
+
+    def test_real_rewrite_off_cli_diagnostic_preserves_stdout_and_input(self):
+        self.policy["rewriteEnabled"] = False
+        self.write_policy()
+        argv = [
+            sys.executable,
+            str(ROOT / "integrations/cursor/hook_adapter.py"),
+            "--policy",
+            str(self.path),
+            "--policy-sha256",
+            self.expected,
+            "--event",
+            "preToolUse",
+        ]
+        for command, expected_stderr in [
+            ("printf old", b"Terraphim: agent_warnings count=1\n"),
+            ("printf unrelated", b""),
+        ]:
+            event = copy.deepcopy(self.event)
+            event["tool_input"]["command"] = command
+            before = copy.deepcopy(event)
+            child = subprocess.run(
+                argv,
+                input=json.dumps(event).encode(),
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                timeout=15,
+            )
+            with self.subTest(command=command):
+                self.assertEqual(child.returncode, 0)
+                self.assertEqual(child.stdout, b'{"permission":"allow"}\n')
+                self.assertEqual(child.stderr, expected_stderr)
+                self.assertNotIn(command.encode(), child.stderr)
+                self.assertEqual(event, before)
+                self.assertFalse((self.root / ".terraphim/learnings").exists())
 
     def test_policy_drift_and_project_overlay_refuse_before_spawn(self):
         old = self.expected

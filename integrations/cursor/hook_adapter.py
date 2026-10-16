@@ -562,7 +562,14 @@ def agent_command(output: dict, original: dict) -> str:
         )
     if "validations" in output:
         require(type(output["validations"]) is dict, "agent_response")
-    return command(result.get("command"))
+    changed = command(result.get("command"))
+    if output.get("warnings"):
+        # The child JSON is bounded; only its validated warning count may escape.
+        print(
+            f"Terraphim: agent_warnings count={len(output['warnings'])}",
+            file=sys.stderr,
+        )
+    return changed
 
 
 def attributed_command(rules: dict, original: str, replacement: str) -> str:
