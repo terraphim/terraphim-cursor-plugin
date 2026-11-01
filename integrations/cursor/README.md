@@ -1,9 +1,13 @@
 # Connect the editor's words to search in Cursor
 
 **Native acceptance requires the matching release qualification record.**
-Source and inactive examples are not runtime proof or a public marketplace
-listing. The complete plugin update cannot publish until actual Cursor hook
-checks pass: **“Hold the update until hooks pass”**.
+The v0.2.7 macOS ARM64 [native receipt](https://github.com/terraphim/terraphim-cursor-plugin/blob/1cf9d706c7dfd2d3078a8d5bb52f86cfd81ce1c4/qualification/cursor/0.2.7/native-receipt.json)
+and [independent review](https://github.com/terraphim/terraphim-cursor-plugin/blob/1cf9d706c7dfd2d3078a8d5bb52f86cfd81ce1c4/qualification/cursor/0.2.7/review.json) pass for
+the exact released candidate; `productionSignoff` is `PENDING_USER_SIGNOFF`.
+Source and inactive examples alone are not runtime proof or a public marketplace
+listing. Later updates must pass their own actual
+Cursor hook checks: **“Hold the update until hooks pass”** remains the gate for
+each changed candidate. Automatic failure capture remains unavailable.
 
 The [read-first setup command](commands/terraphim-setup.md) explains the choices.
 It installs nothing and changes no configuration by itself. The four signed

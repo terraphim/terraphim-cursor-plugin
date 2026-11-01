@@ -1,8 +1,42 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="Terraphim Skills logo" width="96" height="96">
+</p>
+
 # Terraphim Skills Introduction
 
-Four small, open-source skills connect Terraphim's editor alternatives, local
-search, operational learning, and agent memory workflows to Cursor, Kimi Code, AutoClaw, ZCode,
-Hermes Agent, skills.sh, Claude Code, and Grok Build.
+**Bring local search, editor synonyms, explicit learning, and authored memory
+into your agent workflow.** This repository packages four Apache-2.0
+instruction skills and documents direct or custom routes for Cursor, Kimi Code,
+AutoClaw, ZCode, Hermes Agent, skills.sh, and Claude Code. A Grok Build
+marketplace submission is under review.
+
+[v0.2.7 release details](docs/distribution.md)
+· [Choose an agent](#install-in-your-agent)
+· [Try the CLI workflow](docs/cli-workflows.md)
+· [Review permissions](docs/permissions.md)
+· [简体中文](README_CN.md)
+
+## Start here
+
+1. **Install the separate commands** with the [dependency guide](docs/install-dependencies.md),
+   or use the Homebrew commands below. The skills do not install executables for
+   you.
+2. **Add the instruction skills to your agent** using a direct or custom route
+   in the [host table](#install-in-your-agent). A curated marketplace listing
+   has its own approval process.
+3. **Try a bounded search**, then explicitly capture an authored lesson with
+   the [checked example](docs/cli-workflows.md). Review the written memory
+   before using it elsewhere.
+
+The [v0.2.7 release](docs/distribution.md)
+contains four skills and a Cursor integration archive under a signed tag. Its
+[macOS ARM64 native qualification and independent review](docs/distribution.md#cursor-integration-release-gate)
+pass for the exact release source; `productionSignoff` is
+`PENDING_USER_SIGNOFF`. Automatic failure capture is unavailable. This release
+and review do not establish Cursor Marketplace admission or qualify other
+native platforms.
+
+## The four skills
 
 | Skill | Command family | Purpose |
 |---|---|---|
@@ -11,13 +45,12 @@ Hermes Agent, skills.sh, Claude Code, and Grok Build.
 | `terraphim-agent-memory` | `terraphim-agent memory` | Save authored lessons, inspect saved content and source tags, and retrieve memory. |
 | `terraphim-editor` | Editor UI → `terraphim-grep` | Create and swap alternatives, export synonyms and search related decisions. |
 
-These Apache-2.0 instruction skills do not bundle CLI executables, secrets, or
-proprietary skill content. They remain useful without a marketplace account.
-The [Cursor setup guide](integrations/cursor/README.md) provides a read-first
-setup command and inactive optional integration examples. Installing the
-instruction plugin does not activate MCP, hooks, rewriting or capture. Native
-acceptance requires the matching release qualification record; source and
-examples are not proof. The complete update cannot publish until native hooks pass.
+These instruction skills do not bundle CLI executables, secrets, or proprietary
+skill content. They remain useful without a marketplace account. The [Cursor
+setup guide](integrations/cursor/README.md) provides a read-first command and
+optional integration examples. Installing the instruction plugin does not
+activate MCP, hooks, rewriting, or capture; each optional action requires its
+own reviewed setup and matching qualification evidence.
 
 ## Install the command dependencies
 
@@ -43,17 +76,22 @@ troubleshooting. The skills never install dependencies automatically.
 
 ## Install in your agent
 
-| Host | Installation |
-|---|---|
-| Cursor | Use the local-copy instructions below. A prior marketplace submission is recorded; a public listing is not verified. |
-| Kimi Code | Install this repository or add `marketplaces/kimi.json` as a custom marketplace. |
-| AutoClaw | Import one checksummed ZIP per skill with **Skills & Connectors → Skills → Create → Add skill file**. |
-| ZCode | Add `marketplaces/zcode.json` as a personal marketplace and install `terraphim-skills-intro`; curated listing is a separate maintainer-reviewed PR. |
-| Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the four skills. |
-| skills.sh | Run `npx skills add terraphim/terraphim-cursor-plugin`; use `DISABLE_TELEMETRY=1` to opt out of anonymous telemetry. |
-| Claude Code | Add the repository as a marketplace, then install the plugin as shown below. |
-| Kilo | Integration is being prepared; catalog admission and actual Kilo installation remain unqualified. |
-| Grok Build | The marketplace submission pins the signed public release and is awaiting maintainer review; see the [distribution guide](docs/distribution.md) for status. |
+The routes below describe installation methods, not v0.2.7 host acceptance.
+The guide's historical v0.2.4 examples cover a three-skill pack; they do not
+qualify the current four-skill release on non-Cursor hosts. The macOS ARM64
+Cursor native review passes, with production sign-off still pending.
+
+| Host | Direct or custom route | Curated status |
+|---|---|---|
+| Cursor | [Copy the repository locally](#local-cursor-installation). | Prior submission recorded; public listing unverified. |
+| Kimi Code | Install the repository or add [`marketplaces/kimi.json`](marketplaces/kimi.json) as a custom marketplace. | Direct route documented; no curated claim. |
+| AutoClaw | Import one checksummed ZIP per skill from the [release](docs/distribution.md) through **Skills & Connectors → Skills → Create → Add skill file**. | Local import documented; external catalog review is separate. |
+| ZCode | Add [`marketplaces/zcode.json`](marketplaces/zcode.json) as a personal marketplace and install `terraphim-skills-intro`. | Curated listing awaits maintainer review. |
+| Hermes Agent | Add `terraphim/terraphim-cursor-plugin` as a tap, then inspect and install the four skills. | Tap route documented; no curated claim. |
+| skills.sh | Run `npx skills add terraphim/terraphim-cursor-plugin`; `DISABLE_TELEMETRY=1` opts out of anonymous telemetry. | Direct repository route documented. |
+| Claude Code | Add this repository as a marketplace, then install the plugin as shown below. | Custom marketplace route documented. |
+| Kilo | Integration is being prepared. | Catalog admission and actual Kilo installation unqualified. |
+| Grok Build | The submission pins a signed release; see the [distribution guide](docs/distribution.md). | Awaiting maintainer review. |
 
 Claude Code commands:
 
@@ -122,6 +160,11 @@ changes remain explicit and scoped. Review [permissions and side effects](docs/p
 before enabling writes or configured model synthesis.
 
 ## Continue with Terraphim Skills
+
+The skills can support an engineering workflow from research through validation.
+The diagram shows that method; it is not an automatic feature of this plugin.
+
+![V-model showing research, design, specification, implementation, verification, and validation phases](assets/v-model-overview.svg)
 
 Browse the [Community, Core, and Premium catalogue](https://terraphim-skills.md/skills/).
 The public introduction contains no proprietary instructions or entitlement token.
