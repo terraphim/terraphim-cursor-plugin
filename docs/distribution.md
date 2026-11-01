@@ -1,12 +1,17 @@
 # Multi-marketplace distribution
 
-This repository is the canonical source for all hosts. The signed [v0.2.5
-release](https://github.com/terraphim/terraphim-cursor-plugin/releases/tag/v0.2.5)
-contains four skills and deterministic AutoClaw archives, including the new
-editor-to-search companion. Its public packages and original signatures have
-been verified. The version-pinned host examples below retain their historical
-`0.2.4` qualification; that earlier pack has three skills. A new source release
-does not qualify a new host installation or Kilo catalog admission.
+This repository is the canonical source for all hosts. The current signed
+[v0.2.7 release](https://github.com/terraphim/terraphim-cursor-plugin/releases/tag/v0.2.7)
+contains four skills, their AutoClaw archives, and a Cursor integration archive.
+Its macOS ARM64 [native receipt](https://github.com/terraphim/terraphim-cursor-plugin/blob/1cf9d706c7dfd2d3078a8d5bb52f86cfd81ce1c4/qualification/cursor/0.2.7/native-receipt.json)
+has a [passing independent review](https://github.com/terraphim/terraphim-cursor-plugin/blob/1cf9d706c7dfd2d3078a8d5bb52f86cfd81ce1c4/qualification/cursor/0.2.7/review.json)
+for the exact release source; its `productionSignoff` is
+`PENDING_USER_SIGNOFF`. Automatic failure capture is unavailable.
+
+The version-pinned host examples below retain their historical `v0.2.4`
+qualification; that earlier pack has three skills. They are examples of a
+previously checked host route, not v0.2.7 installation proof. A source release
+does not qualify another host, native platform, or curated catalog admission.
 
 ## CLI workflows to include in every listing
 
@@ -45,7 +50,7 @@ verified against the exact GitHub event commit before assets are published. The
 repository's active tag ruleset must restrict updates and deletions for `v*` so
 the tag cannot move between verification and release publication.
 
-## Kimi Code
+## Kimi Code (historical v0.2.4 route)
 
 Install the immutable release URL through Kimi Code's `/plugins install`, or
 open `/plugins marketplace` with
@@ -57,7 +62,7 @@ confirm that exactly the three documented skills appear. The native manifest is
 releases whose shell-level `kimi plugin install` command expects that filename.
 Update by installing the newer tag; remove through Kimi's plugin manager.
 
-## AutoClaw
+## AutoClaw (historical v0.2.4 route)
 
 Download the three ZIP files and `SHA256SUMS` from the `v0.2.4` release. Verify
 each digest, then use **Skills & Connectors → Skills → Create → Add skill file**.
@@ -65,7 +70,7 @@ Import each ZIP separately. Restart AutoClaw and confirm the skills persist. Rem
 them through the same Skills screen. If Homebrew binaries are missing from the GUI
 `PATH`, restart AutoClaw after installing the dependencies.
 
-## ZCode
+## ZCode (historical v0.2.4 route)
 
 Open ZCode's **Discover** view and add
 `https://raw.githubusercontent.com/terraphim/terraphim-cursor-plugin/v0.2.4/marketplaces/zcode.json`
@@ -75,7 +80,7 @@ Skills view shows exactly three skills. Curated discovery requires a separate
 this repository does not claim acceptance before the maintainers merge it.
 Update or remove the installed plugin through ZCode's plugin manager.
 
-## Hermes Agent
+## Hermes Agent (historical v0.2.4 route)
 
 Add the repository as a GitHub tap, then inspect each skill before installing:
 
@@ -89,7 +94,7 @@ hermes skills inspect terraphim/terraphim-cursor-plugin/skills/terraphim-agent-m
 Record the immutable `v0.2.4` provenance. Remove the skills with Hermes' normal
 skill-management command.
 
-## skills.sh
+## skills.sh (historical v0.2.4 route)
 
 Use an isolated agent target and run:
 
@@ -197,11 +202,12 @@ publisher identity is available; no human token is copied into this repository.
 ## Cursor integration release gate
 
 The [read-first project setup](../integrations/cursor/README.md) requires the
-matching release qualification record for native acceptance. Source/examples
-are not proof. The user requires
-**“Hold the update until hooks pass”**: editor/search/memory alone cannot release
-this update. Optional rewriting/capture remain inactive, and automatic failure
-capture is unavailable until its actual native result shape is qualified.
+matching release qualification record for native acceptance. Source and
+examples alone are not proof. The v0.2.7 macOS ARM64 review passes its recorded
+native hook cases for the exact candidate, while production sign-off remains
+pending. Later changes need their own qualification. Optional rewriting and
+capture remain inactive until explicitly configured. Automatic failure capture
+remains unavailable because its native result shape is unqualified.
 
 The shared pack uses the existing signed `v*` pipeline with an additive
 Cursor integration archive and matching checksum entry. Original signed skill
